@@ -1,0 +1,3 @@
+congreso_congreso_homepage:
+    path:     /
+    defaults: { _controller: CongresoCongresoBundle:Default:index }
