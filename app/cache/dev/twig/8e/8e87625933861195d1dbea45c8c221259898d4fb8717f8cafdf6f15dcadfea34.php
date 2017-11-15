@@ -15,17 +15,17 @@ class __TwigTemplate_b0736a15c21769d209010fc6bbc26001df17c39d5997651c6fe476a25a0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8a27202f9376f8e1736eb49d80ccbb5829a572028bb45d07bc572fa589d8f360 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8a27202f9376f8e1736eb49d80ccbb5829a572028bb45d07bc572fa589d8f360->enter($__internal_8a27202f9376f8e1736eb49d80ccbb5829a572028bb45d07bc572fa589d8f360_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Comment/form.html.twig"));
+        $__internal_f25914d34d20630ad9c4e898de4f9bb1a504e63a579912c0ed1fdc6c9d4e80ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f25914d34d20630ad9c4e898de4f9bb1a504e63a579912c0ed1fdc6c9d4e80ea->enter($__internal_f25914d34d20630ad9c4e898de4f9bb1a504e63a579912c0ed1fdc6c9d4e80ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Comment/form.html.twig"));
 
         // line 2
         echo "
 <form action=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_comment_create", array("post_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? $this->getContext($context, "comment")), "post", array()), "id", array()))), "html", null, true);
-        echo "\" method=\"post\" ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_comment_create", array("articulo_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? $this->getContext($context, "comment")), "articulo", array()), "id", array()))), "html", null, true);
+        echo "\" method=\"articulo\" ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'enctype');
-        echo " class=\"Congreso\">
+        echo " class=\"congreso\">
     ";
         // line 4
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
@@ -36,7 +36,7 @@ class __TwigTemplate_b0736a15c21769d209010fc6bbc26001df17c39d5997651c6fe476a25a0
 </form>
 ";
         
-        $__internal_8a27202f9376f8e1736eb49d80ccbb5829a572028bb45d07bc572fa589d8f360->leave($__internal_8a27202f9376f8e1736eb49d80ccbb5829a572028bb45d07bc572fa589d8f360_prof);
+        $__internal_f25914d34d20630ad9c4e898de4f9bb1a504e63a579912c0ed1fdc6c9d4e80ea->leave($__internal_f25914d34d20630ad9c4e898de4f9bb1a504e63a579912c0ed1fdc6c9d4e80ea_prof);
 
     }
 
@@ -67,7 +67,7 @@ class __TwigTemplate_b0736a15c21769d209010fc6bbc26001df17c39d5997651c6fe476a25a0
     {
         return new Twig_Source("{# src/Congreso/CongresoBundle/Resources/views/Comment/form.html.twig #}
 
-<form action=\"{{ path('blogger_comment_create', { 'post_id' : comment.post.id } ) }}\" method=\"post\" {{ form_enctype(form) }} class=\"Congreso\">
+<form action=\"{{ path('congreso_comment_create', { 'articulo_id' : comment.articulo.id } ) }}\" method=\"articulo\" {{ form_enctype(form) }} class=\"congreso\">
     {{ form_widget(form) }}
     <p>
         <input type=\"submit\" value=\"Enviar\">

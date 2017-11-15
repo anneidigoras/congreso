@@ -14,7 +14,7 @@ class ArticuloRepository extends EntityRepository
 {
 	public function getLatestArticulos($limit = null)
 {
-	$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.date', 'DESC');
+	$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.publicacion', 'DESC');
 
 	if (false === is_null($limit))
 		$qp->setMaxResults($limit);

@@ -91,4 +91,5 @@
   'CongresoCongresoBundle:Track:list.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/list.html.twig',
   '::base.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/default/index.html.twig',
+  ':default:layout.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/default/layout.html.twig',
 );

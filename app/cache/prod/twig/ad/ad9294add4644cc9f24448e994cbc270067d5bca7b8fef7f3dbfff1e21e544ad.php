@@ -27,7 +27,7 @@ class __TwigTemplate_a0bb08e1ad4fe1c4ae84f478961da41f366a1d4487f95e6d5d47241c5bc
             echo "
     <p>";
             // line 5
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["tag"] ?? null), "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["cientifico"], "nombre", array()), "html", null, true);
             echo "</p>
 
 ";

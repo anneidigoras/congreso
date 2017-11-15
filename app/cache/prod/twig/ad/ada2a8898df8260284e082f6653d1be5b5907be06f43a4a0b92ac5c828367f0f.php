@@ -51,7 +51,7 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
             <header>
                 <h2><a href=\"";
             // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "titulo", array()), "html", null, true);
             echo "</a></h2>
@@ -64,15 +64,12 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
             echo "</p>
                 <p class=\"continue\"><a href=\"";
             // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
             echo "\">Seguir leyendo...</a></p>
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: ";
-            // line 19
-            echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "numbercomments", array()), "html", null, true);
-            echo "</p>
+                <p>Comentarios: </p>
             </footer>
         </article>
     ";
@@ -100,7 +97,7 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
 
     public function getDebugInfo()
     {
-        return array (  83 => 23,  74 => 19,  67 => 15,  63 => 14,  54 => 10,  47 => 8,  44 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  80 => 23,  67 => 15,  63 => 14,  54 => 10,  47 => 8,  44 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

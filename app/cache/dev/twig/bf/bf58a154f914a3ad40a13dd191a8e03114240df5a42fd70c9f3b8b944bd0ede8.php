@@ -22,32 +22,32 @@ class __TwigTemplate_dc0b62bb32a8557d19e855e4aeb9a56666b578f903747d3571849b7d41c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f6aa642f53ed9a9051f3bc7cc0db61714cd3c6e67672acdd684cb4546c9252c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2f6aa642f53ed9a9051f3bc7cc0db61714cd3c6e67672acdd684cb4546c9252c->enter($__internal_2f6aa642f53ed9a9051f3bc7cc0db61714cd3c6e67672acdd684cb4546c9252c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/list.html.twig"));
+        $__internal_83d8306ba1c7195ab65fc4fbdd44c54ab2ca0dd758e4f6f88f522c00a26d8af5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_83d8306ba1c7195ab65fc4fbdd44c54ab2ca0dd758e4f6f88f522c00a26d8af5->enter($__internal_83d8306ba1c7195ab65fc4fbdd44c54ab2ca0dd758e4f6f88f522c00a26d8af5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2f6aa642f53ed9a9051f3bc7cc0db61714cd3c6e67672acdd684cb4546c9252c->leave($__internal_2f6aa642f53ed9a9051f3bc7cc0db61714cd3c6e67672acdd684cb4546c9252c_prof);
+        $__internal_83d8306ba1c7195ab65fc4fbdd44c54ab2ca0dd758e4f6f88f522c00a26d8af5->leave($__internal_83d8306ba1c7195ab65fc4fbdd44c54ab2ca0dd758e4f6f88f522c00a26d8af5_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_6edd87ac7f97335c150a1c6a7bc8d2f17f930c64a8d53175a1208b9b6937123d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6edd87ac7f97335c150a1c6a7bc8d2f17f930c64a8d53175a1208b9b6937123d->enter($__internal_6edd87ac7f97335c150a1c6a7bc8d2f17f930c64a8d53175a1208b9b6937123d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3fe69eb1c3bb976ce4b0acde831ee51e44579f511647e4a9f9477ec0c8ba4243 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3fe69eb1c3bb976ce4b0acde831ee51e44579f511647e4a9f9477ec0c8ba4243->enter($__internal_3fe69eb1c3bb976ce4b0acde831ee51e44579f511647e4a9f9477ec0c8ba4243_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "List of Articulos";
         
-        $__internal_6edd87ac7f97335c150a1c6a7bc8d2f17f930c64a8d53175a1208b9b6937123d->leave($__internal_6edd87ac7f97335c150a1c6a7bc8d2f17f930c64a8d53175a1208b9b6937123d_prof);
+        $__internal_3fe69eb1c3bb976ce4b0acde831ee51e44579f511647e4a9f9477ec0c8ba4243->leave($__internal_3fe69eb1c3bb976ce4b0acde831ee51e44579f511647e4a9f9477ec0c8ba4243_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_71f75fac9273f6a519cafa91b5ff353b2d91aa504c2e6af946c4321ce6067067 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_71f75fac9273f6a519cafa91b5ff353b2d91aa504c2e6af946c4321ce6067067->enter($__internal_71f75fac9273f6a519cafa91b5ff353b2d91aa504c2e6af946c4321ce6067067_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_85b12dab83d88ebdbdb8452158331f1e52d6f5299c5beea7dbdcd735551572a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_85b12dab83d88ebdbdb8452158331f1e52d6f5299c5beea7dbdcd735551572a2->enter($__internal_85b12dab83d88ebdbdb8452158331f1e52d6f5299c5beea7dbdcd735551572a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
@@ -66,7 +66,7 @@ class __TwigTemplate_dc0b62bb32a8557d19e855e4aeb9a56666b578f903747d3571849b7d41c
             <header>
                 <h2><a href=\"";
             // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "titulo", array()), "html", null, true);
             echo "</a></h2>
@@ -79,15 +79,12 @@ class __TwigTemplate_dc0b62bb32a8557d19e855e4aeb9a56666b578f903747d3571849b7d41c
             echo "</p>
                 <p class=\"continue\"><a href=\"";
             // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
             echo "\">Seguir leyendo...</a></p>
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: ";
-            // line 19
-            echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "numbercomments", array()), "html", null, true);
-            echo "</p>
+                <p>Comentarios: </p>
             </footer>
         </article>
     ";
@@ -102,7 +99,7 @@ class __TwigTemplate_dc0b62bb32a8557d19e855e4aeb9a56666b578f903747d3571849b7d41c
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['articulo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_71f75fac9273f6a519cafa91b5ff353b2d91aa504c2e6af946c4321ce6067067->leave($__internal_71f75fac9273f6a519cafa91b5ff353b2d91aa504c2e6af946c4321ce6067067_prof);
+        $__internal_85b12dab83d88ebdbdb8452158331f1e52d6f5299c5beea7dbdcd735551572a2->leave($__internal_85b12dab83d88ebdbdb8452158331f1e52d6f5299c5beea7dbdcd735551572a2_prof);
 
     }
 
@@ -118,7 +115,7 @@ class __TwigTemplate_dc0b62bb32a8557d19e855e4aeb9a56666b578f903747d3571849b7d41c
 
     public function getDebugInfo()
     {
-        return array (  98 => 23,  89 => 19,  82 => 15,  78 => 14,  69 => 10,  62 => 8,  59 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
+        return array (  95 => 23,  82 => 15,  78 => 14,  69 => 10,  62 => 8,  59 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -140,16 +137,16 @@ class __TwigTemplate_dc0b62bb32a8557d19e855e4aeb9a56666b578f903747d3571849b7d41c
         <article class=\"articulo\">
             <div class=\"date\"><time datetime=\"{{ articulo.publicacion|date('c') }}\">{{ articulo.publicacion|date('l, F j, Y') }}</time></div>
             <header>
-                <h2><a href=\"{{ path('blogger_blog_show', { 'id': articulo.id }) }}\">{{ articulo.titulo }}</a></h2>
+                <h2><a href=\"{{ path('congreso_congreso_show', { 'id': articulo.id }) }}\">{{ articulo.titulo }}</a></h2>
             </header>
 
             <div class=\"snippet\">
                 <p>{{ articulo.cuerpo(200) }}</p>
-                <p class=\"continue\"><a href=\"{{ path('blogger_blog_show', { 'id': articulo.id }) }}\">Seguir leyendo...</a></p>
+                <p class=\"continue\"><a href=\"{{ path('congreso_congreso_show', { 'id': articulo.id }) }}\">Seguir leyendo...</a></p>
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: {{ articulo.numbercomments }}</p>
+                <p>Comentarios: </p>
             </footer>
         </article>
     {% else %}

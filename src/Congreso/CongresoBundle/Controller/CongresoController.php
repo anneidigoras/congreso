@@ -9,9 +9,9 @@ class CongresoController extends Controller
 
 	public function listAction()
 	{
-	$articulos = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Cientifico')->getLatestArticulos();
+	$articulos = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Articulo')->getLatestArticulos();
 
-	return $this->render('CongresoCongresoBundle:Congreso:list.html.twig', array('cientificos' => $cientificos));
+	return $this->render('CongresoCongresoBundle:Congreso:list.html.twig', array('articulos' => $articulos));
 	}
 
 	/*public function getBody($length = null)
@@ -30,10 +30,11 @@ public function showAction($id)
 		throw $this->createNotFoundException('No se ha encontrado el articulo.');
 	}
 
-	/*$tags = $cientifico->getTags();
-	$comments = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Comment')->getCommentsForPost($post->getId());
-*/
-	return $this->render('CongresoCongresoBundle:Congreso:show.html.twig', array('cientifico' => $cientifico, 'comments' => $comments ,'tracks' => $tracks, 'cientificos' => $cientificos));
+	$tracks = $articulo->getTracks();
+	$cientificos = $articulo->getCientificos();
+	$comments = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Comment')->getCommentsForArticulo($articulo->getId());
+
+	return $this->render('CongresoCongresoBundle:Congreso:show.html.twig', array('articulo' => $articulo, 'comments' => $comments ,'tracks' => $tracks, 'cientificos' => $cientificos));
 }
 
 

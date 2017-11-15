@@ -14,10 +14,10 @@ class CommentController extends Controller
 {
     public function newAction($articulo_id)
     {
-        $articulo = $this->getarticulo($articulo_id);
+        $articulo = $this->getArticulo($articulo_id);
 
         $comment = new Comment();
-        $comment->setarticulo($articulo);
+        $comment->setArticulo($articulo);
         $form   = $this->createForm(new CommentType(), $comment);
 
         return $this->render('CongresoCongresoBundle:Comment:form.html.twig', array('comment' => $comment,'form'   => $form->createView()));
@@ -28,7 +28,7 @@ class CommentController extends Controller
         $articulo = $this->getarticulo($articulo_id);
 
         $comment  = new Comment();
-        $comment->setarticulo($articulo);
+        $comment->setArticulo($articulo);
         $request = $this->getRequest();
         $form = $this->createForm(new CommentType(), $comment);
         $form->bind($request);

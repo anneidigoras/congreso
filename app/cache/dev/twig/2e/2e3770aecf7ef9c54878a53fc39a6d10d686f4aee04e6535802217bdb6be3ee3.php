@@ -15,8 +15,8 @@ class __TwigTemplate_12dc20e40462c67380f38060b72d651c659a07d8db15443e4b5447015ef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1763e33cd5d2924f9c4b3cb6961a29de929fe22bda693bf56c2dc80187552663 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1763e33cd5d2924f9c4b3cb6961a29de929fe22bda693bf56c2dc80187552663->enter($__internal_1763e33cd5d2924f9c4b3cb6961a29de929fe22bda693bf56c2dc80187552663_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Cientifico/list.html.twig"));
+        $__internal_d4a150741af791646477af62c8deafdae734b9407b1f6b6516e82b85637fda8f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d4a150741af791646477af62c8deafdae734b9407b1f6b6516e82b85637fda8f->enter($__internal_d4a150741af791646477af62c8deafdae734b9407b1f6b6516e82b85637fda8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Cientifico/list.html.twig"));
 
         // line 2
         echo "
@@ -30,7 +30,7 @@ class __TwigTemplate_12dc20e40462c67380f38060b72d651c659a07d8db15443e4b5447015ef
             echo "
     <p>";
             // line 5
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["tag"] ?? $this->getContext($context, "tag")), "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["cientifico"], "nombre", array()), "html", null, true);
             echo "</p>
 
 ";
@@ -47,7 +47,7 @@ class __TwigTemplate_12dc20e40462c67380f38060b72d651c659a07d8db15443e4b5447015ef
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cientifico'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_1763e33cd5d2924f9c4b3cb6961a29de929fe22bda693bf56c2dc80187552663->leave($__internal_1763e33cd5d2924f9c4b3cb6961a29de929fe22bda693bf56c2dc80187552663_prof);
+        $__internal_d4a150741af791646477af62c8deafdae734b9407b1f6b6516e82b85637fda8f->leave($__internal_d4a150741af791646477af62c8deafdae734b9407b1f6b6516e82b85637fda8f_prof);
 
     }
 
@@ -80,7 +80,7 @@ class __TwigTemplate_12dc20e40462c67380f38060b72d651c659a07d8db15443e4b5447015ef
 
 {% for cientifico in cientificos %}
 
-    <p>{{ tag.nombre }}</p>
+    <p>{{ cientifico.nombre }}</p>
 
 {% else %}
 

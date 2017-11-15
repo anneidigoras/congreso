@@ -100,30 +100,38 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // blogger_blog_list
+        // congreso_congreso_list
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'blogger_blog_list');
+                return $this->redirect($pathinfo.'/', 'congreso_congreso_list');
             }
 
-            return array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::listAction',  '_route' => 'blogger_blog_list',);
+            return array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::listAction',  '_route' => 'congreso_congreso_list',);
         }
 
-        // blogger_blog_show
+        // congreso_congreso_show
         if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'blogger_blog_show')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::showAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'congreso_congreso_show')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::showAction',));
         }
 
-        // blogger_comment_create
-        if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<post_id>\\d+)$#s', $pathinfo, $matches)) {
-            if ($this->context->getMethod() != 'POST') {
-                $allow[] = 'POST';
-                goto not_blogger_comment_create;
+        if (0 === strpos($pathinfo, '/co')) {
+            // congreso_congreso_contact
+            if ('/contact' === $pathinfo) {
+                return array (  '_controller' => 'BloggerBlogBundle:Blog:contact',  '_route' => 'congreso_congreso_contact',);
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'blogger_comment_create')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CommentController::createAction',));
+            // congreso_comment_create
+            if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<articulo_id>\\d+)$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'ARTICULO') {
+                    $allow[] = 'ARTICULO';
+                    goto not_congreso_comment_create;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'congreso_comment_create')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CommentController::createAction',));
+            }
+            not_congreso_comment_create:
+
         }
-        not_blogger_comment_create:
 
         // homepage
         if ('' === rtrim($pathinfo, '/')) {

@@ -15,8 +15,8 @@ class __TwigTemplate_ecb3f623001d09b8dd41be42cdb411a56417a727706e747d30f323f3316
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d02bf78772a77b9f7d8d4ca47d58324f9288c7c69e70489c763bd6bee31b7f61 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d02bf78772a77b9f7d8d4ca47d58324f9288c7c69e70489c763bd6bee31b7f61->enter($__internal_d02bf78772a77b9f7d8d4ca47d58324f9288c7c69e70489c763bd6bee31b7f61_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Track/list.html.twig"));
+        $__internal_e78b717443ef3d68c15d8104e58922913131eba8230422e6b13af91e6e1400d3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e78b717443ef3d68c15d8104e58922913131eba8230422e6b13af91e6e1400d3->enter($__internal_e78b717443ef3d68c15d8104e58922913131eba8230422e6b13af91e6e1400d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Track/list.html.twig"));
 
         // line 2
         echo "
@@ -30,7 +30,7 @@ class __TwigTemplate_ecb3f623001d09b8dd41be42cdb411a56417a727706e747d30f323f3316
             echo "
     <p>";
             // line 5
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["tag"] ?? $this->getContext($context, "tag")), "campo", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "campo", array()), "html", null, true);
             echo "</p>
 
 ";
@@ -47,7 +47,7 @@ class __TwigTemplate_ecb3f623001d09b8dd41be42cdb411a56417a727706e747d30f323f3316
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_d02bf78772a77b9f7d8d4ca47d58324f9288c7c69e70489c763bd6bee31b7f61->leave($__internal_d02bf78772a77b9f7d8d4ca47d58324f9288c7c69e70489c763bd6bee31b7f61_prof);
+        $__internal_e78b717443ef3d68c15d8104e58922913131eba8230422e6b13af91e6e1400d3->leave($__internal_e78b717443ef3d68c15d8104e58922913131eba8230422e6b13af91e6e1400d3_prof);
 
     }
 
@@ -80,7 +80,7 @@ class __TwigTemplate_ecb3f623001d09b8dd41be42cdb411a56417a727706e747d30f323f3316
 
 {% for track in tracks %}
 
-    <p>{{ tag.campo }}</p>
+    <p>{{ track.campo }}</p>
 
 {% else %}
 

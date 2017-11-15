@@ -19,10 +19,10 @@ class __TwigTemplate_6b48a276a0b4c46af08817a41fcafc9b77643a1a1007c8afb2fda2f9fe2
         echo "
 <form action=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_comment_create", array("post_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "post", array()), "id", array()))), "html", null, true);
-        echo "\" method=\"post\" ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_comment_create", array("articulo_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "articulo", array()), "id", array()))), "html", null, true);
+        echo "\" method=\"articulo\" ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? null), 'enctype');
-        echo " class=\"Congreso\">
+        echo " class=\"congreso\">
     ";
         // line 4
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? null), 'widget');

@@ -14,7 +14,7 @@ class CommentRepository extends EntityRepository
 {
 		public function getCommentsForArticulo($articuloId, $approved = true)
 {
-	$qp = $this->createQueryBuilder('c')->select('c')->where('c.post = :post_id')->addOrderBy('c.created')->setParameter('post_id', $postId);
+	$qp = $this->createQueryBuilder('c')->select('c')->where('c.articulo = :articulo_id')->addOrderBy('c.created')->setParameter('articulo_id', $articuloId);
 
 	if (false === is_null($approved))
 		$qp->andWhere('c.approved = :approved')->setParameter('approved', $approved);

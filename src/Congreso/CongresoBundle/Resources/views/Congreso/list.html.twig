@@ -7,16 +7,16 @@
         <article class="articulo">
             <div class="date"><time datetime="{{ articulo.publicacion|date('c') }}">{{ articulo.publicacion|date('l, F j, Y') }}</time></div>
             <header>
-                <h2><a href="{{ path('blogger_blog_show', { 'id': articulo.id }) }}">{{ articulo.titulo }}</a></h2>
+                <h2><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">{{ articulo.titulo }}</a></h2>
             </header>
 
             <div class="snippet">
                 <p>{{ articulo.cuerpo(200) }}</p>
-                <p class="continue"><a href="{{ path('blogger_blog_show', { 'id': articulo.id }) }}">Seguir leyendo...</a></p>
+                <p class="continue"><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">Seguir leyendo...</a></p>
             </div>
 
             <footer class="meta">
-                <p>Comentarios: {{ articulo.numbercomments }}</p>
+                <p>Comentarios: </p>
             </footer>
         </article>
     {% else %}

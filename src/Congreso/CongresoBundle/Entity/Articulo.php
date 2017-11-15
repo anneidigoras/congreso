@@ -287,4 +287,9 @@ class Articulo
     {
         return $this->cientificos;
     }
+
+    public function getnumbercomments()
+    {
+        return count($this->comments);
+    }
 }
