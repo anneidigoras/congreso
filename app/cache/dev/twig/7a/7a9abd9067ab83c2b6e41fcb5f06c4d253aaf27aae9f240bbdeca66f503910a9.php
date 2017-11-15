@@ -15,14 +15,14 @@ class __TwigTemplate_545adaa793c6bab4c4b190e50f5cef6801e71912efd073087ec5b28f6dd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d3a1a4c5c2c14460a5f6335079e838d4bef35ca978cfa7c639d750e7831c4536 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d3a1a4c5c2c14460a5f6335079e838d4bef35ca978cfa7c639d750e7831c4536->enter($__internal_d3a1a4c5c2c14460a5f6335079e838d4bef35ca978cfa7c639d750e7831c4536_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/email_widget.html.php"));
+        $__internal_55f7e7bc8fab12b74be5e9a43ab6efc9064ce9ad25d871eed1e31e7ac5f1bbce = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_55f7e7bc8fab12b74be5e9a43ab6efc9064ce9ad25d871eed1e31e7ac5f1bbce->enter($__internal_55f7e7bc8fab12b74be5e9a43ab6efc9064ce9ad25d871eed1e31e7ac5f1bbce_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/email_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'email')) ?>
 ";
         
-        $__internal_d3a1a4c5c2c14460a5f6335079e838d4bef35ca978cfa7c639d750e7831c4536->leave($__internal_d3a1a4c5c2c14460a5f6335079e838d4bef35ca978cfa7c639d750e7831c4536_prof);
+        $__internal_55f7e7bc8fab12b74be5e9a43ab6efc9064ce9ad25d871eed1e31e7ac5f1bbce->leave($__internal_55f7e7bc8fab12b74be5e9a43ab6efc9064ce9ad25d871eed1e31e7ac5f1bbce_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_545adaa793c6bab4c4b190e50f5cef6801e71912efd073087ec5b28f6dd
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'email')) ?>
-", "@Framework/Form/email_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\email_widget.html.php");
+", "@Framework/Form/email_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\email_widget.html.php");
     }
 }

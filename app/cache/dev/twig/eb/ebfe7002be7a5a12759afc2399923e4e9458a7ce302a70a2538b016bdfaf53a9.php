@@ -15,8 +15,8 @@ class __TwigTemplate_dd71ef37ac5ee936ef077557aecb7d096599115f6c95c73dcbc24d074e5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f52d45baf78025d4edda55515c95092cd50db93e269d5621881617da8ba4455d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f52d45baf78025d4edda55515c95092cd50db93e269d5621881617da8ba4455d->enter($__internal_f52d45baf78025d4edda55515c95092cd50db93e269d5621881617da8ba4455d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/table.html.twig"));
+        $__internal_e81816052b442ec4621ada36de928cdec80dd6210205679ee240b9e8edf4cf74 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e81816052b442ec4621ada36de928cdec80dd6210205679ee240b9e8edf4cf74->enter($__internal_e81816052b442ec4621ada36de928cdec80dd6210205679ee240b9e8edf4cf74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/table.html.twig"));
 
         // line 1
         echo "<table class=\"";
@@ -61,7 +61,7 @@ class __TwigTemplate_dd71ef37ac5ee936ef077557aecb7d096599115f6c95c73dcbc24d074e5
 </table>
 ";
         
-        $__internal_f52d45baf78025d4edda55515c95092cd50db93e269d5621881617da8ba4455d->leave($__internal_f52d45baf78025d4edda55515c95092cd50db93e269d5621881617da8ba4455d_prof);
+        $__internal_e81816052b442ec4621ada36de928cdec80dd6210205679ee240b9e8edf4cf74->leave($__internal_e81816052b442ec4621ada36de928cdec80dd6210205679ee240b9e8edf4cf74_prof);
 
     }
 
@@ -106,6 +106,6 @@ class __TwigTemplate_dd71ef37ac5ee936ef077557aecb7d096599115f6c95c73dcbc24d074e5
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/table.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\table.html.twig");
+", "@WebProfiler/Profiler/table.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\table.html.twig");
     }
 }

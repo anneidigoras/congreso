@@ -15,8 +15,8 @@ class __TwigTemplate_d5b2800207c5ac9deb653428f0b2ae8787b390a9f4dd2817cfa567ed51c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_025c27ab071f510e2ca6166187fbf2bbc92b779630427bb47a62603758734b13 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_025c27ab071f510e2ca6166187fbf2bbc92b779630427bb47a62603758734b13->enter($__internal_025c27ab071f510e2ca6166187fbf2bbc92b779630427bb47a62603758734b13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Collector:exception.css.twig"));
+        $__internal_e76322c9545cd293292dd10f970accabc0a77bb0c0468148fe14d06c043969f9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e76322c9545cd293292dd10f970accabc0a77bb0c0468148fe14d06c043969f9->enter($__internal_e76322c9545cd293292dd10f970accabc0a77bb0c0468148fe14d06c043969f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Collector:exception.css.twig"));
 
         // line 1
         echo ".sf-reset .traces {
@@ -117,7 +117,7 @@ class __TwigTemplate_d5b2800207c5ac9deb653428f0b2ae8787b390a9f4dd2817cfa567ed51c
 }
 ";
         
-        $__internal_025c27ab071f510e2ca6166187fbf2bbc92b779630427bb47a62603758734b13->leave($__internal_025c27ab071f510e2ca6166187fbf2bbc92b779630427bb47a62603758734b13_prof);
+        $__internal_e76322c9545cd293292dd10f970accabc0a77bb0c0468148fe14d06c043969f9->leave($__internal_e76322c9545cd293292dd10f970accabc0a77bb0c0468148fe14d06c043969f9_prof);
 
     }
 
@@ -237,6 +237,6 @@ class __TwigTemplate_d5b2800207c5ac9deb653428f0b2ae8787b390a9f4dd2817cfa567ed51c
 .sf-reset .toggle {
     vertical-align: middle;
 }
-", "WebProfilerBundle:Collector:exception.css.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/exception.css.twig");
+", "WebProfilerBundle:Collector:exception.css.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/exception.css.twig");
     }
 }

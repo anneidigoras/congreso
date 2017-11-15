@@ -15,8 +15,8 @@ class __TwigTemplate_abf5ca3602641ab536ffef1c69762cc284d843febc5863268187599faf8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9dd077b889ae6067cdcba236a5e7a1dc6e002c695e69fe0ac9588720a464d316 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9dd077b889ae6067cdcba236a5e7a1dc6e002c695e69fe0ac9588720a464d316->enter($__internal_9dd077b889ae6067cdcba236a5e7a1dc6e002c695e69fe0ac9588720a464d316_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Swiftmailer/Collector/icon.svg"));
+        $__internal_2bb9cdf5e3948341309e0114312e5b799cd33f1220a817f1a3013d786f9f4327 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2bb9cdf5e3948341309e0114312e5b799cd33f1220a817f1a3013d786f9f4327->enter($__internal_2bb9cdf5e3948341309e0114312e5b799cd33f1220a817f1a3013d786f9f4327_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Swiftmailer/Collector/icon.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -24,7 +24,7 @@ class __TwigTemplate_abf5ca3602641ab536ffef1c69762cc284d843febc5863268187599faf8
 </svg>
 ";
         
-        $__internal_9dd077b889ae6067cdcba236a5e7a1dc6e002c695e69fe0ac9588720a464d316->leave($__internal_9dd077b889ae6067cdcba236a5e7a1dc6e002c695e69fe0ac9588720a464d316_prof);
+        $__internal_2bb9cdf5e3948341309e0114312e5b799cd33f1220a817f1a3013d786f9f4327->leave($__internal_2bb9cdf5e3948341309e0114312e5b799cd33f1220a817f1a3013d786f9f4327_prof);
 
     }
 
@@ -51,6 +51,6 @@ class __TwigTemplate_abf5ca3602641ab536ffef1c69762cc284d843febc5863268187599faf8
         return new Twig_Source("<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
     <path fill=\"#AAAAAA\" d=\"M22,4.9C22,3.9,21.1,3,20.1,3H3.9C2.9,3,2,3.9,2,4.9v13.1C2,19.1,2.9,20,3.9,20h16.1c1.1,0,1.9-0.9,1.9-1.9V4.9z M8.3,14.1l-3.1,3.1c-0.2,0.2-0.5,0.3-0.7,0.3S4,17.4,3.8,17.2c-0.4-0.4-0.4-1,0-1.4l3.1-3.1c0.4-0.4,1-0.4,1.4,0S8.7,13.7,8.3,14.1z M20.4,17.2c-0.2,0.2-0.5,0.3-0.7,0.3s-0.5-0.1-0.7-0.3l-3.1-3.1c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.1,3.1C20.8,16.2,20.8,16.8,20.4,17.2z M20.4,7.2l-7.6,7.6c-0.2,0.2-0.5,0.3-0.7,0.3s-0.5-0.1-0.7-0.3L3.8,7.2c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l6.9,6.9L19,5.8c0.4-0.4,1-0.4,1.4,0S20.8,6.8,20.4,7.2z\"/>
 </svg>
-", "@Swiftmailer/Collector/icon.svg", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\icon.svg");
+", "@Swiftmailer/Collector/icon.svg", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }

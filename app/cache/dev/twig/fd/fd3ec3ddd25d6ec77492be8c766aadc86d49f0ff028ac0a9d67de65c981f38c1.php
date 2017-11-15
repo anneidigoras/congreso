@@ -15,8 +15,8 @@ class __TwigTemplate_d76e0c16c7dca2dc8e1ebc3145760937fdcbb9261db86018dbbbb3a18e8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8b01e391da68260c26470a84aeee007b50bea5706727a362558fb2cacd99d9a0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8b01e391da68260c26470a84aeee007b50bea5706727a362558fb2cacd99d9a0->enter($__internal_8b01e391da68260c26470a84aeee007b50bea5706727a362558fb2cacd99d9a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_expanded.html.php"));
+        $__internal_4b8bb89a8f5006315d68bedbf3c9abdb489c9bab89b39ff46ae2f9a237da72df = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4b8bb89a8f5006315d68bedbf3c9abdb489c9bab89b39ff46ae2f9a237da72df->enter($__internal_4b8bb89a8f5006315d68bedbf3c9abdb489c9bab89b39ff46ae2f9a237da72df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_expanded.html.php"));
 
         // line 1
         echo "<div <?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>>
@@ -27,7 +27,7 @@ class __TwigTemplate_d76e0c16c7dca2dc8e1ebc3145760937fdcbb9261db86018dbbbb3a18e8
 </div>
 ";
         
-        $__internal_8b01e391da68260c26470a84aeee007b50bea5706727a362558fb2cacd99d9a0->leave($__internal_8b01e391da68260c26470a84aeee007b50bea5706727a362558fb2cacd99d9a0_prof);
+        $__internal_4b8bb89a8f5006315d68bedbf3c9abdb489c9bab89b39ff46ae2f9a237da72df->leave($__internal_4b8bb89a8f5006315d68bedbf3c9abdb489c9bab89b39ff46ae2f9a237da72df_prof);
 
     }
 
@@ -57,6 +57,6 @@ class __TwigTemplate_d76e0c16c7dca2dc8e1ebc3145760937fdcbb9261db86018dbbbb3a18e8
     <?php echo \$view['form']->label(\$child, null, array('translation_domain' => \$choice_translation_domain)) ?>
 <?php endforeach ?>
 </div>
-", "@Framework/Form/choice_widget_expanded.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_expanded.html.php");
+", "@Framework/Form/choice_widget_expanded.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_expanded.html.php");
     }
 }

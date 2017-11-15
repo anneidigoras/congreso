@@ -15,8 +15,8 @@ class __TwigTemplate_f5f0373cda9d85794e41817de23ce23e13359c40919b0ade78981889f72
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e72823d2e4daaa242e5756261640c53652fe842ce71e4bdab4ac87e93a0e8e25 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e72823d2e4daaa242e5756261640c53652fe842ce71e4bdab4ac87e93a0e8e25->enter($__internal_e72823d2e4daaa242e5756261640c53652fe842ce71e4bdab4ac87e93a0e8e25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/form_widget_compound.html.php"));
+        $__internal_580733631864e584c5096fb866b029cffc776de48769ad40be6de8711da66cbd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_580733631864e584c5096fb866b029cffc776de48769ad40be6de8711da66cbd->enter($__internal_580733631864e584c5096fb866b029cffc776de48769ad40be6de8711da66cbd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/form_widget_compound.html.php"));
 
         // line 1
         echo "<div <?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>>
@@ -28,7 +28,7 @@ class __TwigTemplate_f5f0373cda9d85794e41817de23ce23e13359c40919b0ade78981889f72
 </div>
 ";
         
-        $__internal_e72823d2e4daaa242e5756261640c53652fe842ce71e4bdab4ac87e93a0e8e25->leave($__internal_e72823d2e4daaa242e5756261640c53652fe842ce71e4bdab4ac87e93a0e8e25_prof);
+        $__internal_580733631864e584c5096fb866b029cffc776de48769ad40be6de8711da66cbd->leave($__internal_580733631864e584c5096fb866b029cffc776de48769ad40be6de8711da66cbd_prof);
 
     }
 
@@ -59,6 +59,6 @@ class __TwigTemplate_f5f0373cda9d85794e41817de23ce23e13359c40919b0ade78981889f72
     <?php echo \$view['form']->block(\$form, 'form_rows') ?>
     <?php echo \$view['form']->rest(\$form) ?>
 </div>
-", "@Framework/Form/form_widget_compound.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\form_widget_compound.html.php");
+", "@Framework/Form/form_widget_compound.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\form_widget_compound.html.php");
     }
 }

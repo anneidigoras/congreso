@@ -72,6 +72,6 @@ class __TwigTemplate_2b74624471023436bd4c559b464e46354edf493f9f30002c3b3f4b1d8ba
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/Exception/logs.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\logs.html.twig");
+        return new Twig_Source("", "@Twig/Exception/logs.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\logs.html.twig");
     }
 }

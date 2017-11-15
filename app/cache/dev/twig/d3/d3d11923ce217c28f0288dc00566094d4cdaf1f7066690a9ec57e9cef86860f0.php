@@ -15,14 +15,14 @@ class __TwigTemplate_87ad7ccb09ae96c6b81c0d3b49ba3df9a5f5219fe6a69b7132d4040de3b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a7f5063435612c17019e493f6fe592e11041bf8df60b40485ed3a99daa796904 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a7f5063435612c17019e493f6fe592e11041bf8df60b40485ed3a99daa796904->enter($__internal_a7f5063435612c17019e493f6fe592e11041bf8df60b40485ed3a99daa796904_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
+        $__internal_688feb941d47982cc7d48d215f2e22fe0f36dd4f7f980cdaf725984083dcc2d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_688feb941d47982cc7d48d215f2e22fe0f36dd4f7f980cdaf725984083dcc2d4->enter($__internal_688feb941d47982cc7d48d215f2e22fe0f36dd4f7f980cdaf725984083dcc2d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
 ";
         
-        $__internal_a7f5063435612c17019e493f6fe592e11041bf8df60b40485ed3a99daa796904->leave($__internal_a7f5063435612c17019e493f6fe592e11041bf8df60b40485ed3a99daa796904_prof);
+        $__internal_688feb941d47982cc7d48d215f2e22fe0f36dd4f7f980cdaf725984083dcc2d4->leave($__internal_688feb941d47982cc7d48d215f2e22fe0f36dd4f7f980cdaf725984083dcc2d4_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_87ad7ccb09ae96c6b81c0d3b49ba3df9a5f5219fe6a69b7132d4040de3b
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_options.html.php");
     }
 }

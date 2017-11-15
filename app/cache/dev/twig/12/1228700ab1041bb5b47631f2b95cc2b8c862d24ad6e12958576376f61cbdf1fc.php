@@ -15,8 +15,8 @@ class __TwigTemplate_82a885a1269b35752ddb467fa6c7ddcfcfca6ac367ab07340f8b2ae9414
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6f71162ba4ed9e7e217e6a5e67d66c64217c8bf75e9a1a6688c8f47468c06a3e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6f71162ba4ed9e7e217e6a5e67d66c64217c8bf75e9a1a6688c8f47468c06a3e->enter($__internal_6f71162ba4ed9e7e217e6a5e67d66c64217c8bf75e9a1a6688c8f47468c06a3e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_collapsed.html.php"));
+        $__internal_5ea7b74d0e690fb1e90dca1d763bf6c8f23bdfef43b1ec6603018114a9dfb479 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5ea7b74d0e690fb1e90dca1d763bf6c8f23bdfef43b1ec6603018114a9dfb479->enter($__internal_5ea7b74d0e690fb1e90dca1d763bf6c8f23bdfef43b1ec6603018114a9dfb479_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_collapsed.html.php"));
 
         // line 1
         echo "<select
@@ -39,7 +39,7 @@ class __TwigTemplate_82a885a1269b35752ddb467fa6c7ddcfcfca6ac367ab07340f8b2ae9414
 </select>
 ";
         
-        $__internal_6f71162ba4ed9e7e217e6a5e67d66c64217c8bf75e9a1a6688c8f47468c06a3e->leave($__internal_6f71162ba4ed9e7e217e6a5e67d66c64217c8bf75e9a1a6688c8f47468c06a3e_prof);
+        $__internal_5ea7b74d0e690fb1e90dca1d763bf6c8f23bdfef43b1ec6603018114a9dfb479->leave($__internal_5ea7b74d0e690fb1e90dca1d763bf6c8f23bdfef43b1ec6603018114a9dfb479_prof);
 
     }
 
@@ -81,6 +81,6 @@ class __TwigTemplate_82a885a1269b35752ddb467fa6c7ddcfcfca6ac367ab07340f8b2ae9414
     <?php endif ?>
     <?php echo \$view['form']->block(\$form, 'choice_widget_options', array('choices' => \$choices)) ?>
 </select>
-", "@Framework/Form/choice_widget_collapsed.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_collapsed.html.php");
+", "@Framework/Form/choice_widget_collapsed.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_collapsed.html.php");
     }
 }

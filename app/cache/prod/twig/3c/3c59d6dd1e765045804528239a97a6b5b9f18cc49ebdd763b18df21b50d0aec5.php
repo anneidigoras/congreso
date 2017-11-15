@@ -43,6 +43,6 @@ class __TwigTemplate_82dab95acdf2041d5a9cfed7e93dc22fbe54c956690938a1f69abcd0fd8
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/collection_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\collection_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/collection_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\collection_widget.html.php");
     }
 }

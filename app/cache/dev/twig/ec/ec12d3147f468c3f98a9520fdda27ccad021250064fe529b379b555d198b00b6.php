@@ -15,8 +15,8 @@ class __TwigTemplate_7e28fb36c7169050cd46e9b315a8ab82dd8f7b0388cc68db8f784479990
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_981cd7efaada1864347c5faf6db3827408f084c72022acda1aaaa950f7521c75 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_981cd7efaada1864347c5faf6db3827408f084c72022acda1aaaa950f7521c75->enter($__internal_981cd7efaada1864347c5faf6db3827408f084c72022acda1aaaa950f7521c75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/collection_widget.html.php"));
+        $__internal_b718f64bf37d2009b353c4eb846094db4752543466da23c525f4e8ae0f99ddf1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b718f64bf37d2009b353c4eb846094db4752543466da23c525f4e8ae0f99ddf1->enter($__internal_b718f64bf37d2009b353c4eb846094db4752543466da23c525f4e8ae0f99ddf1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/collection_widget.html.php"));
 
         // line 1
         echo "<?php if (isset(\$prototype)): ?>
@@ -25,7 +25,7 @@ class __TwigTemplate_7e28fb36c7169050cd46e9b315a8ab82dd8f7b0388cc68db8f784479990
 <?php echo \$view['form']->widget(\$form, array('attr' => \$attr)) ?>
 ";
         
-        $__internal_981cd7efaada1864347c5faf6db3827408f084c72022acda1aaaa950f7521c75->leave($__internal_981cd7efaada1864347c5faf6db3827408f084c72022acda1aaaa950f7521c75_prof);
+        $__internal_b718f64bf37d2009b353c4eb846094db4752543466da23c525f4e8ae0f99ddf1->leave($__internal_b718f64bf37d2009b353c4eb846094db4752543466da23c525f4e8ae0f99ddf1_prof);
 
     }
 
@@ -53,6 +53,6 @@ class __TwigTemplate_7e28fb36c7169050cd46e9b315a8ab82dd8f7b0388cc68db8f784479990
     <?php \$attr['data-prototype'] = \$view->escape(\$view['form']->row(\$prototype)) ?>
 <?php endif ?>
 <?php echo \$view['form']->widget(\$form, array('attr' => \$attr)) ?>
-", "@Framework/Form/collection_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\collection_widget.html.php");
+", "@Framework/Form/collection_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\collection_widget.html.php");
     }
 }

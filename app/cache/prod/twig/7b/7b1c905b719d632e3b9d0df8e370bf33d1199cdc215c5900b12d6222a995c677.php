@@ -44,6 +44,6 @@ class __TwigTemplate_bbf0ea7a1982bbcb637800eddc159c9699e065ab305a6242c3eee0c6ceb
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/checkbox_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\checkbox_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/checkbox_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\checkbox_widget.html.php");
     }
 }

@@ -142,6 +142,6 @@ class __TwigTemplate_ce93a3fae8d366c79ec6832c1e8efd49579a0285a777b8509c2470b5bfb
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "default/index.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\app\\Resources\\views\\default\\index.html.twig");
+        return new Twig_Source("", "default/index.html.twig", "C:\\xampp\\htdocs\\congreso\\app\\Resources\\views\\default\\index.html.twig");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_55df709132766dbf6088b85b498fc7385d2c18995ba0d4df6e422a0f7b0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_29eab9cf64384de4bb537c2225dd740d59e5eabd7ddd5bbe9b566933ea8e8e8e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_29eab9cf64384de4bb537c2225dd740d59e5eabd7ddd5bbe9b566933ea8e8e8e->enter($__internal_29eab9cf64384de4bb537c2225dd740d59e5eabd7ddd5bbe9b566933ea8e8e8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/button_row.html.php"));
+        $__internal_a84c08d28fe3747575484da654e4d354d4b49a895cfb19dbd54f93d14e5ab7bc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a84c08d28fe3747575484da654e4d354d4b49a895cfb19dbd54f93d14e5ab7bc->enter($__internal_a84c08d28fe3747575484da654e4d354d4b49a895cfb19dbd54f93d14e5ab7bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/button_row.html.php"));
 
         // line 1
         echo "<div>
@@ -24,7 +24,7 @@ class __TwigTemplate_55df709132766dbf6088b85b498fc7385d2c18995ba0d4df6e422a0f7b0
 </div>
 ";
         
-        $__internal_29eab9cf64384de4bb537c2225dd740d59e5eabd7ddd5bbe9b566933ea8e8e8e->leave($__internal_29eab9cf64384de4bb537c2225dd740d59e5eabd7ddd5bbe9b566933ea8e8e8e_prof);
+        $__internal_a84c08d28fe3747575484da654e4d354d4b49a895cfb19dbd54f93d14e5ab7bc->leave($__internal_a84c08d28fe3747575484da654e4d354d4b49a895cfb19dbd54f93d14e5ab7bc_prof);
 
     }
 
@@ -51,6 +51,6 @@ class __TwigTemplate_55df709132766dbf6088b85b498fc7385d2c18995ba0d4df6e422a0f7b0
         return new Twig_Source("<div>
     <?php echo \$view['form']->widget(\$form) ?>
 </div>
-", "@Framework/Form/button_row.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\button_row.html.php");
+", "@Framework/Form/button_row.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\button_row.html.php");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_299c749bee1bc108e53a8bbccd24c0242007fc5fb7d588f32369c1791bb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f1e4cdf04c18ad0b7c0e57ec2bd7c1d9332ec3947b0927d487caf730ea17d105 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f1e4cdf04c18ad0b7c0e57ec2bd7c1d9332ec3947b0927d487caf730ea17d105->enter($__internal_f1e4cdf04c18ad0b7c0e57ec2bd7c1d9332ec3947b0927d487caf730ea17d105_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/event.svg"));
+        $__internal_181ac2b29c2a8eec373adc100c7c351370352ffdeb5cf1ed2d322c52bb2a90db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_181ac2b29c2a8eec373adc100c7c351370352ffdeb5cf1ed2d322c52bb2a90db->enter($__internal_181ac2b29c2a8eec373adc100c7c351370352ffdeb5cf1ed2d322c52bb2a90db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/event.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -32,7 +32,7 @@ class __TwigTemplate_299c749bee1bc108e53a8bbccd24c0242007fc5fb7d588f32369c1791bb
 </svg>
 ";
         
-        $__internal_f1e4cdf04c18ad0b7c0e57ec2bd7c1d9332ec3947b0927d487caf730ea17d105->leave($__internal_f1e4cdf04c18ad0b7c0e57ec2bd7c1d9332ec3947b0927d487caf730ea17d105_prof);
+        $__internal_181ac2b29c2a8eec373adc100c7c351370352ffdeb5cf1ed2d322c52bb2a90db->leave($__internal_181ac2b29c2a8eec373adc100c7c351370352ffdeb5cf1ed2d322c52bb2a90db_prof);
 
     }
 
@@ -67,6 +67,6 @@ class __TwigTemplate_299c749bee1bc108e53a8bbccd24c0242007fc5fb7d588f32369c1791bb
     c-0.5-0.1-1.1,0.3-1.1,0.9S13.9,3,14.4,3c3.3,0.5,5.8,3.4,5.8,6.8c0,0.5,0.5,1.2,1,1.2c0,0,0,0,0,0c0.6,0,1-0.7,1-1.2
     C22.2,5.5,19,1.6,14.7,1z\"/>
 </svg>
-", "@WebProfiler/Icon/event.svg", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\event.svg");
+", "@WebProfiler/Icon/event.svg", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\event.svg");
     }
 }

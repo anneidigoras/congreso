@@ -15,8 +15,8 @@ class __TwigTemplate_93baef3b9ec4111df768a9301b34ad790618b160a568823c512fe25ccf9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_41459e78054dacc27187f91c571d42ee89547210724e9c604365eff985fd28de = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_41459e78054dacc27187f91c571d42ee89547210724e9c604365eff985fd28de->enter($__internal_41459e78054dacc27187f91c571d42ee89547210724e9c604365eff985fd28de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:base_js.html.twig"));
+        $__internal_03c3622ffcf4a65a1e320dead78031e3a5d6ca9983afe1ba3c95588b35b0e6cd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_03c3622ffcf4a65a1e320dead78031e3a5d6ca9983afe1ba3c95588b35b0e6cd->enter($__internal_03c3622ffcf4a65a1e320dead78031e3a5d6ca9983afe1ba3c95588b35b0e6cd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:base_js.html.twig"));
 
         // line 1
         echo "<script>/*<![CDATA[*/
@@ -488,7 +488,7 @@ class __TwigTemplate_93baef3b9ec4111df768a9301b34ad790618b160a568823c512fe25ccf9
 /*]]>*/</script>
 ";
         
-        $__internal_41459e78054dacc27187f91c571d42ee89547210724e9c604365eff985fd28de->leave($__internal_41459e78054dacc27187f91c571d42ee89547210724e9c604365eff985fd28de_prof);
+        $__internal_03c3622ffcf4a65a1e320dead78031e3a5d6ca9983afe1ba3c95588b35b0e6cd->leave($__internal_03c3622ffcf4a65a1e320dead78031e3a5d6ca9983afe1ba3c95588b35b0e6cd_prof);
 
     }
 
@@ -965,6 +965,6 @@ class __TwigTemplate_93baef3b9ec4111df768a9301b34ad790618b160a568823c512fe25ccf9
     });
 
 /*]]>*/</script>
-", "WebProfilerBundle:Profiler:base_js.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/base_js.html.twig");
+", "WebProfilerBundle:Profiler:base_js.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/base_js.html.twig");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_33e22050c7340a1708053dde2c199d2d7826936e2a2cec57b8ed1df4131
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5288da89f496c3eb563db5c8394ac69370c2ed33819eb030afbda23af7e63ab9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5288da89f496c3eb563db5c8394ac69370c2ed33819eb030afbda23af7e63ab9->enter($__internal_5288da89f496c3eb563db5c8394ac69370c2ed33819eb030afbda23af7e63ab9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/trace.txt.twig"));
+        $__internal_a55b54035dfd72f057eaed144f64dfa45025f39e3516f2e902eaa9ceb258c89a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a55b54035dfd72f057eaed144f64dfa45025f39e3516f2e902eaa9ceb258c89a->enter($__internal_a55b54035dfd72f057eaed144f64dfa45025f39e3516f2e902eaa9ceb258c89a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/trace.txt.twig"));
 
         // line 1
         if ($this->getAttribute(($context["trace"] ?? $this->getContext($context, "trace")), "function", array())) {
@@ -43,7 +43,7 @@ class __TwigTemplate_33e22050c7340a1708053dde2c199d2d7826936e2a2cec57b8ed1df4131
 ";
         }
         
-        $__internal_5288da89f496c3eb563db5c8394ac69370c2ed33819eb030afbda23af7e63ab9->leave($__internal_5288da89f496c3eb563db5c8394ac69370c2ed33819eb030afbda23af7e63ab9_prof);
+        $__internal_a55b54035dfd72f057eaed144f64dfa45025f39e3516f2e902eaa9ceb258c89a->leave($__internal_a55b54035dfd72f057eaed144f64dfa45025f39e3516f2e902eaa9ceb258c89a_prof);
 
     }
 
@@ -80,6 +80,6 @@ class __TwigTemplate_33e22050c7340a1708053dde2c199d2d7826936e2a2cec57b8ed1df4131
 {% if trace.file is defined and trace.line is defined %}
         in {{ trace.file }} line {{ trace.line }}
 {% endif %}
-", "@Twig/Exception/trace.txt.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\trace.txt.twig");
+", "@Twig/Exception/trace.txt.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\trace.txt.twig");
     }
 }

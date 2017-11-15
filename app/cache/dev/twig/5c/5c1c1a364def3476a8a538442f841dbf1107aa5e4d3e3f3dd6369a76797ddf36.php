@@ -15,8 +15,8 @@ class __TwigTemplate_c027c69229ab8a33e9a9e0ac280c0c4b2ef387e01d26f608efe25297194
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5b0bddbe1e0954bd349ec5025c497bd647ff5669a8e1f70908437d3763db7d4b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5b0bddbe1e0954bd349ec5025c497bd647ff5669a8e1f70908437d3763db7d4b->enter($__internal_5b0bddbe1e0954bd349ec5025c497bd647ff5669a8e1f70908437d3763db7d4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Doctrine/Collector/explain.html.twig"));
+        $__internal_4fdf6ad15b9c337f0716bfb676c3420195794d1393cff9d37332c4703a13b4e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4fdf6ad15b9c337f0716bfb676c3420195794d1393cff9d37332c4703a13b4e1->enter($__internal_4fdf6ad15b9c337f0716bfb676c3420195794d1393cff9d37332c4703a13b4e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Doctrine/Collector/explain.html.twig"));
 
         // line 1
         if ((twig_length_filter($this->env, $this->getAttribute(($context["data"] ?? $this->getContext($context, "data")), 0, array(), "array")) > 1)) {
@@ -98,7 +98,7 @@ class __TwigTemplate_c027c69229ab8a33e9a9e0ac280c0c4b2ef387e01d26f608efe25297194
 ";
         }
         
-        $__internal_5b0bddbe1e0954bd349ec5025c497bd647ff5669a8e1f70908437d3763db7d4b->leave($__internal_5b0bddbe1e0954bd349ec5025c497bd647ff5669a8e1f70908437d3763db7d4b_prof);
+        $__internal_4fdf6ad15b9c337f0716bfb676c3420195794d1393cff9d37332c4703a13b4e1->leave($__internal_4fdf6ad15b9c337f0716bfb676c3420195794d1393cff9d37332c4703a13b4e1_prof);
 
     }
 
@@ -155,6 +155,6 @@ class __TwigTemplate_c027c69229ab8a33e9a9e0ac280c0c4b2ef387e01d26f608efe25297194
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
     }
 }

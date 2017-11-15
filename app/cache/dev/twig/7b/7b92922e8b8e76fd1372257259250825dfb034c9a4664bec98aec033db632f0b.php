@@ -15,14 +15,14 @@ class __TwigTemplate_6089b51c445ce91b696adfe564e97c152be3c2500c4059eb176307b1429
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e545b109428dc1d46c93a23dc4a3e6e2ccb7088301cb4dcc7da6b6e884ac9e08 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e545b109428dc1d46c93a23dc4a3e6e2ccb7088301cb4dcc7da6b6e884ac9e08->enter($__internal_e545b109428dc1d46c93a23dc4a3e6e2ccb7088301cb4dcc7da6b6e884ac9e08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
+        $__internal_a1e7f0191faa90e5258df2a089a3f4a31e88953da4997d8ef72a42dce168717e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a1e7f0191faa90e5258df2a089a3f4a31e88953da4997d8ef72a42dce168717e->enter($__internal_a1e7f0191faa90e5258df2a089a3f4a31e88953da4997d8ef72a42dce168717e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'search')) ?>
 ";
         
-        $__internal_e545b109428dc1d46c93a23dc4a3e6e2ccb7088301cb4dcc7da6b6e884ac9e08->leave($__internal_e545b109428dc1d46c93a23dc4a3e6e2ccb7088301cb4dcc7da6b6e884ac9e08_prof);
+        $__internal_a1e7f0191faa90e5258df2a089a3f4a31e88953da4997d8ef72a42dce168717e->leave($__internal_a1e7f0191faa90e5258df2a089a3f4a31e88953da4997d8ef72a42dce168717e_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_6089b51c445ce91b696adfe564e97c152be3c2500c4059eb176307b1429
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'search')) ?>
-", "@Framework/Form/search_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\search_widget.html.php");
+", "@Framework/Form/search_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\search_widget.html.php");
     }
 }

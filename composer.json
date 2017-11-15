@@ -6,7 +6,7 @@
     "autoload": {
         "psr-4": {
             "": "src/",
-            "BloggerBlogBundle\\":"src/Blogger/BlogBundle"
+            "CongresoCongresoBundle\\":"src/Congreso/CongresoBundle"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },

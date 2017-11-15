@@ -40,6 +40,6 @@ class __TwigTemplate_802eaf96182261a83866d6b2c22348f4f8dcd6d0f00ceea2516ad06c51a
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/search_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\search_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/search_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\search_widget.html.php");
     }
 }

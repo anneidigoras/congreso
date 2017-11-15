@@ -15,14 +15,14 @@ class __TwigTemplate_566afe1593c5a8794f9cf98c044f0758d37fa89229094f9149722b5853f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_94790c37a2ec905e938872fcbff9cb4ab4ddc9b7216c95ca7ddfa4ee0836c575 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_94790c37a2ec905e938872fcbff9cb4ab4ddc9b7216c95ca7ddfa4ee0836c575->enter($__internal_94790c37a2ec905e938872fcbff9cb4ab4ddc9b7216c95ca7ddfa4ee0836c575_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/reset_widget.html.php"));
+        $__internal_2b0f55a63ef13693a55b16dbced3c050c1f6a89aae2d5f457d4bf6e577a73ff2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2b0f55a63ef13693a55b16dbced3c050c1f6a89aae2d5f457d4bf6e577a73ff2->enter($__internal_2b0f55a63ef13693a55b16dbced3c050c1f6a89aae2d5f457d4bf6e577a73ff2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/reset_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'button_widget', array('type' => isset(\$type) ? \$type : 'reset')) ?>
 ";
         
-        $__internal_94790c37a2ec905e938872fcbff9cb4ab4ddc9b7216c95ca7ddfa4ee0836c575->leave($__internal_94790c37a2ec905e938872fcbff9cb4ab4ddc9b7216c95ca7ddfa4ee0836c575_prof);
+        $__internal_2b0f55a63ef13693a55b16dbced3c050c1f6a89aae2d5f457d4bf6e577a73ff2->leave($__internal_2b0f55a63ef13693a55b16dbced3c050c1f6a89aae2d5f457d4bf6e577a73ff2_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_566afe1593c5a8794f9cf98c044f0758d37fa89229094f9149722b5853f
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'button_widget', array('type' => isset(\$type) ? \$type : 'reset')) ?>
-", "@Framework/Form/reset_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\reset_widget.html.php");
+", "@Framework/Form/reset_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\reset_widget.html.php");
     }
 }

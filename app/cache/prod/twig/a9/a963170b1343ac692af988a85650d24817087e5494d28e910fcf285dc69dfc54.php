@@ -121,6 +121,6 @@ class __TwigTemplate_b749439c9e232050af15bc7dc862149703530739109b4939c8b843b065f
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
+        return new Twig_Source("", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
     }
 }

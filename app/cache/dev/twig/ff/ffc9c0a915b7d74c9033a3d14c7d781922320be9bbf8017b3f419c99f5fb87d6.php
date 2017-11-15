@@ -15,8 +15,8 @@ class __TwigTemplate_bac0ac7bcb35b9891c049c286c1c91df7923e196a04c1ee2c3f7d26d92a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8248a728c4f45f279bfc6aa8d1b07e274ba8e884393666c2ad72e6882053d23d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8248a728c4f45f279bfc6aa8d1b07e274ba8e884393666c2ad72e6882053d23d->enter($__internal_8248a728c4f45f279bfc6aa8d1b07e274ba8e884393666c2ad72e6882053d23d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
+        $__internal_7758c0b1367b0cbe3b0c230f98a9e8319fda8e9b3e61bba842b1593dbc708fd6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7758c0b1367b0cbe3b0c230f98a9e8319fda8e9b3e61bba842b1593dbc708fd6->enter($__internal_7758c0b1367b0cbe3b0c230f98a9e8319fda8e9b3e61bba842b1593dbc708fd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
 
         // line 3
         $context["mixins"] = array("break_long_words" => "-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;", "monospace_font" => "font-family: monospace; font-size: 13px; font-size-adjust: 0.5;", "sans_serif_font" => "font-family: Helvetica, Arial, sans-serif;", "subtle_border_and_shadow" => "background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);");
@@ -1084,7 +1084,7 @@ table.logs .sf-call-stack abbr {
 }
 ";
         
-        $__internal_8248a728c4f45f279bfc6aa8d1b07e274ba8e884393666c2ad72e6882053d23d->leave($__internal_8248a728c4f45f279bfc6aa8d1b07e274ba8e884393666c2ad72e6882053d23d_prof);
+        $__internal_7758c0b1367b0cbe3b0c230f98a9e8319fda8e9b3e61bba842b1593dbc708fd6->leave($__internal_7758c0b1367b0cbe3b0c230f98a9e8319fda8e9b3e61bba842b1593dbc708fd6_prof);
 
     }
 
@@ -2111,6 +2111,6 @@ table.logs .sf-call-stack abbr {
         margin-left: 2px;
     }
 }
-", "@WebProfiler/Profiler/profiler.css.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\profiler.css.twig");
+", "@WebProfiler/Profiler/profiler.css.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\profiler.css.twig");
     }
 }

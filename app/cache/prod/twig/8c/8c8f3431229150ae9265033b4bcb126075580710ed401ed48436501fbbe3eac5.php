@@ -61,6 +61,6 @@ class __TwigTemplate_f1b9f9372df39f7be729053199d0d5a8626ffee2eef2cb93418e29dc99d
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/time_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\time_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/time_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\time_widget.html.php");
     }
 }

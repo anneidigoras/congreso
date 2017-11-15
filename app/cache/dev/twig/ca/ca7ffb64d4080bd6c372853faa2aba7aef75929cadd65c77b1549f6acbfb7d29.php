@@ -15,8 +15,8 @@ class __TwigTemplate_39e377187f20984e81081e86f6619fae2aa058cedbc82326b6260f85153
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aca18977f2e6786980aa429b211e9e88b30e8da650ed356c205005d45043110a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_aca18977f2e6786980aa429b211e9e88b30e8da650ed356c205005d45043110a->enter($__internal_aca18977f2e6786980aa429b211e9e88b30e8da650ed356c205005d45043110a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+        $__internal_69249123143cfd109ab7a140df23862a205cda534bf879f6bf347f8a9988f1f9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_69249123143cfd109ab7a140df23862a205cda534bf879f6bf347f8a9988f1f9->enter($__internal_69249123143cfd109ab7a140df23862a205cda534bf879f6bf347f8a9988f1f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -28,7 +28,7 @@ class __TwigTemplate_39e377187f20984e81081e86f6619fae2aa058cedbc82326b6260f85153
 </svg>
 ";
         
-        $__internal_aca18977f2e6786980aa429b211e9e88b30e8da650ed356c205005d45043110a->leave($__internal_aca18977f2e6786980aa429b211e9e88b30e8da650ed356c205005d45043110a_prof);
+        $__internal_69249123143cfd109ab7a140df23862a205cda534bf879f6bf347f8a9988f1f9->leave($__internal_69249123143cfd109ab7a140df23862a205cda534bf879f6bf347f8a9988f1f9_prof);
 
     }
 
@@ -59,6 +59,6 @@ class __TwigTemplate_39e377187f20984e81081e86f6619fae2aa058cedbc82326b6260f85153
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
-", "@WebProfiler/Icon/logger.svg", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
+", "@WebProfiler/Icon/logger.svg", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
     }
 }

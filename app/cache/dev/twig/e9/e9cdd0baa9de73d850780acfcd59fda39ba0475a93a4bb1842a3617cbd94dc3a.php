@@ -15,14 +15,14 @@ class __TwigTemplate_f141eb1e86b072731be90c05b7295252f22a1560d0a5d7e76efd4e6e06a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0d1acde347a740084db2fa48882c29cf40c5262a041acb231b50270e1ca19ec2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0d1acde347a740084db2fa48882c29cf40c5262a041acb231b50270e1ca19ec2->enter($__internal_0d1acde347a740084db2fa48882c29cf40c5262a041acb231b50270e1ca19ec2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/hidden_widget.html.php"));
+        $__internal_c3208054a602acae74de78a9a39b771b634aec1a7d9a360e5b7b83d128d7d698 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c3208054a602acae74de78a9a39b771b634aec1a7d9a360e5b7b83d128d7d698->enter($__internal_c3208054a602acae74de78a9a39b771b634aec1a7d9a360e5b7b83d128d7d698_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/hidden_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'hidden')) ?>
 ";
         
-        $__internal_0d1acde347a740084db2fa48882c29cf40c5262a041acb231b50270e1ca19ec2->leave($__internal_0d1acde347a740084db2fa48882c29cf40c5262a041acb231b50270e1ca19ec2_prof);
+        $__internal_c3208054a602acae74de78a9a39b771b634aec1a7d9a360e5b7b83d128d7d698->leave($__internal_c3208054a602acae74de78a9a39b771b634aec1a7d9a360e5b7b83d128d7d698_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_f141eb1e86b072731be90c05b7295252f22a1560d0a5d7e76efd4e6e06a
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'hidden')) ?>
-", "@Framework/Form/hidden_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\hidden_widget.html.php");
+", "@Framework/Form/hidden_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\hidden_widget.html.php");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_e4e893b849885634c8375e28c2229a99f4a8f377eabc78653ee8bf12456
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_467085ca14709b743aaf49794b06814b812383167f0532aa6cbfb94f760c16e9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_467085ca14709b743aaf49794b06814b812383167f0532aa6cbfb94f760c16e9->enter($__internal_467085ca14709b743aaf49794b06814b812383167f0532aa6cbfb94f760c16e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_options.html.php"));
+        $__internal_58ed59b18d98f1a5bb12dd98f2343c13d06f86e8265d74dcc3677b2374b81e91 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_58ed59b18d98f1a5bb12dd98f2343c13d06f86e8265d74dcc3677b2374b81e91->enter($__internal_58ed59b18d98f1a5bb12dd98f2343c13d06f86e8265d74dcc3677b2374b81e91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_options.html.php"));
 
         // line 1
         echo "<?php use Symfony\\Component\\Form\\ChoiceList\\View\\ChoiceGroupView;
@@ -34,7 +34,7 @@ class __TwigTemplate_e4e893b849885634c8375e28c2229a99f4a8f377eabc78653ee8bf12456
 <?php endforeach ?>
 ";
         
-        $__internal_467085ca14709b743aaf49794b06814b812383167f0532aa6cbfb94f760c16e9->leave($__internal_467085ca14709b743aaf49794b06814b812383167f0532aa6cbfb94f760c16e9_prof);
+        $__internal_58ed59b18d98f1a5bb12dd98f2343c13d06f86e8265d74dcc3677b2374b81e91->leave($__internal_58ed59b18d98f1a5bb12dd98f2343c13d06f86e8265d74dcc3677b2374b81e91_prof);
 
     }
 
@@ -71,6 +71,6 @@ class __TwigTemplate_e4e893b849885634c8375e28c2229a99f4a8f377eabc78653ee8bf12456
         <option value=\"<?php echo \$view->escape(\$choice->value) ?>\" <?php echo \$formHelper->block(\$form, 'choice_attributes', array('choice_attr' => \$choice->attr)) ?><?php if (\$is_selected(\$choice->value, \$value)): ?> selected=\"selected\"<?php endif?>><?php echo \$view->escape(false !== \$choice_translation_domain ? \$translatorHelper->trans(\$choice->label, array(), \$choice_translation_domain) : \$choice->label) ?></option>
     <?php endif ?>
 <?php endforeach ?>
-", "@Framework/Form/choice_widget_options.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_options.html.php");
+", "@Framework/Form/choice_widget_options.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_options.html.php");
     }
 }

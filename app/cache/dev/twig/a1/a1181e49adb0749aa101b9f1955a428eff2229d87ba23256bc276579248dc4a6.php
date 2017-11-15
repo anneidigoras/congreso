@@ -15,8 +15,8 @@ class __TwigTemplate_3f89c6ce4cacbc265e2ccd8886d0e4fe63d0d6d979842890e07488e3398
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6d01414a43a78f8ecaba0334be69f9c8b7c3ca92e3915a5c627dae07531f2658 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6d01414a43a78f8ecaba0334be69f9c8b7c3ca92e3915a5c627dae07531f2658->enter($__internal_6d01414a43a78f8ecaba0334be69f9c8b7c3ca92e3915a5c627dae07531f2658_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
+        $__internal_5c5f112f515044513c2cc61833a86e4019761e716e24231bcc5ad01231bc0b2c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5c5f112f515044513c2cc61833a86e4019761e716e24231bcc5ad01231bc0b2c->enter($__internal_5c5f112f515044513c2cc61833a86e4019761e716e24231bcc5ad01231bc0b2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
 
         // line 1
         echo "<h2>Routing</h2>
@@ -197,7 +197,7 @@ $context["trace"], "level", array()) == 2)) {
 </p>
 ";
         
-        $__internal_6d01414a43a78f8ecaba0334be69f9c8b7c3ca92e3915a5c627dae07531f2658->leave($__internal_6d01414a43a78f8ecaba0334be69f9c8b7c3ca92e3915a5c627dae07531f2658_prof);
+        $__internal_5c5f112f515044513c2cc61833a86e4019761e716e24231bcc5ad01231bc0b2c->leave($__internal_5c5f112f515044513c2cc61833a86e4019761e716e24231bcc5ad01231bc0b2c_prof);
 
     }
 
@@ -304,6 +304,6 @@ $context["trace"], "level", array()) == 2)) {
     Note: These matching logs are based on the current router configuration,
     which might differ from the configuration used when profiling this request.
 </p>
-", "WebProfilerBundle:Router:panel.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Router/panel.html.twig");
+", "WebProfilerBundle:Router:panel.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Router/panel.html.twig");
     }
 }

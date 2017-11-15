@@ -22,6 +22,15 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $context = $this->context;
         $request = $this->request;
 
+        // congreso_congreso_homepage
+        if ('' === rtrim($pathinfo, '/')) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'congreso_congreso_homepage');
+            }
+
+            return array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\DefaultController::indexAction',  '_route' => 'congreso_congreso_homepage',);
+        }
+
         // homepage
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {

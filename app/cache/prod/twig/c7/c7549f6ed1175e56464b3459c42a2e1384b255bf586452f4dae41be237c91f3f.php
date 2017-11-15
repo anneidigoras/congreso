@@ -50,6 +50,6 @@ class __TwigTemplate_beb1a0ce48e926468a89541e7530d6aa37eafb6342e74289993b66d65e8
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/Exception/exception.css.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\exception.css.twig");
+        return new Twig_Source("", "@Twig/Exception/exception.css.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\exception.css.twig");
     }
 }

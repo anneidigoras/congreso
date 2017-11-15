@@ -293,6 +293,6 @@ class __TwigTemplate_b154ea50911f53aef4260cf390ce64ffe44e492b26c8f09fb8fb7491b3e
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "SecurityBundle:Collector:security.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views/Collector/security.html.twig");
+        return new Twig_Source("", "SecurityBundle:Collector:security.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views/Collector/security.html.twig");
     }
 }

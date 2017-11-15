@@ -15,8 +15,8 @@ class __TwigTemplate_028e0ae99a795f7ee6d5db025b0ac3e42f29f541abe12d5dbef3af4a423
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_436e04286f0b387e8acc9668d0f959bdc2cc5f7a00f257ef25d17636a4abe7e6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_436e04286f0b387e8acc9668d0f959bdc2cc5f7a00f257ef25d17636a4abe7e6->enter($__internal_436e04286f0b387e8acc9668d0f959bdc2cc5f7a00f257ef25d17636a4abe7e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:explain.html.twig"));
+        $__internal_e9a67baac91ff204f2fb3af898b85727f5f34dc6f1873adad5f4fd2638133a63 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e9a67baac91ff204f2fb3af898b85727f5f34dc6f1873adad5f4fd2638133a63->enter($__internal_e9a67baac91ff204f2fb3af898b85727f5f34dc6f1873adad5f4fd2638133a63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:explain.html.twig"));
 
         // line 1
         if ((twig_length_filter($this->env, $this->getAttribute(($context["data"] ?? $this->getContext($context, "data")), 0, array(), "array")) > 1)) {
@@ -98,7 +98,7 @@ class __TwigTemplate_028e0ae99a795f7ee6d5db025b0ac3e42f29f541abe12d5dbef3af4a423
 ";
         }
         
-        $__internal_436e04286f0b387e8acc9668d0f959bdc2cc5f7a00f257ef25d17636a4abe7e6->leave($__internal_436e04286f0b387e8acc9668d0f959bdc2cc5f7a00f257ef25d17636a4abe7e6_prof);
+        $__internal_e9a67baac91ff204f2fb3af898b85727f5f34dc6f1873adad5f4fd2638133a63->leave($__internal_e9a67baac91ff204f2fb3af898b85727f5f34dc6f1873adad5f4fd2638133a63_prof);
 
     }
 
@@ -155,6 +155,6 @@ class __TwigTemplate_028e0ae99a795f7ee6d5db025b0ac3e42f29f541abe12d5dbef3af4a423
         {%- endfor -%}
     </pre>
 {% endif %}
-", "DoctrineBundle:Collector:explain.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "DoctrineBundle:Collector:explain.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

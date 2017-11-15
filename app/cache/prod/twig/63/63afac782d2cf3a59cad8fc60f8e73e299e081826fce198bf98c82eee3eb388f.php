@@ -44,6 +44,6 @@ class __TwigTemplate_4dd5ed899e926d09c12e5dfd6dafd1bec8275b0275a8ec4c0517a5aef46
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/FormTable/hidden_row.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\FormTable\\hidden_row.html.php");
+        return new Twig_Source("", "@Framework/FormTable/hidden_row.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\FormTable\\hidden_row.html.php");
     }
 }

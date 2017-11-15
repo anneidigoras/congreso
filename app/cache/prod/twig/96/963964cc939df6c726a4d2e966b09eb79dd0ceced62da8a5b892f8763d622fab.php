@@ -46,6 +46,6 @@ class __TwigTemplate_8c71b5d8dd9e07bc1f218ce83d5e00214149cba7ff07c5b1bc13cdb55c0
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle:Exception:error.json.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/error.json.twig");
+        return new Twig_Source("", "TwigBundle:Exception:error.json.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/error.json.twig");
     }
 }

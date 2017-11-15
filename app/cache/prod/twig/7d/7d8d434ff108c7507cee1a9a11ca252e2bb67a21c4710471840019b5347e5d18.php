@@ -128,6 +128,6 @@ class __TwigTemplate_ce67ce9ff5c542602364a14690a0c3db3ef8d35d2e1253b043af8636542
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle:Exception:traces.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/traces.html.twig");
+        return new Twig_Source("", "TwigBundle:Exception:traces.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/traces.html.twig");
     }
 }

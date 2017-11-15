@@ -15,8 +15,8 @@ class __TwigTemplate_b6c4c0d453b1463867ca872d52765e84603070e81fd6c8b2bd6c05fc833
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_31e7ac7460a41ba5b3d9cda1fc9a243f4544852cce4b4e3b043ee3adfdb0c542 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_31e7ac7460a41ba5b3d9cda1fc9a243f4544852cce4b4e3b043ee3adfdb0c542->enter($__internal_31e7ac7460a41ba5b3d9cda1fc9a243f4544852cce4b4e3b043ee3adfdb0c542_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.css.twig"));
+        $__internal_73b734fb79e4084fc34b93a1b1e6b19bf166624418816fd656596bb7ab5b02d6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_73b734fb79e4084fc34b93a1b1e6b19bf166624418816fd656596bb7ab5b02d6->enter($__internal_73b734fb79e4084fc34b93a1b1e6b19bf166624418816fd656596bb7ab5b02d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.css.twig"));
 
         // line 1
         echo "/*
@@ -30,7 +30,7 @@ class __TwigTemplate_b6c4c0d453b1463867ca872d52765e84603070e81fd6c8b2bd6c05fc833
 */
 ";
         
-        $__internal_31e7ac7460a41ba5b3d9cda1fc9a243f4544852cce4b4e3b043ee3adfdb0c542->leave($__internal_31e7ac7460a41ba5b3d9cda1fc9a243f4544852cce4b4e3b043ee3adfdb0c542_prof);
+        $__internal_73b734fb79e4084fc34b93a1b1e6b19bf166624418816fd656596bb7ab5b02d6->leave($__internal_73b734fb79e4084fc34b93a1b1e6b19bf166624418816fd656596bb7ab5b02d6_prof);
 
     }
 
@@ -63,6 +63,6 @@ class __TwigTemplate_b6c4c0d453b1463867ca872d52765e84603070e81fd6c8b2bd6c05fc833
 {{ status_code }} {{ status_text }}
 
 */
-", "TwigBundle:Exception:error.css.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/error.css.twig");
+", "TwigBundle:Exception:error.css.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/error.css.twig");
     }
 }

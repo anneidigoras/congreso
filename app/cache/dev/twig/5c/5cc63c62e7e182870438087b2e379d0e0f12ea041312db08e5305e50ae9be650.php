@@ -15,8 +15,8 @@ class __TwigTemplate_61cccbafe09f4d6949269ee5300757b54d291d54337ff6f3498d6fbdf6e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d629454c4760977345da739ca83c6cdc2820cb103d0d8d9209fd13732c9b130c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d629454c4760977345da739ca83c6cdc2820cb103d0d8d9209fd13732c9b130c->enter($__internal_d629454c4760977345da739ca83c6cdc2820cb103d0d8d9209fd13732c9b130c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/error.xml.twig"));
+        $__internal_68801ee1f43ef316a8b70056641b8d16fbdf8ded6fa38e296feea5696e1ec2d3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_68801ee1f43ef316a8b70056641b8d16fbdf8ded6fa38e296feea5696e1ec2d3->enter($__internal_68801ee1f43ef316a8b70056641b8d16fbdf8ded6fa38e296feea5696e1ec2d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/error.xml.twig"));
 
         // line 1
         echo "<?xml version=\"1.0\" encoding=\"";
@@ -31,7 +31,7 @@ class __TwigTemplate_61cccbafe09f4d6949269ee5300757b54d291d54337ff6f3498d6fbdf6e
         echo "\" />
 ";
         
-        $__internal_d629454c4760977345da739ca83c6cdc2820cb103d0d8d9209fd13732c9b130c->leave($__internal_d629454c4760977345da739ca83c6cdc2820cb103d0d8d9209fd13732c9b130c_prof);
+        $__internal_68801ee1f43ef316a8b70056641b8d16fbdf8ded6fa38e296feea5696e1ec2d3->leave($__internal_68801ee1f43ef316a8b70056641b8d16fbdf8ded6fa38e296feea5696e1ec2d3_prof);
 
     }
 
@@ -63,6 +63,6 @@ class __TwigTemplate_61cccbafe09f4d6949269ee5300757b54d291d54337ff6f3498d6fbdf6e
         return new Twig_Source("<?xml version=\"1.0\" encoding=\"{{ _charset }}\" ?>
 
 <error code=\"{{ status_code }}\" message=\"{{ status_text }}\" />
-", "@Twig/Exception/error.xml.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.xml.twig");
+", "@Twig/Exception/error.xml.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.xml.twig");
     }
 }

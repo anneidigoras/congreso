@@ -39,6 +39,6 @@ class __TwigTemplate_04d32a4431f2f0249ea8575269b767c0d8c2ded0e5466f2b49b194dda4f
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/Exception/error.atom.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.atom.twig");
+        return new Twig_Source("", "@Twig/Exception/error.atom.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.atom.twig");
     }
 }

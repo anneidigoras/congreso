@@ -15,8 +15,8 @@ class __TwigTemplate_956580cf4af1c53641ead38ab9c4a9e3b97c2cb061200083d2557b0243c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_153e41a763f6a15fa45147e66a6fd2cc3052470cb37efb0d5cc98ca6896fab6c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_153e41a763f6a15fa45147e66a6fd2cc3052470cb37efb0d5cc98ca6896fab6c->enter($__internal_153e41a763f6a15fa45147e66a6fd2cc3052470cb37efb0d5cc98ca6896fab6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/error.txt.twig"));
+        $__internal_680997f9dd3069c9245a2a963ec71e5ddf5e8880599786e8ea77c61a72abf69b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_680997f9dd3069c9245a2a963ec71e5ddf5e8880599786e8ea77c61a72abf69b->enter($__internal_680997f9dd3069c9245a2a963ec71e5ddf5e8880599786e8ea77c61a72abf69b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/error.txt.twig"));
 
         // line 1
         echo "Oops! An Error Occurred
@@ -33,7 +33,7 @@ Something is broken. Please let us know what you were doing when this error occu
 We will fix it as soon as possible. Sorry for any inconvenience caused.
 ";
         
-        $__internal_153e41a763f6a15fa45147e66a6fd2cc3052470cb37efb0d5cc98ca6896fab6c->leave($__internal_153e41a763f6a15fa45147e66a6fd2cc3052470cb37efb0d5cc98ca6896fab6c_prof);
+        $__internal_680997f9dd3069c9245a2a963ec71e5ddf5e8880599786e8ea77c61a72abf69b->leave($__internal_680997f9dd3069c9245a2a963ec71e5ddf5e8880599786e8ea77c61a72abf69b_prof);
 
     }
 
@@ -69,6 +69,6 @@ The server returned a \"{{ status_code }} {{ status_text }}\".
 
 Something is broken. Please let us know what you were doing when this error occurred.
 We will fix it as soon as possible. Sorry for any inconvenience caused.
-", "@Twig/Exception/error.txt.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.txt.twig");
+", "@Twig/Exception/error.txt.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.txt.twig");
     }
 }

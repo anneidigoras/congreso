@@ -15,8 +15,8 @@ class __TwigTemplate_a94326d40401991f30c3d9f4b30537b14d0e848d78a7da2a82786330ab0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_10322a278dbaacb2a7f23ba68e2326902dcea4993c56ada1a00b92b4ea29d878 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_10322a278dbaacb2a7f23ba68e2326902dcea4993c56ada1a00b92b4ea29d878->enter($__internal_10322a278dbaacb2a7f23ba68e2326902dcea4993c56ada1a00b92b4ea29d878_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/base_js.html.twig"));
+        $__internal_7d782447bc9836ab8026a394511576f1a8029dad99acf8c85ab2bce0d1888760 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7d782447bc9836ab8026a394511576f1a8029dad99acf8c85ab2bce0d1888760->enter($__internal_7d782447bc9836ab8026a394511576f1a8029dad99acf8c85ab2bce0d1888760_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/base_js.html.twig"));
 
         // line 1
         echo "<script>/*<![CDATA[*/
@@ -488,7 +488,7 @@ class __TwigTemplate_a94326d40401991f30c3d9f4b30537b14d0e848d78a7da2a82786330ab0
 /*]]>*/</script>
 ";
         
-        $__internal_10322a278dbaacb2a7f23ba68e2326902dcea4993c56ada1a00b92b4ea29d878->leave($__internal_10322a278dbaacb2a7f23ba68e2326902dcea4993c56ada1a00b92b4ea29d878_prof);
+        $__internal_7d782447bc9836ab8026a394511576f1a8029dad99acf8c85ab2bce0d1888760->leave($__internal_7d782447bc9836ab8026a394511576f1a8029dad99acf8c85ab2bce0d1888760_prof);
 
     }
 
@@ -965,6 +965,6 @@ class __TwigTemplate_a94326d40401991f30c3d9f4b30537b14d0e848d78a7da2a82786330ab0
     });
 
 /*]]>*/</script>
-", "@WebProfiler/Profiler/base_js.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
+", "@WebProfiler/Profiler/base_js.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
     }
 }

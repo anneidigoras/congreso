@@ -45,6 +45,6 @@ class __TwigTemplate_0de18a7219b4781eef6116a22755cd796359be05d2fa0390a0a5a485637
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/choice_widget_expanded.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_expanded.html.php");
+        return new Twig_Source("", "@Framework/Form/choice_widget_expanded.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\choice_widget_expanded.html.php");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_72baa2deab5e23f5def7d92b23069fbd8e6d04d0af165c91abdbde6ccaf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6f272919b90badc60ae4589af1acaea5311ffd9bce3befcf62c499ae4adb025c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6f272919b90badc60ae4589af1acaea5311ffd9bce3befcf62c499ae4adb025c->enter($__internal_6f272919b90badc60ae4589af1acaea5311ffd9bce3befcf62c499ae4adb025c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/error.js.twig"));
+        $__internal_9d0b38519a2e2a778de55e44825027ca0124f32d8ad672dadf1befbf698f28a7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9d0b38519a2e2a778de55e44825027ca0124f32d8ad672dadf1befbf698f28a7->enter($__internal_9d0b38519a2e2a778de55e44825027ca0124f32d8ad672dadf1befbf698f28a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/error.js.twig"));
 
         // line 1
         echo "/*
@@ -30,7 +30,7 @@ class __TwigTemplate_72baa2deab5e23f5def7d92b23069fbd8e6d04d0af165c91abdbde6ccaf
 */
 ";
         
-        $__internal_6f272919b90badc60ae4589af1acaea5311ffd9bce3befcf62c499ae4adb025c->leave($__internal_6f272919b90badc60ae4589af1acaea5311ffd9bce3befcf62c499ae4adb025c_prof);
+        $__internal_9d0b38519a2e2a778de55e44825027ca0124f32d8ad672dadf1befbf698f28a7->leave($__internal_9d0b38519a2e2a778de55e44825027ca0124f32d8ad672dadf1befbf698f28a7_prof);
 
     }
 
@@ -63,6 +63,6 @@ class __TwigTemplate_72baa2deab5e23f5def7d92b23069fbd8e6d04d0af165c91abdbde6ccaf
 {{ status_code }} {{ status_text }}
 
 */
-", "@Twig/Exception/error.js.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.js.twig");
+", "@Twig/Exception/error.js.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.js.twig");
     }
 }

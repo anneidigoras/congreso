@@ -47,6 +47,6 @@ class __TwigTemplate_dd0e0c48644d6a5ed6503268d3ccb73a021093ac55d4abb51321f9af5a2
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/form_label.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\form_label.html.php");
+        return new Twig_Source("", "@Framework/Form/form_label.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\form_label.html.php");
     }
 }

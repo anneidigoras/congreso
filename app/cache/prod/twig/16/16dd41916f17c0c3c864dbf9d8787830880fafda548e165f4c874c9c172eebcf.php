@@ -47,6 +47,6 @@ class __TwigTemplate_0ddcb7f095891bbf9be5a61ed3adb5283e8b7eecac0fdfe77b52a90f6ef
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/money_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\money_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/money_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\money_widget.html.php");
     }
 }

@@ -43,6 +43,6 @@ class __TwigTemplate_d8cd1a58c72198cc1664808478ec64e4fc22232f3917267630fd64016ec
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Doctrine/Collector/icon.svg", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\icon.svg");
+        return new Twig_Source("", "@Doctrine/Collector/icon.svg", "C:\\xampp\\htdocs\\congreso\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }

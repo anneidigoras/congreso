@@ -15,13 +15,13 @@ class __TwigTemplate_ba26e614fddc4f8022092da591c45bf7c6e3c668ccfbe491f0f6416fcef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_54fef22ee3395e0f0c3a8ac9599d6928e0d14918327e6ae43943073113730d99 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_54fef22ee3395e0f0c3a8ac9599d6928e0d14918327e6ae43943073113730d99->enter($__internal_54fef22ee3395e0f0c3a8ac9599d6928e0d14918327e6ae43943073113730d99_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/exception.rdf.twig"));
+        $__internal_cafa7898ff9c5b6b9ca34d6103d25597054e7f81510ed0b03d12ddc4316c1004 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cafa7898ff9c5b6b9ca34d6103d25597054e7f81510ed0b03d12ddc4316c1004->enter($__internal_cafa7898ff9c5b6b9ca34d6103d25597054e7f81510ed0b03d12ddc4316c1004_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/exception.rdf.twig"));
 
         // line 1
         $this->loadTemplate("@Twig/Exception/exception.xml.twig", "@Twig/Exception/exception.rdf.twig", 1)->display(array_merge($context, array("exception" => ($context["exception"] ?? $this->getContext($context, "exception")))));
         
-        $__internal_54fef22ee3395e0f0c3a8ac9599d6928e0d14918327e6ae43943073113730d99->leave($__internal_54fef22ee3395e0f0c3a8ac9599d6928e0d14918327e6ae43943073113730d99_prof);
+        $__internal_cafa7898ff9c5b6b9ca34d6103d25597054e7f81510ed0b03d12ddc4316c1004->leave($__internal_cafa7898ff9c5b6b9ca34d6103d25597054e7f81510ed0b03d12ddc4316c1004_prof);
 
     }
 
@@ -51,6 +51,6 @@ class __TwigTemplate_ba26e614fddc4f8022092da591c45bf7c6e3c668ccfbe491f0f6416fcef
     public function getSourceContext()
     {
         return new Twig_Source("{% include '@Twig/Exception/exception.xml.twig' with { 'exception': exception } %}
-", "@Twig/Exception/exception.rdf.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\exception.rdf.twig");
+", "@Twig/Exception/exception.rdf.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\exception.rdf.twig");
     }
 }

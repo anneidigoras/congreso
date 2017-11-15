@@ -124,6 +124,6 @@ class __TwigTemplate_6d99e36de98ea364b8992b81fcc698323f25d9436acfa92484de477a669
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle::layout.html.twig", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/layout.html.twig");
+        return new Twig_Source("", "TwigBundle::layout.html.twig", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/layout.html.twig");
     }
 }

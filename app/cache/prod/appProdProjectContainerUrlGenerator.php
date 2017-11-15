@@ -18,6 +18,7 @@ class appProdProjectContainerUrlGenerator extends Symfony\Component\Routing\Gene
         $this->logger = $logger;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
+        'congreso_congreso_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Congreso\\CongresoBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }

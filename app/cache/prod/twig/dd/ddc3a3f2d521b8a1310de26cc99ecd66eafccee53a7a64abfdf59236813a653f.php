@@ -40,6 +40,6 @@ class __TwigTemplate_6d7cbd8735963f26564367f20e046137d46602b4918f5ae12c19c599c5e
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/percent_widget.html.php", "C:\\xampp\\htdocs\\ingweb_congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\percent_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/percent_widget.html.php", "C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Resources\\views\\Form\\percent_widget.html.php");
     }
 }
