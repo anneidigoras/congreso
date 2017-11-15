@@ -106,10 +106,10 @@ be configured with the ``entity_manager`` option::
     use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
     /**
-     * @Route("/blog/{id}")
+     * @Route("/congreso/{id}")
      * @ParamConverter("post", class="SensioBlogBundle:Post", options={"entity_manager" = "foo"})
      */
-    public function showAction(Post $post)
+    public function showAction(Articulo $articulo)
     {
     }
 
@@ -117,10 +117,10 @@ If the placeholder does not have the same name as the primary key, pass the ``id
 option::
 
     /**
-     * @Route("/blog/{post_id}")
-     * @ParamConverter("post", class="SensioBlogBundle:Post", options={"id" = "post_id"})
+     * @Route("/congreso/{articulo_id}")
+     * @ParamConverter("articulo", class="SensioBlogBundle:Post", options={"id" = "articulo_id"})
      */
-    public function showAction(Post $post)
+    public function showAction(Articulo $articulo)
     {
     }
 
@@ -132,14 +132,14 @@ option::
 This also allows you to have multiple converters in one action::
 
     /**
-     * @Route("/blog/{id}/comments/{comment_id}")
+     * @Route("/congreso/{id}/comments/{comment_id}")
      * @ParamConverter("comment", class="SensioBlogBundle:Comment", options={"id" = "comment_id"})
      */
-    public function showAction(Post $post, Comment $comment)
+    public function showAction(Articulo $articulo, Comment $comment)
     {
     }
 
-In the example above, the ``$post`` parameter is handled automatically, but ``$comment`` is
+In the example above, the ``$articulo`` parameter is handled automatically, but ``$comment`` is
 configured with the annotation since they can not both follow the default convention.
 
 If you want to match an entity using multiple fields use the ``mapping`` hash
@@ -147,11 +147,11 @@ option: the key is route placeholder name and the value is the Doctrine
 field name::
 
     /**
-     * @Route("/blog/{date}/{slug}/comments/{comment_slug}")
-     * @ParamConverter("post", options={"mapping": {"date": "date", "slug": "slug"}})
+     * @Route("/congreso/{date}/{slug}/comments/{comment_slug}")
+     * @ParamConverter("articulo", options={"mapping": {"date": "date", "slug": "slug"}})
      * @ParamConverter("comment", options={"mapping": {"comment_slug": "slug"}})
      */
-    public function showAction(Post $post, Comment $comment)
+    public function showAction(Articulo $articulo, Comment $comment)
     {
     }
 
@@ -159,10 +159,10 @@ If you are matching an entity using several fields, but you want to exclude a
 route parameter from being part of the criteria::
 
     /**
-     * @Route("/blog/{date}/{slug}")
-     * @ParamConverter("post", options={"exclude": {"date"}})
+     * @Route("/congreso/{date}/{slug}")
+     * @ParamConverter("Articulo", options={"exclude": {"date"}})
      */
-    public function showAction(Post $post, \DateTime $date)
+    public function showAction(Articulo $articulo, \DateTime $date)
     {
     }
 
@@ -170,7 +170,7 @@ If you want to specify the repository method to use to find the entity (for exam
 to add joins to the query), you can add the ``repository_method`` option::
 
     /**
-     * @Route("/blog/{id}")
+     * @Route("/congreso/{id}")
      * @ParamConverter("post", class="SensioBlogBundle:Post", options={"repository_method" = "findWithJoins"})
      */
     public function showAction(Post $post)
