@@ -55,6 +55,15 @@ class Comment
     private $updated;
 
 
+
+    public function __construct()
+    {
+        $this->setCreated(new \DateTime());
+        $this->setUpdated(new \DateTime());
+
+        $this->setApproved(true);
+    }
+
     /**
      * Get id
      *
@@ -202,4 +211,10 @@ class Comment
     {
         return $this->articulo;
     }
+
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+{
+    $metadata->addPropertyConstraint('user', new NotBlank(array('message' => 'Debes indicar tu nombre')));
+    $metadata->addPropertyConstraint('comment', new NotBlank(array('message' => 'Debes escribir tu comentario')));
+}
 }

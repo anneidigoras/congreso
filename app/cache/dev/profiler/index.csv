@@ -115,3 +115,11 @@ e9995b,127.0.0.1,GET,http://congreso.localhost/app_dev.php/style.css,1510761460,
 d7ff8c,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/style.css,1510761512,,404
 5a340c,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/images/img03.png,1510761512,81ab5e,200
 81ab5e,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/images/img03.png,1510761512,,404
+304ad1,127.0.0.1,GET,http://congreso.localhost/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCongresoCongresoBundle%253AComment%253Anew,1510761736,54e24b,200
+54e24b,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/1,1510761737,,200
+c09b08,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/style.css,1510761737,70f253,200
+70f253,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/style.css,1510761738,,404
+de12a8,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/images/img03.png,1510761739,a11d55,200
+a11d55,127.0.0.1,GET,http://congreso.localhost/app_dev.php/show/images/img03.png,1510761739,,404
+44049d,127.0.0.1,GET,http://congreso.localhost/app_dev.php/comment/1?congreso_congresobundle_comment%5B_token%5D=04zo0bzAuSlIsOxf9vTrwY58a_WG1XG25YoCPc55vuI&congreso_congresobundle_comment%5Bcomment%5D=tf7r6ct6y&congreso_congresobundle_comment%5Buser%5D=ggvgvg,1510761744,604b72,200
+604b72,127.0.0.1,GET,http://congreso.localhost/app_dev.php/comment/1?congreso_congresobundle_comment%5B_token%5D=04zo0bzAuSlIsOxf9vTrwY58a_WG1XG25YoCPc55vuI&congreso_congresobundle_comment%5Bcomment%5D=tf7r6ct6y&congreso_congresobundle_comment%5Buser%5D=ggvgvg,1510761744,,405

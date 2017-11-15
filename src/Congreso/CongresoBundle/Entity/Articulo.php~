@@ -78,6 +78,8 @@ class Articulo
         $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
         $this->tracks = new \Doctrine\Common\Collections\ArrayCollection();
         $this->cientificos = new \Doctrine\Common\Collections\ArrayCollection();
+
+        $this->setDate(new \DateTime());
     }
 
     /**
@@ -223,6 +225,8 @@ class Articulo
      */
     public function addTrack(\Congreso\CongresoBundle\Entity\Track $tracks)
     {
+         $tracks->addArticulo($this);
+
         $this->tracks[] = $tracks;
     
         return $this;
@@ -235,6 +239,7 @@ class Articulo
      */
     public function removeTrack(\Congreso\CongresoBundle\Entity\Track $tracks)
     {
+         $tracks->removeArticulo($this);
         $this->tracks->removeElement($tracks);
     }
 
@@ -256,6 +261,7 @@ class Articulo
      */
     public function addCientifico(\Congreso\CongresoBundle\Entity\Cientifico $cientificos)
     {
+        $cientificos->addArticulo($this);
         $this->cientificos[] = $cientificos;
     
         return $this;
@@ -268,6 +274,7 @@ class Articulo
      */
     public function removeCientifico(\Congreso\CongresoBundle\Entity\Cientifico $cientificos)
     {
+        $cientificos->removeArticulo($this);
         $this->cientificos->removeElement($cientificos);
     }
 
@@ -279,5 +286,10 @@ class Articulo
     public function getCientificos()
     {
         return $this->cientificos;
+    }
+
+    public function getnumbercomments()
+    {
+        return count($this->comments);
     }
 }

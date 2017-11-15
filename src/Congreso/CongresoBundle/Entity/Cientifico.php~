@@ -33,7 +33,7 @@ class Cientifico
 	protected $id;
 
 	/**
-	* @ORM\Column(type="varchar")
+	* @ORM\Column(type="text")
 	*/
 	protected $nombre;
 
@@ -69,10 +69,10 @@ class Cientifico
     /**
      * Set nombre
      *
-     * @param \varchar $nombre
+     * @param string $nombre
      * @return Cientifico
      */
-    public function setNombre(\varchar $nombre)
+    public function setNombre($nombre)
     {
         $this->nombre = $nombre;
     
@@ -82,7 +82,7 @@ class Cientifico
     /**
      * Get nombre
      *
-     * @return \varchar 
+     * @return string 
      */
     public function getNombre()
     {

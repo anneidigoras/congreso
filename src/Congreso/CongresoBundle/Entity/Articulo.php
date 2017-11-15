@@ -292,4 +292,11 @@ class Articulo
     {
         return count($this->comments);
     }
+
+
+    public function __toString()
+    {
+    return $this->getTitulo();
+    }
+
 }
