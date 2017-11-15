@@ -1,3 +1,14 @@
-congreso_congreso_homepage:
-    path:     /
-    defaults: { _controller: CongresoCongresoBundle:Default:index }
+blogger_blog_list:
+    path: /
+    defaults: { _controller: CongresoCongresoBundle:Congreso:list }
+
+blogger_blog_show:
+    path: /show/{id}
+    defaults: { _controller: CongresoCongresoBundle:Congreso:show }
+    
+blogger_comment_create:
+    path:  /comment/{post_id}
+    defaults: { _controller: CongresoCongresoBundle:Comment:create }
+    requirements:
+        _method: POST
+        post_id: \d+

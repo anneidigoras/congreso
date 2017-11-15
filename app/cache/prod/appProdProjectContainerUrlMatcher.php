@@ -22,14 +22,30 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $context = $this->context;
         $request = $this->request;
 
-        // congreso_congreso_homepage
+        // blogger_blog_list
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'congreso_congreso_homepage');
+                return $this->redirect($pathinfo.'/', 'blogger_blog_list');
             }
 
-            return array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\DefaultController::indexAction',  '_route' => 'congreso_congreso_homepage',);
+            return array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::listAction',  '_route' => 'blogger_blog_list',);
         }
+
+        // blogger_blog_show
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'blogger_blog_show')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::showAction',));
+        }
+
+        // blogger_comment_create
+        if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<post_id>\\d+)$#s', $pathinfo, $matches)) {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_blogger_comment_create;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'blogger_comment_create')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CommentController::createAction',));
+        }
+        not_blogger_comment_create:
 
         // homepage
         if ('' === rtrim($pathinfo, '/')) {

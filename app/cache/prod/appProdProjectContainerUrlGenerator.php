@@ -18,7 +18,9 @@ class appProdProjectContainerUrlGenerator extends Symfony\Component\Routing\Gene
         $this->logger = $logger;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
-        'congreso_congreso_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Congreso\\CongresoBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'blogger_blog_list' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::listAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'blogger_blog_show' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::showAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/show',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'blogger_comment_create' => array (  0 =>   array (    0 => 'post_id',  ),  1 =>   array (    '_controller' => 'Congreso\\CongresoBundle\\Controller\\CommentController::createAction',  ),  2 =>   array (    'post_id' => '\\d+',    '_method' => 'POST',  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '\\d+',      3 => 'post_id',    ),    1 =>     array (      0 => 'text',      1 => '/comment',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }

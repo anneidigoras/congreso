@@ -1,0 +1,39 @@
+{# src/Congreso/CongresoBundle/Resources/views/Congreso/show.html.twig #}
+{% extends "CongresoCongresoBundle::layout.html.twig" %}
+{% block title %}List of Articulos{% endblock %}
+
+{% block body %}
+	<h1>{{ articulo.titulo }}</h1>
+
+	<div class="body">{{ articulo.cuerpo }}</div>
+	<div class="date">{{ articulo.publicacion |date('d-m-Y') }}</div>
+	<section class="comments" id="comments">
+		<section class="previous-comments">
+			<h3>Comentarios</h3>
+			{% include 'CongresoCongresoBundle:Comment:list.html.twig' with { 'comments': comments } %}
+		</section>
+		<h3>Añadir comentario</h3>
+		{{ render(controller( 'CongresoCongresoBundle:Comment:new', { 'articulo_id': articulo.id } )) }}
+    </section>
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/blog.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block sidebar %}
+
+<div class="tracks">
+
+{% include 'CongresoCongresoBundle:Track:list.html.twig' with { 'tracks': tracks } %}
+
+</div>
+
+<div class="cientificos">
+
+{% include 'CongresoCongresoBundle:Cientifico:list.html.twig' with { 'cientificos': cientificos } %}
+
+</div>
+
+{% endblock %}

@@ -9,21 +9,34 @@ class CongresoController extends Controller
 
 	public function listAction()
 	{
-		$posts = $this->get('doctrine')->getManager()->createQuery('SELECT p FROM BloggerBlogBundle:Post p')->execute();
+	$articulos = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Cientifico')->getLatestArticulos();
 
-		return $this->render('BloggerBlogBundle:Blog:list.html.php', array('posts' => $posts));
+	return $this->render('CongresoCongresoBundle:Congreso:list.html.twig', array('cientificos' => $cientificos));
 	}
 
-	public function showAction($id)
-	{
-		$post = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Post')->find($id);
-		if (!$post)
-		{
-			// cause the 404 page not found to be displayed
-			throw $this->createNotFoundException();
-		}
-		
-		return $this->render('BloggerBlogBundle:Blog:show.html.php', array('post' => $post));
+	/*public function getBody($length = null)
+{
+	if (false === is_null($length) && $length > 0 && strlen($this->body) > $length)
+		return substr($this->body, 0, $length) . "(...)";
+	else
+		return $this->body;
+}*/
+
+public function showAction($id)
+{
+	$articulo = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Articulo')->find($id);
+	
+	if (!$articulo) {
+		throw $this->createNotFoundException('No se ha encontrado el articulo.');
 	}
+
+	/*$tags = $cientifico->getTags();
+	$comments = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Comment')->getCommentsForPost($post->getId());
+*/
+	return $this->render('CongresoCongresoBundle:Congreso:show.html.twig', array('cientifico' => $cientifico, 'comments' => $comments ,'tracks' => $tracks, 'cientificos' => $cientificos));
+}
+
+
+
 }
 ?>

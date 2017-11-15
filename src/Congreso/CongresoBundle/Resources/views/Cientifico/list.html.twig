@@ -1,0 +1,11 @@
+{# src/Congreso/CongresoBundle/Resources/views/Cientifico/list.html.twig #}
+
+{% for cientifico in cientificos %}
+
+    <p>{{ tag.nombre }}</p>
+
+{% else %}
+
+    <p>No hay cientificos para este articulo.</p>
+
+{% endfor %}
