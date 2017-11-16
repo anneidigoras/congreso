@@ -48,6 +48,12 @@ class Cientifico
 	*/
 	protected $nacimiento;
 
+
+    /**
+    * @ORM\Column(type="text")
+    */
+    protected $info;
+
     /**
      * Constructor
      */
@@ -133,6 +139,30 @@ class Cientifico
     public function getNacimiento()
     {
         return $this->nacimiento;
+    }
+
+
+    /**
+     * Set info
+     *
+     * @param string $info
+     * @return Cientifico
+     */
+    public function setInfo($info)
+    {
+        $this->info = $info;
+    
+        return $this;
+    }
+
+    /**
+     * Get info
+     *
+     * @return string 
+     */
+    public function getInfo()
+    {
+        return $this->info;
     }
 
     /**

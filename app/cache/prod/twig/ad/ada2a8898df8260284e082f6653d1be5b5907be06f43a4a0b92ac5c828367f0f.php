@@ -28,7 +28,7 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Lista de Articulos";
+        echo "Lista de Artículos";
     }
 
     // line 5

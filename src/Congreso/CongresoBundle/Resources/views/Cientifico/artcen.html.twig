@@ -26,9 +26,66 @@
 
 {% block sidebar1 %}
 <div class="cientificos">
-<p>{{ cientifico.nombre }}</p>
-<p>{{ cientifico.especialidad }}</p>
-<div class="date"><time datetime="{{ cientifico.nacimiento|date('c') }}">{{ cientifico.nacimiento|date('l, F j, Y') }}</time></div>
+<p>Estos son los artículos que ha escrito {{ cientifico.nombre }}.</p>
+<p>{{ cientifico.nombre }} es un respetado profesional en los siguientes campos: {{ cientifico.especialidad }}</p>
+
+
+<p>Nació el 
+{% if cientifico.nacimiento|date('d') ==  "01" %}
+    1
+{% elseif cientifico.nacimiento|date('d') ==  "02" %}
+    2
+{% elseif cientifico.nacimiento|date('d') ==  "03" %}
+    3
+{% elseif cientifico.nacimiento|date('d') ==  "04" %}
+    4
+{% elseif cientifico.nacimiento|date('d') ==  "05" %}
+    5
+{% elseif cientifico.nacimiento|date('d') ==  "06" %}
+    6
+{% elseif cientifico.nacimiento|date('d') ==  "07" %}
+    7
+{% elseif cientifico.nacimiento|date('d') ==  "08" %}
+    8
+{% elseif cientifico.nacimiento|date('d') ==  "09" %}
+    9
+{% else %}
+    {{ cientifico.nacimiento|date('d') }}
+{% endif %}
+
+ de 
+
+{% if cientifico.nacimiento|date('m') ==  "01" %}
+    enero
+{% elseif cientifico.nacimiento|date('m') ==  "02" %}
+    febrero
+{% elseif cientifico.nacimiento|date('m') ==  "03" %}
+    marzo
+{% elseif cientifico.nacimiento|date('m') ==  "04" %}
+    abril
+{% elseif cientifico.nacimiento|date('m') ==  "05" %}
+    mayo
+{% elseif cientifico.nacimiento|date('m') ==  "06" %}
+    junio
+{% elseif cientifico.nacimiento|date('m') ==  "07" %}
+    julio
+{% elseif cientifico.nacimiento|date('m') ==  "08" %}
+    agosto
+{% elseif cientifico.nacimiento|date('m') ==  "09" %}
+    septiembre
+{% elseif cientifico.nacimiento|date('m') ==  "10" %}
+    octubre
+{% elseif cientifico.nacimiento|date('m') ==  "11" %}
+    noviembre
+{% elseif cientifico.nacimiento|date('m') ==  "12" %}
+    diciembre
+{% endif %}
+
+ de {{ cientifico.nacimiento|date('Y') }}</p>
+
+
+
+<p> Si quiere más información sobre {{ cientifico.nombre }}, pulse <a href="{{ cientifico.info }}">aquí</a>.</p>
 </div>
 {% endblock %}
 

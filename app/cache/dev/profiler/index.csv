@@ -1,0 +1,5 @@
+3a5f29,127.0.0.1,GET,http://congreso.localhost/app_dev.php/,1510870033,,200
+2e24f4,127.0.0.1,GET,http://congreso.localhost/app_dev.php/style.css,1510870035,1ea44c,200
+1ea44c,127.0.0.1,GET,http://congreso.localhost/app_dev.php/style.css,1510870036,,404
+3eca19,127.0.0.1,GET,http://congreso.localhost/app_dev.php/images/img03.png,1510870037,0019e1,200
+0019e1,127.0.0.1,GET,http://congreso.localhost/app_dev.php/images/img03.png,1510870037,,404

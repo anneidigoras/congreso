@@ -64,10 +64,10 @@ class Cientifico extends \Congreso\CongresoBundle\Entity\Cientifico implements \
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Cientifico' . "\0" . 'articulos', 'id', 'nombre', 'especialidad', 'nacimiento');
+            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Cientifico' . "\0" . 'articulos', 'id', 'nombre', 'especialidad', 'nacimiento', 'info');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Cientifico' . "\0" . 'articulos', 'id', 'nombre', 'especialidad', 'nacimiento');
+        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Cientifico' . "\0" . 'articulos', 'id', 'nombre', 'especialidad', 'nacimiento', 'info');
     }
 
     /**
@@ -252,6 +252,28 @@ class Cientifico extends \Congreso\CongresoBundle\Entity\Cientifico implements \
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNacimiento', array());
 
         return parent::getNacimiento();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setInfo($info)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setInfo', array($info));
+
+        return parent::setInfo($info);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getInfo()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getInfo', array());
+
+        return parent::getInfo();
     }
 
     /**
