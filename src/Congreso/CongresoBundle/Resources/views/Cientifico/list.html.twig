@@ -2,7 +2,7 @@
 
 {% for cientifico in cientificos %}
 
-    <p>{{ cientifico.nombre }}</p>
+    <p class="continue"><a href="{{ path('congreso_cientifico_artcen', { 'id': cientifico.id }) }}">{{ cientifico.nombre }}</a></p>
 
 {% else %}
 

@@ -1,5 +1,5 @@
 <?php
-// src/Blogger/BlogBundle/Controller/BlogController.php
+// src/Congreso/CongresoBundle/Controller/CongresoController.php
 namespace Congreso\CongresoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

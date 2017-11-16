@@ -15,8 +15,8 @@ class __TwigTemplate_a5db7c6e579d32a8d611003e068aff8c526a35aba3cf28a140d3947e134
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_27334ba659f154610f836e8347c085a807c209a081e7f356de8550445dea96ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_27334ba659f154610f836e8347c085a807c209a081e7f356de8550445dea96ad->enter($__internal_27334ba659f154610f836e8347c085a807c209a081e7f356de8550445dea96ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Comment:list.html.twig"));
+        $__internal_de87ee8a507831c04011c39f9687719a6dd9e8ea565206515db8347f936d2648 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_de87ee8a507831c04011c39f9687719a6dd9e8ea565206515db8347f936d2648->enter($__internal_de87ee8a507831c04011c39f9687719a6dd9e8ea565206515db8347f936d2648_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
@@ -80,7 +80,7 @@ class __TwigTemplate_a5db7c6e579d32a8d611003e068aff8c526a35aba3cf28a140d3947e134
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_27334ba659f154610f836e8347c085a807c209a081e7f356de8550445dea96ad->leave($__internal_27334ba659f154610f836e8347c085a807c209a081e7f356de8550445dea96ad_prof);
+        $__internal_de87ee8a507831c04011c39f9687719a6dd9e8ea565206515db8347f936d2648->leave($__internal_de87ee8a507831c04011c39f9687719a6dd9e8ea565206515db8347f936d2648_prof);
 
     }
 

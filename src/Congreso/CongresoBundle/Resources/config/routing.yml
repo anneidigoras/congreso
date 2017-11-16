@@ -6,6 +6,14 @@ congreso_congreso_show:
     path: /show/{id}
     defaults: { _controller: CongresoCongresoBundle:Congreso:show }
 
+congreso_cientifico_artcen:
+    path: /cen/{id}
+    defaults: { _controller: CongresoCongresoBundle:Cientifico:list }
+
+congreso_track_arttrac:
+    path: /trac/{id}
+    defaults: { _controller: CongresoCongresoBundle:Track:list }
+
 congreso_congreso_contact:
     path:  /contact
     defaults: { _controller: BloggerBlogBundle:Blog:contact }

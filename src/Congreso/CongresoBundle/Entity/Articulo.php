@@ -17,7 +17,7 @@ class Articulo
 	
 
     /**
-    * @ORM\OneToMany(targetEntity="Comment", mappedBy="articulos")
+    * @ORM\OneToMany(targetEntity="Comment", mappedBy="articulo")
     */
     private $comments;
 

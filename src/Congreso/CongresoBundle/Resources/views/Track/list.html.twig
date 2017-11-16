@@ -2,8 +2,7 @@
 
 {% for track in tracks %}
 
-    <p>{{ track.campo }}</p>
-
+    <p class="continue"><a href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></p>
 {% else %}
 
     <p>No hay tracks para este articulo.</p>

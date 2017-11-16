@@ -25,16 +25,17 @@ class __TwigTemplate_d98a8101e43463da5b62ef2bed97a4a21280af0e54bd05f854591421149
         foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
             // line 4
             echo "
-    <p>";
+    <p class=\"continue\"><a href=\"";
             // line 5
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute($context["track"], "id", array()))), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "campo", array()), "html", null, true);
-            echo "</p>
-
+            echo "</a></p>
 ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 8
+            // line 7
             echo "
     <p>No hay tracks para este articulo.</p>
 
@@ -57,7 +58,7 @@ class __TwigTemplate_d98a8101e43463da5b62ef2bed97a4a21280af0e54bd05f854591421149
 
     public function getDebugInfo()
     {
-        return array (  38 => 8,  30 => 5,  27 => 4,  22 => 3,  19 => 2,);
+        return array (  39 => 7,  30 => 5,  27 => 4,  22 => 3,  19 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

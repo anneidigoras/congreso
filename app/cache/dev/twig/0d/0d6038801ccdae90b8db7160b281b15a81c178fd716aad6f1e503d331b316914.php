@@ -22,32 +22,32 @@ class __TwigTemplate_39bd6b1aa12bd9f5fa0b7b49ec06503de12b677bb6876555de2b2ef02a9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e86397df8715070f0a46bdf09d5ab193ea72567c380a612ff7928c370e84df64 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e86397df8715070f0a46bdf09d5ab193ea72567c380a612ff7928c370e84df64->enter($__internal_e86397df8715070f0a46bdf09d5ab193ea72567c380a612ff7928c370e84df64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Comment:create.html.twig"));
+        $__internal_1b78d735b7c6d936a6b5368404379430468ec74ecfaf2860e358d52e5afbd6db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1b78d735b7c6d936a6b5368404379430468ec74ecfaf2860e358d52e5afbd6db->enter($__internal_1b78d735b7c6d936a6b5368404379430468ec74ecfaf2860e358d52e5afbd6db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Comment:create.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e86397df8715070f0a46bdf09d5ab193ea72567c380a612ff7928c370e84df64->leave($__internal_e86397df8715070f0a46bdf09d5ab193ea72567c380a612ff7928c370e84df64_prof);
+        $__internal_1b78d735b7c6d936a6b5368404379430468ec74ecfaf2860e358d52e5afbd6db->leave($__internal_1b78d735b7c6d936a6b5368404379430468ec74ecfaf2860e358d52e5afbd6db_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_06cee58c139fd7c1f6ea5f128d2f6d8e0e0d76feb9d435e185fbcdc542113dfb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_06cee58c139fd7c1f6ea5f128d2f6d8e0e0d76feb9d435e185fbcdc542113dfb->enter($__internal_06cee58c139fd7c1f6ea5f128d2f6d8e0e0d76feb9d435e185fbcdc542113dfb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0ff6d216d5f9365449b39a631f5f66bc8bcd4efca285e4b357ada8e0688384b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0ff6d216d5f9365449b39a631f5f66bc8bcd4efca285e4b357ada8e0688384b2->enter($__internal_0ff6d216d5f9365449b39a631f5f66bc8bcd4efca285e4b357ada8e0688384b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Añadir comentario";
         
-        $__internal_06cee58c139fd7c1f6ea5f128d2f6d8e0e0d76feb9d435e185fbcdc542113dfb->leave($__internal_06cee58c139fd7c1f6ea5f128d2f6d8e0e0d76feb9d435e185fbcdc542113dfb_prof);
+        $__internal_0ff6d216d5f9365449b39a631f5f66bc8bcd4efca285e4b357ada8e0688384b2->leave($__internal_0ff6d216d5f9365449b39a631f5f66bc8bcd4efca285e4b357ada8e0688384b2_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f71e7aee038b5c44b8951df459c819b60d8bbe719eb2b31b21335a1690cf6bf8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f71e7aee038b5c44b8951df459c819b60d8bbe719eb2b31b21335a1690cf6bf8->enter($__internal_f71e7aee038b5c44b8951df459c819b60d8bbe719eb2b31b21335a1690cf6bf8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f967fb223470eef7f0931e869a602e16e7b5596d7a631b333944489b5425fc45 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f967fb223470eef7f0931e869a602e16e7b5596d7a631b333944489b5425fc45->enter($__internal_f967fb223470eef7f0931e869a602e16e7b5596d7a631b333944489b5425fc45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "    <h1>Añadir un comentario al articulo \"";
@@ -57,7 +57,7 @@ class __TwigTemplate_39bd6b1aa12bd9f5fa0b7b49ec06503de12b677bb6876555de2b2ef02a9
         // line 9
         $this->loadTemplate("CongresoCongresoBundle:Comment:form.html.twig", "CongresoCongresoBundle:Comment:create.html.twig", 9)->display(array_merge($context, array("form" => ($context["form"] ?? $this->getContext($context, "form")))));
         
-        $__internal_f71e7aee038b5c44b8951df459c819b60d8bbe719eb2b31b21335a1690cf6bf8->leave($__internal_f71e7aee038b5c44b8951df459c819b60d8bbe719eb2b31b21335a1690cf6bf8_prof);
+        $__internal_f967fb223470eef7f0931e869a602e16e7b5596d7a631b333944489b5425fc45->leave($__internal_f967fb223470eef7f0931e869a602e16e7b5596d7a631b333944489b5425fc45_prof);
 
     }
 

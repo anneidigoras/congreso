@@ -36,6 +36,16 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'congreso_congreso_show')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::showAction',));
         }
 
+        // congreso_cientifico_artcen
+        if (0 === strpos($pathinfo, '/cen') && preg_match('#^/cen/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'congreso_cientifico_artcen')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CientificoController::listAction',));
+        }
+
+        // congreso_track_arttrac
+        if (0 === strpos($pathinfo, '/trac') && preg_match('#^/trac/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'congreso_track_arttrac')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\TrackController::listAction',));
+        }
+
         if (0 === strpos($pathinfo, '/co')) {
             // congreso_congreso_contact
             if ('/contact' === $pathinfo) {

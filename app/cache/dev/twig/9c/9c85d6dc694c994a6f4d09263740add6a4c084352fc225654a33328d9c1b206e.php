@@ -15,8 +15,8 @@ class __TwigTemplate_ff5b382486d27e8570d10a177f88163337fdb585b41aaf1ccc191230801
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_09887162acb2a9817146236ae86691bf5606206930231979c8d12770579d2f76 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_09887162acb2a9817146236ae86691bf5606206930231979c8d12770579d2f76->enter($__internal_09887162acb2a9817146236ae86691bf5606206930231979c8d12770579d2f76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Track:list.html.twig"));
+        $__internal_ffafc9f9dc44a3c678e608bf65e39c0fc930ef898d74e0e85a6752cdd8a2007c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ffafc9f9dc44a3c678e608bf65e39c0fc930ef898d74e0e85a6752cdd8a2007c->enter($__internal_ffafc9f9dc44a3c678e608bf65e39c0fc930ef898d74e0e85a6752cdd8a2007c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Track:list.html.twig"));
 
         // line 2
         echo "
@@ -28,16 +28,17 @@ class __TwigTemplate_ff5b382486d27e8570d10a177f88163337fdb585b41aaf1ccc191230801
         foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
             // line 4
             echo "
-    <p>";
+    <p class=\"continue\"><a href=\"";
             // line 5
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute($context["track"], "id", array()))), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "campo", array()), "html", null, true);
-            echo "</p>
-
+            echo "</a></p>
 ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 8
+            // line 7
             echo "
     <p>No hay tracks para este articulo.</p>
 
@@ -47,7 +48,7 @@ class __TwigTemplate_ff5b382486d27e8570d10a177f88163337fdb585b41aaf1ccc191230801
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_09887162acb2a9817146236ae86691bf5606206930231979c8d12770579d2f76->leave($__internal_09887162acb2a9817146236ae86691bf5606206930231979c8d12770579d2f76_prof);
+        $__internal_ffafc9f9dc44a3c678e608bf65e39c0fc930ef898d74e0e85a6752cdd8a2007c->leave($__internal_ffafc9f9dc44a3c678e608bf65e39c0fc930ef898d74e0e85a6752cdd8a2007c_prof);
 
     }
 
@@ -63,7 +64,7 @@ class __TwigTemplate_ff5b382486d27e8570d10a177f88163337fdb585b41aaf1ccc191230801
 
     public function getDebugInfo()
     {
-        return array (  41 => 8,  33 => 5,  30 => 4,  25 => 3,  22 => 2,);
+        return array (  42 => 7,  33 => 5,  30 => 4,  25 => 3,  22 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -80,8 +81,7 @@ class __TwigTemplate_ff5b382486d27e8570d10a177f88163337fdb585b41aaf1ccc191230801
 
 {% for track in tracks %}
 
-    <p>{{ track.campo }}</p>
-
+    <p class=\"continue\"><a href=\"{{ path('congreso_track_arttrac', { 'id': track.id }) }}\">{{ track.campo }}</a></p>
 {% else %}
 
     <p>No hay tracks para este articulo.</p>

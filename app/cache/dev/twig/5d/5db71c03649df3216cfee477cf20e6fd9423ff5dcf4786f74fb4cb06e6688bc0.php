@@ -15,8 +15,8 @@ class __TwigTemplate_0de0f5feba2c89c256a57bcadde890fa97415dbc4d31da303277a83d53e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5e391ca3e5f07c1aed3b1dc5aee4547131d2606131d8d99ab50c2445ef121335 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5e391ca3e5f07c1aed3b1dc5aee4547131d2606131d8d99ab50c2445ef121335->enter($__internal_5e391ca3e5f07c1aed3b1dc5aee4547131d2606131d8d99ab50c2445ef121335_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Cientifico:list.html.twig"));
+        $__internal_39fa6bcccec66dc9620a737098eb5c64f380c2d1c21bc54b6250c803ccd803ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_39fa6bcccec66dc9620a737098eb5c64f380c2d1c21bc54b6250c803ccd803ea->enter($__internal_39fa6bcccec66dc9620a737098eb5c64f380c2d1c21bc54b6250c803ccd803ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Cientifico:list.html.twig"));
 
         // line 2
         echo "
@@ -28,10 +28,12 @@ class __TwigTemplate_0de0f5feba2c89c256a57bcadde890fa97415dbc4d31da303277a83d53e
         foreach ($context['_seq'] as $context["_key"] => $context["cientifico"]) {
             // line 4
             echo "
-    <p>";
+    <p class=\"continue\"><a href=\"";
             // line 5
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_cientifico_artcen", array("id" => $this->getAttribute($context["cientifico"], "id", array()))), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["cientifico"], "nombre", array()), "html", null, true);
-            echo "</p>
+            echo "</a></p>
 
 ";
             $context['_iterated'] = true;
@@ -47,7 +49,7 @@ class __TwigTemplate_0de0f5feba2c89c256a57bcadde890fa97415dbc4d31da303277a83d53e
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cientifico'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_5e391ca3e5f07c1aed3b1dc5aee4547131d2606131d8d99ab50c2445ef121335->leave($__internal_5e391ca3e5f07c1aed3b1dc5aee4547131d2606131d8d99ab50c2445ef121335_prof);
+        $__internal_39fa6bcccec66dc9620a737098eb5c64f380c2d1c21bc54b6250c803ccd803ea->leave($__internal_39fa6bcccec66dc9620a737098eb5c64f380c2d1c21bc54b6250c803ccd803ea_prof);
 
     }
 
@@ -63,7 +65,7 @@ class __TwigTemplate_0de0f5feba2c89c256a57bcadde890fa97415dbc4d31da303277a83d53e
 
     public function getDebugInfo()
     {
-        return array (  41 => 8,  33 => 5,  30 => 4,  25 => 3,  22 => 2,);
+        return array (  43 => 8,  33 => 5,  30 => 4,  25 => 3,  22 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -80,7 +82,7 @@ class __TwigTemplate_0de0f5feba2c89c256a57bcadde890fa97415dbc4d31da303277a83d53e
 
 {% for cientifico in cientificos %}
 
-    <p>{{ cientifico.nombre }}</p>
+    <p class=\"continue\"><a href=\"{{ path('congreso_cientifico_artcen', { 'id': cientifico.id }) }}\">{{ cientifico.nombre }}</a></p>
 
 {% else %}
 

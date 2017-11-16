@@ -25,10 +25,12 @@ class __TwigTemplate_e588087fb489bcefc5b6baca1d0758344aa50006e12d9e6df5d6308191c
         foreach ($context['_seq'] as $context["_key"] => $context["cientifico"]) {
             // line 4
             echo "
-    <p>";
+    <p class=\"continue\"><a href=\"";
             // line 5
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_cientifico_artcen", array("id" => $this->getAttribute($context["cientifico"], "id", array()))), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["cientifico"], "nombre", array()), "html", null, true);
-            echo "</p>
+            echo "</a></p>
 
 ";
             $context['_iterated'] = true;
@@ -57,7 +59,7 @@ class __TwigTemplate_e588087fb489bcefc5b6baca1d0758344aa50006e12d9e6df5d6308191c
 
     public function getDebugInfo()
     {
-        return array (  38 => 8,  30 => 5,  27 => 4,  22 => 3,  19 => 2,);
+        return array (  40 => 8,  30 => 5,  27 => 4,  22 => 3,  19 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
