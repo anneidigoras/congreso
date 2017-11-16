@@ -22,5 +22,5 @@ congreso_comment_create:
     path:  /comment/{articulo_id}
     defaults: { _controller: CongresoCongresoBundle:Comment:create }
     requirements:
-        _method: ARTICULO
+        _method: GET
         articulo_id: \d+

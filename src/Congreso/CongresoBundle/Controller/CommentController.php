@@ -40,7 +40,7 @@ class CommentController extends Controller
             $em->persist($comment);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('Congreso_Congreso_show', array('id' => $comment->getarticulo()->getId())) . '#comment-' . $comment->getId());
+            return $this->redirect($this->generateUrl('congreso_congreso_show', array('id' => $comment->getarticulo()->getId())) . '#comment-' . $comment->getId());
         }
 
         return $this->render('CongresoCongresoBundle:Comment:create.html.twig', array('comment' => $comment, 'form' => $form->createView()));
@@ -50,7 +50,7 @@ class CommentController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $articulo = $em->getRepository('CongresoCongresoBundle:articulo')->find($articulo_id);
+        $articulo = $em->getRepository('CongresoCongresoBundle:Articulo')->find($articulo_id);
 
         if (!$articulo) {
             throw $this->createNotFoundException('Unable to find Blog articulo.');

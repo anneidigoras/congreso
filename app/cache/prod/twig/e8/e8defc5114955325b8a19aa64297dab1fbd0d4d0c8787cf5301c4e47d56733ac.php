@@ -12,6 +12,7 @@ class __TwigTemplate_e7f40e68635f917427f799e9615bf1dbb39801aa053809c54c4b28bf26a
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'sidebar1' => array($this, 'block_sidebar1'),
         );
     }
 
@@ -86,6 +87,29 @@ class __TwigTemplate_e7f40e68635f917427f799e9615bf1dbb39801aa053809c54c4b28bf26a
         $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
+    // line 27
+    public function block_sidebar1($context, array $blocks = array())
+    {
+        // line 28
+        echo "<div class=\"cientificos\">
+<p>";
+        // line 29
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["cientifico"] ?? null), "nombre", array()), "html", null, true);
+        echo "</p>
+<p>";
+        // line 30
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["cientifico"] ?? null), "especialidad", array()), "html", null, true);
+        echo "</p>
+<div class=\"date\"><time datetime=\"";
+        // line 31
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["cientifico"] ?? null), "nacimiento", array()), "c"), "html", null, true);
+        echo "\">";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["cientifico"] ?? null), "nacimiento", array()), "l, F j, Y"), "html", null, true);
+        echo "</time></div>
+</div>
+";
+    }
+
     public function getTemplateName()
     {
         return "@CongresoCongreso/Cientifico/artcen.html.twig";
@@ -98,7 +122,7 @@ class __TwigTemplate_e7f40e68635f917427f799e9615bf1dbb39801aa053809c54c4b28bf26a
 
     public function getDebugInfo()
     {
-        return array (  81 => 23,  68 => 15,  64 => 14,  55 => 10,  48 => 8,  45 => 7,  39 => 6,  36 => 5,  29 => 3,  11 => 2,);
+        return array (  105 => 31,  101 => 30,  97 => 29,  94 => 28,  91 => 27,  82 => 23,  69 => 15,  65 => 14,  56 => 10,  49 => 8,  46 => 7,  40 => 6,  37 => 5,  30 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

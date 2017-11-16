@@ -54,8 +54,8 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
 
             // congreso_comment_create
             if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<articulo_id>\\d+)$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'ARTICULO') {
-                    $allow[] = 'ARTICULO';
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
                     goto not_congreso_comment_create;
                 }
 
