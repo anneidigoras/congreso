@@ -11,159 +11,119 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'stylesheets' => array($this, 'block_stylesheets'),
-            'navigation' => array($this, 'block_navigation'),
-            'blog_title' => array($this, 'block_blog_title'),
-            'blog_tagline' => array($this, 'block_blog_tagline'),
             'body' => array($this, 'block_body'),
             'sidebar' => array($this, 'block_sidebar'),
-            'footer' => array($this, 'block_footer'),
-            'javascripts' => array($this, 'block_javascripts'),
+            'linea' => array($this, 'block_linea'),
+            'sidebar1' => array($this, 'block_sidebar1'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<!-- app/Resources/views/base.html.twig -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=\"utf-8\" />
-        <title>";
-        // line 6
-        $this->displayBlock('title', $context, $blocks);
-        echo " - symblog</title>
-        <!--[if lt IE 9]>
-            <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
-        <![endif]-->
-        ";
-        // line 10
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 15
-        echo "        <link rel=\"shortcut icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
-    </head>
-    <body>
+        echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
 
-        <section id=\"wrapper\">
-            <header id=\"header\">
-                <div class=\"top\">
-                    ";
+Name       : Sovereign 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120902
+
+-->
+<html xmlns=\"http://www.w3.org/1999/xhtml\">
+<head>
+<meta name=\"keywords\" content=\"\" />
+<meta name=\"description\" content=\"\" />
+<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
+<title>Congreso cientifico</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />
+<link href=\"";
         // line 22
-        $this->displayBlock('navigation', $context, $blocks);
-        // line 33
-        echo "                </div>
-
-                <hgroup>
-                    <h2>";
-        // line 36
-        $this->displayBlock('blog_title', $context, $blocks);
-        echo "</h2>
-                    <h3>";
-        // line 37
-        $this->displayBlock('blog_tagline', $context, $blocks);
-        echo "</h3>
-                </hgroup>
-            </header>
-
-            <section class=\"main-col\">
-                ";
-        // line 42
-        $this->displayBlock('body', $context, $blocks);
-        // line 43
-        echo "            </section>
-            <aside class=\"sidebar\">
-                ";
-        // line 45
-        $this->displayBlock('sidebar', $context, $blocks);
-        // line 46
-        echo "            </aside>
-
-            <div id=\"footer\">
-                ";
-        // line 49
-        $this->displayBlock('footer', $context, $blocks);
-        // line 52
-        echo "            </div>
-        </section>
-
-        ";
-        // line 55
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 56
-        echo "    </body>
-</html>";
-    }
-
-    // line 6
-    public function block_title($context, array $blocks = array())
-    {
-        echo "symblog";
-    }
-
-    // line 10
-    public function block_stylesheets($context, array $blocks = array())
-    {
-        // line 11
-        echo "            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-            <link href=\"";
-        // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/screen.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
-        ";
+</head>
+<body>
+<div id=\"wrapper\">
+\t
+\t\t<div id=\"header\" class=\"container\">
+\t\t\t<div id=\"logo\">
+\t\t\t\t<h1><a href=\"#\">";
+        // line 29
+        $this->displayBlock('title', $context, $blocks);
+        echo " </a></h1>
+\t\t\t</div>
+\t\t</div>
+\t
+\t<!-- end #header -->
+\t<div id=\"page\">
+\t\t<div id=\"three-columns\">
+\t\t
+\t\t</div>
+\t\t<div id=\"content\">
+\t\t\t";
+        // line 39
+        $this->displayBlock('body', $context, $blocks);
+        // line 40
+        echo "\t\t</div>
+\t\t<!-- end #content -->
+\t\t<div id=\"sidebar\">
+\t\t\t";
+        // line 43
+        $this->displayBlock('sidebar', $context, $blocks);
+        // line 44
+        echo "\t\t\t";
+        $this->displayBlock('linea', $context, $blocks);
+        // line 45
+        echo "\t\t\t";
+        $this->displayBlock('sidebar1', $context, $blocks);
+        // line 46
+        echo "
+\t\t</div>
+\t\t
+\t\t<!-- end #sidebar -->
+\t\t<div style=\"clear: both;\">&nbsp;</div>
+\t</div>
+\t<div class=\"container\"><img src=\"images/img03.png\" width=\"1000\" height=\"40\" alt=\"\" /></div>
+\t<!-- end #page --> 
+</div>
+<div id=\"footer-content\"></div>
+<div id=\"footer\">
+\t<p>&copy; Untitled. All rights reserved. Design by <a href=\"http://templated.co\" rel=\"nofollow\">TEMPLATED</a>. Photos by <a href=\"http://fotogrph.com/\">Fotogrph</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
+";
     }
 
-    // line 22
-    public function block_navigation($context, array $blocks = array())
+    // line 29
+    public function block_title($context, array $blocks = array())
     {
-        // line 23
-        echo "                        <nav>
-                            <ul class=\"navigation\">
-                                <li><a href=\"#\">Inicio</a></li>
-                                <li><a href=\"#\">Sobre mi</a></li>
-                                <li><a href=\"#\">Contacto</a></li>
-                                
-
-                            </ul>
-                        </nav>
-                    ";
+        echo " ";
     }
 
-    // line 36
-    public function block_blog_title($context, array $blocks = array())
-    {
-        echo "<a href=\"#\">symblog</a>";
-    }
-
-    // line 37
-    public function block_blog_tagline($context, array $blocks = array())
-    {
-        echo "<a href=\"#\">creando un blog en Symfony2</a>";
-    }
-
-    // line 42
+    // line 39
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 45
+    // line 43
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 49
-    public function block_footer($context, array $blocks = array())
+    // line 44
+    public function block_linea($context, array $blocks = array())
     {
-        // line 50
-        echo "                    Blog en Symfony2 - creado por <a href=\"http://carloslaorden.com\">Carlos Laorden</a>, con la ayuda de <a href=\"https://github.com/dsyph3r\">dsyph3r</a>
-                ";
     }
 
-    // line 55
-    public function block_javascripts($context, array $blocks = array())
+    // line 45
+    public function block_sidebar1($context, array $blocks = array())
     {
     }
 
@@ -179,7 +139,7 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
 
     public function getDebugInfo()
     {
-        return array (  166 => 55,  161 => 50,  158 => 49,  153 => 45,  148 => 42,  142 => 37,  136 => 36,  123 => 23,  120 => 22,  114 => 13,  110 => 11,  107 => 10,  101 => 6,  96 => 56,  94 => 55,  89 => 52,  87 => 49,  82 => 46,  80 => 45,  76 => 43,  74 => 42,  66 => 37,  62 => 36,  57 => 33,  55 => 22,  44 => 15,  42 => 10,  35 => 6,  28 => 1,);
+        return array (  126 => 45,  121 => 44,  116 => 43,  111 => 39,  105 => 29,  85 => 46,  82 => 45,  79 => 44,  77 => 43,  72 => 40,  70 => 39,  57 => 29,  47 => 22,  24 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

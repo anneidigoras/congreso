@@ -386,4 +386,15 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
         return parent::getnumbercomments();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

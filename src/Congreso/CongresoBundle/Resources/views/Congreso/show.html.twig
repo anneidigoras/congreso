@@ -19,21 +19,23 @@
 
 {% block stylesheets %}
 {{ parent() }}
-<link href="{{ asset('css/blog.css') }}" type="text/css" rel="stylesheet" />
+<link href="{{ asset('css/congreso.css') }}" type="text/css" rel="stylesheet" />
 {% endblock %}
 
 {% block sidebar %}
-
 <div class="tracks">
-
 {% include 'CongresoCongresoBundle:Track:list.html.twig' with { 'tracks': tracks } %}
-
 </div>
-
-<div class="cientificos">
-
-{% include 'CongresoCongresoBundle:Cientifico:list.html.twig' with { 'cientificos': cientificos } %}
-
-</div>
-
 {% endblock %}
+
+{% block linea %}
+<p>-----------------</p>
+{% endblock %}
+
+{% block sidebar1 %}
+<div class="cientificos">
+{% include 'CongresoCongresoBundle:Cientifico:list.html.twig' with { 'cientificos': cientificos } %}
+</div>
+{% endblock %}
+
+

@@ -11,219 +11,155 @@ class __TwigTemplate_d882acde4f4b42cd8633763c1d480248c057bf1eb49dc40eeba39fe53f8
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'stylesheets' => array($this, 'block_stylesheets'),
-            'navigation' => array($this, 'block_navigation'),
-            'blog_title' => array($this, 'block_blog_title'),
-            'blog_tagline' => array($this, 'block_blog_tagline'),
             'body' => array($this, 'block_body'),
             'sidebar' => array($this, 'block_sidebar'),
-            'footer' => array($this, 'block_footer'),
-            'javascripts' => array($this, 'block_javascripts'),
+            'linea' => array($this, 'block_linea'),
+            'sidebar1' => array($this, 'block_sidebar1'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4943ea0563a782c45139c3b608e3af0fba6c54aef3b330187abb79b047e24dfe = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4943ea0563a782c45139c3b608e3af0fba6c54aef3b330187abb79b047e24dfe->enter($__internal_4943ea0563a782c45139c3b608e3af0fba6c54aef3b330187abb79b047e24dfe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_fb30fe5cb614c7dcf2319a4a2619d2d58e21f443229e25e67d587316ae5c7c22 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fb30fe5cb614c7dcf2319a4a2619d2d58e21f443229e25e67d587316ae5c7c22->enter($__internal_fb30fe5cb614c7dcf2319a4a2619d2d58e21f443229e25e67d587316ae5c7c22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
-        echo "<!-- app/Resources/views/base.html.twig -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=\"utf-8\" />
-        <title>";
-        // line 6
-        $this->displayBlock('title', $context, $blocks);
-        echo " - symblog</title>
-        <!--[if lt IE 9]>
-            <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
-        <![endif]-->
-        ";
-        // line 10
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 15
-        echo "        <link rel=\"shortcut icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
-    </head>
-    <body>
+        echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
 
-        <section id=\"wrapper\">
-            <header id=\"header\">
-                <div class=\"top\">
-                    ";
+Name       : Sovereign 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120902
+
+-->
+<html xmlns=\"http://www.w3.org/1999/xhtml\">
+<head>
+<meta name=\"keywords\" content=\"\" />
+<meta name=\"description\" content=\"\" />
+<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
+<title>Congreso cientifico</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />
+<link href=\"";
         // line 22
-        $this->displayBlock('navigation', $context, $blocks);
-        // line 33
-        echo "                </div>
-
-                <hgroup>
-                    <h2>";
-        // line 36
-        $this->displayBlock('blog_title', $context, $blocks);
-        echo "</h2>
-                    <h3>";
-        // line 37
-        $this->displayBlock('blog_tagline', $context, $blocks);
-        echo "</h3>
-                </hgroup>
-            </header>
-
-            <section class=\"main-col\">
-                ";
-        // line 42
-        $this->displayBlock('body', $context, $blocks);
-        // line 43
-        echo "            </section>
-            <aside class=\"sidebar\">
-                ";
-        // line 45
-        $this->displayBlock('sidebar', $context, $blocks);
-        // line 46
-        echo "            </aside>
-
-            <div id=\"footer\">
-                ";
-        // line 49
-        $this->displayBlock('footer', $context, $blocks);
-        // line 52
-        echo "            </div>
-        </section>
-
-        ";
-        // line 55
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 56
-        echo "    </body>
-</html>";
-        
-        $__internal_4943ea0563a782c45139c3b608e3af0fba6c54aef3b330187abb79b047e24dfe->leave($__internal_4943ea0563a782c45139c3b608e3af0fba6c54aef3b330187abb79b047e24dfe_prof);
-
-    }
-
-    // line 6
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_b52d11918fd54d806f249acf2938c02843b037a74a2bf04b905cd96131b91156 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b52d11918fd54d806f249acf2938c02843b037a74a2bf04b905cd96131b91156->enter($__internal_b52d11918fd54d806f249acf2938c02843b037a74a2bf04b905cd96131b91156_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
-
-        echo "symblog";
-        
-        $__internal_b52d11918fd54d806f249acf2938c02843b037a74a2bf04b905cd96131b91156->leave($__internal_b52d11918fd54d806f249acf2938c02843b037a74a2bf04b905cd96131b91156_prof);
-
-    }
-
-    // line 10
-    public function block_stylesheets($context, array $blocks = array())
-    {
-        $__internal_e72f37df591b782ca989c9634a21506cfa9b1e3b72f5b54e6ad9991c59eb1f2f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e72f37df591b782ca989c9634a21506cfa9b1e3b72f5b54e6ad9991c59eb1f2f->enter($__internal_e72f37df591b782ca989c9634a21506cfa9b1e3b72f5b54e6ad9991c59eb1f2f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 11
-        echo "            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-            <link href=\"";
-        // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/screen.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
-        ";
+</head>
+<body>
+<div id=\"wrapper\">
+\t
+\t\t<div id=\"header\" class=\"container\">
+\t\t\t<div id=\"logo\">
+\t\t\t\t<h1><a href=\"#\">";
+        // line 29
+        $this->displayBlock('title', $context, $blocks);
+        echo " </a></h1>
+\t\t\t</div>
+\t\t</div>
+\t
+\t<!-- end #header -->
+\t<div id=\"page\">
+\t\t<div id=\"three-columns\">
+\t\t
+\t\t</div>
+\t\t<div id=\"content\">
+\t\t\t";
+        // line 39
+        $this->displayBlock('body', $context, $blocks);
+        // line 40
+        echo "\t\t</div>
+\t\t<!-- end #content -->
+\t\t<div id=\"sidebar\">
+\t\t\t";
+        // line 43
+        $this->displayBlock('sidebar', $context, $blocks);
+        // line 44
+        echo "\t\t\t";
+        $this->displayBlock('linea', $context, $blocks);
+        // line 45
+        echo "\t\t\t";
+        $this->displayBlock('sidebar1', $context, $blocks);
+        // line 46
+        echo "
+\t\t</div>
+\t\t
+\t\t<!-- end #sidebar -->
+\t\t<div style=\"clear: both;\">&nbsp;</div>
+\t</div>
+\t<div class=\"container\"><img src=\"images/img03.png\" width=\"1000\" height=\"40\" alt=\"\" /></div>
+\t<!-- end #page --> 
+</div>
+<div id=\"footer-content\"></div>
+<div id=\"footer\">
+\t<p>&copy; Untitled. All rights reserved. Design by <a href=\"http://templated.co\" rel=\"nofollow\">TEMPLATED</a>. Photos by <a href=\"http://fotogrph.com/\">Fotogrph</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
+";
         
-        $__internal_e72f37df591b782ca989c9634a21506cfa9b1e3b72f5b54e6ad9991c59eb1f2f->leave($__internal_e72f37df591b782ca989c9634a21506cfa9b1e3b72f5b54e6ad9991c59eb1f2f_prof);
+        $__internal_fb30fe5cb614c7dcf2319a4a2619d2d58e21f443229e25e67d587316ae5c7c22->leave($__internal_fb30fe5cb614c7dcf2319a4a2619d2d58e21f443229e25e67d587316ae5c7c22_prof);
 
     }
 
-    // line 22
-    public function block_navigation($context, array $blocks = array())
+    // line 29
+    public function block_title($context, array $blocks = array())
     {
-        $__internal_6734b4318e7e69bf635edab650c59bb5c5988466d8a385def6119dabe1028ded = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6734b4318e7e69bf635edab650c59bb5c5988466d8a385def6119dabe1028ded->enter($__internal_6734b4318e7e69bf635edab650c59bb5c5988466d8a385def6119dabe1028ded_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navigation"));
+        $__internal_2f01d9393347e6fcd39caa8fcd8b21bbd6f6a7211bcbb0a49eb6afbc9f38e474 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2f01d9393347e6fcd39caa8fcd8b21bbd6f6a7211bcbb0a49eb6afbc9f38e474->enter($__internal_2f01d9393347e6fcd39caa8fcd8b21bbd6f6a7211bcbb0a49eb6afbc9f38e474_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        // line 23
-        echo "                        <nav>
-                            <ul class=\"navigation\">
-                                <li><a href=\"#\">Inicio</a></li>
-                                <li><a href=\"#\">Sobre mi</a></li>
-                                <li><a href=\"#\">Contacto</a></li>
-                                
-
-                            </ul>
-                        </nav>
-                    ";
+        echo " ";
         
-        $__internal_6734b4318e7e69bf635edab650c59bb5c5988466d8a385def6119dabe1028ded->leave($__internal_6734b4318e7e69bf635edab650c59bb5c5988466d8a385def6119dabe1028ded_prof);
+        $__internal_2f01d9393347e6fcd39caa8fcd8b21bbd6f6a7211bcbb0a49eb6afbc9f38e474->leave($__internal_2f01d9393347e6fcd39caa8fcd8b21bbd6f6a7211bcbb0a49eb6afbc9f38e474_prof);
 
     }
 
-    // line 36
-    public function block_blog_title($context, array $blocks = array())
-    {
-        $__internal_8220b50d0e3b372df6ce8dbced95d61a8f92767636654c52198e8c18f002de93 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8220b50d0e3b372df6ce8dbced95d61a8f92767636654c52198e8c18f002de93->enter($__internal_8220b50d0e3b372df6ce8dbced95d61a8f92767636654c52198e8c18f002de93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blog_title"));
-
-        echo "<a href=\"#\">symblog</a>";
-        
-        $__internal_8220b50d0e3b372df6ce8dbced95d61a8f92767636654c52198e8c18f002de93->leave($__internal_8220b50d0e3b372df6ce8dbced95d61a8f92767636654c52198e8c18f002de93_prof);
-
-    }
-
-    // line 37
-    public function block_blog_tagline($context, array $blocks = array())
-    {
-        $__internal_4ee2007532b1a84e2fd4f8c817346745a056ecda6dcfa6036ec1b3cc25621863 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4ee2007532b1a84e2fd4f8c817346745a056ecda6dcfa6036ec1b3cc25621863->enter($__internal_4ee2007532b1a84e2fd4f8c817346745a056ecda6dcfa6036ec1b3cc25621863_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blog_tagline"));
-
-        echo "<a href=\"#\">creando un blog en Symfony2</a>";
-        
-        $__internal_4ee2007532b1a84e2fd4f8c817346745a056ecda6dcfa6036ec1b3cc25621863->leave($__internal_4ee2007532b1a84e2fd4f8c817346745a056ecda6dcfa6036ec1b3cc25621863_prof);
-
-    }
-
-    // line 42
+    // line 39
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2786c6d1958f4e56ca8a92081cd14dbc0b9efee026e4eb442668b54edd193b1d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2786c6d1958f4e56ca8a92081cd14dbc0b9efee026e4eb442668b54edd193b1d->enter($__internal_2786c6d1958f4e56ca8a92081cd14dbc0b9efee026e4eb442668b54edd193b1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cce9cbc09559029a157811979d4e49d62e207b5c35b9ae855ac0f949c657ebf5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cce9cbc09559029a157811979d4e49d62e207b5c35b9ae855ac0f949c657ebf5->enter($__internal_cce9cbc09559029a157811979d4e49d62e207b5c35b9ae855ac0f949c657ebf5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_2786c6d1958f4e56ca8a92081cd14dbc0b9efee026e4eb442668b54edd193b1d->leave($__internal_2786c6d1958f4e56ca8a92081cd14dbc0b9efee026e4eb442668b54edd193b1d_prof);
+        $__internal_cce9cbc09559029a157811979d4e49d62e207b5c35b9ae855ac0f949c657ebf5->leave($__internal_cce9cbc09559029a157811979d4e49d62e207b5c35b9ae855ac0f949c657ebf5_prof);
+
+    }
+
+    // line 43
+    public function block_sidebar($context, array $blocks = array())
+    {
+        $__internal_f573786237290dbdee834939ba8482607d865710bbc70ec27811aed09c900423 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f573786237290dbdee834939ba8482607d865710bbc70ec27811aed09c900423->enter($__internal_f573786237290dbdee834939ba8482607d865710bbc70ec27811aed09c900423_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+
+        
+        $__internal_f573786237290dbdee834939ba8482607d865710bbc70ec27811aed09c900423->leave($__internal_f573786237290dbdee834939ba8482607d865710bbc70ec27811aed09c900423_prof);
+
+    }
+
+    // line 44
+    public function block_linea($context, array $blocks = array())
+    {
+        $__internal_088b28ef80a5901bf510e657b54c3ab94d3241f3600623066bb4f33af70de503 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_088b28ef80a5901bf510e657b54c3ab94d3241f3600623066bb4f33af70de503->enter($__internal_088b28ef80a5901bf510e657b54c3ab94d3241f3600623066bb4f33af70de503_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "linea"));
+
+        
+        $__internal_088b28ef80a5901bf510e657b54c3ab94d3241f3600623066bb4f33af70de503->leave($__internal_088b28ef80a5901bf510e657b54c3ab94d3241f3600623066bb4f33af70de503_prof);
 
     }
 
     // line 45
-    public function block_sidebar($context, array $blocks = array())
+    public function block_sidebar1($context, array $blocks = array())
     {
-        $__internal_28c6cc342e41926b07b1d29fceacfdd18f6c6494755352cef5d6c7259b3a5efb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_28c6cc342e41926b07b1d29fceacfdd18f6c6494755352cef5d6c7259b3a5efb->enter($__internal_28c6cc342e41926b07b1d29fceacfdd18f6c6494755352cef5d6c7259b3a5efb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_78b51fb93453143cc1cf2e5fe1dbfd88cdafe352e258bcbb972a43889612f8ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_78b51fb93453143cc1cf2e5fe1dbfd88cdafe352e258bcbb972a43889612f8ea->enter($__internal_78b51fb93453143cc1cf2e5fe1dbfd88cdafe352e258bcbb972a43889612f8ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar1"));
 
         
-        $__internal_28c6cc342e41926b07b1d29fceacfdd18f6c6494755352cef5d6c7259b3a5efb->leave($__internal_28c6cc342e41926b07b1d29fceacfdd18f6c6494755352cef5d6c7259b3a5efb_prof);
-
-    }
-
-    // line 49
-    public function block_footer($context, array $blocks = array())
-    {
-        $__internal_4544e52645e1956e0544b9881169fcca3e6a6c86a5399a112d1908dc6bd6bf74 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4544e52645e1956e0544b9881169fcca3e6a6c86a5399a112d1908dc6bd6bf74->enter($__internal_4544e52645e1956e0544b9881169fcca3e6a6c86a5399a112d1908dc6bd6bf74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
-
-        // line 50
-        echo "                    Blog en Symfony2 - creado por <a href=\"http://carloslaorden.com\">Carlos Laorden</a>, con la ayuda de <a href=\"https://github.com/dsyph3r\">dsyph3r</a>
-                ";
-        
-        $__internal_4544e52645e1956e0544b9881169fcca3e6a6c86a5399a112d1908dc6bd6bf74->leave($__internal_4544e52645e1956e0544b9881169fcca3e6a6c86a5399a112d1908dc6bd6bf74_prof);
-
-    }
-
-    // line 55
-    public function block_javascripts($context, array $blocks = array())
-    {
-        $__internal_a6b361fe93a2e826fc2a5ffb9b24becc2bcc006deb9243a8bbcb8d65414ea783 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a6b361fe93a2e826fc2a5ffb9b24becc2bcc006deb9243a8bbcb8d65414ea783->enter($__internal_a6b361fe93a2e826fc2a5ffb9b24becc2bcc006deb9243a8bbcb8d65414ea783_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
-
-        
-        $__internal_a6b361fe93a2e826fc2a5ffb9b24becc2bcc006deb9243a8bbcb8d65414ea783->leave($__internal_a6b361fe93a2e826fc2a5ffb9b24becc2bcc006deb9243a8bbcb8d65414ea783_prof);
+        $__internal_78b51fb93453143cc1cf2e5fe1dbfd88cdafe352e258bcbb972a43889612f8ea->leave($__internal_78b51fb93453143cc1cf2e5fe1dbfd88cdafe352e258bcbb972a43889612f8ea_prof);
 
     }
 
@@ -239,7 +175,7 @@ class __TwigTemplate_d882acde4f4b42cd8633763c1d480248c057bf1eb49dc40eeba39fe53f8
 
     public function getDebugInfo()
     {
-        return array (  220 => 55,  212 => 50,  206 => 49,  195 => 45,  184 => 42,  172 => 37,  160 => 36,  144 => 23,  138 => 22,  129 => 13,  125 => 11,  119 => 10,  107 => 6,  99 => 56,  97 => 55,  92 => 52,  90 => 49,  85 => 46,  83 => 45,  79 => 43,  77 => 42,  69 => 37,  65 => 36,  60 => 33,  58 => 22,  47 => 15,  45 => 10,  38 => 6,  31 => 1,);
+        return array (  156 => 45,  145 => 44,  134 => 43,  123 => 39,  111 => 29,  88 => 46,  85 => 45,  82 => 44,  80 => 43,  75 => 40,  73 => 39,  60 => 29,  50 => 22,  27 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -252,62 +188,67 @@ class __TwigTemplate_d882acde4f4b42cd8633763c1d480248c057bf1eb49dc40eeba39fe53f8
 
     public function getSourceContext()
     {
-        return new Twig_Source("<!-- app/Resources/views/base.html.twig -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=\"utf-8\" />
-        <title>{% block title %}symblog{% endblock %} - symblog</title>
-        <!--[if lt IE 9]>
-            <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
-        <![endif]-->
-        {% block stylesheets %}
-            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-            <link href=\"{{ asset('css/screen.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
-        {% endblock %}
-        <link rel=\"shortcut icon\" href=\"{{ asset('favicon.ico') }}\" />
-    </head>
-    <body>
+        return new Twig_Source("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
 
-        <section id=\"wrapper\">
-            <header id=\"header\">
-                <div class=\"top\">
-                    {% block navigation %}
-                        <nav>
-                            <ul class=\"navigation\">
-                                <li><a href=\"#\">Inicio</a></li>
-                                <li><a href=\"#\">Sobre mi</a></li>
-                                <li><a href=\"#\">Contacto</a></li>
-                                
+Name       : Sovereign 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120902
 
-                            </ul>
-                        </nav>
-                    {% endblock %}
-                </div>
+-->
+<html xmlns=\"http://www.w3.org/1999/xhtml\">
+<head>
+<meta name=\"keywords\" content=\"\" />
+<meta name=\"description\" content=\"\" />
+<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
+<title>Congreso cientifico</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />
+<link href=\"{{ asset('css/screen.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
+</head>
+<body>
+<div id=\"wrapper\">
+\t
+\t\t<div id=\"header\" class=\"container\">
+\t\t\t<div id=\"logo\">
+\t\t\t\t<h1><a href=\"#\">{% block title %} {% endblock %} </a></h1>
+\t\t\t</div>
+\t\t</div>
+\t
+\t<!-- end #header -->
+\t<div id=\"page\">
+\t\t<div id=\"three-columns\">
+\t\t
+\t\t</div>
+\t\t<div id=\"content\">
+\t\t\t{% block body %}{% endblock %}
+\t\t</div>
+\t\t<!-- end #content -->
+\t\t<div id=\"sidebar\">
+\t\t\t{% block sidebar %}{% endblock %}
+\t\t\t{% block linea %}{% endblock %}
+\t\t\t{% block sidebar1 %}{% endblock %}
 
-                <hgroup>
-                    <h2>{% block blog_title %}<a href=\"#\">symblog</a>{% endblock %}</h2>
-                    <h3>{% block blog_tagline %}<a href=\"#\">creando un blog en Symfony2</a>{% endblock %}</h3>
-                </hgroup>
-            </header>
-
-            <section class=\"main-col\">
-                {% block body %}{% endblock %}
-            </section>
-            <aside class=\"sidebar\">
-                {% block sidebar %}{% endblock %}
-            </aside>
-
-            <div id=\"footer\">
-                {% block footer %}
-                    Blog en Symfony2 - creado por <a href=\"http://carloslaorden.com\">Carlos Laorden</a>, con la ayuda de <a href=\"https://github.com/dsyph3r\">dsyph3r</a>
-                {% endblock %}
-            </div>
-        </section>
-
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>", "base.html.twig", "C:\\xampp\\htdocs\\congreso\\app\\Resources\\views\\base.html.twig");
+\t\t</div>
+\t\t
+\t\t<!-- end #sidebar -->
+\t\t<div style=\"clear: both;\">&nbsp;</div>
+\t</div>
+\t<div class=\"container\"><img src=\"images/img03.png\" width=\"1000\" height=\"40\" alt=\"\" /></div>
+\t<!-- end #page --> 
+</div>
+<div id=\"footer-content\"></div>
+<div id=\"footer\">
+\t<p>&copy; Untitled. All rights reserved. Design by <a href=\"http://templated.co\" rel=\"nofollow\">TEMPLATED</a>. Photos by <a href=\"http://fotogrph.com/\">Fotogrph</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
+", "base.html.twig", "C:\\xampp\\htdocs\\congreso\\app\\Resources\\views\\base.html.twig");
     }
 }

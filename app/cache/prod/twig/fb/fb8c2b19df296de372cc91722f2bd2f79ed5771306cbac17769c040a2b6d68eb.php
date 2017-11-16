@@ -14,6 +14,8 @@ class __TwigTemplate_d8bc81e6a68bf4caedd04cdbd78d5878cea71a0b9b7f62e10972a2781d8
             'body' => array($this, 'block_body'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'sidebar' => array($this, 'block_sidebar'),
+            'linea' => array($this, 'block_linea'),
+            'sidebar1' => array($this, 'block_sidebar1'),
         );
     }
 
@@ -74,7 +76,7 @@ class __TwigTemplate_d8bc81e6a68bf4caedd04cdbd78d5878cea71a0b9b7f62e10972a2781d8
         echo "
 <link href=\"";
         // line 22
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/blog.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/congreso.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
 ";
     }
@@ -83,25 +85,33 @@ class __TwigTemplate_d8bc81e6a68bf4caedd04cdbd78d5878cea71a0b9b7f62e10972a2781d8
     public function block_sidebar($context, array $blocks = array())
     {
         // line 26
-        echo "
-<div class=\"tracks\">
-
+        echo "<div class=\"tracks\">
 ";
-        // line 29
-        $this->loadTemplate("CongresoCongresoBundle:Track:list.html.twig", "@CongresoCongreso/Congreso/show.html.twig", 29)->display(array_merge($context, array("tracks" => ($context["tracks"] ?? null))));
-        // line 30
-        echo "
-</div>
-
-<div class=\"cientificos\">
-
+        // line 27
+        $this->loadTemplate("CongresoCongresoBundle:Track:list.html.twig", "@CongresoCongreso/Congreso/show.html.twig", 27)->display(array_merge($context, array("tracks" => ($context["tracks"] ?? null))));
+        // line 28
+        echo "</div>
 ";
-        // line 35
-        $this->loadTemplate("CongresoCongresoBundle:Cientifico:list.html.twig", "@CongresoCongreso/Congreso/show.html.twig", 35)->display(array_merge($context, array("cientificos" => ($context["cientificos"] ?? null))));
+    }
+
+    // line 31
+    public function block_linea($context, array $blocks = array())
+    {
+        // line 32
+        echo "<p>-----------------</p>
+";
+    }
+
+    // line 35
+    public function block_sidebar1($context, array $blocks = array())
+    {
         // line 36
-        echo "
-</div>
-
+        echo "<div class=\"cientificos\">
+";
+        // line 37
+        $this->loadTemplate("CongresoCongresoBundle:Cientifico:list.html.twig", "@CongresoCongreso/Congreso/show.html.twig", 37)->display(array_merge($context, array("cientificos" => ($context["cientificos"] ?? null))));
+        // line 38
+        echo "</div>
 ";
     }
 
@@ -117,7 +127,7 @@ class __TwigTemplate_d8bc81e6a68bf4caedd04cdbd78d5878cea71a0b9b7f62e10972a2781d8
 
     public function getDebugInfo()
     {
-        return array (  102 => 36,  100 => 35,  93 => 30,  91 => 29,  86 => 26,  83 => 25,  77 => 22,  73 => 21,  70 => 20,  63 => 16,  59 => 14,  57 => 13,  50 => 9,  46 => 8,  40 => 6,  37 => 5,  31 => 3,  11 => 2,);
+        return array (  114 => 38,  112 => 37,  109 => 36,  106 => 35,  101 => 32,  98 => 31,  93 => 28,  91 => 27,  88 => 26,  85 => 25,  79 => 22,  75 => 21,  72 => 20,  65 => 16,  61 => 14,  59 => 13,  52 => 9,  48 => 8,  42 => 6,  39 => 5,  33 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -23,13 +23,13 @@ Released   : 20120902
 </head>
 <body>
 <div id="wrapper">
-	<div id="header-wrapper">
+	
 		<div id="header" class="container">
 			<div id="logo">
 				<h1><a href="#">{% block title %} {% endblock %} </a></h1>
 			</div>
 		</div>
-	</div>
+	
 	<!-- end #header -->
 	<div id="page">
 		<div id="three-columns">
@@ -41,7 +41,11 @@ Released   : 20120902
 		<!-- end #content -->
 		<div id="sidebar">
 			{% block sidebar %}{% endblock %}
+			{% block linea %}{% endblock %}
+			{% block sidebar1 %}{% endblock %}
+
 		</div>
+		
 		<!-- end #sidebar -->
 		<div style="clear: both;">&nbsp;</div>
 	</div>
