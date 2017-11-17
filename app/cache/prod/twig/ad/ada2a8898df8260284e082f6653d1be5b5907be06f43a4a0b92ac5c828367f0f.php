@@ -60,7 +60,7 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
             <div class=\"snippet\">
                 <p>";
             // line 14
-            echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "cuerpo", array(0 => 200), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, (twig_slice($this->env, $this->getAttribute($context["articulo"], "cuerpo", array()), 0, 400) . "..."), "html", null, true);
             echo "</p>
                 <p class=\"continue\"><a href=\"";
             // line 15
