@@ -22,32 +22,32 @@ class __TwigTemplate_8f42dded9e1188ad903f14387e382b27a36f78fb86c9056b0860f04646d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bf1e00f7c6deea196e26eca1a5f8d1821d35b711fe6abec8fffff45b683431a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf1e00f7c6deea196e26eca1a5f8d1821d35b711fe6abec8fffff45b683431a5->enter($__internal_bf1e00f7c6deea196e26eca1a5f8d1821d35b711fe6abec8fffff45b683431a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/contact.html.twig"));
+        $__internal_eab2c66caf309a80e030a00d4ad545bc0c65a50640b3603eb12e6d472595c4d5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_eab2c66caf309a80e030a00d4ad545bc0c65a50640b3603eb12e6d472595c4d5->enter($__internal_eab2c66caf309a80e030a00d4ad545bc0c65a50640b3603eb12e6d472595c4d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/contact.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bf1e00f7c6deea196e26eca1a5f8d1821d35b711fe6abec8fffff45b683431a5->leave($__internal_bf1e00f7c6deea196e26eca1a5f8d1821d35b711fe6abec8fffff45b683431a5_prof);
+        $__internal_eab2c66caf309a80e030a00d4ad545bc0c65a50640b3603eb12e6d472595c4d5->leave($__internal_eab2c66caf309a80e030a00d4ad545bc0c65a50640b3603eb12e6d472595c4d5_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_58bc7ab2e76255f98e9aa97d1f48fbdf5b54ec4ca3c64e5e886b13e9a5f7a144 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_58bc7ab2e76255f98e9aa97d1f48fbdf5b54ec4ca3c64e5e886b13e9a5f7a144->enter($__internal_58bc7ab2e76255f98e9aa97d1f48fbdf5b54ec4ca3c64e5e886b13e9a5f7a144_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_db8ad706ab7f1439209c5e8799cfbd764d4b62650aadeecd034ad9bbc5b457ac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_db8ad706ab7f1439209c5e8799cfbd764d4b62650aadeecd034ad9bbc5b457ac->enter($__internal_db8ad706ab7f1439209c5e8799cfbd764d4b62650aadeecd034ad9bbc5b457ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Contacto";
         
-        $__internal_58bc7ab2e76255f98e9aa97d1f48fbdf5b54ec4ca3c64e5e886b13e9a5f7a144->leave($__internal_58bc7ab2e76255f98e9aa97d1f48fbdf5b54ec4ca3c64e5e886b13e9a5f7a144_prof);
+        $__internal_db8ad706ab7f1439209c5e8799cfbd764d4b62650aadeecd034ad9bbc5b457ac->leave($__internal_db8ad706ab7f1439209c5e8799cfbd764d4b62650aadeecd034ad9bbc5b457ac_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7746b5600d389bcfbdf461c7ef6640d3cb998ccc1f7e4a8ea1c50c5b14890544 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7746b5600d389bcfbdf461c7ef6640d3cb998ccc1f7e4a8ea1c50c5b14890544->enter($__internal_7746b5600d389bcfbdf461c7ef6640d3cb998ccc1f7e4a8ea1c50c5b14890544_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_74747d6cd9cb242528e23184cb872c4d266f059dfa7fb25ac2ef94228d5af298 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_74747d6cd9cb242528e23184cb872c4d266f059dfa7fb25ac2ef94228d5af298->enter($__internal_74747d6cd9cb242528e23184cb872c4d266f059dfa7fb25ac2ef94228d5af298_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    <header>
@@ -63,9 +63,11 @@ class __TwigTemplate_8f42dded9e1188ad903f14387e382b27a36f78fb86c9056b0860f04646d
 \t\t<li><a href=\"https://www.linkedin.com/in/garikoitz-bereciartua-ram%C3%B3n-a40322152/\" target=\"_blank\">Garikoitz Bereciartua</a> - gari.bereciartua@opendeusto.es</li>
 \t\t<li><a href=\"https://www.linkedin.com/in/benatgaldos/\" target=\"_blank\">Beñat Galdós</a> - benatgaldos@opendeusto.es</li>
 \t</ul>
+
+\t<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
 ";
         
-        $__internal_7746b5600d389bcfbdf461c7ef6640d3cb998ccc1f7e4a8ea1c50c5b14890544->leave($__internal_7746b5600d389bcfbdf461c7ef6640d3cb998ccc1f7e4a8ea1c50c5b14890544_prof);
+        $__internal_74747d6cd9cb242528e23184cb872c4d266f059dfa7fb25ac2ef94228d5af298->leave($__internal_74747d6cd9cb242528e23184cb872c4d266f059dfa7fb25ac2ef94228d5af298_prof);
 
     }
 
@@ -113,6 +115,8 @@ class __TwigTemplate_8f42dded9e1188ad903f14387e382b27a36f78fb86c9056b0860f04646d
 \t\t<li><a href=\"https://www.linkedin.com/in/garikoitz-bereciartua-ram%C3%B3n-a40322152/\" target=\"_blank\">Garikoitz Bereciartua</a> - gari.bereciartua@opendeusto.es</li>
 \t\t<li><a href=\"https://www.linkedin.com/in/benatgaldos/\" target=\"_blank\">Beñat Galdós</a> - benatgaldos@opendeusto.es</li>
 \t</ul>
+
+\t<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
 {% endblock %}
 ", "@CongresoCongreso/Congreso/contact.html.twig", "C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle\\Resources\\views\\Congreso\\contact.html.twig");
     }

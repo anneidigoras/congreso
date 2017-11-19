@@ -48,6 +48,8 @@ class __TwigTemplate_30cc6a3b1fefe8c680df41674775204f05b5ed9a599c6e365c18a0d74ca
 \t\t<li><a href=\"https://www.linkedin.com/in/garikoitz-bereciartua-ram%C3%B3n-a40322152/\" target=\"_blank\">Garikoitz Bereciartua</a> - gari.bereciartua@opendeusto.es</li>
 \t\t<li><a href=\"https://www.linkedin.com/in/benatgaldos/\" target=\"_blank\">Beñat Galdós</a> - benatgaldos@opendeusto.es</li>
 \t</ul>
+
+\t<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
 ";
     }
 

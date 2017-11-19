@@ -12,6 +12,7 @@ class __TwigTemplate_02c2c36149b1ac1738186cc35a0efac8451b4603db00284884f6412e6d0
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'sidebar' => array($this, 'block_sidebar'),
         );
     }
 
@@ -70,7 +71,10 @@ class __TwigTemplate_02c2c36149b1ac1738186cc35a0efac8451b4603db00284884f6412e6d0
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: </p>
+                <p>Comentarios: ";
+            // line 19
+            echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "numberofcomments", array()), "html", null, true);
+            echo "</p>
             </footer>
         </article>
     ";
@@ -86,6 +90,15 @@ class __TwigTemplate_02c2c36149b1ac1738186cc35a0efac8451b4603db00284884f6412e6d0
         $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
+    // line 27
+    public function block_sidebar($context, array $blocks = array())
+    {
+        // line 28
+        echo "<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
+<p class=\"continue\"><a href=\"/contact\">Contacto</a></p>
+";
+    }
+
     public function getTemplateName()
     {
         return "CongresoCongresoBundle:Track:arttrac.html.twig";
@@ -98,7 +111,7 @@ class __TwigTemplate_02c2c36149b1ac1738186cc35a0efac8451b4603db00284884f6412e6d0
 
     public function getDebugInfo()
     {
-        return array (  81 => 23,  68 => 15,  64 => 14,  55 => 10,  48 => 8,  45 => 7,  39 => 6,  36 => 5,  29 => 3,  11 => 2,);
+        return array (  97 => 28,  94 => 27,  85 => 23,  76 => 19,  69 => 15,  65 => 14,  56 => 10,  49 => 8,  46 => 7,  40 => 6,  37 => 5,  30 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

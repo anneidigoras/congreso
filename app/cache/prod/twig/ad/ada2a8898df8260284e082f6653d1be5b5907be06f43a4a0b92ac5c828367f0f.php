@@ -12,6 +12,7 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'sidebar' => array($this, 'block_sidebar'),
         );
     }
 
@@ -88,6 +89,14 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
         $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
+    // line 27
+    public function block_sidebar($context, array $blocks = array())
+    {
+        // line 28
+        echo "    <p class=\"continue\"><a href=\"/contact\">Contacto</a></p>
+";
+    }
+
     public function getTemplateName()
     {
         return "@CongresoCongreso/Congreso/list.html.twig";
@@ -100,7 +109,7 @@ class __TwigTemplate_02a6ae5517acc84db90fc326654a11ea719a3d54b990564d5dcb287b564
 
     public function getDebugInfo()
     {
-        return array (  83 => 23,  74 => 19,  67 => 15,  63 => 14,  54 => 10,  47 => 8,  44 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  96 => 28,  93 => 27,  84 => 23,  75 => 19,  68 => 15,  64 => 14,  55 => 10,  48 => 8,  45 => 7,  39 => 6,  36 => 5,  30 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
