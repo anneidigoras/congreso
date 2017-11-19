@@ -5,6 +5,7 @@
 {% block body %}
     {% for articulo in articulos %}
         <article class="articulo">
+        <div class="separator"></div>
             {% if articulo.publicacion|date('d') ==  "01" %}
                 1
             {% elseif articulo.publicacion|date('d') ==  "02" %}

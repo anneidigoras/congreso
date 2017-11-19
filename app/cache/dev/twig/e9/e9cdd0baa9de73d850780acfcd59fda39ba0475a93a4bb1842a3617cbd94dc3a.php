@@ -15,14 +15,14 @@ class __TwigTemplate_f141eb1e86b072731be90c05b7295252f22a1560d0a5d7e76efd4e6e06a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bf83fa663db3611b421b6a9dfbfbf1966e8eca48b19f5edd31e868e25f218f3b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf83fa663db3611b421b6a9dfbfbf1966e8eca48b19f5edd31e868e25f218f3b->enter($__internal_bf83fa663db3611b421b6a9dfbfbf1966e8eca48b19f5edd31e868e25f218f3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/hidden_widget.html.php"));
+        $__internal_885b51cf313163c592b4f95a3a2a453eebff4458730244890d8ab9833ae76a0f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_885b51cf313163c592b4f95a3a2a453eebff4458730244890d8ab9833ae76a0f->enter($__internal_885b51cf313163c592b4f95a3a2a453eebff4458730244890d8ab9833ae76a0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/hidden_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'hidden')) ?>
 ";
         
-        $__internal_bf83fa663db3611b421b6a9dfbfbf1966e8eca48b19f5edd31e868e25f218f3b->leave($__internal_bf83fa663db3611b421b6a9dfbfbf1966e8eca48b19f5edd31e868e25f218f3b_prof);
+        $__internal_885b51cf313163c592b4f95a3a2a453eebff4458730244890d8ab9833ae76a0f->leave($__internal_885b51cf313163c592b4f95a3a2a453eebff4458730244890d8ab9833ae76a0f_prof);
 
     }
 

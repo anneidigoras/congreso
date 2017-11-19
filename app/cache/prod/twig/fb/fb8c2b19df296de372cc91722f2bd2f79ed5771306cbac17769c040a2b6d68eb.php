@@ -32,7 +32,7 @@ class __TwigTemplate_d8bc81e6a68bf4caedd04cdbd78d5878cea71a0b9b7f62e10972a2781d8
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "List of Articulos";
+        echo "Artículo seleccionado";
     }
 
     // line 5

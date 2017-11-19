@@ -1,10 +1,11 @@
 {# src/Congreso/CongresoBundle/Resources/views/Track/arttrac.html.twig #}
 {% extends "CongresoCongresoBundle::layout.html.twig" %}
-{% block title %}Articulos de {{ track.campo }}{% endblock %}
+{% block title %}Artículos de {{ track.campo }}{% endblock %}
 
 {% block body %}
     {% for articulo in articulos %}
         <article class="articulo">
+        <div class="separator"></div>
             {% if articulo.publicacion|date('d') ==  "01" %}
                 1
             {% elseif articulo.publicacion|date('d') ==  "02" %}
@@ -61,7 +62,7 @@
             </header>
 
             <div class="snippet">
-                <p>{{ articulo.cuerpo(200) }}</p>
+                <p>{{ articulo.cuerpo|slice(0, 400) ~ '...' }}</p>
                 <p class="continue"><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">Seguir leyendo...</a></p>
             </div>
 

@@ -1,10 +1,11 @@
 {# src/Congreso/CongresoBundle/Resources/views/Cientifico/show.html.twig #}
 {% extends "CongresoCongresoBundle::layout.html.twig" %}
-{% block title %}Articulos de {{ cientifico.nombre }}{% endblock %}
+{% block title %}Artículos de {{ cientifico.nombre }}{% endblock %}
 
 {% block body %}
     {% for articulo in articulos %}
         <article class="articulo">
+        <div class="separator"></div>
              {% if articulo.publicacion|date('d') ==  "01" %}
                 1
             {% elseif articulo.publicacion|date('d') ==  "02" %}
