@@ -239,9 +239,10 @@ class __TwigTemplate_73bd86276026728832f0e83f43a3cb97e9b5123b7036b05764b434d5ccf
 <p> Si quiere más información sobre ";
         // line 88
         echo twig_escape_filter($this->env, $this->getAttribute(($context["cientifico"] ?? null), "nombre", array()), "html", null, true);
-        echo ", pulse <a href=\"";
+        echo ", pulse <a target=\"_blank\" href=\"";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["cientifico"] ?? null), "info", array()), "html", null, true);
         echo "\">aquí</a>.</p>
+
 </div>
 <div class=\"separator\"></div>
 <p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
