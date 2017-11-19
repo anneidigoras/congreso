@@ -15,8 +15,8 @@ class __TwigTemplate_f57a49a48c6d28c8fafb36a5619c8244c27d0ea5078975a4e1838a14cf7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2b32e2a35a845493b826ee3e8715aa51caefcd67d3c5ea3af85465c5443ebacd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2b32e2a35a845493b826ee3e8715aa51caefcd67d3c5ea3af85465c5443ebacd->enter($__internal_2b32e2a35a845493b826ee3e8715aa51caefcd67d3c5ea3af85465c5443ebacd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@SensioDistribution/Configurator/steps.html.twig"));
+        $__internal_69e0c6b6584252c89d5e4e3f90f73b84a16d1e0c921a51eb16f4aab0c12e3a4a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_69e0c6b6584252c89d5e4e3f90f73b84a16d1e0c921a51eb16f4aab0c12e3a4a->enter($__internal_69e0c6b6584252c89d5e4e3f90f73b84a16d1e0c921a51eb16f4aab0c12e3a4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@SensioDistribution/Configurator/steps.html.twig"));
 
         // line 1
         echo "<div class=\"symfony-block-steps\">
@@ -61,7 +61,7 @@ class __TwigTemplate_f57a49a48c6d28c8fafb36a5619c8244c27d0ea5078975a4e1838a14cf7
         echo "</div>
 ";
         
-        $__internal_2b32e2a35a845493b826ee3e8715aa51caefcd67d3c5ea3af85465c5443ebacd->leave($__internal_2b32e2a35a845493b826ee3e8715aa51caefcd67d3c5ea3af85465c5443ebacd_prof);
+        $__internal_69e0c6b6584252c89d5e4e3f90f73b84a16d1e0c921a51eb16f4aab0c12e3a4a->leave($__internal_69e0c6b6584252c89d5e4e3f90f73b84a16d1e0c921a51eb16f4aab0c12e3a4a_prof);
 
     }
 
