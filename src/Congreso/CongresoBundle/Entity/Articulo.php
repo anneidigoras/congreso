@@ -288,7 +288,7 @@ class Articulo
         return $this->cientificos;
     }
 
-    public function getnumbercomments()
+    function getNumberOfComments()
     {
         return count($this->comments);
     }

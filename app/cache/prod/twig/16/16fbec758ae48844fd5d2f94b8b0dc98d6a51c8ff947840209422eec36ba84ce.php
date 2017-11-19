@@ -69,7 +69,10 @@ class __TwigTemplate_130254004630fca5e63a67130bbb46788a7ba00c770062f9aa01ff378ad
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: </p>
+                <p>Comentarios: ";
+            // line 19
+            echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "numberofcomments", array()), "html", null, true);
+            echo "</p>
             </footer>
         </article>
     ";
@@ -97,7 +100,7 @@ class __TwigTemplate_130254004630fca5e63a67130bbb46788a7ba00c770062f9aa01ff378ad
 
     public function getDebugInfo()
     {
-        return array (  80 => 23,  67 => 15,  63 => 14,  54 => 10,  47 => 8,  44 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  83 => 23,  74 => 19,  67 => 15,  63 => 14,  54 => 10,  47 => 8,  44 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

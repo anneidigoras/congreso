@@ -378,12 +378,12 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
     /**
      * {@inheritDoc}
      */
-    public function getnumbercomments()
+    public function getNumberOfComments()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getnumbercomments', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNumberOfComments', array());
 
-        return parent::getnumbercomments();
+        return parent::getNumberOfComments();
     }
 
     /**

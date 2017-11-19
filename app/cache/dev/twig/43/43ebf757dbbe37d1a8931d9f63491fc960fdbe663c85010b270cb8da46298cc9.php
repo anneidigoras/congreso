@@ -22,32 +22,32 @@ class __TwigTemplate_74d8776bc67347e494d134869ab8190d29df881ea7dc208d45a743167c6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0ec1a137897bc78778caf222bc735ce70c99bf6b61b7881e16df084a310ff04a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0ec1a137897bc78778caf222bc735ce70c99bf6b61b7881e16df084a310ff04a->enter($__internal_0ec1a137897bc78778caf222bc735ce70c99bf6b61b7881e16df084a310ff04a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Congreso:list.html.twig"));
+        $__internal_312b5d6f03964240bc34b4bcc5d67c2f3aac89c66b7bb823f1f8a961d8323a0c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_312b5d6f03964240bc34b4bcc5d67c2f3aac89c66b7bb823f1f8a961d8323a0c->enter($__internal_312b5d6f03964240bc34b4bcc5d67c2f3aac89c66b7bb823f1f8a961d8323a0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Congreso:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0ec1a137897bc78778caf222bc735ce70c99bf6b61b7881e16df084a310ff04a->leave($__internal_0ec1a137897bc78778caf222bc735ce70c99bf6b61b7881e16df084a310ff04a_prof);
+        $__internal_312b5d6f03964240bc34b4bcc5d67c2f3aac89c66b7bb823f1f8a961d8323a0c->leave($__internal_312b5d6f03964240bc34b4bcc5d67c2f3aac89c66b7bb823f1f8a961d8323a0c_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_8e4fed7d69f276e7e163954bc545ade559df99fdaa5e6a41d520d444910da229 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8e4fed7d69f276e7e163954bc545ade559df99fdaa5e6a41d520d444910da229->enter($__internal_8e4fed7d69f276e7e163954bc545ade559df99fdaa5e6a41d520d444910da229_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0fcafeafccaeb53855aec76e433f43a786db19fb51074adf9d59c6072d6420af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0fcafeafccaeb53855aec76e433f43a786db19fb51074adf9d59c6072d6420af->enter($__internal_0fcafeafccaeb53855aec76e433f43a786db19fb51074adf9d59c6072d6420af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de Artículos";
         
-        $__internal_8e4fed7d69f276e7e163954bc545ade559df99fdaa5e6a41d520d444910da229->leave($__internal_8e4fed7d69f276e7e163954bc545ade559df99fdaa5e6a41d520d444910da229_prof);
+        $__internal_0fcafeafccaeb53855aec76e433f43a786db19fb51074adf9d59c6072d6420af->leave($__internal_0fcafeafccaeb53855aec76e433f43a786db19fb51074adf9d59c6072d6420af_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1202fc0da330eb75476ebcc9f4053315d2cb4952c9ce2c42bb56ffb892d1a788 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1202fc0da330eb75476ebcc9f4053315d2cb4952c9ce2c42bb56ffb892d1a788->enter($__internal_1202fc0da330eb75476ebcc9f4053315d2cb4952c9ce2c42bb56ffb892d1a788_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7cee8a8442e0bcf63e2955d4dfa13384690b019b9624dc93b8ead374156a2034 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7cee8a8442e0bcf63e2955d4dfa13384690b019b9624dc93b8ead374156a2034->enter($__internal_7cee8a8442e0bcf63e2955d4dfa13384690b019b9624dc93b8ead374156a2034_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
@@ -84,7 +84,10 @@ class __TwigTemplate_74d8776bc67347e494d134869ab8190d29df881ea7dc208d45a743167c6
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: </p>
+                <p>Comentarios: ";
+            // line 19
+            echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "numberofcomments", array()), "html", null, true);
+            echo "</p>
             </footer>
         </article>
     ";
@@ -99,7 +102,7 @@ class __TwigTemplate_74d8776bc67347e494d134869ab8190d29df881ea7dc208d45a743167c6
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['articulo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_1202fc0da330eb75476ebcc9f4053315d2cb4952c9ce2c42bb56ffb892d1a788->leave($__internal_1202fc0da330eb75476ebcc9f4053315d2cb4952c9ce2c42bb56ffb892d1a788_prof);
+        $__internal_7cee8a8442e0bcf63e2955d4dfa13384690b019b9624dc93b8ead374156a2034->leave($__internal_7cee8a8442e0bcf63e2955d4dfa13384690b019b9624dc93b8ead374156a2034_prof);
 
     }
 
@@ -115,7 +118,7 @@ class __TwigTemplate_74d8776bc67347e494d134869ab8190d29df881ea7dc208d45a743167c6
 
     public function getDebugInfo()
     {
-        return array (  95 => 23,  82 => 15,  78 => 14,  69 => 10,  62 => 8,  59 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
+        return array (  98 => 23,  89 => 19,  82 => 15,  78 => 14,  69 => 10,  62 => 8,  59 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -146,7 +149,7 @@ class __TwigTemplate_74d8776bc67347e494d134869ab8190d29df881ea7dc208d45a743167c6
             </div>
 
             <footer class=\"meta\">
-                <p>Comentarios: </p>
+                <p>Comentarios: {{articulo.numberofcomments}}</p>
             </footer>
         </article>
     {% else %}
