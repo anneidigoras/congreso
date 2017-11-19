@@ -22,46 +22,50 @@ class __TwigTemplate_1934f1bb2468413af60f97c5be85ae6978786f218313a8872d082f149d1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4aa9b8a9575dfbfda5500ce6e2cfa68ce4d03ad3affcfec69f934c37b2439629 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4aa9b8a9575dfbfda5500ce6e2cfa68ce4d03ad3affcfec69f934c37b2439629->enter($__internal_4aa9b8a9575dfbfda5500ce6e2cfa68ce4d03ad3affcfec69f934c37b2439629_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Congreso:contact.html.twig"));
+        $__internal_8f42ccf4b7fe3487a05452dfce8cf5cc9d43a5d45c4eed62f8262836cc7c7318 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8f42ccf4b7fe3487a05452dfce8cf5cc9d43a5d45c4eed62f8262836cc7c7318->enter($__internal_8f42ccf4b7fe3487a05452dfce8cf5cc9d43a5d45c4eed62f8262836cc7c7318_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Congreso:contact.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4aa9b8a9575dfbfda5500ce6e2cfa68ce4d03ad3affcfec69f934c37b2439629->leave($__internal_4aa9b8a9575dfbfda5500ce6e2cfa68ce4d03ad3affcfec69f934c37b2439629_prof);
+        $__internal_8f42ccf4b7fe3487a05452dfce8cf5cc9d43a5d45c4eed62f8262836cc7c7318->leave($__internal_8f42ccf4b7fe3487a05452dfce8cf5cc9d43a5d45c4eed62f8262836cc7c7318_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_e579855b39ab3176f6bc1de70d4b87d81e6a44059d7cce14f2822b7843f90b02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e579855b39ab3176f6bc1de70d4b87d81e6a44059d7cce14f2822b7843f90b02->enter($__internal_e579855b39ab3176f6bc1de70d4b87d81e6a44059d7cce14f2822b7843f90b02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b846dcbe1d016b8c01e9701cad897341eab4cca3f06c9ed4f9ebf4044d48cffc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b846dcbe1d016b8c01e9701cad897341eab4cca3f06c9ed4f9ebf4044d48cffc->enter($__internal_b846dcbe1d016b8c01e9701cad897341eab4cca3f06c9ed4f9ebf4044d48cffc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Contact";
+        echo "Contacto";
         
-        $__internal_e579855b39ab3176f6bc1de70d4b87d81e6a44059d7cce14f2822b7843f90b02->leave($__internal_e579855b39ab3176f6bc1de70d4b87d81e6a44059d7cce14f2822b7843f90b02_prof);
+        $__internal_b846dcbe1d016b8c01e9701cad897341eab4cca3f06c9ed4f9ebf4044d48cffc->leave($__internal_b846dcbe1d016b8c01e9701cad897341eab4cca3f06c9ed4f9ebf4044d48cffc_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ee7562d0f0b96753a13aef0ea5c9777c29bbc61b10eb50e1ad20958134c53d2c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ee7562d0f0b96753a13aef0ea5c9777c29bbc61b10eb50e1ad20958134c53d2c->enter($__internal_ee7562d0f0b96753a13aef0ea5c9777c29bbc61b10eb50e1ad20958134c53d2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b7dfc113fd6c1123f84f7d1c5fd633672ac793d33153ed3cb38d0536ab27c9c9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b7dfc113fd6c1123f84f7d1c5fd633672ac793d33153ed3cb38d0536ab27c9c9->enter($__internal_b7dfc113fd6c1123f84f7d1c5fd633672ac793d33153ed3cb38d0536ab27c9c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    <header>
-        <h1>Contacta conmigo</h1>
+        <h1>Contacta con nosotros</h1>
     </header>
-
-    <p>Puedes encontrarme en las siguientes redes sociales:</p>
+    <p>A continuación puedes encontrar el repositorio para esta página de Congreso Científico subido a GitHub:</p>
+    <a href=\"https://github.com/anneidigoras/congreso\" target=\"_blank\">Congreso Científico (Repo)</a>
+    <div class=\"separator\"></div>
+    <p>Puedes encontrarnos también en nuestras cuentas de LinkedIn o contactarnos por correo:</p>
 \t<ul>
-\t\t<li><a href=\"https://twitter.com/claorden\" target=\"_blank\">Twitter</a></li>
-\t\t<li><a href=\"https://www.linkedin.com/in/claorden\" target=\"_blank\">LinkedIn</a></li>
+\t\t<li><a href=\"https://www.linkedin.com/in/anne-idigoras-pagola-772326a8/\" target=\"_blank\">Anne Idigoras</a> - anneidigoras@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/imanol-echeverr%C3%ADa-franco-67617513b/\" target=\"_blank\">Imanol Echeverría</a> - imanol.echeverria@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/garikoitz-bereciartua-ram%C3%B3n-a40322152/\" target=\"_blank\">Garikoitz Bereciartua</a> - gari.bereciartua@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/benatgaldos/\" target=\"_blank\">Beñat Galdós</a> - benatgaldos@opendeusto.es</li>
 \t</ul>
 ";
         
-        $__internal_ee7562d0f0b96753a13aef0ea5c9777c29bbc61b10eb50e1ad20958134c53d2c->leave($__internal_ee7562d0f0b96753a13aef0ea5c9777c29bbc61b10eb50e1ad20958134c53d2c_prof);
+        $__internal_b7dfc113fd6c1123f84f7d1c5fd633672ac793d33153ed3cb38d0536ab27c9c9->leave($__internal_b7dfc113fd6c1123f84f7d1c5fd633672ac793d33153ed3cb38d0536ab27c9c9_prof);
 
     }
 
@@ -93,17 +97,21 @@ class __TwigTemplate_1934f1bb2468413af60f97c5be85ae6978786f218313a8872d082f149d1
         return new Twig_Source("{# src/Congreso/CongresoBundle/Resources/views/Congreso/contact.html.twig #}
 {% extends 'CongresoCongresoBundle::layout.html.twig' %}
 
-{% block title %}Contact{% endblock%}
+{% block title %}Contacto{% endblock%}
 
 {% block body %}
     <header>
-        <h1>Contacta conmigo</h1>
+        <h1>Contacta con nosotros</h1>
     </header>
-
-    <p>Puedes encontrarme en las siguientes redes sociales:</p>
+    <p>A continuación puedes encontrar el repositorio para esta página de Congreso Científico subido a GitHub:</p>
+    <a href=\"https://github.com/anneidigoras/congreso\" target=\"_blank\">Congreso Científico (Repo)</a>
+    <div class=\"separator\"></div>
+    <p>Puedes encontrarnos también en nuestras cuentas de LinkedIn o contactarnos por correo:</p>
 \t<ul>
-\t\t<li><a href=\"https://twitter.com/claorden\" target=\"_blank\">Twitter</a></li>
-\t\t<li><a href=\"https://www.linkedin.com/in/claorden\" target=\"_blank\">LinkedIn</a></li>
+\t\t<li><a href=\"https://www.linkedin.com/in/anne-idigoras-pagola-772326a8/\" target=\"_blank\">Anne Idigoras</a> - anneidigoras@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/imanol-echeverr%C3%ADa-franco-67617513b/\" target=\"_blank\">Imanol Echeverría</a> - imanol.echeverria@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/garikoitz-bereciartua-ram%C3%B3n-a40322152/\" target=\"_blank\">Garikoitz Bereciartua</a> - gari.bereciartua@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/benatgaldos/\" target=\"_blank\">Beñat Galdós</a> - benatgaldos@opendeusto.es</li>
 \t</ul>
 {% endblock %}
 ", "CongresoCongresoBundle:Congreso:contact.html.twig", "C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Congreso/contact.html.twig");

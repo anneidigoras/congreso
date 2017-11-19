@@ -127,7 +127,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         if (0 === strpos($pathinfo, '/co')) {
             // congreso_congreso_contact
             if ('/contact' === $pathinfo) {
-                return array (  '_controller' => 'BloggerBlogBundle:Blog:contact',  '_route' => 'congreso_congreso_contact',);
+                return array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::contactAction',  '_route' => 'congreso_congreso_contact',);
             }
 
             // congreso_comment_create

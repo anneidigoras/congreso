@@ -16,7 +16,7 @@ congreso_track_arttrac:
 
 congreso_congreso_contact:
     path:  /contact
-    defaults: { _controller: BloggerBlogBundle:Blog:contact }
+    defaults: { _controller: CongresoCongresoBundle:Congreso:contact }
       
 congreso_comment_create:
     path:  /comment/{articulo_id}

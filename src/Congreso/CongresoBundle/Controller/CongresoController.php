@@ -37,7 +37,9 @@ public function showAction($id)
 	return $this->render('CongresoCongresoBundle:Congreso:show.html.twig', array('articulo' => $articulo, 'comments' => $comments ,'tracks' => $tracks, 'cientificos' => $cientificos));
 }
 
-
-
+	public function contactAction()
+	{
+	return $this->render('CongresoCongresoBundle:Congreso:contact.html.twig');
+	}
 }
 ?>

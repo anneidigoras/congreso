@@ -28,7 +28,7 @@ class __TwigTemplate_30cc6a3b1fefe8c680df41674775204f05b5ed9a599c6e365c18a0d74ca
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        echo "Contact";
+        echo "Contacto";
     }
 
     // line 6
@@ -36,13 +36,17 @@ class __TwigTemplate_30cc6a3b1fefe8c680df41674775204f05b5ed9a599c6e365c18a0d74ca
     {
         // line 7
         echo "    <header>
-        <h1>Contacta conmigo</h1>
+        <h1>Contacta con nosotros</h1>
     </header>
-
-    <p>Puedes encontrarme en las siguientes redes sociales:</p>
+    <p>A continuación puedes encontrar el repositorio para esta página de Congreso Científico subido a GitHub:</p>
+    <a href=\"https://github.com/anneidigoras/congreso\" target=\"_blank\">Congreso Científico (Repo)</a>
+    <div class=\"separator\"></div>
+    <p>Puedes encontrarnos también en nuestras cuentas de LinkedIn o contactarnos por correo:</p>
 \t<ul>
-\t\t<li><a href=\"https://twitter.com/claorden\" target=\"_blank\">Twitter</a></li>
-\t\t<li><a href=\"https://www.linkedin.com/in/claorden\" target=\"_blank\">LinkedIn</a></li>
+\t\t<li><a href=\"https://www.linkedin.com/in/anne-idigoras-pagola-772326a8/\" target=\"_blank\">Anne Idigoras</a> - anneidigoras@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/imanol-echeverr%C3%ADa-franco-67617513b/\" target=\"_blank\">Imanol Echeverría</a> - imanol.echeverria@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/garikoitz-bereciartua-ram%C3%B3n-a40322152/\" target=\"_blank\">Garikoitz Bereciartua</a> - gari.bereciartua@opendeusto.es</li>
+\t\t<li><a href=\"https://www.linkedin.com/in/benatgaldos/\" target=\"_blank\">Beñat Galdós</a> - benatgaldos@opendeusto.es</li>
 \t</ul>
 ";
     }
