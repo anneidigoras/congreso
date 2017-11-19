@@ -6,7 +6,9 @@
 	<h1>{{ articulo.titulo }}</h1>
 
 	<div class="body">{{ articulo.cuerpo }}</div>
-	<div class="date">{{ articulo.publicacion |date('d-m-Y') }}</div>
+	<div class="separator"></div>
+	<div class="date">Fecha de publicación: {{ articulo.publicacion |date('d-m-Y') }}</div>
+	<div class="separator"></div>
 	<section class="comments" id="comments">
 		<section class="previous-comments">
 			<h3>Comentarios</h3>
@@ -29,7 +31,7 @@
 {% endblock %}
 
 {% block linea %}
-<p>-----------------</p>
+<div class="separator"></div>
 {% endblock %}
 
 {% block sidebar1 %}
