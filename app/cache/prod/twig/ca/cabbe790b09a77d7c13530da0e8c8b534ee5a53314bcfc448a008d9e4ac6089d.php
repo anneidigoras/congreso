@@ -39,9 +39,9 @@ class __TwigTemplate_ecb65d33bcdd18e1e337aa6bbd6a3067c19e7a69a4d3de816c5959b7be9
     public function block_body($context, array $blocks = array())
     {
         // line 6
-        echo "\t<h1>";
+        echo "\t<h4>";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["articulo"] ?? null), "titulo", array()), "html", null, true);
-        echo "</h1>
+        echo "</h4>
 
 \t<div class=\"body\">";
         // line 8

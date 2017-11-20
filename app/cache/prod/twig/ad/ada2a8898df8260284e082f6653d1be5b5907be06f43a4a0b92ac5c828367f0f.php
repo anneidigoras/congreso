@@ -237,7 +237,7 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
         }
         if (!$context['_iterated']) {
             // line 83
-            echo "        <p>Tu puta madre</p>
+            echo "        <p>aaaaa</p>
     ";
         }
         $_parent = $context['_parent'];
