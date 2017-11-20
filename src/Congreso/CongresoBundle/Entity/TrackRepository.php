@@ -12,4 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class TrackRepository extends EntityRepository
 {
+	public function getTracks($limit = null)
+{
+	$qp = $this->createQueryBuilder('p')->select('p');
+
+	if (false === is_null($limit))
+		$qp->setMaxResults($limit);
+
+	return $qp->getQuery()->getResult();
+}
 }

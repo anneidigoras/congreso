@@ -9,9 +9,10 @@ class CongresoController extends Controller
 
 	public function listAction()
 	{
+	$tracks = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Track')->getTracks();
 	$articulos = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Articulo')->getLatestArticulos();
 
-	return $this->render('CongresoCongresoBundle:Congreso:list.html.twig', array('articulos' => $articulos));
+	return $this->render('CongresoCongresoBundle:Congreso:list.html.twig', array('articulos' => $articulos,'tracks' => $tracks));
 	}
 
 	/*public function getBody($length = null)

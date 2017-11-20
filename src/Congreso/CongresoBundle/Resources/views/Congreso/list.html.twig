@@ -3,75 +3,84 @@
 {% block title %}Lista de Artículos{% endblock %}
 
 {% block body %}
-    {% for articulo in articulos %}
-        <article class="articulo">
-        <div class="separator"></div>
-            {% if articulo.publicacion|date('d') ==  "01" %}
-                1
-            {% elseif articulo.publicacion|date('d') ==  "02" %}
-                2
-            {% elseif articulo.publicacion|date('d') ==  "03" %}
-                3
-            {% elseif articulo.publicacion|date('d') ==  "04" %}
-                4
-            {% elseif articulo.publicacion|date('d') ==  "05" %}
-                5
-            {% elseif articulo.publicacion|date('d') ==  "06" %}
-                6
-            {% elseif articulo.publicacion|date('d') ==  "07" %}
-                7
-            {% elseif articulo.publicacion|date('d') ==  "08" %}
-                8
-            {% elseif articulo.publicacion|date('d') ==  "09" %}
-                9
-            {% else %}
-                {{ articulo.publicacion|date('d') }}
+    {% for track in tracks %}
+        <h1><a href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></h1>
+        {% set i = 0 %}
+        {% for articulo in articulos %}
+            {% if track.id==articulo.tracks[0].id and i<2 %}
+                {% set i = i+1 %}
+                <article class="articulo">
+                <div class="separator"></div>
+                    {% if articulo.publicacion|date('d') ==  "01" %}
+                        1
+                    {% elseif articulo.publicacion|date('d') ==  "02" %}
+                        2
+                    {% elseif articulo.publicacion|date('d') ==  "03" %}
+                        3
+                    {% elseif articulo.publicacion|date('d') ==  "04" %}
+                        4
+                    {% elseif articulo.publicacion|date('d') ==  "05" %}
+                        5
+                    {% elseif articulo.publicacion|date('d') ==  "06" %}
+                        6
+                    {% elseif articulo.publicacion|date('d') ==  "07" %}
+                        7
+                    {% elseif articulo.publicacion|date('d') ==  "08" %}
+                        8
+                    {% elseif articulo.publicacion|date('d') ==  "09" %}
+                        9
+                    {% else %}
+                        {{ articulo.publicacion|date('d') }}
+                    {% endif %}
+
+                    de 
+
+                    {% if articulo.publicacion|date('m') ==  "01" %}
+                        enero
+                    {% elseif articulo.publicacion|date('m') ==  "02" %}
+                        febrero
+                    {% elseif articulo.publicacion|date('m') ==  "03" %}
+                        marzo
+                    {% elseif articulo.publicacion|date('m') ==  "04" %}
+                        abril
+                    {% elseif articulo.publicacion|date('m') ==  "05" %}
+                        mayo
+                    {% elseif articulo.publicacion|date('m') ==  "06" %}
+                        junio
+                    {% elseif articulo.publicacion|date('m') ==  "07" %}
+                        julio
+                    {% elseif articulo.publicacion|date('m') ==  "08" %}
+                        agosto
+                    {% elseif articulo.publicacion|date('m') ==  "09" %}
+                        septiembre
+                    {% elseif articulo.publicacion|date('m') ==  "10" %}
+                        octubre
+                    {% elseif articulo.publicacion|date('m') ==  "11" %}
+                        noviembre
+                    {% elseif articulo.publicacion|date('m') ==  "12" %}
+                        diciembre
+                    {% endif %}
+                    
+                     de {{ articulo.publicacion|date('Y') }}</p>
+                    <header>
+                        <h2><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">{{ articulo.titulo }}</a></h2>
+                    </header>
+
+                    <div class="snippet">
+                        <p>{{ articulo.cuerpo|slice(0, 400) ~ '...' }}</p>
+                        <p class="continue"><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">Seguir leyendo...</a></p>
+                    </div>
+
+                    <footer class="meta">
+                        <p>Comentarios: {{articulo.numberofcomments}}</p>
+                    </footer>
+                </article>
             {% endif %}
-
-            de 
-
-            {% if articulo.publicacion|date('m') ==  "01" %}
-                enero
-            {% elseif articulo.publicacion|date('m') ==  "02" %}
-                febrero
-            {% elseif articulo.publicacion|date('m') ==  "03" %}
-                marzo
-            {% elseif articulo.publicacion|date('m') ==  "04" %}
-                abril
-            {% elseif articulo.publicacion|date('m') ==  "05" %}
-                mayo
-            {% elseif articulo.publicacion|date('m') ==  "06" %}
-                junio
-            {% elseif articulo.publicacion|date('m') ==  "07" %}
-                julio
-            {% elseif articulo.publicacion|date('m') ==  "08" %}
-                agosto
-            {% elseif articulo.publicacion|date('m') ==  "09" %}
-                septiembre
-            {% elseif articulo.publicacion|date('m') ==  "10" %}
-                octubre
-            {% elseif articulo.publicacion|date('m') ==  "11" %}
-                noviembre
-            {% elseif articulo.publicacion|date('m') ==  "12" %}
-                diciembre
-            {% endif %}
-            
-             de {{ articulo.publicacion|date('Y') }}</p>
-            <header>
-                <h2><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">{{ articulo.titulo }}</a></h2>
-            </header>
-
-            <div class="snippet">
-                <p>{{ articulo.cuerpo|slice(0, 400) ~ '...' }}</p>
-                <p class="continue"><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">Seguir leyendo...</a></p>
-            </div>
-
-            <footer class="meta">
-                <p>Comentarios: {{articulo.numberofcomments}}</p>
-            </footer>
-        </article>
+        {% else %}
+            <p>No hay entradas en este blog</p>
+        {% endfor %}
     {% else %}
-        <p>No hay entradas en este blog</p>
+        <p>Tu puta madre</p>
     {% endfor %}
 {% endblock %}
 
