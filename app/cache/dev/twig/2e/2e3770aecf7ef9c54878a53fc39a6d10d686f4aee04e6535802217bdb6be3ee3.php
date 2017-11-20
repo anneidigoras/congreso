@@ -15,8 +15,8 @@ class __TwigTemplate_12dc20e40462c67380f38060b72d651c659a07d8db15443e4b5447015ef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_30acb7fe593d0dfb354a25ae36486e507f3d3ad56d2f85e3c44e3b9c29c595ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_30acb7fe593d0dfb354a25ae36486e507f3d3ad56d2f85e3c44e3b9c29c595ee->enter($__internal_30acb7fe593d0dfb354a25ae36486e507f3d3ad56d2f85e3c44e3b9c29c595ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Cientifico/list.html.twig"));
+        $__internal_cd5d3c15f2f594d2d1b7f024a95f7c774311194982fe8df009d57fd85cad03cc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cd5d3c15f2f594d2d1b7f024a95f7c774311194982fe8df009d57fd85cad03cc->enter($__internal_cd5d3c15f2f594d2d1b7f024a95f7c774311194982fe8df009d57fd85cad03cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Cientifico/list.html.twig"));
 
         // line 2
         echo "
@@ -49,7 +49,7 @@ class __TwigTemplate_12dc20e40462c67380f38060b72d651c659a07d8db15443e4b5447015ef
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cientifico'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_30acb7fe593d0dfb354a25ae36486e507f3d3ad56d2f85e3c44e3b9c29c595ee->leave($__internal_30acb7fe593d0dfb354a25ae36486e507f3d3ad56d2f85e3c44e3b9c29c595ee_prof);
+        $__internal_cd5d3c15f2f594d2d1b7f024a95f7c774311194982fe8df009d57fd85cad03cc->leave($__internal_cd5d3c15f2f594d2d1b7f024a95f7c774311194982fe8df009d57fd85cad03cc_prof);
 
     }
 

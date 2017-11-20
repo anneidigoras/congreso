@@ -30,7 +30,7 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 12
+        // line 13
         echo "    </head>
     <body>
 
@@ -39,7 +39,7 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         <div id=\"header\" class=\"container\">
             <div id=\"logo\">
                 <h1><a href=\"#\">";
-        // line 19
+        // line 20
         $this->displayBlock('title', $context, $blocks);
         echo " </a></h1>
             </div>
@@ -52,22 +52,22 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         </div>
         <div id=\"content\">
             ";
-        // line 29
-        $this->displayBlock('body', $context, $blocks);
         // line 30
+        $this->displayBlock('body', $context, $blocks);
+        // line 31
         echo "        </div>
         <!-- end #content -->
         <div id=\"sidebar\">
             ";
-        // line 33
-        $this->displayBlock('sidebar', $context, $blocks);
         // line 34
-        echo "            ";
-        $this->displayBlock('linea', $context, $blocks);
+        $this->displayBlock('sidebar', $context, $blocks);
         // line 35
         echo "            ";
-        $this->displayBlock('sidebar1', $context, $blocks);
+        $this->displayBlock('linea', $context, $blocks);
         // line 36
+        echo "            ";
+        $this->displayBlock('sidebar1', $context, $blocks);
+        // line 37
         echo "
         </div>
         
@@ -92,36 +92,37 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         // line 7
         echo "            <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
             <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+            <title>Congreso científico</title>
             <link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />
             <link href=\"";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/screen.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
         ";
     }
 
-    // line 19
+    // line 20
     public function block_title($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 29
+    // line 30
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 33
+    // line 34
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 34
+    // line 35
     public function block_linea($context, array $blocks = array())
     {
     }
 
-    // line 35
+    // line 36
     public function block_sidebar1($context, array $blocks = array())
     {
     }
@@ -133,7 +134,7 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
 
     public function getDebugInfo()
     {
-        return array (  125 => 35,  120 => 34,  115 => 33,  110 => 29,  104 => 19,  98 => 10,  93 => 7,  90 => 6,  71 => 36,  68 => 35,  65 => 34,  63 => 33,  58 => 30,  56 => 29,  43 => 19,  34 => 12,  32 => 6,  25 => 1,);
+        return array (  126 => 36,  121 => 35,  116 => 34,  111 => 30,  105 => 20,  99 => 11,  93 => 7,  90 => 6,  71 => 37,  68 => 36,  65 => 35,  63 => 34,  58 => 31,  56 => 30,  43 => 20,  34 => 13,  32 => 6,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
