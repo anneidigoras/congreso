@@ -214,7 +214,10 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
     public function block_sidebar($context, array $blocks = array())
     {
         // line 79
-        echo "<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
+        echo "<p>";
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["track"] ?? null), "info", array()), "html", null, true);
+        echo "</p>
+<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
 <p class=\"continue\"><a href=\"/contact\">Contacto</a></p>
 ";
     }

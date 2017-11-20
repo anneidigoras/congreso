@@ -64,10 +64,10 @@ class Track extends \Congreso\CongresoBundle\Entity\Track implements \Doctrine\O
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Track' . "\0" . 'articulos', 'id', 'campo');
+            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Track' . "\0" . 'articulos', 'id', 'campo', 'info');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Track' . "\0" . 'articulos', 'id', 'campo');
+        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Track' . "\0" . 'articulos', 'id', 'campo', 'info');
     }
 
     /**
@@ -208,6 +208,28 @@ class Track extends \Congreso\CongresoBundle\Entity\Track implements \Doctrine\O
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCampo', array());
 
         return parent::getCampo();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setInfo($info)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setInfo', array($info));
+
+        return parent::setInfo($info);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getInfo()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getInfo', array());
+
+        return parent::getInfo();
     }
 
     /**

@@ -36,6 +36,11 @@ class Track
 	* @ORM\Column(type="text")
 	*/
 	protected $campo;
+
+    /**
+    * @ORM\Column(type="text")
+    */
+    protected $info;
 	
 
     /**
@@ -77,6 +82,30 @@ class Track
     public function getCampo()
     {
         return $this->campo;
+    }
+
+     /**
+     * Set info
+     *
+     * @param string $info
+     * @return Cientifico
+     */
+    public function setInfo($info)
+    {
+        $this->info = $info;
+    
+        return $this;
+    }
+
+
+      /**
+     * Get info
+     *
+     * @return string 
+     */
+    public function getInfo()
+    {
+        return $this->info;
     }
 
     /**
