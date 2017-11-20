@@ -74,12 +74,11 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         <!-- end #sidebar -->
         <div style=\"clear: both;\">&nbsp;</div>
     </div>
-    <div class=\"container\"><img src=\"images/img03.png\" width=\"1000\" height=\"40\" alt=\"\" /></div>
     <!-- end #page --> 
 </div>
 <div id=\"footer-content\"></div>
 <div id=\"footer\">
-    <p>&copy; Untitled. All rights reserved. Design by <a href=\"http://templated.co\" rel=\"nofollow\">TEMPLATED</a>. Photos by <a href=\"http://fotogrph.com/\">Fotogrph</a>.</p>
+    <p>&copy; Congreso Científico. Todos los derechos reservados. Diseño por <a href=\"http://templated.co\" rel=\"nofollow\">TEMPLATED</a>.</p>
 </div>
 <!-- end #footer -->
 </body>
@@ -134,7 +133,7 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
 
     public function getDebugInfo()
     {
-        return array (  126 => 36,  121 => 35,  116 => 34,  111 => 30,  105 => 20,  99 => 11,  93 => 7,  90 => 6,  71 => 37,  68 => 36,  65 => 35,  63 => 34,  58 => 31,  56 => 30,  43 => 20,  34 => 13,  32 => 6,  25 => 1,);
+        return array (  125 => 36,  120 => 35,  115 => 34,  110 => 30,  104 => 20,  98 => 11,  92 => 7,  89 => 6,  71 => 37,  68 => 36,  65 => 35,  63 => 34,  58 => 31,  56 => 30,  43 => 20,  34 => 13,  32 => 6,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
