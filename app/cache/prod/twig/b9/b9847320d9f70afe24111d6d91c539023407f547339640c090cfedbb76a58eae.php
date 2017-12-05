@@ -11,8 +11,10 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
 
         $this->blocks = array(
             'stylesheets' => array($this, 'block_stylesheets'),
+            'javascripts' => array($this, 'block_javascripts'),
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'tabla' => array($this, 'block_tabla'),
             'sidebar' => array($this, 'block_sidebar'),
             'linea' => array($this, 'block_linea'),
             'sidebar1' => array($this, 'block_sidebar1'),
@@ -31,6 +33,9 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 13
+        echo "        ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 16
         echo "    </head>
     <body>
 
@@ -39,25 +44,25 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         <div id=\"header\" class=\"container\">
             <div id=\"logo\">
                 <h1><a href=\"#\">";
-        // line 20
+        // line 23
         $this->displayBlock('title', $context, $blocks);
         echo " </a></h1>
                 ";
-        // line 21
+        // line 24
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 22
+            // line 25
             echo "                    <a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_logout");
             echo "\">Salir</a>
                 ";
         } else {
-            // line 24
+            // line 27
             echo "                    <a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login");
             echo "\">Entrar</a>    
                 ";
         }
-        // line 26
+        // line 29
         echo "            </div>
         </div>
     
@@ -68,24 +73,26 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         </div>
         <div id=\"content\">
             ";
-        // line 35
+        // line 38
         $this->displayBlock('body', $context, $blocks);
-        // line 36
+        // line 39
+        echo "            ";
+        $this->displayBlock('tabla', $context, $blocks);
+        // line 40
         echo "        </div>
         <!-- end #content -->
         <div id=\"sidebar\">
             ";
-        // line 39
+        // line 43
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 40
+        // line 44
         echo "            ";
         $this->displayBlock('linea', $context, $blocks);
-        // line 41
+        // line 45
         echo "            ";
         $this->displayBlock('sidebar1', $context, $blocks);
-        // line 42
-        echo "
-        </div>
+        // line 46
+        echo "        </div>
         
         <!-- end #sidebar -->
         <div style=\"clear: both;\">&nbsp;</div>
@@ -108,7 +115,7 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         echo "            <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
             <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
             <title>Congreso científico</title>
-            <link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />
+            <link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />
             <link href=\"";
         // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/screen.css"), "html", null, true);
@@ -116,28 +123,41 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         ";
     }
 
-    // line 20
+    // line 13
+    public function block_javascripts($context, array $blocks = array())
+    {
+        // line 14
+        echo "            
+        ";
+    }
+
+    // line 23
     public function block_title($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 35
+    // line 38
     public function block_body($context, array $blocks = array())
     {
     }
 
     // line 39
+    public function block_tabla($context, array $blocks = array())
+    {
+    }
+
+    // line 43
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 40
+    // line 44
     public function block_linea($context, array $blocks = array())
     {
     }
 
-    // line 41
+    // line 45
     public function block_sidebar1($context, array $blocks = array())
     {
     }
@@ -154,7 +174,7 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
 
     public function getDebugInfo()
     {
-        return array (  141 => 41,  136 => 40,  131 => 39,  126 => 35,  120 => 20,  114 => 11,  108 => 7,  105 => 6,  87 => 42,  84 => 41,  81 => 40,  79 => 39,  74 => 36,  72 => 35,  61 => 26,  55 => 24,  49 => 22,  47 => 21,  43 => 20,  34 => 13,  32 => 6,  25 => 1,);
+        return array (  161 => 45,  156 => 44,  151 => 43,  146 => 39,  141 => 38,  135 => 23,  130 => 14,  127 => 13,  121 => 11,  115 => 7,  112 => 6,  95 => 46,  92 => 45,  89 => 44,  87 => 43,  82 => 40,  79 => 39,  77 => 38,  66 => 29,  60 => 27,  54 => 25,  52 => 24,  48 => 23,  39 => 16,  36 => 13,  34 => 6,  27 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

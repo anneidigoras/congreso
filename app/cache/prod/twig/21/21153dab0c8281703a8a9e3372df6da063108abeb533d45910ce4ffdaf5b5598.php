@@ -50,7 +50,7 @@ class __TwigTemplate_a5632b4978fcce9639a58a441a5f70679f51e59949fdd761f81da3d4957
         echo twig_escape_filter($this->env, ($context["last_username"] ?? null), "html", null, true);
         echo "\" />
 
-\t<label for=\"password\">Contrase�a:</label>
+\t<label for=\"password\">Contraseña:</label>
 \t<input type=\"password\" id=\"password\" name=\"_password\" />
 
 \t<button type=\"submit\">Entrar</button>
