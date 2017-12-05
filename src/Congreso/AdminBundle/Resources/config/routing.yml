@@ -1,0 +1,13 @@
+congreso_admin_homepage:
+    path:     /
+    defaults: { _controller: CongresoCongresoBundle:Congreso:list }
+
+
+blogger_admin_login:
+    pattern: /login
+    defaults: { _controller: CongresoAdminBundle:Security:login }
+blogger_admin_login_check:
+    pattern: /login_check
+
+blogger_admin_logout:
+    pattern: /logout

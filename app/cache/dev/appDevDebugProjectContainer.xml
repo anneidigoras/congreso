@@ -17,6 +17,8 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="CongresoCongresoBundle">Congreso\CongresoBundle\CongresoCongresoBundle</parameter>
+      <parameter key="EasyAdminBundle">EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle</parameter>
+      <parameter key="CongresoAdminBundle">Congreso\AdminBundle\CongresoAdminBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -67,6 +69,16 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\xampp\htdocs\congreso\src\Congreso\CongresoBundle</parameter>
         <parameter key="namespace">Congreso\CongresoBundle</parameter>
+      </parameter>
+      <parameter key="EasyAdminBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src</parameter>
+        <parameter key="namespace">EasyCorp\Bundle\EasyAdminBundle</parameter>
+      </parameter>
+      <parameter key="CongresoAdminBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\xampp\htdocs\congreso\src\Congreso\AdminBundle</parameter>
+        <parameter key="namespace">Congreso\AdminBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -293,7 +305,16 @@
     <parameter key="security.http_utils.class">Symfony\Component\Security\Http\HttpUtils</parameter>
     <parameter key="security.validator.user_password.class">Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator</parameter>
     <parameter key="security.expression_language.class">Symfony\Component\Security\Core\Authorization\ExpressionLanguage</parameter>
-    <parameter key="security.role_hierarchy.roles" type="collection"/>
+    <parameter key="security.role_hierarchy.roles" type="collection">
+      <parameter key="ROLE_ADMIN" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
+      <parameter key="ROLE_SUPER_ADMIN" type="collection">
+        <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_ADMIN</parameter>
+        <parameter>ROLE_ALLOWED_TO_SWITCH</parameter>
+      </parameter>
+    </parameter>
     <parameter key="security.authentication.retry_entry_point.class">Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint</parameter>
     <parameter key="security.channel_listener.class">Symfony\Component\Security\Http\Firewall\ChannelListener</parameter>
     <parameter key="security.authentication.form_entry_point.class">Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint</parameter>
@@ -534,6 +555,50 @@
     <parameter key="sensio_framework_extra.converter.doctrine.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter</parameter>
     <parameter key="sensio_framework_extra.converter.datetime.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DateTimeParamConverter</parameter>
     <parameter key="sensio_framework_extra.view.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener</parameter>
+    <parameter key="easyadmin.config" type="collection">
+      <parameter key="design" type="collection">
+        <parameter key="assets" type="collection">
+          <parameter key="css" type="collection"/>
+          <parameter key="js" type="collection"/>
+          <parameter key="favicon" type="collection">
+            <parameter key="path">favicon.ico</parameter>
+            <parameter key="mime_type">image/x-icon</parameter>
+          </parameter>
+        </parameter>
+        <parameter key="theme">default</parameter>
+        <parameter key="color_scheme">dark</parameter>
+        <parameter key="brand_color">#205081</parameter>
+        <parameter key="form_theme" type="collection">
+          <parameter>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</parameter>
+        </parameter>
+        <parameter key="menu" type="collection"/>
+      </parameter>
+      <parameter key="site_name">EasyAdmin</parameter>
+      <parameter key="formats" type="collection">
+        <parameter key="date">Y-m-d</parameter>
+        <parameter key="time">H:i:s</parameter>
+        <parameter key="datetime">F j, Y H:i</parameter>
+      </parameter>
+      <parameter key="disabled_actions" type="collection"/>
+      <parameter key="translation_domain">messages</parameter>
+      <parameter key="list" type="collection">
+        <parameter key="actions" type="collection"/>
+        <parameter key="max_results">15</parameter>
+      </parameter>
+      <parameter key="search" type="collection"/>
+      <parameter key="edit" type="collection">
+        <parameter key="actions" type="collection"/>
+      </parameter>
+      <parameter key="new" type="collection">
+        <parameter key="actions" type="collection"/>
+      </parameter>
+      <parameter key="show" type="collection">
+        <parameter key="actions" type="collection"/>
+        <parameter key="max_results">10</parameter>
+      </parameter>
+      <parameter key="entities" type="collection"/>
+    </parameter>
+    <parameter key="easyadmin.cache.dir">C:/xampp/htdocs/congreso/app/cache/dev/easy_admin</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
     <parameter key="web_profiler.controller.router.class">Symfony\Bundle\WebProfilerBundle\Controller\RouterController</parameter>
     <parameter key="web_profiler.controller.exception.class">Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController</parameter>
@@ -604,6 +669,10 @@
         <parameter>dump</parameter>
         <parameter>@Debug/Profiler/dump.html.twig</parameter>
       </parameter>
+      <parameter key="easyadmin.data_collector" type="collection">
+        <parameter>easyadmin</parameter>
+        <parameter>@EasyAdmin/data_collector/easyadmin.html.twig</parameter>
+      </parameter>
       <parameter key="data_collector.config" type="collection">
         <parameter>config</parameter>
         <parameter>@WebProfiler/Collector/config.html.twig</parameter>
@@ -617,6 +686,12 @@
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
+    </service>
+    <service id="controller_resolver" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver" public="false">
+      <tag name="monolog.logger" channel="request"/>
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="controller_name_converter"/>
+      <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -1143,6 +1218,16 @@
               <argument key="Symfony\Component\Form\Extension\Core\Type\CurrencyType">form.type.currency</argument>
               <argument key="entity">form.type.entity</argument>
               <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType">form.type.entity</argument>
+              <argument key="easyadmin.form.type">easyadmin.form.type</argument>
+              <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType">easyadmin.form.type</argument>
+              <argument key="easyadmin_autocomplete">easyadmin.form.type.autocomplete</argument>
+              <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType">easyadmin.form.type.autocomplete</argument>
+              <argument key="easyadmin_divider">easyadmin.form.type.divider</argument>
+              <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType">easyadmin.form.type.divider</argument>
+              <argument key="easyadmin_section">easyadmin.form.type.section</argument>
+              <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType">easyadmin.form.type.section</argument>
+              <argument key="easyadmin_group">easyadmin.form.type.group</argument>
+              <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType">easyadmin.form.type.group</argument>
             </argument>
             <argument type="collection">
               <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="collection">
@@ -1151,6 +1236,7 @@
                 <argument>form.type_extension.upload.validator</argument>
                 <argument>form.type_extension.csrf</argument>
                 <argument>form.type_extension.form.data_collector</argument>
+                <argument>easyadmin.form.type.extension</argument>
               </argument>
               <argument key="Symfony\Component\Form\Extension\Core\Type\RepeatedType" type="collection">
                 <argument>form.type_extension.repeated.validator</argument>
@@ -1162,6 +1248,7 @@
             <argument type="collection">
               <argument>form.type_guesser.validator</argument>
               <argument>form.type_guesser.doctrine</argument>
+              <argument>easyadmin.form.guesser.missing_doctrine_orm_type_guesser</argument>
             </argument>
           </service>
         </argument>
@@ -1530,6 +1617,14 @@
       </call>
       <call method="add">
         <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\DataCollector\EasyAdminDataCollector" public="false">
+            <tag name="data_collector" template="@EasyAdmin/data_collector/easyadmin.html.twig" id="easyadmin"/>
+            <argument type="service" id="easyadmin.config.manager"/>
+          </service>
+        </argument>
+      </call>
+      <call method="add">
+        <argument type="service">
           <service class="Symfony\Component\HttpKernel\DataCollector\ConfigDataCollector" public="false">
             <tag name="data_collector" template="@WebProfiler/Collector/config.html.twig" id="config" priority="-255"/>
             <call method="setKernel">
@@ -1691,6 +1786,22 @@
         </argument>
         <argument>0</argument>
       </call>
+      <call method="addListenerService">
+        <argument>kernel.controller</argument>
+        <argument type="collection">
+          <argument>easyadmin.listener.controller</argument>
+          <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>easy_admin.post_initialize</argument>
+        <argument type="collection">
+          <argument>easyadmin.listener.request_post_initialize</argument>
+          <argument>initializeRequest</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
       <call method="addSubscriberService">
         <argument>response_listener</argument>
         <argument>Symfony\Component\HttpKernel\EventListener\ResponseListener</argument>
@@ -1789,14 +1900,7 @@
       </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
-      <argument type="service">
-        <service class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver" public="false">
-          <tag name="monolog.logger" channel="request"/>
-          <argument type="service" id="service_container"/>
-          <argument type="service" id="controller_name_converter"/>
-          <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-        </service>
-      </argument>
+      <argument type="service" id="controller_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
     <service id="security.context" class="Symfony\Component\Security\Core\SecurityContext">
@@ -1814,8 +1918,22 @@
     <service id="security.authentication.manager" class="Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager" public="false">
       <argument type="collection">
         <argument type="service">
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
+            <argument type="service" id="security.user.provider.concrete.in_memory"/>
+            <argument type="service" id="security.user_checker.secured_area"/>
+            <argument>secured_area</argument>
+            <argument type="service" id="security.encoder_factory"/>
+            <argument>true</argument>
+          </service>
+        </argument>
+        <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5a1318dee0e628.23542002</argument>
+            <argument>5a266622a7d4b0.58934805</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+            <argument>5a266622a7d4b0.58934805</argument>
           </service>
         </argument>
       </argument>
@@ -1845,8 +1963,9 @@
             </service>
           </argument>
           <argument type="service">
-            <service class="Symfony\Component\Security\Core\Authorization\Voter\RoleVoter" public="false">
+            <service class="Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter" public="false">
               <tag name="security.voter" priority="245"/>
+              <argument type="service" id="security.role_hierarchy"/>
             </service>
           </argument>
           <argument type="service">
@@ -1863,7 +1982,16 @@
       </call>
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="ROLE_ADMIN" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument key="ROLE_SUPER_ADMIN" type="collection">
+          <argument>ROLE_USER</argument>
+          <argument>ROLE_ADMIN</argument>
+          <argument>ROLE_ALLOWED_TO_SWITCH</argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.firewall" class="Symfony\Component\Security\Http\Firewall">
       <tag name="kernel.event_subscriber"/>
@@ -1871,6 +1999,11 @@
         <service class="Symfony\Bundle\SecurityBundle\Security\FirewallMap" public="false">
           <argument type="service" id="service_container"/>
           <argument type="collection">
+            <argument key="security.firewall.map.context.secured_area" type="service">
+              <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+                <argument>^/</argument>
+              </service>
+            </argument>
             <argument key="security.firewall.map.context.dev" type="service">
               <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
                 <argument>^/(_(profiler|wdt)|css|images|js)/</argument>
@@ -1886,11 +2019,64 @@
       <argument type="service" id="request_stack" on-invalid="null"/>
       <argument type="service" id="router" on-invalid="null"/>
       <argument type="service" id="security.token_storage" on-invalid="null"/>
+      <call method="registerListener">
+        <argument>secured_area</argument>
+        <argument>/admin/logout</argument>
+        <argument>logout</argument>
+        <argument>_csrf_token</argument>
+        <argument>null</argument>
+      </call>
+    </service>
+    <service id="security.http_utils" class="Symfony\Component\Security\Http\HttpUtils" public="false">
+      <argument type="service" id="router" on-invalid="null"/>
+      <argument type="service" id="router" on-invalid="null"/>
     </service>
     <service id="security.validator.user_password" class="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator">
       <tag name="validator.constraint_validator" alias="security.validator.user_password"/>
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.encoder_factory"/>
+    </service>
+    <service id="security.channel_listener" class="Symfony\Component\Security\Http\Firewall\ChannelListener" public="false">
+      <tag name="monolog.logger" channel="security"/>
+      <argument type="service" id="security.access_map"/>
+      <argument type="service">
+        <service class="Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint" public="false">
+          <argument>80</argument>
+          <argument>443</argument>
+        </service>
+      </argument>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+    </service>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false">
+      <call method="add">
+        <argument type="service">
+          <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+            <argument>^/admin/login</argument>
+          </service>
+        </argument>
+        <argument type="collection">
+          <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service">
+          <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+            <argument>^/admin</argument>
+          </service>
+        </argument>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
+    <service id="security.access_listener" class="Symfony\Component\Security\Http\Firewall\AccessListener" public="false">
+      <tag name="monolog.logger" channel="security"/>
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.access.decision_manager"/>
+      <argument type="service" id="security.access_map"/>
+      <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.rememberme.response_listener" class="Symfony\Component\Security\Http\RememberMe\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -1907,34 +2093,186 @@
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
     </service>
-    <service id="security.firewall.map.context.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
-      <argument type="collection"/>
-      <argument>null</argument>
-    </service>
-    <service id="security.firewall.map.context.main" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
-      <argument type="collection">
+    <service id="security.user.provider.concrete.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false">
+      <call method="createUser">
         <argument type="service">
-          <service class="Symfony\Component\Security\Http\Firewall\ChannelListener" public="false">
-            <tag name="monolog.logger" channel="security"/>
+          <service class="Symfony\Component\Security\Core\User\User" public="false">
+            <argument>user</argument>
+            <argument>userpass</argument>
+            <argument type="collection">
+              <argument>ROLE_USER</argument>
+            </argument>
+          </service>
+        </argument>
+      </call>
+      <call method="createUser">
+        <argument type="service">
+          <service class="Symfony\Component\Security\Core\User\User" public="false">
+            <argument>admin</argument>
+            <argument>adminpass</argument>
+            <argument type="collection">
+              <argument>ROLE_ADMIN</argument>
+            </argument>
+          </service>
+        </argument>
+      </call>
+    </service>
+    <service id="security.firewall.map.context.secured_area" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
+      <argument type="collection">
+        <argument type="service" id="security.channel_listener"/>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="collection">
+              <argument type="service" id="security.user.provider.concrete.in_memory"/>
+            </argument>
+            <argument>secured_area</argument>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+            <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\LogoutListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service" id="security.http_utils"/>
             <argument type="service">
-              <service class="Symfony\Component\Security\Http\AccessMap" public="false"/>
+              <service class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
+                <argument type="service" id="security.http_utils"/>
+                <argument>/</argument>
+              </service>
+            </argument>
+            <argument type="collection">
+              <argument key="csrf_parameter">_csrf_token</argument>
+              <argument key="csrf_token_id">logout</argument>
+              <argument key="logout_path">/admin/logout</argument>
+            </argument>
+            <call method="addHandler">
+              <argument type="service">
+                <service class="Symfony\Component\Security\Http\Logout\SessionLogoutHandler" public="false"/>
+              </argument>
+            </call>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener" public="false">
+            <tag name="security.remember_me_aware" id="secured_area" provider="security.user.provider.concrete.in_memory"/>
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy" public="false">
+                <argument>migrate</argument>
+              </service>
+            </argument>
+            <argument type="service" id="security.http_utils"/>
+            <argument>secured_area</argument>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" public="false">
+                <argument type="service" id="security.http_utils"/>
+                <argument type="collection"/>
+                <call method="setOptions">
+                  <argument type="collection">
+                    <argument key="login_path">/admin/login</argument>
+                    <argument key="default_target_path">/admin/index</argument>
+                    <argument key="always_use_default_target_path">true</argument>
+                    <argument key="target_path_parameter">_target_path</argument>
+                    <argument key="use_referer">false</argument>
+                  </argument>
+                </call>
+                <call method="setProviderKey">
+                  <argument>secured_area</argument>
+                </call>
+              </service>
             </argument>
             <argument type="service">
-              <service class="Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint" public="false">
-                <argument>80</argument>
-                <argument>443</argument>
+              <service class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler" public="false">
+                <argument type="service" id="http_kernel"/>
+                <argument type="service" id="security.http_utils"/>
+                <argument type="collection"/>
+                <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+                <call method="setOptions">
+                  <argument type="collection">
+                    <argument key="login_path">/admin/login</argument>
+                    <argument key="failure_path">null</argument>
+                    <argument key="failure_forward">false</argument>
+                    <argument key="failure_path_parameter">_failure_path</argument>
+                  </argument>
+                </call>
+              </service>
+            </argument>
+            <argument type="collection">
+              <argument key="check_path">/admin/login_check</argument>
+              <argument key="use_forward">false</argument>
+              <argument key="require_previous_session">true</argument>
+              <argument key="username_parameter">_username</argument>
+              <argument key="password_parameter">_password</argument>
+              <argument key="csrf_parameter">_csrf_token</argument>
+              <argument key="csrf_token_id">authenticate</argument>
+              <argument key="post_only">true</argument>
+            </argument>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+            <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+            <argument>null</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\BasicAuthenticationListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument>secured_area</argument>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
+                <argument type="service" id="http_kernel"/>
+                <argument type="service" id="security.http_utils"/>
+                <argument>/admin/login</argument>
+                <argument>false</argument>
               </service>
             </argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
         <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument>5a266622a7d4b0.58934805</argument>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+            <argument type="service" id="security.authentication.manager"/>
+          </service>
+        </argument>
+        <argument type="service" id="security.access_listener"/>
+      </argument>
+      <argument type="service">
+        <service class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
+          <argument type="service" id="security.token_storage"/>
+          <argument type="service" id="security.authentication.trust_resolver"/>
+          <argument type="service" id="security.http_utils"/>
+          <argument>secured_area</argument>
+          <argument type="service">
+            <service class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
+              <argument type="service" id="http_kernel"/>
+              <argument type="service" id="security.http_utils"/>
+              <argument>/admin/login</argument>
+              <argument>false</argument>
+            </service>
+          </argument>
+          <argument>null</argument>
+          <argument>null</argument>
+          <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+          <argument>false</argument>
+        </service>
+      </argument>
+    </service>
+    <service id="security.firewall.map.context.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
+      <argument type="collection"/>
+      <argument>null</argument>
+    </service>
+    <service id="security.firewall.map.context.main" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
+      <argument type="collection">
+        <argument type="service" id="security.channel_listener"/>
+        <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
             <argument type="service" id="security.token_storage"/>
             <argument type="collection">
-              <argument type="service">
-                <service class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false"/>
-              </argument>
+              <argument type="service" id="security.user.provider.concrete.in_memory"/>
             </argument>
             <argument>main</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -1944,33 +2282,18 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5a1318dee0e628.23542002</argument>
+            <argument>5a266622a7d4b0.58934805</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
         </argument>
-        <argument type="service">
-          <service class="Symfony\Component\Security\Http\Firewall\AccessListener" public="false">
-            <tag name="monolog.logger" channel="security"/>
-            <argument type="service" id="security.token_storage"/>
-            <argument type="service" id="security.access.decision_manager"/>
-            <argument type="service">
-              <service class="Symfony\Component\Security\Http\AccessMap" public="false"/>
-            </argument>
-            <argument type="service" id="security.authentication.manager"/>
-          </service>
-        </argument>
+        <argument type="service" id="security.access_listener"/>
       </argument>
       <argument type="service">
         <service class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
           <argument type="service" id="security.token_storage"/>
           <argument type="service" id="security.authentication.trust_resolver"/>
-          <argument type="service">
-            <service class="Symfony\Component\Security\Http\HttpUtils" public="false">
-              <argument type="service" id="router" on-invalid="null"/>
-              <argument type="service" id="router" on-invalid="null"/>
-            </service>
-          </argument>
+          <argument type="service" id="security.http_utils"/>
           <argument>main</argument>
           <argument>null</argument>
           <argument>null</argument>
@@ -2148,6 +2471,18 @@
         <argument type="service">
           <service class="Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension" public="false">
             <tag name="twig.extension"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addExtension">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension" public="false">
+            <tag name="twig.extension"/>
+            <argument type="service" id="easyadmin.config.manager"/>
+            <argument type="service" id="property_accessor"/>
+            <argument type="service" id="easyadmin.router"/>
+            <argument>true</argument>
+            <argument type="service" id="security.logout_url_generator" on-invalid="null"/>
           </service>
         </argument>
       </call>
@@ -2470,6 +2805,210 @@
       <argument type="service" id="security.token_storage" on-invalid="null"/>
       <argument type="service" id="security.authorization_checker" on-invalid="null"/>
     </service>
+    <service id="easyadmin.cache.manager" class="EasyCorp\Bundle\EasyAdminBundle\Cache\CacheManager">
+      <argument>C:/xampp/htdocs/congreso/app/cache/dev/easy_admin</argument>
+    </service>
+    <service id="easyadmin.config.manager" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager">
+      <argument type="service" id="easyadmin.cache.manager"/>
+      <argument type="service" id="property_accessor"/>
+      <argument type="collection">
+        <argument key="design" type="collection">
+          <argument key="assets" type="collection">
+            <argument key="css" type="collection"/>
+            <argument key="js" type="collection"/>
+            <argument key="favicon" type="collection">
+              <argument key="path">favicon.ico</argument>
+              <argument key="mime_type">image/x-icon</argument>
+            </argument>
+          </argument>
+          <argument key="theme">default</argument>
+          <argument key="color_scheme">dark</argument>
+          <argument key="brand_color">#205081</argument>
+          <argument key="form_theme" type="collection">
+            <argument>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</argument>
+          </argument>
+          <argument key="menu" type="collection"/>
+        </argument>
+        <argument key="site_name">EasyAdmin</argument>
+        <argument key="formats" type="collection">
+          <argument key="date">Y-m-d</argument>
+          <argument key="time">H:i:s</argument>
+          <argument key="datetime">F j, Y H:i</argument>
+        </argument>
+        <argument key="disabled_actions" type="collection"/>
+        <argument key="translation_domain">messages</argument>
+        <argument key="list" type="collection">
+          <argument key="actions" type="collection"/>
+          <argument key="max_results">15</argument>
+        </argument>
+        <argument key="search" type="collection"/>
+        <argument key="edit" type="collection">
+          <argument key="actions" type="collection"/>
+        </argument>
+        <argument key="new" type="collection">
+          <argument key="actions" type="collection"/>
+        </argument>
+        <argument key="show" type="collection">
+          <argument key="actions" type="collection"/>
+          <argument key="max_results">10</argument>
+        </argument>
+        <argument key="entities" type="collection"/>
+      </argument>
+      <argument>true</argument>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\NormalizerConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="90"/>
+            <argument type="service" id="service_container"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\DesignConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="80"/>
+            <argument type="service" id="service_container"/>
+            <argument>true</argument>
+            <argument>en</argument>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\MenuConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="70"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ActionConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="60"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\MetadataConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="50"/>
+            <argument type="service" id="doctrine"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\PropertyConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="40"/>
+            <argument type="service" id="form.registry"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ViewConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="30"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\TemplateConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="20"/>
+            <argument type="service" id="twig.loader"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Configuration\DefaultConfigPass" public="false">
+            <tag name="easyadmin.config_pass" priority="10"/>
+          </service>
+        </argument>
+      </call>
+    </service>
+    <service id="easyadmin.query_builder" class="EasyCorp\Bundle\EasyAdminBundle\Search\QueryBuilder">
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="easyadmin.autocomplete" class="EasyCorp\Bundle\EasyAdminBundle\Search\Autocomplete">
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service">
+        <service class="EasyCorp\Bundle\EasyAdminBundle\Search\Finder" public="false">
+          <argument type="service" id="easyadmin.query_builder"/>
+          <argument type="service" id="easyadmin.paginator"/>
+        </service>
+      </argument>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="easyadmin.paginator" class="EasyCorp\Bundle\EasyAdminBundle\Search\Paginator"/>
+    <service id="easyadmin.router" class="EasyCorp\Bundle\EasyAdminBundle\Router\EasyAdminRouter">
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="router"/>
+      <argument type="service" id="property_accessor"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.listener.controller" class="EasyCorp\Bundle\EasyAdminBundle\EventListener\ControllerListener">
+      <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="controller_resolver"/>
+    </service>
+    <service id="easyadmin.listener.request_post_initialize" class="EasyCorp\Bundle\EasyAdminBundle\EventListener\RequestPostInitializeListener">
+      <tag name="kernel.event_listener" event="easy_admin.post_initialize" method="initializeRequest"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.form.type" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType">
+      <tag name="form.type"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="collection">
+        <argument key="4" type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\AutocompleteTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="30"/>
+          </service>
+        </argument>
+        <argument key="3" type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\CollectionTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="20"/>
+          </service>
+        </argument>
+        <argument key="2" type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\CheckboxTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="10"/>
+          </service>
+        </argument>
+        <argument key="1" type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\TypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="0"/>
+            <argument type="service" id="easyadmin.config.manager"/>
+          </service>
+        </argument>
+        <argument key="0" type="service">
+          <service class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\EntityTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="-20"/>
+          </service>
+        </argument>
+      </argument>
+    </service>
+    <service id="easyadmin.form.type.autocomplete" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType">
+      <tag name="form.type" alias="easyadmin_autocomplete"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+    </service>
+    <service id="easyadmin.form.type.divider" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType">
+      <tag name="form.type" alias="easyadmin_divider"/>
+    </service>
+    <service id="easyadmin.form.type.section" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType">
+      <tag name="form.type" alias="easyadmin_section"/>
+    </service>
+    <service id="easyadmin.form.type.group" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType">
+      <tag name="form.type" alias="easyadmin_group"/>
+    </service>
+    <service id="easyadmin.form.type.extension" class="EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EasyAdminExtension">
+      <tag name="form.type_extension" alias="form" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.form.guesser.missing_doctrine_orm_type_guesser" class="EasyCorp\Bundle\EasyAdminBundle\Form\Guesser\MissingDoctrineOrmTypeGuesser">
+      <tag name="form.type_guesser"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector">
       <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
       <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
@@ -2555,6 +3094,10 @@
         <argument key="data_collector.dump" type="collection">
           <argument>dump</argument>
           <argument>@Debug/Profiler/dump.html.twig</argument>
+        </argument>
+        <argument key="easyadmin.data_collector" type="collection">
+          <argument>easyadmin</argument>
+          <argument>@EasyAdmin/data_collector/easyadmin.html.twig</argument>
         </argument>
         <argument key="data_collector.config" type="collection">
           <argument>config</argument>
@@ -2758,12 +3301,19 @@
       <argument>true</argument>
     </service>
     <service id="security.encoder_factory" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="Symfony\Component\Security\Core\User\User" type="collection">
+          <argument key="class">%security.encoder.plain.class%</argument>
+          <argument key="arguments" type="collection">
+            <argument>false</argument>
+          </argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.password_encoder" class="Symfony\Component\Security\Core\Encoder\UserPasswordEncoder">
       <argument type="service" id="security.encoder_factory"/>
     </service>
-    <service id="security.user_checker.main" class="Symfony\Component\Security\Core\User\UserChecker"/>
+    <service id="security.user_checker.secured_area" class="Symfony\Component\Security\Core\User\UserChecker"/>
     <service id="logger" class="Symfony\Bridge\Monolog\Logger">
       <argument>app</argument>
       <call method="useMicrosecondTimestamps">
@@ -2874,6 +3424,14 @@
         <argument>CongresoCongreso</argument>
       </call>
       <call method="addPath">
+        <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/views</argument>
+        <argument>EasyAdmin</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\congreso\src\Congreso\AdminBundle/Resources/views</argument>
+        <argument>CongresoAdmin</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
@@ -2894,6 +3452,7 @@
     </service>
     <service id="session.storage" alias="session.storage.native"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher"/>
+    <service id="security.user_checker.main" alias="security.user_checker.secured_area"/>
     <service id="swiftmailer.spool" alias="swiftmailer.mailer.default.spool"/>
     <service id="swiftmailer.transport.real" alias="swiftmailer.mailer.default.transport.real"/>
     <service id="swiftmailer.plugin.messagelogger" alias="swiftmailer.mailer.default.plugin.messagelogger"/>
@@ -2905,6 +3464,7 @@
     <service id="doctrine.orm.default_metadata_cache" alias="doctrine_cache.providers.doctrine.orm.default_metadata_cache"/>
     <service id="doctrine.orm.default_result_cache" alias="doctrine_cache.providers.doctrine.orm.default_result_cache"/>
     <service id="doctrine.orm.default_query_cache" alias="doctrine_cache.providers.doctrine.orm.default_query_cache"/>
+    <service id="easy_admin.property_accessor" alias="property_accessor"/>
     <service id="sensio.distribution.webconfigurator" alias="sensio_distribution.webconfigurator"/>
     <service id="console.command.sensiolabs_security_command_securitycheckercommand" alias="sensio_distribution.security_checker.command"/>
   </services>

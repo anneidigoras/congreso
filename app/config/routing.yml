@@ -1,3 +1,11 @@
+congreso_admin:
+    resource: "@CongresoAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+congreso_admin:
+    resource: "@CongresoAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 congreso_congreso:
     resource: "@CongresoCongresoBundle/Resources/config/routing.yml"
     prefix:   /

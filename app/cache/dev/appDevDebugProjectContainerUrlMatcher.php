@@ -100,6 +100,36 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // congreso_admin_homepage
+        if ('' === rtrim($pathinfo, '/')) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'congreso_admin_homepage');
+            }
+
+            return array (  '_controller' => 'Congreso\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'congreso_admin_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // blogger_admin_login
+                if ('/login' === $pathinfo) {
+                    return array (  '_controller' => 'BloggerAdminBundle:Security:login',  '_route' => 'blogger_admin_login',);
+                }
+
+                // blogger_admin_login_check
+                if ('/login_check' === $pathinfo) {
+                    return array('_route' => 'blogger_admin_login_check');
+                }
+
+            }
+
+            // blogger_admin_logout
+            if ('/logout' === $pathinfo) {
+                return array('_route' => 'blogger_admin_logout');
+            }
+
+        }
+
         // congreso_congreso_list
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {
