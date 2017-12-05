@@ -1,0 +1,14 @@
+congreso_admin_homepage:
+    path:     /
+    defaults: { _controller: CongresoAdminBundle:Default:index }
+# src/Blogger/AdminBundle/resources/config/routing.yml
+congreso_admin_login:
+    pattern: /login
+    defaults: { _controller: CongresoAdminBundle:Security:login }
+congreso_admin_login_check:
+    pattern: /login_check
+congreso_admin_index:
+    path: /index
+    defaults: { _controller: CongresoAdminBundle:Security:index }
+congreso_admin_logout:
+    pattern: /logout

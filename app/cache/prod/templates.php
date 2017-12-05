@@ -91,6 +91,8 @@
   'CongresoCongresoBundle::layout.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/layout.html.twig',
   'CongresoCongresoBundle:Track:arttrac.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/arttrac.html.twig',
   'CongresoCongresoBundle:Track:list.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/list.html.twig',
+  'CongresoAdminBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\AdminBundle/Resources/views/Default/index.html.twig',
+  'CongresoAdminBundle:Security:login.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\AdminBundle/Resources/views/Security/login.html.twig',
   '::base.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/default/index.html.twig',
   ':default:layout.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/default/layout.html.twig',

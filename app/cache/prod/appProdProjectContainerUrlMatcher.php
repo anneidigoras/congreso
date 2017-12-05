@@ -22,6 +22,41 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $context = $this->context;
         $request = $this->request;
 
+        if (0 === strpos($pathinfo, '/admin')) {
+            // congreso_admin_homepage
+            if ('/admin' === rtrim($pathinfo, '/')) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'congreso_admin_homepage');
+                }
+
+                return array (  '_controller' => 'Congreso\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'congreso_admin_homepage',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/login')) {
+                // congreso_admin_login
+                if ('/admin/login' === $pathinfo) {
+                    return array (  '_controller' => 'Congreso\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'congreso_admin_login',);
+                }
+
+                // congreso_admin_login_check
+                if ('/admin/login_check' === $pathinfo) {
+                    return array('_route' => 'congreso_admin_login_check');
+                }
+
+            }
+
+            // congreso_admin_index
+            if ('/admin/index' === $pathinfo) {
+                return array (  '_controller' => 'Congreso\\AdminBundle\\Controller\\SecurityController::indexAction',  '_route' => 'congreso_admin_index',);
+            }
+
+            // congreso_admin_logout
+            if ('/admin/logout' === $pathinfo) {
+                return array('_route' => 'congreso_admin_logout');
+            }
+
+        }
+
         // congreso_congreso_list
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {

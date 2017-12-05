@@ -42,7 +42,23 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         // line 20
         $this->displayBlock('title', $context, $blocks);
         echo " </a></h1>
-            </div>
+                ";
+        // line 21
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
+            // line 22
+            echo "                    <a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_logout");
+            echo "\">Salir</a>
+                ";
+        } else {
+            // line 24
+            echo "                    <a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login");
+            echo "\">Entrar</a>    
+                ";
+        }
+        // line 26
+        echo "            </div>
         </div>
     
     <!-- end #header -->
@@ -52,22 +68,22 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         </div>
         <div id=\"content\">
             ";
-        // line 30
+        // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 31
+        // line 36
         echo "        </div>
         <!-- end #content -->
         <div id=\"sidebar\">
             ";
-        // line 34
+        // line 39
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 35
+        // line 40
         echo "            ";
         $this->displayBlock('linea', $context, $blocks);
-        // line 36
+        // line 41
         echo "            ";
         $this->displayBlock('sidebar1', $context, $blocks);
-        // line 37
+        // line 42
         echo "
         </div>
         
@@ -106,22 +122,22 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         echo " ";
     }
 
-    // line 30
+    // line 35
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 34
+    // line 39
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 35
+    // line 40
     public function block_linea($context, array $blocks = array())
     {
     }
 
-    // line 36
+    // line 41
     public function block_sidebar1($context, array $blocks = array())
     {
     }
@@ -131,9 +147,14 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         return "::base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  125 => 36,  120 => 35,  115 => 34,  110 => 30,  104 => 20,  98 => 11,  92 => 7,  89 => 6,  71 => 37,  68 => 36,  65 => 35,  63 => 34,  58 => 31,  56 => 30,  43 => 20,  34 => 13,  32 => 6,  25 => 1,);
+        return array (  141 => 41,  136 => 40,  131 => 39,  126 => 35,  120 => 20,  114 => 11,  108 => 7,  105 => 6,  87 => 42,  84 => 41,  81 => 40,  79 => 39,  74 => 36,  72 => 35,  61 => 26,  55 => 24,  49 => 22,  47 => 21,  43 => 20,  34 => 13,  32 => 6,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
