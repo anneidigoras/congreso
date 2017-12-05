@@ -1,3 +1,4 @@
+# app/config/routing.yml	
 congreso_admin:
     resource: "@CongresoAdminBundle/Resources/config/routing.yml"
     prefix:   /admin

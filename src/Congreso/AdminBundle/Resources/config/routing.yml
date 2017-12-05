@@ -12,3 +12,8 @@ congreso_admin_index:
     defaults: { _controller: CongresoAdminBundle:Security:index }
 congreso_admin_logout:
     pattern: /logout
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /backend

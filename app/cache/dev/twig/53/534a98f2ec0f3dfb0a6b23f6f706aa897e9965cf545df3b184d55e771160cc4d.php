@@ -1,0 +1,100 @@
+<?php
+
+/* default/layout.html.twig */
+class __TwigTemplate_d1c51e62866c61f75d85dcc95e341de3a1f7594b4dba98bb040fb629a91d497c extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'body' => array($this, 'block_body'),
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_621675634125b788018d5ab1a2dfa9eae3927588044755519aa4ca216b54f156 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_621675634125b788018d5ab1a2dfa9eae3927588044755519aa4ca216b54f156->enter($__internal_621675634125b788018d5ab1a2dfa9eae3927588044755519aa4ca216b54f156_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/layout.html.twig"));
+
+        // line 2
+        echo "<!doctype html>
+<html>
+\t<head>
+\t\t<title>";
+        // line 5
+        $this->displayBlock('title', $context, $blocks);
+        echo "</title>
+\t</head>
+\t<body>
+\t\t";
+        // line 8
+        $this->displayBlock('body', $context, $blocks);
+        // line 9
+        echo "\t</body>
+</html>
+";
+        
+        $__internal_621675634125b788018d5ab1a2dfa9eae3927588044755519aa4ca216b54f156->leave($__internal_621675634125b788018d5ab1a2dfa9eae3927588044755519aa4ca216b54f156_prof);
+
+    }
+
+    // line 5
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_2b7a118bb220a80342b5568aa50f65bba59dd134cb6d7f76f191dd46eea2263d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2b7a118bb220a80342b5568aa50f65bba59dd134cb6d7f76f191dd46eea2263d->enter($__internal_2b7a118bb220a80342b5568aa50f65bba59dd134cb6d7f76f191dd46eea2263d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Default title";
+        
+        $__internal_2b7a118bb220a80342b5568aa50f65bba59dd134cb6d7f76f191dd46eea2263d->leave($__internal_2b7a118bb220a80342b5568aa50f65bba59dd134cb6d7f76f191dd46eea2263d_prof);
+
+    }
+
+    // line 8
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_5b688faadd8c8d82cae4b5cc218b7e71fa7bd96f3164a6b92887b451090eaae5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5b688faadd8c8d82cae4b5cc218b7e71fa7bd96f3164a6b92887b451090eaae5->enter($__internal_5b688faadd8c8d82cae4b5cc218b7e71fa7bd96f3164a6b92887b451090eaae5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        
+        $__internal_5b688faadd8c8d82cae4b5cc218b7e71fa7bd96f3164a6b92887b451090eaae5->leave($__internal_5b688faadd8c8d82cae4b5cc218b7e71fa7bd96f3164a6b92887b451090eaae5_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "default/layout.html.twig";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  58 => 8,  46 => 5,  37 => 9,  35 => 8,  29 => 5,  24 => 2,);
+    }
+
+    /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
+    public function getSource()
+    {
+        @trigger_error('The '.__METHOD__.' method is deprecated since version 1.27 and will be removed in 2.0. Use getSourceContext() instead.', E_USER_DEPRECATED);
+
+        return $this->getSourceContext()->getCode();
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("{# app/Resources/views/layout.html.twig #}
+<!doctype html>
+<html>
+\t<head>
+\t\t<title>{% block title %}Default title{% endblock %}</title>
+\t</head>
+\t<body>
+\t\t{% block body %}{% endblock %}
+\t</body>
+</html>
+", "default/layout.html.twig", "C:\\xampp\\htdocs\\congreso\\app\\Resources\\views\\default\\layout.html.twig");
+    }
+}

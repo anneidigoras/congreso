@@ -133,6 +133,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array('_route' => 'congreso_admin_logout');
             }
 
+            if (0 === strpos($pathinfo, '/admin/backend')) {
+                // easyadmin
+                if ('/admin/backend' === rtrim($pathinfo, '/')) {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'easyadmin');
+                    }
+
+                    return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
+                }
+
+                // admin
+                if ('/admin/backend' === rtrim($pathinfo, '/')) {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'admin');
+                    }
+
+                    return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
+                }
+
+            }
+
         }
 
         // congreso_congreso_list

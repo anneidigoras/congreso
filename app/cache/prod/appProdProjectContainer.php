@@ -38,6 +38,7 @@ class appProdProjectContainer extends Container
             'cache_warmer' => 'getCacheWarmerService',
             'config_cache_factory' => 'getConfigCacheFactoryService',
             'controller_name_converter' => 'getControllerNameConverterService',
+            'controller_resolver' => 'getControllerResolverService',
             'debug.debug_handlers_listener' => 'getDebug_DebugHandlersListenerService',
             'debug.stopwatch' => 'getDebug_StopwatchService',
             'doctrine' => 'getDoctrineService',
@@ -52,6 +53,22 @@ class appProdProjectContainer extends Container
             'doctrine_cache.providers.doctrine.orm.default_metadata_cache' => 'getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService',
             'doctrine_cache.providers.doctrine.orm.default_query_cache' => 'getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService',
             'doctrine_cache.providers.doctrine.orm.default_result_cache' => 'getDoctrineCache_Providers_Doctrine_Orm_DefaultResultCacheService',
+            'easyadmin.autocomplete' => 'getEasyadmin_AutocompleteService',
+            'easyadmin.cache.manager' => 'getEasyadmin_Cache_ManagerService',
+            'easyadmin.config.manager' => 'getEasyadmin_Config_ManagerService',
+            'easyadmin.form.guesser.missing_doctrine_orm_type_guesser' => 'getEasyadmin_Form_Guesser_MissingDoctrineOrmTypeGuesserService',
+            'easyadmin.form.type' => 'getEasyadmin_Form_TypeService',
+            'easyadmin.form.type.autocomplete' => 'getEasyadmin_Form_Type_AutocompleteService',
+            'easyadmin.form.type.divider' => 'getEasyadmin_Form_Type_DividerService',
+            'easyadmin.form.type.extension' => 'getEasyadmin_Form_Type_ExtensionService',
+            'easyadmin.form.type.group' => 'getEasyadmin_Form_Type_GroupService',
+            'easyadmin.form.type.section' => 'getEasyadmin_Form_Type_SectionService',
+            'easyadmin.listener.controller' => 'getEasyadmin_Listener_ControllerService',
+            'easyadmin.listener.exception' => 'getEasyadmin_Listener_ExceptionService',
+            'easyadmin.listener.request_post_initialize' => 'getEasyadmin_Listener_RequestPostInitializeService',
+            'easyadmin.paginator' => 'getEasyadmin_PaginatorService',
+            'easyadmin.query_builder' => 'getEasyadmin_QueryBuilderService',
+            'easyadmin.router' => 'getEasyadmin_RouterService',
             'event_dispatcher' => 'getEventDispatcherService',
             'file_locator' => 'getFileLocatorService',
             'filesystem' => 'getFilesystemService',
@@ -234,6 +251,7 @@ class appProdProjectContainer extends Container
             'doctrine.orm.default_query_cache' => 'doctrine_cache.providers.doctrine.orm.default_query_cache',
             'doctrine.orm.default_result_cache' => 'doctrine_cache.providers.doctrine.orm.default_result_cache',
             'doctrine.orm.entity_manager' => 'doctrine.orm.default_entity_manager',
+            'easy_admin.property_accessor' => 'property_accessor',
             'mailer' => 'swiftmailer.mailer.default',
             'session.storage' => 'session.storage.native',
             'swiftmailer.mailer' => 'swiftmailer.mailer.default',
@@ -311,7 +329,7 @@ class appProdProjectContainer extends Container
 
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, ($this->targetDirs[2].'/Resources'));
 
-        return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => $this->get('kernel.class_cache.cache_warmer'), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer($this), 3 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 4 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c, array()), 5 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer($this, new \Symfony\Bundle\TwigBundle\TemplateIterator($a, $this->targetDirs[2], array())), 6 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine'))));
+        return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => $this->get('kernel.class_cache.cache_warmer'), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer($this), 3 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 4 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c, array()), 5 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer($this, new \Symfony\Bundle\TwigBundle\TemplateIterator($a, $this->targetDirs[2], array())), 6 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine')), 7 => new \EasyCorp\Bundle\EasyAdminBundle\Cache\ConfigWarmer($this->get('easyadmin.config.manager'))));
     }
 
     /*
@@ -499,6 +517,180 @@ class appProdProjectContainer extends Container
     }
 
     /*
+     * Gets the public 'easyadmin.autocomplete' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Search\Autocomplete
+     */
+    protected function getEasyadmin_AutocompleteService()
+    {
+        return $this->services['easyadmin.autocomplete'] = new \EasyCorp\Bundle\EasyAdminBundle\Search\Autocomplete($this->get('easyadmin.config.manager'), new \EasyCorp\Bundle\EasyAdminBundle\Search\Finder($this->get('easyadmin.query_builder'), $this->get('easyadmin.paginator')), $this->get('property_accessor'));
+    }
+
+    /*
+     * Gets the public 'easyadmin.cache.manager' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Cache\CacheManager
+     */
+    protected function getEasyadmin_Cache_ManagerService()
+    {
+        return $this->services['easyadmin.cache.manager'] = new \EasyCorp\Bundle\EasyAdminBundle\Cache\CacheManager((__DIR__.'/easy_admin'));
+    }
+
+    /*
+     * Gets the public 'easyadmin.config.manager' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager
+     */
+    protected function getEasyadmin_Config_ManagerService()
+    {
+        $this->services['easyadmin.config.manager'] = $instance = new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager($this->get('easyadmin.cache.manager'), $this->get('property_accessor'), array('entities' => array('Articulo' => array('class' => 'Congreso\\CongresoBundle\\Entity\\Articulo', 'name' => 'Articulo'), 'Cientifico' => array('class' => 'Congreso\\CongresoBundle\\Entity\\Cientifico', 'name' => 'Cientifico'), 'Track' => array('class' => 'Congreso\\CongresoBundle\\Entity\\Track', 'name' => 'Track')), 'design' => array('assets' => array('css' => array(), 'js' => array(), 'favicon' => array('path' => 'favicon.ico', 'mime_type' => 'image/x-icon')), 'theme' => 'default', 'color_scheme' => 'dark', 'brand_color' => '#205081', 'form_theme' => array(0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig'), 'menu' => array()), 'site_name' => 'EasyAdmin', 'formats' => array('date' => 'Y-m-d', 'time' => 'H:i:s', 'datetime' => 'F j, Y H:i'), 'disabled_actions' => array(), 'translation_domain' => 'messages', 'list' => array('actions' => array(), 'max_results' => 15), 'search' => array(), 'edit' => array('actions' => array()), 'new' => array('actions' => array()), 'show' => array('actions' => array(), 'max_results' => 10)), false);
+
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\NormalizerConfigPass($this));
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\DesignConfigPass($this, false, 'en'));
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\MenuConfigPass());
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ActionConfigPass());
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\MetadataConfigPass($this->get('doctrine')));
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\PropertyConfigPass($this->get('form.registry')));
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ViewConfigPass());
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\TemplateConfigPass($this->get('twig.loader')));
+        $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\DefaultConfigPass());
+
+        return $instance;
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.guesser.missing_doctrine_orm_type_guesser' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Guesser\MissingDoctrineOrmTypeGuesser
+     */
+    protected function getEasyadmin_Form_Guesser_MissingDoctrineOrmTypeGuesserService()
+    {
+        return $this->services['easyadmin.form.guesser.missing_doctrine_orm_type_guesser'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Guesser\MissingDoctrineOrmTypeGuesser($this->get('doctrine'));
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.type' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType
+     */
+    protected function getEasyadmin_Form_TypeService()
+    {
+        $a = $this->get('easyadmin.config.manager');
+
+        return $this->services['easyadmin.form.type'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType($a, array(4 => new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\AutocompleteTypeConfigurator(), 3 => new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\CollectionTypeConfigurator(), 2 => new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\CheckboxTypeConfigurator(), 1 => new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\TypeConfigurator($a), 0 => new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\EntityTypeConfigurator()));
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.type.autocomplete' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType
+     */
+    protected function getEasyadmin_Form_Type_AutocompleteService()
+    {
+        return $this->services['easyadmin.form.type.autocomplete'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType($this->get('easyadmin.config.manager'));
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.type.divider' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType
+     */
+    protected function getEasyadmin_Form_Type_DividerService()
+    {
+        return $this->services['easyadmin.form.type.divider'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType();
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.type.extension' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EasyAdminExtension
+     */
+    protected function getEasyadmin_Form_Type_ExtensionService()
+    {
+        return $this->services['easyadmin.form.type.extension'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EasyAdminExtension($this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.type.group' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType
+     */
+    protected function getEasyadmin_Form_Type_GroupService()
+    {
+        return $this->services['easyadmin.form.type.group'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType();
+    }
+
+    /*
+     * Gets the public 'easyadmin.form.type.section' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType
+     */
+    protected function getEasyadmin_Form_Type_SectionService()
+    {
+        return $this->services['easyadmin.form.type.section'] = new \EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType();
+    }
+
+    /*
+     * Gets the public 'easyadmin.listener.controller' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\EventListener\ControllerListener
+     */
+    protected function getEasyadmin_Listener_ControllerService()
+    {
+        return $this->services['easyadmin.listener.controller'] = new \EasyCorp\Bundle\EasyAdminBundle\EventListener\ControllerListener($this->get('easyadmin.config.manager'), $this->get('controller_resolver'));
+    }
+
+    /*
+     * Gets the public 'easyadmin.listener.exception' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\EventListener\ExceptionListener
+     */
+    protected function getEasyadmin_Listener_ExceptionService()
+    {
+        return $this->services['easyadmin.listener.exception'] = new \EasyCorp\Bundle\EasyAdminBundle\EventListener\ExceptionListener($this->get('twig'), array('entities' => array('Articulo' => array('class' => 'Congreso\\CongresoBundle\\Entity\\Articulo', 'name' => 'Articulo'), 'Cientifico' => array('class' => 'Congreso\\CongresoBundle\\Entity\\Cientifico', 'name' => 'Cientifico'), 'Track' => array('class' => 'Congreso\\CongresoBundle\\Entity\\Track', 'name' => 'Track')), 'design' => array('assets' => array('css' => array(), 'js' => array(), 'favicon' => array('path' => 'favicon.ico', 'mime_type' => 'image/x-icon')), 'theme' => 'default', 'color_scheme' => 'dark', 'brand_color' => '#205081', 'form_theme' => array(0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig'), 'menu' => array()), 'site_name' => 'EasyAdmin', 'formats' => array('date' => 'Y-m-d', 'time' => 'H:i:s', 'datetime' => 'F j, Y H:i'), 'disabled_actions' => array(), 'translation_domain' => 'messages', 'list' => array('actions' => array(), 'max_results' => 15), 'search' => array(), 'edit' => array('actions' => array()), 'new' => array('actions' => array()), 'show' => array('actions' => array(), 'max_results' => 10)), 'easyadmin.listener.exception:showExceptionPageAction', $this->get('monolog.logger.request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /*
+     * Gets the public 'easyadmin.listener.request_post_initialize' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\EventListener\RequestPostInitializeListener
+     */
+    protected function getEasyadmin_Listener_RequestPostInitializeService()
+    {
+        return $this->services['easyadmin.listener.request_post_initialize'] = new \EasyCorp\Bundle\EasyAdminBundle\EventListener\RequestPostInitializeListener($this->get('doctrine'), $this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /*
+     * Gets the public 'easyadmin.paginator' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Search\Paginator
+     */
+    protected function getEasyadmin_PaginatorService()
+    {
+        return $this->services['easyadmin.paginator'] = new \EasyCorp\Bundle\EasyAdminBundle\Search\Paginator();
+    }
+
+    /*
+     * Gets the public 'easyadmin.query_builder' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Search\QueryBuilder
+     */
+    protected function getEasyadmin_QueryBuilderService()
+    {
+        return $this->services['easyadmin.query_builder'] = new \EasyCorp\Bundle\EasyAdminBundle\Search\QueryBuilder($this->get('doctrine'));
+    }
+
+    /*
+     * Gets the public 'easyadmin.router' shared service.
+     *
+     * @return \EasyCorp\Bundle\EasyAdminBundle\Router\EasyAdminRouter
+     */
+    protected function getEasyadmin_RouterService()
+    {
+        return $this->services['easyadmin.router'] = new \EasyCorp\Bundle\EasyAdminBundle\Router\EasyAdminRouter($this->get('easyadmin.config.manager'), $this->get('router'), $this->get('property_accessor'), $this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /*
      * Gets the public 'event_dispatcher' shared service.
      *
      * @return \Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher
@@ -507,6 +699,9 @@ class appProdProjectContainer extends Container
     {
         $this->services['event_dispatcher'] = $instance = new \Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher($this);
 
+        $instance->addListenerService('kernel.controller', array(0 => 'easyadmin.listener.controller', 1 => 'onKernelController'), 0);
+        $instance->addListenerService('kernel.exception', array(0 => 'easyadmin.listener.exception', 1 => 'onKernelException'), -64);
+        $instance->addListenerService('easy_admin.post_initialize', array(0 => 'easyadmin.listener.request_post_initialize', 1 => 'initializeRequest'), 0);
         $instance->addSubscriberService('response_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener');
         $instance->addSubscriberService('streamed_response_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener');
         $instance->addSubscriberService('locale_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener');
@@ -582,7 +777,7 @@ class appProdProjectContainer extends Container
      */
     protected function getForm_RegistryService()
     {
-        return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => 'form.type.form', 'birthday' => 'form.type.birthday', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\BirthdayType' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CheckboxType' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType' => 'form.type.choice', 'collection' => 'form.type.collection', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CollectionType' => 'form.type.collection', 'country' => 'form.type.country', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CountryType' => 'form.type.country', 'date' => 'form.type.date', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType' => 'form.type.date', 'datetime' => 'form.type.datetime', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\DateTimeType' => 'form.type.datetime', 'email' => 'form.type.email', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\EmailType' => 'form.type.email', 'file' => 'form.type.file', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\FileType' => 'form.type.file', 'hidden' => 'form.type.hidden', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\HiddenType' => 'form.type.hidden', 'integer' => 'form.type.integer', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType' => 'form.type.integer', 'language' => 'form.type.language', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\LanguageType' => 'form.type.language', 'locale' => 'form.type.locale', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\LocaleType' => 'form.type.locale', 'money' => 'form.type.money', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\MoneyType' => 'form.type.money', 'number' => 'form.type.number', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType' => 'form.type.number', 'password' => 'form.type.password', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\PasswordType' => 'form.type.password', 'percent' => 'form.type.percent', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\PercentType' => 'form.type.percent', 'radio' => 'form.type.radio', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RadioType' => 'form.type.radio', 'range' => 'form.type.range', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RangeType' => 'form.type.range', 'repeated' => 'form.type.repeated', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RepeatedType' => 'form.type.repeated', 'search' => 'form.type.search', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\SearchType' => 'form.type.search', 'textarea' => 'form.type.textarea', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TextareaType' => 'form.type.textarea', 'text' => 'form.type.text', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType' => 'form.type.text', 'time' => 'form.type.time', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TimeType' => 'form.type.time', 'timezone' => 'form.type.timezone', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TimezoneType' => 'form.type.timezone', 'url' => 'form.type.url', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\UrlType' => 'form.type.url', 'button' => 'form.type.button', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ButtonType' => 'form.type.button', 'submit' => 'form.type.submit', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType' => 'form.type.submit', 'reset' => 'form.type.reset', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ResetType' => 'form.type.reset', 'currency' => 'form.type.currency', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CurrencyType' => 'form.type.currency', 'entity' => 'form.type.entity', 'Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType' => 'form.type.entity'), array('Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.upload.validator', 3 => 'form.type_extension.csrf'), 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RepeatedType' => array(0 => 'form.type_extension.repeated.validator'), 'Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))), $this->get('form.resolved_type_factory'));
+        return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => 'form.type.form', 'birthday' => 'form.type.birthday', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\BirthdayType' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CheckboxType' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType' => 'form.type.choice', 'collection' => 'form.type.collection', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CollectionType' => 'form.type.collection', 'country' => 'form.type.country', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CountryType' => 'form.type.country', 'date' => 'form.type.date', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType' => 'form.type.date', 'datetime' => 'form.type.datetime', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\DateTimeType' => 'form.type.datetime', 'email' => 'form.type.email', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\EmailType' => 'form.type.email', 'file' => 'form.type.file', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\FileType' => 'form.type.file', 'hidden' => 'form.type.hidden', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\HiddenType' => 'form.type.hidden', 'integer' => 'form.type.integer', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType' => 'form.type.integer', 'language' => 'form.type.language', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\LanguageType' => 'form.type.language', 'locale' => 'form.type.locale', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\LocaleType' => 'form.type.locale', 'money' => 'form.type.money', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\MoneyType' => 'form.type.money', 'number' => 'form.type.number', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType' => 'form.type.number', 'password' => 'form.type.password', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\PasswordType' => 'form.type.password', 'percent' => 'form.type.percent', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\PercentType' => 'form.type.percent', 'radio' => 'form.type.radio', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RadioType' => 'form.type.radio', 'range' => 'form.type.range', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RangeType' => 'form.type.range', 'repeated' => 'form.type.repeated', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RepeatedType' => 'form.type.repeated', 'search' => 'form.type.search', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\SearchType' => 'form.type.search', 'textarea' => 'form.type.textarea', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TextareaType' => 'form.type.textarea', 'text' => 'form.type.text', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType' => 'form.type.text', 'time' => 'form.type.time', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TimeType' => 'form.type.time', 'timezone' => 'form.type.timezone', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\TimezoneType' => 'form.type.timezone', 'url' => 'form.type.url', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\UrlType' => 'form.type.url', 'button' => 'form.type.button', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ButtonType' => 'form.type.button', 'submit' => 'form.type.submit', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType' => 'form.type.submit', 'reset' => 'form.type.reset', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ResetType' => 'form.type.reset', 'currency' => 'form.type.currency', 'Symfony\\Component\\Form\\Extension\\Core\\Type\\CurrencyType' => 'form.type.currency', 'entity' => 'form.type.entity', 'Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType' => 'form.type.entity', 'easyadmin.form.type' => 'easyadmin.form.type', 'EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\EasyAdminFormType' => 'easyadmin.form.type', 'easyadmin_autocomplete' => 'easyadmin.form.type.autocomplete', 'EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\EasyAdminAutocompleteType' => 'easyadmin.form.type.autocomplete', 'easyadmin_divider' => 'easyadmin.form.type.divider', 'EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\EasyAdminDividerType' => 'easyadmin.form.type.divider', 'easyadmin_section' => 'easyadmin.form.type.section', 'EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\EasyAdminSectionType' => 'easyadmin.form.type.section', 'easyadmin_group' => 'easyadmin.form.type.group', 'EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\EasyAdminGroupType' => 'easyadmin.form.type.group'), array('Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.upload.validator', 3 => 'form.type_extension.csrf', 4 => 'easyadmin.form.type.extension'), 'Symfony\\Component\\Form\\Extension\\Core\\Type\\RepeatedType' => array(0 => 'form.type_extension.repeated.validator'), 'Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine', 2 => 'easyadmin.form.guesser.missing_doctrine_orm_type_guesser'))), $this->get('form.resolved_type_factory'));
     }
 
     /*
@@ -1086,7 +1281,7 @@ class appProdProjectContainer extends Container
      */
     protected function getHttpKernelService()
     {
-        return $this->services['http_kernel'] = new \Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel($this->get('event_dispatcher'), $this, new \Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver($this, $this->get('controller_name_converter'), $this->get('monolog.logger.request', ContainerInterface::NULL_ON_INVALID_REFERENCE)), $this->get('request_stack'), false);
+        return $this->services['http_kernel'] = new \Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel($this->get('event_dispatcher'), $this, $this->get('controller_resolver'), $this->get('request_stack'), false);
     }
 
     /*
@@ -1494,13 +1689,13 @@ class appProdProjectContainer extends Container
         $k->addHandler(new \Symfony\Component\Security\Http\Logout\SessionLogoutHandler());
 
         $l = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($j, array());
-        $l->setOptions(array('login_path' => '/admin/login', 'default_target_path' => '/admin/index', 'always_use_default_target_path' => true, 'target_path_parameter' => '_target_path', 'use_referer' => false));
+        $l->setOptions(array('login_path' => '/admin/login', 'default_target_path' => '/admin/backend', 'always_use_default_target_path' => true, 'target_path_parameter' => '_target_path', 'use_referer' => false));
         $l->setProviderKey('secured_area');
 
         $m = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $j, array(), $a);
         $m->setOptions(array('login_path' => '/admin/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'));
 
-        return $this->services['security.firewall.map.context.secured_area'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($i, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'secured_area', $a, $c), 2 => $k, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $j, 'secured_area', $l, $m, array('check_path' => '/admin/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5a2670a017a9d5.79684451', $a, $f), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $i, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $j, 'secured_area', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $j, '/admin/login', false), NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.secured_area'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($i, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'secured_area', $a, $c), 2 => $k, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $j, 'secured_area', $l, $m, array('check_path' => '/admin/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5a2690228cbbe5.36006180', $a, $f), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $i, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $j, 'secured_area', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $j, '/admin/login', false), NULL, NULL, $a, false));
     }
 
     /*
@@ -2212,40 +2407,42 @@ class appProdProjectContainer extends Container
      */
     protected function getTwigService()
     {
-        $a = $this->get('request_stack');
-        $b = $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE);
-        $c = $this->get('fragment.handler');
+        $a = $this->get('security.logout_url_generator');
+        $b = $this->get('request_stack');
+        $c = $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE);
+        $d = $this->get('fragment.handler');
 
-        $d = new \Symfony\Bridge\Twig\Extension\HttpFoundationExtension($a, $b);
+        $e = new \Symfony\Bridge\Twig\Extension\HttpFoundationExtension($b, $c);
 
-        $e = new \Symfony\Bridge\Twig\AppVariable();
-        $e->setEnvironment('prod');
-        $e->setDebug(false);
+        $f = new \Symfony\Bridge\Twig\AppVariable();
+        $f->setEnvironment('prod');
+        $f->setDebug(false);
         if ($this->has('security.token_storage')) {
-            $e->setTokenStorage($this->get('security.token_storage', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+            $f->setTokenStorage($this->get('security.token_storage', ContainerInterface::NULL_ON_INVALID_REFERENCE));
         }
         if ($this->has('request_stack')) {
-            $e->setRequestStack($a);
+            $f->setRequestStack($b);
         }
-        $e->setContainer($this);
+        $f->setContainer($this);
 
         $this->services['twig'] = $instance = new \Twig\Environment($this->get('twig.loader'), array('debug' => false, 'strict_variables' => false, 'exception_controller' => 'twig.controller.exception:showAction', 'form_themes' => array(0 => 'form_div_layout.html.twig'), 'autoescape' => 'name', 'cache' => (__DIR__.'/twig'), 'charset' => 'UTF-8', 'paths' => array(), 'date' => array('format' => 'F j, Y H:i', 'interval_format' => '%d days', 'timezone' => NULL), 'number_format' => array('decimals' => 0, 'decimal_point' => '.', 'thousands_separator' => ',')));
 
-        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\LogoutUrlExtension($this->get('security.logout_url_generator')));
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\LogoutUrlExtension($a));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\SecurityExtension($this->get('security.authorization_checker', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator')));
-        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\AssetExtension($this->get('assets.packages'), $d));
-        $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\ActionsExtension($c));
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\AssetExtension($this->get('assets.packages'), $e));
+        $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\ActionsExtension($d));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\CodeExtension(NULL, $this->targetDirs[2], 'UTF-8'));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\RoutingExtension($this->get('router')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\YamlExtension());
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\StopwatchExtension($this->get('debug.stopwatch', ContainerInterface::NULL_ON_INVALID_REFERENCE), false));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\ExpressionExtension());
-        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\HttpKernelExtension($c));
-        $instance->addExtension($d);
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\HttpKernelExtension($d));
+        $instance->addExtension($e);
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(new \Symfony\Bridge\Twig\Form\TwigRenderer(new \Symfony\Bridge\Twig\Form\TwigRendererEngine(array(0 => 'form_div_layout.html.twig')), $this->get('security.csrf.token_manager', ContainerInterface::NULL_ON_INVALID_REFERENCE))));
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
-        $instance->addGlobal('app', $e);
+        $instance->addExtension(new \EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension($this->get('easyadmin.config.manager'), $this->get('property_accessor'), $this->get('easyadmin.router'), false, $a));
+        $instance->addGlobal('app', $f);
         call_user_func(array(new \Symfony\Bundle\TwigBundle\DependencyInjection\Configurator\EnvironmentConfigurator('F j, Y H:i', '%d days', NULL, 0, '.', ','), 'configure'), $instance);
 
         return $instance;
@@ -2295,6 +2492,7 @@ class appProdProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views'), 'Twig');
         $instance->addPath(($this->targetDirs[3].'\\vendor\\symfony\\swiftmailer-bundle/Resources/views'), 'Swiftmailer');
         $instance->addPath(($this->targetDirs[3].'\\vendor\\doctrine\\doctrine-bundle/Resources/views'), 'Doctrine');
+        $instance->addPath(($this->targetDirs[3].'\\vendor\\javiereguiluz\\easyadmin-bundle\\src/Resources/views'), 'EasyAdmin');
         $instance->addPath(($this->targetDirs[3].'\\src\\Congreso\\CongresoBundle/Resources/views'), 'CongresoCongreso');
         $instance->addPath(($this->targetDirs[3].'\\src\\Congreso\\AdminBundle/Resources/views'), 'CongresoAdmin');
         $instance->addPath(($this->targetDirs[2].'/Resources/views'));
@@ -2404,6 +2602,16 @@ class appProdProjectContainer extends Container
     }
 
     /*
+     * Gets the private 'controller_resolver' shared service.
+     *
+     * @return \Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver
+     */
+    protected function getControllerResolverService()
+    {
+        return $this->services['controller_resolver'] = new \Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver($this, $this->get('controller_name_converter'), $this->get('monolog.logger.request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /*
      * Gets the private 'form.server_params' shared service.
      *
      * @return \Symfony\Component\Form\Util\ServerParams
@@ -2457,7 +2665,7 @@ class appProdProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.in_memory'), $this->get('security.user_checker.secured_area'), 'secured_area', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5a2670a017a9d5.79684451')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.in_memory'), $this->get('security.user_checker.secured_area'), 'secured_area', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5a2690228cbbe5.36006180')), true);
 
         $instance->setEventDispatcher($this->get('event_dispatcher'));
 
@@ -2620,6 +2828,7 @@ class appProdProjectContainer extends Container
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'AppBundle' => 'AppBundle\\AppBundle',
+                'EasyAdminBundle' => 'EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle',
                 'CongresoCongresoBundle' => 'Congreso\\CongresoBundle\\CongresoCongresoBundle',
                 'CongresoAdminBundle' => 'Congreso\\AdminBundle\\CongresoAdminBundle',
             ),
@@ -2663,6 +2872,11 @@ class appProdProjectContainer extends Container
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'\\src\\AppBundle'),
                     'namespace' => 'AppBundle',
+                ),
+                'EasyAdminBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'\\vendor\\javiereguiluz\\easyadmin-bundle\\src'),
+                    'namespace' => 'EasyCorp\\Bundle\\EasyAdminBundle',
                 ),
                 'CongresoCongresoBundle' => array(
                     'parent' => NULL,
@@ -3106,6 +3320,81 @@ class appProdProjectContainer extends Container
             'sensio_framework_extra.converter.doctrine.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\DoctrineParamConverter',
             'sensio_framework_extra.converter.datetime.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\DateTimeParamConverter',
             'sensio_framework_extra.view.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\TemplateListener',
+            'easyadmin.config' => array(
+                'entities' => array(
+                    'Articulo' => array(
+                        'class' => 'Congreso\\CongresoBundle\\Entity\\Articulo',
+                        'name' => 'Articulo',
+                    ),
+                    'Cientifico' => array(
+                        'class' => 'Congreso\\CongresoBundle\\Entity\\Cientifico',
+                        'name' => 'Cientifico',
+                    ),
+                    'Track' => array(
+                        'class' => 'Congreso\\CongresoBundle\\Entity\\Track',
+                        'name' => 'Track',
+                    ),
+                ),
+                'design' => array(
+                    'assets' => array(
+                        'css' => array(
+
+                        ),
+                        'js' => array(
+
+                        ),
+                        'favicon' => array(
+                            'path' => 'favicon.ico',
+                            'mime_type' => 'image/x-icon',
+                        ),
+                    ),
+                    'theme' => 'default',
+                    'color_scheme' => 'dark',
+                    'brand_color' => '#205081',
+                    'form_theme' => array(
+                        0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig',
+                    ),
+                    'menu' => array(
+
+                    ),
+                ),
+                'site_name' => 'EasyAdmin',
+                'formats' => array(
+                    'date' => 'Y-m-d',
+                    'time' => 'H:i:s',
+                    'datetime' => 'F j, Y H:i',
+                ),
+                'disabled_actions' => array(
+
+                ),
+                'translation_domain' => 'messages',
+                'list' => array(
+                    'actions' => array(
+
+                    ),
+                    'max_results' => 15,
+                ),
+                'search' => array(
+
+                ),
+                'edit' => array(
+                    'actions' => array(
+
+                    ),
+                ),
+                'new' => array(
+                    'actions' => array(
+
+                    ),
+                ),
+                'show' => array(
+                    'actions' => array(
+
+                    ),
+                    'max_results' => 10,
+                ),
+            ),
+            'easyadmin.cache.dir' => (__DIR__.'/easy_admin'),
             'console.command.ids' => array(
 
             ),
