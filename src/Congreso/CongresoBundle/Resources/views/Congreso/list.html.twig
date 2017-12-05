@@ -2,6 +2,14 @@
 {% extends "CongresoCongresoBundle::layout.html.twig" %}
 {% block title %}Lista de Artículos{% endblock %}
 
+{% block navigation %}
+    <nav>
+        <ul class="navigation">
+            <li><a href="">Entrar</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
 {% block body %}
     {% for track in tracks %}
         <h1><a href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></h1>
