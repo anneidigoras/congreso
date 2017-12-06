@@ -1,5 +1,14 @@
 {# src/Congreso/CongresoBundle/Resources/views/Congreso/list.html.twig #}
 {% extends "CongresoCongresoBundle::layout.html.twig" %}
+
+
+{% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery1.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.qtip-1.0.0-rc3.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/script1.js') }}"></script>
+{% endblock %}
+
+
 {% block title %}Lista de Artículos{% endblock %}
 
 {% block body %}
@@ -85,5 +94,30 @@
 {% endblock %}
 
 {% block sidebar %}
-    <p class="continue"><a href="/contact">Contacto</a></p>
+
+
+
+
+
+    <ul>
+        <li><a href="/contact">Contacto</a></li>
+    </ul>
+
+    <div class="separator"></div>
+    <p>¿Quieres saber la fecha y hora actuales?</p>
+
+
+    
+
+    <button type="button" id="boton-mostrar-ocultar">Mostrar/Ocultar</button>
+
+    <div id="mostrar-ocultar" style="display: none;">
+        <p id="dia">Jueves, 1 de enero de 1970</p>
+        <p id="reloj">00:00:00</p>
+        <button type="button" id="Actualizar">Actualizar</button>
+    </div>
+
+
+    
 {% endblock %}
+
