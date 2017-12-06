@@ -20,7 +20,7 @@
     
         <div id="header" class="container">
             <div id="logo">
-                <h1><a href="#">{% block title %} {% endblock %} </a></h1>
+                <h1><a id="titulo-lista" href="#">{% block title %} {% endblock %} </a></h1>
                 {% if is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('congreso_admin_logout')}}">Salir</a>
                 {% else %}

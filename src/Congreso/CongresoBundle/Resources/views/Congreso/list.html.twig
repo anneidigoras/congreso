@@ -3,17 +3,23 @@
 
 
 {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/jquery1.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/jquery.qtip-1.0.0-rc3.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/script1.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/script2.js') }}"></script>
 {% endblock %}
 
 
-{% block title %}Lista de Artículos{% endblock %}
+{% block title %}
+Lista de Artículos
+{% endblock %}
 
 {% block body %}
+    <div id="lista-ocultar">
     {% for track in tracks %}
-        <h1><a href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></h1>
+        <h1><a id="nombre-temas" href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></h1>
+        <div id="lista-ocultar1">
         {% set i = 0 %}
         {% for articulo in articulos %}
             {% if track.id==articulo.tracks[0].id and i<2 %}
@@ -88,9 +94,13 @@
         {% else %}
             <p>No hay entradas en este blog</p>
         {% endfor %}
+
+        </div>
     {% else %}
         <p>aaaaa</p>
+
     {% endfor %}
+    </div>
 {% endblock %}
 
 {% block sidebar %}

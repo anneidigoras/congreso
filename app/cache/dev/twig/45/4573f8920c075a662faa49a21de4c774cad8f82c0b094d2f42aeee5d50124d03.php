@@ -15,14 +15,14 @@ class __TwigTemplate_c1d79d306fb826b3ee5c32323332ee9778605ff0b610f60372a419d6913
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8e073ef89c65ff28246f8a84cf28757e16a60ccec549bc89259f7eab0d4533b5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8e073ef89c65ff28246f8a84cf28757e16a60ccec549bc89259f7eab0d4533b5->enter($__internal_8e073ef89c65ff28246f8a84cf28757e16a60ccec549bc89259f7eab0d4533b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/submit_widget.html.php"));
+        $__internal_efb9eca204907e8ddd2b490eb533d62e937538e26eb7efa005674be9d40621ef = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_efb9eca204907e8ddd2b490eb533d62e937538e26eb7efa005674be9d40621ef->enter($__internal_efb9eca204907e8ddd2b490eb533d62e937538e26eb7efa005674be9d40621ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/submit_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'button_widget', array('type' => isset(\$type) ? \$type : 'submit')) ?>
 ";
         
-        $__internal_8e073ef89c65ff28246f8a84cf28757e16a60ccec549bc89259f7eab0d4533b5->leave($__internal_8e073ef89c65ff28246f8a84cf28757e16a60ccec549bc89259f7eab0d4533b5_prof);
+        $__internal_efb9eca204907e8ddd2b490eb533d62e937538e26eb7efa005674be9d40621ef->leave($__internal_efb9eca204907e8ddd2b490eb533d62e937538e26eb7efa005674be9d40621ef_prof);
 
     }
 

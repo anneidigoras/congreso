@@ -43,7 +43,7 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
     
         <div id=\"header\" class=\"container\">
             <div id=\"logo\">
-                <h1><a href=\"#\">";
+                <h1><a id=\"titulo-lista\" href=\"#\">";
         // line 23
         $this->displayBlock('title', $context, $blocks);
         echo " </a></h1>
