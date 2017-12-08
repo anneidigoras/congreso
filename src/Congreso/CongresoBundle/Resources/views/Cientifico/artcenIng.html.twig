@@ -1,0 +1,147 @@
+{# src/Congreso/CongresoBundle/Resources/views/Cientifico/show.html.twig #}
+{% extends "CongresoCongresoBundle::layoutIng.html.twig" %}
+{% block title %}Articles made by {{ cientifico.nombre }}{% endblock %}
+
+{% block body %}
+    {% for articulo in articulos %}
+        <article class="articulo">
+        <div class="separator"></div>
+             {% if articulo.publicacion|date('d') ==  "01" %}
+                1
+            {% elseif articulo.publicacion|date('d') ==  "02" %}
+                2
+            {% elseif articulo.publicacion|date('d') ==  "03" %}
+                3
+            {% elseif articulo.publicacion|date('d') ==  "04" %}
+                4
+            {% elseif articulo.publicacion|date('d') ==  "05" %}
+                5
+            {% elseif articulo.publicacion|date('d') ==  "06" %}
+                6
+            {% elseif articulo.publicacion|date('d') ==  "07" %}
+                7
+            {% elseif articulo.publicacion|date('d') ==  "08" %}
+                8
+            {% elseif articulo.publicacion|date('d') ==  "09" %}
+                9
+            {% else %}
+                {{ articulo.publicacion|date('d') }}
+            {% endif %}
+
+            de 
+
+            {% if articulo.publicacion|date('m') ==  "01" %}
+                enero
+            {% elseif articulo.publicacion|date('m') ==  "02" %}
+                febrero
+            {% elseif articulo.publicacion|date('m') ==  "03" %}
+                marzo
+            {% elseif articulo.publicacion|date('m') ==  "04" %}
+                abril
+            {% elseif articulo.publicacion|date('m') ==  "05" %}
+                mayo
+            {% elseif articulo.publicacion|date('m') ==  "06" %}
+                junio
+            {% elseif articulo.publicacion|date('m') ==  "07" %}
+                julio
+            {% elseif articulo.publicacion|date('m') ==  "08" %}
+                agosto
+            {% elseif articulo.publicacion|date('m') ==  "09" %}
+                septiembre
+            {% elseif articulo.publicacion|date('m') ==  "10" %}
+                octubre
+            {% elseif articulo.publicacion|date('m') ==  "11" %}
+                noviembre
+            {% elseif articulo.publicacion|date('m') ==  "12" %}
+                diciembre
+            {% endif %}
+            
+             de {{ articulo.publicacion|date('Y') }}</p>
+            <header>
+                <h2><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">{{ articulo.titulo }}</a></h2>
+            </header>
+
+            <div class="snippet">
+                <p>{{ articulo.cuerpo|slice(0, 400) ~ '...' }}</p>
+                <p class="continue"><a href="{{ path('congreso_congreso_show', { 'id': articulo.id }) }}">Keep reading...</a></p>
+            </div>
+
+            <footer class="meta">
+                <p>Comments: {{articulo.numberofcomments}}</p>
+            </footer>
+        </article>
+    {% else %}
+        <p>This blog is empty</p>
+    {% endfor %}
+{% endblock %}
+
+{% block sidebar1 %}
+<div class="cientificos">
+<p>these are the articles written by {{ cientifico.nombre }}.</p>
+<p>{{ cientifico.nombre }} it is a respected professional in the areas of: {{ cientifico.especialidad }}</p>
+
+
+<p>Was born in 
+{% if cientifico.nacimiento|date('d') ==  "01" %}
+    1
+{% elseif cientifico.nacimiento|date('d') ==  "02" %}
+    2
+{% elseif cientifico.nacimiento|date('d') ==  "03" %}
+    3
+{% elseif cientifico.nacimiento|date('d') ==  "04" %}
+    4
+{% elseif cientifico.nacimiento|date('d') ==  "05" %}
+    5
+{% elseif cientifico.nacimiento|date('d') ==  "06" %}
+    6
+{% elseif cientifico.nacimiento|date('d') ==  "07" %}
+    7
+{% elseif cientifico.nacimiento|date('d') ==  "08" %}
+    8
+{% elseif cientifico.nacimiento|date('d') ==  "09" %}
+    9
+{% else %}
+    {{ cientifico.nacimiento|date('d') }}
+{% endif %}
+
+ de 
+
+{% if cientifico.nacimiento|date('m') ==  "01" %}
+    enero
+{% elseif cientifico.nacimiento|date('m') ==  "02" %}
+    febrero
+{% elseif cientifico.nacimiento|date('m') ==  "03" %}
+    marzo
+{% elseif cientifico.nacimiento|date('m') ==  "04" %}
+    abril
+{% elseif cientifico.nacimiento|date('m') ==  "05" %}
+    mayo
+{% elseif cientifico.nacimiento|date('m') ==  "06" %}
+    junio
+{% elseif cientifico.nacimiento|date('m') ==  "07" %}
+    julio
+{% elseif cientifico.nacimiento|date('m') ==  "08" %}
+    agosto
+{% elseif cientifico.nacimiento|date('m') ==  "09" %}
+    septiembre
+{% elseif cientifico.nacimiento|date('m') ==  "10" %}
+    octubre
+{% elseif cientifico.nacimiento|date('m') ==  "11" %}
+    noviembre
+{% elseif cientifico.nacimiento|date('m') ==  "12" %}
+    diciembre
+{% endif %}
+
+ de {{ cientifico.nacimiento|date('Y') }}</p>
+
+
+
+<p> If you want more information about {{ cientifico.nombre }}, press <a target="_blank" href="{{ cientifico.info }}">aquí</a>.</p>
+
+</div>
+<div class="separator"></div>
+<p class="continue"><a href="/">Back Hombre</a></p>
+<p class="continue"><a href="/contact">Contact</a></p>
+<p class="continue"><a href="/contact">Change language</a></p>
+{% endblock %}
+

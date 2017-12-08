@@ -1,0 +1,10 @@
+{# src/Congreso/CongresoBundle/Resources/views/Comment/create.html.twig #}
+
+{% extends 'CongresoCongresoBundle::layoutIng.html.twig' %}
+
+{% block title %}Add comment{% endblock%}
+
+{% block body %}
+    <h1>Add a comment to the article "{{ comment.articulo.titulo }}"</h1>
+    {% include 'CongresoCongresoBundle:Comment:form.html.twig' with { 'form': form } %}
+{% endblock %}
