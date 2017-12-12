@@ -24,20 +24,20 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e2947b6927a90f8fafe92c3d3758f995eec91920093a748865cb76334be0ac94 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e2947b6927a90f8fafe92c3d3758f995eec91920093a748865cb76334be0ac94->enter($__internal_e2947b6927a90f8fafe92c3d3758f995eec91920093a748865cb76334be0ac94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/list.html.twig"));
+        $__internal_faa51850ab53f9b62b79ca69ed48e52ba1c8add6a5c57b02d2040459b04baa78 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_faa51850ab53f9b62b79ca69ed48e52ba1c8add6a5c57b02d2040459b04baa78->enter($__internal_faa51850ab53f9b62b79ca69ed48e52ba1c8add6a5c57b02d2040459b04baa78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e2947b6927a90f8fafe92c3d3758f995eec91920093a748865cb76334be0ac94->leave($__internal_e2947b6927a90f8fafe92c3d3758f995eec91920093a748865cb76334be0ac94_prof);
+        $__internal_faa51850ab53f9b62b79ca69ed48e52ba1c8add6a5c57b02d2040459b04baa78->leave($__internal_faa51850ab53f9b62b79ca69ed48e52ba1c8add6a5c57b02d2040459b04baa78_prof);
 
     }
 
     // line 5
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_087b1282f8d085bfcb6c29fcff5a49685706f8348db87c140360fb683cd36e85 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_087b1282f8d085bfcb6c29fcff5a49685706f8348db87c140360fb683cd36e85->enter($__internal_087b1282f8d085bfcb6c29fcff5a49685706f8348db87c140360fb683cd36e85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_47e878249034b24ae55a06efffa6788e582c9056dffee1e0f402c9c1f1b1a61e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_47e878249034b24ae55a06efffa6788e582c9056dffee1e0f402c9c1f1b1a61e->enter($__internal_47e878249034b24ae55a06efffa6788e582c9056dffee1e0f402c9c1f1b1a61e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 6
         echo "            <script type=\"text/javascript\" src=\"";
@@ -61,29 +61,29 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
         echo "\"></script>
 ";
         
-        $__internal_087b1282f8d085bfcb6c29fcff5a49685706f8348db87c140360fb683cd36e85->leave($__internal_087b1282f8d085bfcb6c29fcff5a49685706f8348db87c140360fb683cd36e85_prof);
+        $__internal_47e878249034b24ae55a06efffa6788e582c9056dffee1e0f402c9c1f1b1a61e->leave($__internal_47e878249034b24ae55a06efffa6788e582c9056dffee1e0f402c9c1f1b1a61e_prof);
 
     }
 
     // line 14
     public function block_title($context, array $blocks = array())
     {
-        $__internal_23ac9340025784fd659445fe2a5adc0e9a7000733b6cc4b0e4a64b7b461e4c61 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_23ac9340025784fd659445fe2a5adc0e9a7000733b6cc4b0e4a64b7b461e4c61->enter($__internal_23ac9340025784fd659445fe2a5adc0e9a7000733b6cc4b0e4a64b7b461e4c61_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_835b403ee5b9ab0908eb0f1c2622764d08b925c9bd15e2284fcc7654f43bb03e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_835b403ee5b9ab0908eb0f1c2622764d08b925c9bd15e2284fcc7654f43bb03e->enter($__internal_835b403ee5b9ab0908eb0f1c2622764d08b925c9bd15e2284fcc7654f43bb03e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 15
         echo "Congreso Científico
 ";
         
-        $__internal_23ac9340025784fd659445fe2a5adc0e9a7000733b6cc4b0e4a64b7b461e4c61->leave($__internal_23ac9340025784fd659445fe2a5adc0e9a7000733b6cc4b0e4a64b7b461e4c61_prof);
+        $__internal_835b403ee5b9ab0908eb0f1c2622764d08b925c9bd15e2284fcc7654f43bb03e->leave($__internal_835b403ee5b9ab0908eb0f1c2622764d08b925c9bd15e2284fcc7654f43bb03e_prof);
 
     }
 
     // line 18
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1f316574df61175c18a7a45a7d0f86db2dda6cde5013de347ddb36e2213076c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1f316574df61175c18a7a45a7d0f86db2dda6cde5013de347ddb36e2213076c7->enter($__internal_1f316574df61175c18a7a45a7d0f86db2dda6cde5013de347ddb36e2213076c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_67f62b4fd48a0973bdfca7493849e30693a2e152611cb84e4f2a8f3c50cb2c9d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_67f62b4fd48a0973bdfca7493849e30693a2e152611cb84e4f2a8f3c50cb2c9d->enter($__internal_67f62b4fd48a0973bdfca7493849e30693a2e152611cb84e4f2a8f3c50cb2c9d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 19
         echo "    <div id=\"lista-ocultar\">
@@ -189,31 +189,19 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
         echo "    </div>
 ";
         
-        $__internal_1f316574df61175c18a7a45a7d0f86db2dda6cde5013de347ddb36e2213076c7->leave($__internal_1f316574df61175c18a7a45a7d0f86db2dda6cde5013de347ddb36e2213076c7_prof);
+        $__internal_67f62b4fd48a0973bdfca7493849e30693a2e152611cb84e4f2a8f3c50cb2c9d->leave($__internal_67f62b4fd48a0973bdfca7493849e30693a2e152611cb84e4f2a8f3c50cb2c9d_prof);
 
     }
 
     // line 62
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_38e05bf1886f8f81a28ef13cf4534ad389d2a8104127f75d9f24a50859ccca4a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_38e05bf1886f8f81a28ef13cf4534ad389d2a8104127f75d9f24a50859ccca4a->enter($__internal_38e05bf1886f8f81a28ef13cf4534ad389d2a8104127f75d9f24a50859ccca4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_39fca59b42bf484765e4e9dc6e86ef734bdba49830d53ec30211e199b583695f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_39fca59b42bf484765e4e9dc6e86ef734bdba49830d53ec30211e199b583695f->enter($__internal_39fca59b42bf484765e4e9dc6e86ef734bdba49830d53ec30211e199b583695f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 63
         echo "
-
-
-
-
-    <ul>
-        <li><a href=\"/contact\">Contacto</a></li>
-    </ul>
-
-    <div class=\"separator\"></div>
-    <p>¿Quieres saber la fecha y hora actuales?</p>
-
-
-    
+    <p>¿Quieres saber la fecha y hora actuales?</p>    
 
     <button type=\"button\" id=\"boton-mostrar-ocultar\">Mostrar/Ocultar</button>
 
@@ -227,7 +215,7 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
     
 ";
         
-        $__internal_38e05bf1886f8f81a28ef13cf4534ad389d2a8104127f75d9f24a50859ccca4a->leave($__internal_38e05bf1886f8f81a28ef13cf4534ad389d2a8104127f75d9f24a50859ccca4a_prof);
+        $__internal_39fca59b42bf484765e4e9dc6e86ef734bdba49830d53ec30211e199b583695f->leave($__internal_39fca59b42bf484765e4e9dc6e86ef734bdba49830d53ec30211e199b583695f_prof);
 
     }
 
@@ -319,19 +307,7 @@ Congreso Científico
 
 {% block sidebar %}
 
-
-
-
-
-    <ul>
-        <li><a href=\"/contact\">Contacto</a></li>
-    </ul>
-
-    <div class=\"separator\"></div>
-    <p>¿Quieres saber la fecha y hora actuales?</p>
-
-
-    
+    <p>¿Quieres saber la fecha y hora actuales?</p>    
 
     <button type=\"button\" id=\"boton-mostrar-ocultar\">Mostrar/Ocultar</button>
 

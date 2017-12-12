@@ -114,9 +114,6 @@ class __TwigTemplate_220c4a924bae7c176e0320cd7d8898f642af5593fab8e703a9ade8b9811
         $this->loadTemplate("CongresoCongresoBundle:Cientifico:list.html.twig", "CongresoCongresoBundle:Congreso:show.html.twig", 39)->display(array_merge($context, array("cientificos" => ($context["cientificos"] ?? null))));
         // line 40
         echo "</div>
-<div class=\"separator\"></div>
-<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
-<p class=\"continue\"><a href=\"/contact\">Contacto</a></p>
 ";
     }
 

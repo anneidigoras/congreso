@@ -174,19 +174,7 @@ class __TwigTemplate_8c8565cc39fc091cf83ed86efa6eb02f20ab5e9617b9aef1df3de3fc450
     {
         // line 63
         echo "
-
-
-
-
-    <ul>
-        <li><a href=\"/contact\">Contacto</a></li>
-    </ul>
-
-    <div class=\"separator\"></div>
-    <p>¿Quieres saber la fecha y hora actuales?</p>
-
-
-    
+    <p>¿Quieres saber la fecha y hora actuales?</p>    
 
     <button type=\"button\" id=\"boton-mostrar-ocultar\">Mostrar/Ocultar</button>
 

@@ -100,9 +100,6 @@ class __TwigTemplate_94b7e718bc03be95a40f6828347c0094c90962611a169e394574c0c08aa
     // line 54
     public function block_sidebar($context, array $blocks = array())
     {
-        // line 55
-        echo "    <p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
-";
     }
 
     public function getTemplateName()
@@ -117,7 +114,7 @@ class __TwigTemplate_94b7e718bc03be95a40f6828347c0094c90962611a169e394574c0c08aa
 
     public function getDebugInfo()
     {
-        return array (  104 => 55,  101 => 54,  70 => 25,  67 => 24,  55 => 13,  52 => 12,  46 => 10,  40 => 6,  35 => 5,  32 => 4,  11 => 2,);
+        return array (  101 => 54,  70 => 25,  67 => 24,  55 => 13,  52 => 12,  46 => 10,  40 => 6,  35 => 5,  32 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
