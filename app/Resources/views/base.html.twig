@@ -15,19 +15,27 @@
         {% endblock %}
     </head>
     <body>
-
+        <header id="header">
+                <div class="top">
+                    {% block navigation %}
+                        <nav>
+                            <ul class="navigation">
+                                <li><a href="{{ path('congreso_congreso_list')}}">Inicio</a></li>
+                                <li><a href="{{ path('congreso_congreso_contact')}}">Contacto</a></li>
+                                {% if is_granted('ROLE_ADMIN')%}
+                                    <li><a href="{{ path('congreso_admin_logout')}}">Salir</a></li>
+                                {% else %}
+                                    <li><a href="{{ path('congreso_admin_login')}}">Entrar</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endblock %}
+                </div>
+                <h1><a id="titulo-lista" href="#">{% block title %}{% endblock %}</a></h1>
+            </header>
         <div id="wrapper">
     
-        <div id="header" class="container">
-            <div id="logo">
-                <h1><a id="titulo-lista" href="#">{% block title %} {% endblock %} </a></h1>
-                {% if is_granted('ROLE_ADMIN') %}
-                    <a href="{{ path('congreso_admin_logout')}}">Salir</a>
-                {% else %}
-                    <a href="{{ path('congreso_admin_login')}}">Entrar</a>    
-                {% endif %}
-            </div>
-        </div>
+        
     
     <!-- end #header -->
     <div id="page">

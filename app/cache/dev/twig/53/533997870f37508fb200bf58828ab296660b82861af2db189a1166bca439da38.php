@@ -24,20 +24,20 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cf2081ddd22605151e2c20e8564b1ce5854222002b6ac9da58acd43acf4ed7f6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cf2081ddd22605151e2c20e8564b1ce5854222002b6ac9da58acd43acf4ed7f6->enter($__internal_cf2081ddd22605151e2c20e8564b1ce5854222002b6ac9da58acd43acf4ed7f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/list.html.twig"));
+        $__internal_d05331bfb099dc520e9432fd72929764bfa03fd06418fb6eb2fe5bf427e550f5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d05331bfb099dc520e9432fd72929764bfa03fd06418fb6eb2fe5bf427e550f5->enter($__internal_d05331bfb099dc520e9432fd72929764bfa03fd06418fb6eb2fe5bf427e550f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_cf2081ddd22605151e2c20e8564b1ce5854222002b6ac9da58acd43acf4ed7f6->leave($__internal_cf2081ddd22605151e2c20e8564b1ce5854222002b6ac9da58acd43acf4ed7f6_prof);
+        $__internal_d05331bfb099dc520e9432fd72929764bfa03fd06418fb6eb2fe5bf427e550f5->leave($__internal_d05331bfb099dc520e9432fd72929764bfa03fd06418fb6eb2fe5bf427e550f5_prof);
 
     }
 
     // line 5
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_ab4187c87147e74b1994ed743f6bbea85d49c49c9d6ef3f409733087cc20d30a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ab4187c87147e74b1994ed743f6bbea85d49c49c9d6ef3f409733087cc20d30a->enter($__internal_ab4187c87147e74b1994ed743f6bbea85d49c49c9d6ef3f409733087cc20d30a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_2baffafe424927626a006641e4aef10eceb99bb5e49e158f607f896945df5515 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2baffafe424927626a006641e4aef10eceb99bb5e49e158f607f896945df5515->enter($__internal_2baffafe424927626a006641e4aef10eceb99bb5e49e158f607f896945df5515_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 6
         echo "            <script type=\"text/javascript\" src=\"";
@@ -61,29 +61,29 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
         echo "\"></script>
 ";
         
-        $__internal_ab4187c87147e74b1994ed743f6bbea85d49c49c9d6ef3f409733087cc20d30a->leave($__internal_ab4187c87147e74b1994ed743f6bbea85d49c49c9d6ef3f409733087cc20d30a_prof);
+        $__internal_2baffafe424927626a006641e4aef10eceb99bb5e49e158f607f896945df5515->leave($__internal_2baffafe424927626a006641e4aef10eceb99bb5e49e158f607f896945df5515_prof);
 
     }
 
     // line 14
     public function block_title($context, array $blocks = array())
     {
-        $__internal_ad5847754c3c0cacce8825d9fd058d1bdecf8a43ff998aba9e2e46c95dca2991 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ad5847754c3c0cacce8825d9fd058d1bdecf8a43ff998aba9e2e46c95dca2991->enter($__internal_ad5847754c3c0cacce8825d9fd058d1bdecf8a43ff998aba9e2e46c95dca2991_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_011a3d22730e70567b7dd6dd6d40ed12c298d7c21366af22af4d632606fd97b6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_011a3d22730e70567b7dd6dd6d40ed12c298d7c21366af22af4d632606fd97b6->enter($__internal_011a3d22730e70567b7dd6dd6d40ed12c298d7c21366af22af4d632606fd97b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 15
-        echo "Lista de Artículos
+        echo "Congreso Científico
 ";
         
-        $__internal_ad5847754c3c0cacce8825d9fd058d1bdecf8a43ff998aba9e2e46c95dca2991->leave($__internal_ad5847754c3c0cacce8825d9fd058d1bdecf8a43ff998aba9e2e46c95dca2991_prof);
+        $__internal_011a3d22730e70567b7dd6dd6d40ed12c298d7c21366af22af4d632606fd97b6->leave($__internal_011a3d22730e70567b7dd6dd6d40ed12c298d7c21366af22af4d632606fd97b6_prof);
 
     }
 
     // line 18
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c9105a7a2a6a907f6ebfd5434f1dd0a03b86048e31394e69d6dab923887944dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c9105a7a2a6a907f6ebfd5434f1dd0a03b86048e31394e69d6dab923887944dc->enter($__internal_c9105a7a2a6a907f6ebfd5434f1dd0a03b86048e31394e69d6dab923887944dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c1dcaeefe0a3a57d7e4f775e8105a6848af999e9dccf349d9e958232736ee726 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c1dcaeefe0a3a57d7e4f775e8105a6848af999e9dccf349d9e958232736ee726->enter($__internal_c1dcaeefe0a3a57d7e4f775e8105a6848af999e9dccf349d9e958232736ee726_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 19
         echo "    <div id=\"lista-ocultar\">
@@ -94,158 +94,162 @@ class __TwigTemplate_b1b80c6e2d5ebb7aa9cf88b3bd0de0898628152fadfc3c2fbceb8a05761
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
             // line 21
-            echo "        <h1><a id=\"nombre-temas\" href=\"";
+            echo "    <holi class=\"track\">
+        <header>
+            <h3><a id=\"nombre-temas\" href=\"";
+            // line 23
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute($context["track"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "campo", array()), "html", null, true);
-            echo "</a></h1>
+            echo "</a></h3>            
+        </header>
         <div id=\"lista-ocultar1\">
         ";
-            // line 23
+            // line 26
             $context["i"] = 0;
-            // line 24
+            // line 27
             echo "        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["articulos"] ?? $this->getContext($context, "articulos")));
             $context['_iterated'] = false;
             foreach ($context['_seq'] as $context["_key"] => $context["articulo"]) {
-                // line 25
+                // line 28
                 echo "            ";
                 if ((($this->getAttribute($context["track"], "id", array()) == $this->getAttribute($this->getAttribute($this->getAttribute($context["articulo"], "tracks", array()), 0, array(), "array"), "id", array())) && (($context["i"] ?? $this->getContext($context, "i")) < 2))) {
-                    // line 26
+                    // line 29
                     echo "                ";
                     $context["i"] = (($context["i"] ?? $this->getContext($context, "i")) + 1);
-                    // line 27
+                    // line 30
                     echo "                <article class=\"articulo\">
                 <div class=\"separator\"></div>
                     ";
-                    // line 29
+                    // line 32
                     if ((twig_date_format_filter($this->env, $this->getAttribute($context["articulo"], "publicacion", array()), "d") == "01")) {
-                        // line 30
+                        // line 33
                         echo "                        1
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 31
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 34
 $context["articulo"], "publicacion", array()), "d") == "02")) {
-                        // line 32
+                        // line 35
                         echo "                        2
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 33
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 36
 $context["articulo"], "publicacion", array()), "d") == "03")) {
-                        // line 34
+                        // line 37
                         echo "                        3
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 35
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 38
 $context["articulo"], "publicacion", array()), "d") == "04")) {
-                        // line 36
+                        // line 39
                         echo "                        4
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 37
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 40
 $context["articulo"], "publicacion", array()), "d") == "05")) {
-                        // line 38
+                        // line 41
                         echo "                        5
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 39
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 42
 $context["articulo"], "publicacion", array()), "d") == "06")) {
-                        // line 40
+                        // line 43
                         echo "                        6
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 41
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 44
 $context["articulo"], "publicacion", array()), "d") == "07")) {
-                        // line 42
+                        // line 45
                         echo "                        7
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 43
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 46
 $context["articulo"], "publicacion", array()), "d") == "08")) {
-                        // line 44
+                        // line 47
                         echo "                        8
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 45
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 48
 $context["articulo"], "publicacion", array()), "d") == "09")) {
-                        // line 46
+                        // line 49
                         echo "                        9
                     ";
                     } else {
-                        // line 48
+                        // line 51
                         echo "                        ";
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["articulo"], "publicacion", array()), "d"), "html", null, true);
                         echo "
                     ";
                     }
-                    // line 50
+                    // line 53
                     echo "
                     de 
 
                     ";
-                    // line 53
+                    // line 56
                     if ((twig_date_format_filter($this->env, $this->getAttribute($context["articulo"], "publicacion", array()), "m") == "01")) {
-                        // line 54
+                        // line 57
                         echo "                        enero
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 55
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 58
 $context["articulo"], "publicacion", array()), "m") == "02")) {
-                        // line 56
+                        // line 59
                         echo "                        febrero
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 57
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 60
 $context["articulo"], "publicacion", array()), "m") == "03")) {
-                        // line 58
+                        // line 61
                         echo "                        marzo
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 59
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 62
 $context["articulo"], "publicacion", array()), "m") == "04")) {
-                        // line 60
+                        // line 63
                         echo "                        abril
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 61
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 64
 $context["articulo"], "publicacion", array()), "m") == "05")) {
-                        // line 62
+                        // line 65
                         echo "                        mayo
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 63
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 66
 $context["articulo"], "publicacion", array()), "m") == "06")) {
-                        // line 64
+                        // line 67
                         echo "                        junio
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 65
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 68
 $context["articulo"], "publicacion", array()), "m") == "07")) {
-                        // line 66
+                        // line 69
                         echo "                        julio
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 67
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 70
 $context["articulo"], "publicacion", array()), "m") == "08")) {
-                        // line 68
+                        // line 71
                         echo "                        agosto
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 69
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 72
 $context["articulo"], "publicacion", array()), "m") == "09")) {
-                        // line 70
+                        // line 73
                         echo "                        septiembre
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 71
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 74
 $context["articulo"], "publicacion", array()), "m") == "10")) {
-                        // line 72
+                        // line 75
                         echo "                        octubre
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 73
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 76
 $context["articulo"], "publicacion", array()), "m") == "11")) {
-                        // line 74
+                        // line 77
                         echo "                        noviembre
                     ";
-                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 75
+                    } elseif ((twig_date_format_filter($this->env, $this->getAttribute(                    // line 78
 $context["articulo"], "publicacion", array()), "m") == "12")) {
-                        // line 76
+                        // line 79
                         echo "                        diciembre
                     ";
                     }
-                    // line 78
+                    // line 81
                     echo "                    
                      de ";
-                    // line 79
+                    // line 82
                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["articulo"], "publicacion", array()), "Y"), "html", null, true);
                     echo "</p>
                     <header>
                         <h2><a href=\"";
-                    // line 81
+                    // line 84
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
                     echo "\">";
                     echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "titulo", array()), "html", null, true);
@@ -254,44 +258,45 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
 
                     <div class=\"snippet\">
                         <p>";
-                    // line 85
+                    // line 88
                     echo twig_escape_filter($this->env, (twig_slice($this->env, $this->getAttribute($context["articulo"], "cuerpo", array()), 0, 400) . "..."), "html", null, true);
                     echo "</p>
                         <p class=\"continue\"><a href=\"";
-                    // line 86
+                    // line 89
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_show", array("id" => $this->getAttribute($context["articulo"], "id", array()))), "html", null, true);
                     echo "\">Seguir leyendo...</a></p>
                     </div>
 
                     <footer class=\"meta\">
                         <p>Comentarios: ";
-                    // line 90
+                    // line 93
                     echo twig_escape_filter($this->env, $this->getAttribute($context["articulo"], "numberofcomments", array()), "html", null, true);
                     echo "</p>
                     </footer>
                 </article>
             ";
                 }
-                // line 94
+                // line 97
                 echo "        ";
                 $context['_iterated'] = true;
             }
             if (!$context['_iterated']) {
-                // line 95
+                // line 98
                 echo "            <p>No hay entradas en este blog</p>
         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['articulo'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 97
+            // line 100
             echo "
         </div>
+    </holi>
     ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 100
+            // line 104
             echo "        <p>aaaaa</p>
 
     ";
@@ -299,21 +304,21 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 103
+        // line 107
         echo "    </div>
 ";
         
-        $__internal_c9105a7a2a6a907f6ebfd5434f1dd0a03b86048e31394e69d6dab923887944dc->leave($__internal_c9105a7a2a6a907f6ebfd5434f1dd0a03b86048e31394e69d6dab923887944dc_prof);
+        $__internal_c1dcaeefe0a3a57d7e4f775e8105a6848af999e9dccf349d9e958232736ee726->leave($__internal_c1dcaeefe0a3a57d7e4f775e8105a6848af999e9dccf349d9e958232736ee726_prof);
 
     }
 
-    // line 106
+    // line 110
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_28ca4d4e2ef857219cc675ccd29873816fd9d95ad76e44922f51f098561267d5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_28ca4d4e2ef857219cc675ccd29873816fd9d95ad76e44922f51f098561267d5->enter($__internal_28ca4d4e2ef857219cc675ccd29873816fd9d95ad76e44922f51f098561267d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_dd208591fae0f26e1a633facf734757ac9338edd9efe0b4b546c8233cd256cd6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dd208591fae0f26e1a633facf734757ac9338edd9efe0b4b546c8233cd256cd6->enter($__internal_dd208591fae0f26e1a633facf734757ac9338edd9efe0b4b546c8233cd256cd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 107
+        // line 111
         echo "
 
 
@@ -341,7 +346,7 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
     
 ";
         
-        $__internal_28ca4d4e2ef857219cc675ccd29873816fd9d95ad76e44922f51f098561267d5->leave($__internal_28ca4d4e2ef857219cc675ccd29873816fd9d95ad76e44922f51f098561267d5_prof);
+        $__internal_dd208591fae0f26e1a633facf734757ac9338edd9efe0b4b546c8233cd256cd6->leave($__internal_dd208591fae0f26e1a633facf734757ac9338edd9efe0b4b546c8233cd256cd6_prof);
 
     }
 
@@ -357,7 +362,7 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
 
     public function getDebugInfo()
     {
-        return array (  317 => 107,  311 => 106,  303 => 103,  295 => 100,  288 => 97,  281 => 95,  276 => 94,  269 => 90,  262 => 86,  258 => 85,  249 => 81,  244 => 79,  241 => 78,  237 => 76,  235 => 75,  232 => 74,  230 => 73,  227 => 72,  225 => 71,  222 => 70,  220 => 69,  217 => 68,  215 => 67,  212 => 66,  210 => 65,  207 => 64,  205 => 63,  202 => 62,  200 => 61,  197 => 60,  195 => 59,  192 => 58,  190 => 57,  187 => 56,  185 => 55,  182 => 54,  180 => 53,  175 => 50,  169 => 48,  165 => 46,  163 => 45,  160 => 44,  158 => 43,  155 => 42,  153 => 41,  150 => 40,  148 => 39,  145 => 38,  143 => 37,  140 => 36,  138 => 35,  135 => 34,  133 => 33,  130 => 32,  128 => 31,  125 => 30,  123 => 29,  119 => 27,  116 => 26,  113 => 25,  107 => 24,  105 => 23,  97 => 21,  92 => 20,  89 => 19,  83 => 18,  75 => 15,  69 => 14,  60 => 10,  56 => 9,  52 => 8,  48 => 7,  43 => 6,  37 => 5,  11 => 2,);
+        return array (  322 => 111,  316 => 110,  308 => 107,  300 => 104,  292 => 100,  285 => 98,  280 => 97,  273 => 93,  266 => 89,  262 => 88,  253 => 84,  248 => 82,  245 => 81,  241 => 79,  239 => 78,  236 => 77,  234 => 76,  231 => 75,  229 => 74,  226 => 73,  224 => 72,  221 => 71,  219 => 70,  216 => 69,  214 => 68,  211 => 67,  209 => 66,  206 => 65,  204 => 64,  201 => 63,  199 => 62,  196 => 61,  194 => 60,  191 => 59,  189 => 58,  186 => 57,  184 => 56,  179 => 53,  173 => 51,  169 => 49,  167 => 48,  164 => 47,  162 => 46,  159 => 45,  157 => 44,  154 => 43,  152 => 42,  149 => 41,  147 => 40,  144 => 39,  142 => 38,  139 => 37,  137 => 36,  134 => 35,  132 => 34,  129 => 33,  127 => 32,  123 => 30,  120 => 29,  117 => 28,  111 => 27,  109 => 26,  101 => 23,  97 => 21,  92 => 20,  89 => 19,  83 => 18,  75 => 15,  69 => 14,  60 => 10,  56 => 9,  52 => 8,  48 => 7,  43 => 6,  37 => 5,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -384,13 +389,16 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
 
 
 {% block title %}
-Lista de Artículos
+Congreso Científico
 {% endblock %}
 
 {% block body %}
     <div id=\"lista-ocultar\">
     {% for track in tracks %}
-        <h1><a id=\"nombre-temas\" href=\"{{ path('congreso_track_arttrac', { 'id': track.id }) }}\">{{ track.campo }}</a></h1>
+    <holi class=\"track\">
+        <header>
+            <h3><a id=\"nombre-temas\" href=\"{{ path('congreso_track_arttrac', { 'id': track.id }) }}\">{{ track.campo }}</a></h3>            
+        </header>
         <div id=\"lista-ocultar1\">
         {% set i = 0 %}
         {% for articulo in articulos %}
@@ -468,6 +476,7 @@ Lista de Artículos
         {% endfor %}
 
         </div>
+    </holi>
     {% else %}
         <p>aaaaa</p>
 

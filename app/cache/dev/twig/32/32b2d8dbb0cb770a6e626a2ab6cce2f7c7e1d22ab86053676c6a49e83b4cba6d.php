@@ -15,8 +15,8 @@ class __TwigTemplate_78be21f90ba8cf508d6cd0034f847692a706bb8962bf974296d72109e1a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8cac3f5f3b7112c7fc53526c766779e1be4ea9d3b975e9b82846ad3927b0fd88 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8cac3f5f3b7112c7fc53526c766779e1be4ea9d3b975e9b82846ad3927b0fd88->enter($__internal_8cac3f5f3b7112c7fc53526c766779e1be4ea9d3b975e9b82846ad3927b0fd88_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_image.html.twig"));
+        $__internal_8f016e9793bbb721111ea866b5f828cb98b9fef8aabca19ebd29987c749edaa8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8f016e9793bbb721111ea866b5f828cb98b9fef8aabca19ebd29987c749edaa8->enter($__internal_8f016e9793bbb721111ea866b5f828cb98b9fef8aabca19ebd29987c749edaa8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_image.html.twig"));
 
         // line 1
         echo "<a href=\"#\" class=\"easyadmin-thumbnail\" data-featherlight=\"#easyadmin-lightbox-";
@@ -39,7 +39,7 @@ class __TwigTemplate_78be21f90ba8cf508d6cd0034f847692a706bb8962bf974296d72109e1a
 </div>
 ";
         
-        $__internal_8cac3f5f3b7112c7fc53526c766779e1be4ea9d3b975e9b82846ad3927b0fd88->leave($__internal_8cac3f5f3b7112c7fc53526c766779e1be4ea9d3b975e9b82846ad3927b0fd88_prof);
+        $__internal_8f016e9793bbb721111ea866b5f828cb98b9fef8aabca19ebd29987c749edaa8->leave($__internal_8f016e9793bbb721111ea866b5f828cb98b9fef8aabca19ebd29987c749edaa8_prof);
 
     }
 

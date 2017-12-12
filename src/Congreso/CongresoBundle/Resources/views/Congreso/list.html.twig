@@ -12,13 +12,16 @@
 
 
 {% block title %}
-Lista de Artículos
+Congreso Científico
 {% endblock %}
 
 {% block body %}
     <div id="lista-ocultar">
     {% for track in tracks %}
-        <h1><a id="nombre-temas" href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></h1>
+    <holi class="track">
+        <header>
+            <h3><a id="nombre-temas" href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></h3>            
+        </header>
         <div id="lista-ocultar1">
         {% set i = 0 %}
         {% for articulo in articulos %}
@@ -96,6 +99,7 @@ Lista de Artículos
         {% endfor %}
 
         </div>
+    </holi>
     {% else %}
         <p>aaaaa</p>
 

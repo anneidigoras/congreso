@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.6em;
+	font-size: 300%;
 }
 h4 {
 	font-size: 200%;
@@ -76,12 +76,16 @@ a:hover {
 
 #header {
 	width: 1000px;
-	height: 100px;
-	margin: 0 auto;
-	padding: 0px 50px;
-	background: #415C13 url(images/img02.png) repeat;
+	margin: 0px auto;
+	background: #415C13;
 }
 
+#header .top { border-bottom: 1px solid #ccc; margin-bottom: 10px; }
+#header ul.navigation { list-style: none; text-align: right; }
+#header ul.navigation h1 { display: inline; text-align: left; }
+#header .navigation li { display: inline }
+#header .navigation li a { display: inline-block; padding: 10px 15px; border-left: 1px solid #ccc; color: white; }
+#header h1 a { text-align: center; display:block; color: #ffffff; }
 /* Logo */
 
 #logo {

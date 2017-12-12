@@ -42,5 +42,16 @@ public function showAction($id)
 	{
 	return $this->render('CongresoCongresoBundle:Congreso:contact.html.twig');
 	}
+
+	public function showAjaxAction($id)
+{
+	$track = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Track')->find($id);
+	
+	if (!$track) {
+		throw $this->createNotFoundException('No se ha encontrado el track.');
+	}
+
+	return $this->render('CongresoCongresoBundle:Congreso:showAjax.html.twig', array('track' => $track));
+}
 }
 ?>

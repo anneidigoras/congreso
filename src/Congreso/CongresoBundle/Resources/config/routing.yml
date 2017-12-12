@@ -24,3 +24,7 @@ congreso_comment_create:
     requirements:
         _method: GET
         articulo_id: \d+
+
+congreso_congreso_showAjax:
+    path: /showAjax/{id}
+    defaults: { _controller: CongresoCongresoBundle:Congreso:showAjax }

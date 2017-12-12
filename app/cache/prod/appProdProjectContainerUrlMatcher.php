@@ -121,6 +121,11 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
 
         }
 
+        // congreso_congreso_showAjax
+        if (0 === strpos($pathinfo, '/showAjax') && preg_match('#^/showAjax/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'congreso_congreso_showAjax')), array (  '_controller' => 'Congreso\\CongresoBundle\\Controller\\CongresoController::showAjaxAction',));
+        }
+
         // homepage
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {

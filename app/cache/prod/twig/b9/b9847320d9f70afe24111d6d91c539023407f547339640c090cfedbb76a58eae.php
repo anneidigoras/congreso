@@ -12,6 +12,7 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         $this->blocks = array(
             'stylesheets' => array($this, 'block_stylesheets'),
             'javascripts' => array($this, 'block_javascripts'),
+            'navigation' => array($this, 'block_navigation'),
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'tabla' => array($this, 'block_tabla'),
@@ -38,33 +39,21 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         // line 16
         echo "    </head>
     <body>
-
+        <header id=\"header\">
+                <div class=\"top\">
+                    ";
+        // line 20
+        $this->displayBlock('navigation', $context, $blocks);
+        // line 33
+        echo "                </div>
+                <h1><a id=\"titulo-lista\" href=\"#\">";
+        // line 34
+        $this->displayBlock('title', $context, $blocks);
+        echo "</a></h1>
+            </header>
         <div id=\"wrapper\">
     
-        <div id=\"header\" class=\"container\">
-            <div id=\"logo\">
-                <h1><a id=\"titulo-lista\" href=\"#\">";
-        // line 23
-        $this->displayBlock('title', $context, $blocks);
-        echo " </a></h1>
-                ";
-        // line 24
-        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 25
-            echo "                    <a href=\"";
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_logout");
-            echo "\">Salir</a>
-                ";
-        } else {
-            // line 27
-            echo "                    <a href=\"";
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login");
-            echo "\">Entrar</a>    
-                ";
-        }
-        // line 29
-        echo "            </div>
-        </div>
+        
     
     <!-- end #header -->
     <div id=\"page\">
@@ -73,25 +62,25 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         </div>
         <div id=\"content\">
             ";
-        // line 38
+        // line 46
         $this->displayBlock('body', $context, $blocks);
-        // line 39
+        // line 47
         echo "            ";
         $this->displayBlock('tabla', $context, $blocks);
-        // line 40
+        // line 48
         echo "        </div>
         <!-- end #content -->
         <div id=\"sidebar\">
             ";
-        // line 43
+        // line 51
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 44
+        // line 52
         echo "            ";
         $this->displayBlock('linea', $context, $blocks);
-        // line 45
+        // line 53
         echo "            ";
         $this->displayBlock('sidebar1', $context, $blocks);
-        // line 46
+        // line 54
         echo "        </div>
         
         <!-- end #sidebar -->
@@ -131,33 +120,67 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         ";
     }
 
-    // line 23
-    public function block_title($context, array $blocks = array())
+    // line 20
+    public function block_navigation($context, array $blocks = array())
     {
-        echo " ";
+        // line 21
+        echo "                        <nav>
+                            <ul class=\"navigation\">
+                                <li><a href=\"";
+        // line 23
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_list");
+        echo "\">Inicio</a></li>
+                                <li><a href=\"";
+        // line 24
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_contact");
+        echo "\">Contacto</a></li>
+                                ";
+        // line 25
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
+            // line 26
+            echo "                                    <li><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_logout");
+            echo "\">Salir</a></li>
+                                ";
+        } else {
+            // line 28
+            echo "                                    <li><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login");
+            echo "\">Entrar</a></li>
+                                ";
+        }
+        // line 30
+        echo "                            </ul>
+                        </nav>
+                    ";
     }
 
-    // line 38
+    // line 34
+    public function block_title($context, array $blocks = array())
+    {
+    }
+
+    // line 46
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 39
+    // line 47
     public function block_tabla($context, array $blocks = array())
     {
     }
 
-    // line 43
+    // line 51
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 44
+    // line 52
     public function block_linea($context, array $blocks = array())
     {
     }
 
-    // line 45
+    // line 53
     public function block_sidebar1($context, array $blocks = array())
     {
     }
@@ -167,14 +190,9 @@ class __TwigTemplate_c7f7343bc74cd1b834c90fb50f66c37284021a6cb101e0b0d671eb97d55
         return "::base.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  161 => 45,  156 => 44,  151 => 43,  146 => 39,  141 => 38,  135 => 23,  130 => 14,  127 => 13,  121 => 11,  115 => 7,  112 => 6,  95 => 46,  92 => 45,  89 => 44,  87 => 43,  82 => 40,  79 => 39,  77 => 38,  66 => 29,  60 => 27,  54 => 25,  52 => 24,  48 => 23,  39 => 16,  36 => 13,  34 => 6,  27 => 1,);
+        return array (  184 => 53,  179 => 52,  174 => 51,  169 => 47,  164 => 46,  159 => 34,  153 => 30,  147 => 28,  141 => 26,  139 => 25,  135 => 24,  131 => 23,  127 => 21,  124 => 20,  119 => 14,  116 => 13,  110 => 11,  104 => 7,  101 => 6,  84 => 54,  81 => 53,  78 => 52,  76 => 51,  71 => 48,  68 => 47,  66 => 46,  51 => 34,  48 => 33,  46 => 20,  40 => 16,  37 => 13,  35 => 6,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
