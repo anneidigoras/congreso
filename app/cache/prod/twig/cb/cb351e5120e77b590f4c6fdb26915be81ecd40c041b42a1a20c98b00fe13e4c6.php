@@ -17,29 +17,13 @@ class __TwigTemplate_18a9b511d5ea06e74398ff5e94d3090ef4e42c96d8b7635d1924a0d1bc3
     {
         // line 2
         echo "
-";
+<p class=\"continue\"><a href=\"";
         // line 3
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["tracks"] ?? null));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-            // line 4
-            echo "    <p class=\"continue\"><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute($context["track"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "campo", array()), "html", null, true);
-            echo "</a></p>
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute(($context["track"] ?? null), "id", array()))), "html", null, true);
+        echo "\">";
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["track"] ?? null), "campo", array()), "html", null, true);
+        echo "</a></p>
 ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 6
-            echo "    <p>No hay tracks para este articulo.</p>
-";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
     public function getTemplateName()
@@ -54,7 +38,7 @@ class __TwigTemplate_18a9b511d5ea06e74398ff5e94d3090ef4e42c96d8b7635d1924a0d1bc3
 
     public function getDebugInfo()
     {
-        return array (  37 => 6,  27 => 4,  22 => 3,  19 => 2,);
+        return array (  22 => 3,  19 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

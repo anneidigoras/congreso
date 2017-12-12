@@ -15,13 +15,13 @@ class __TwigTemplate_be3072b3a8089c23b74354971c4055bda5c33e58cf56d2dfc37c565361e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b0f99a969e7e5113b3970703d6308aa83383eecd77f7bdd01e2c922a7341e88e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b0f99a969e7e5113b3970703d6308aa83383eecd77f7bdd01e2c922a7341e88e->enter($__internal_b0f99a969e7e5113b3970703d6308aa83383eecd77f7bdd01e2c922a7341e88e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/showAjax.html.twig"));
+        $__internal_3fd830f335179e95b1658f537f197717f851bd69197f062e34f7a07f37f2b672 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3fd830f335179e95b1658f537f197717f851bd69197f062e34f7a07f37f2b672->enter($__internal_3fd830f335179e95b1658f537f197717f851bd69197f062e34f7a07f37f2b672_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Congreso/showAjax.html.twig"));
 
         // line 2
         echo twig_escape_filter($this->env, $this->getAttribute(($context["track"] ?? $this->getContext($context, "track")), "info", array()), "html", null, true);
         
-        $__internal_b0f99a969e7e5113b3970703d6308aa83383eecd77f7bdd01e2c922a7341e88e->leave($__internal_b0f99a969e7e5113b3970703d6308aa83383eecd77f7bdd01e2c922a7341e88e_prof);
+        $__internal_3fd830f335179e95b1658f537f197717f851bd69197f062e34f7a07f37f2b672->leave($__internal_3fd830f335179e95b1658f537f197717f851bd69197f062e34f7a07f37f2b672_prof);
 
     }
 

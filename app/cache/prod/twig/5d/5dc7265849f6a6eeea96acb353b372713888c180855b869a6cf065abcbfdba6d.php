@@ -94,7 +94,7 @@ class __TwigTemplate_1db91c8e52a91dd599a604327002b83b726eb7433d868228afcc0f9a7bf
             foreach ($context['_seq'] as $context["_key"] => $context["articulo"]) {
                 // line 28
                 echo "            ";
-                if ((($this->getAttribute($context["track"], "id", array()) == $this->getAttribute($this->getAttribute($this->getAttribute($context["articulo"], "tracks", array()), 0, array(), "array"), "id", array())) && (($context["i"] ?? null) < 2))) {
+                if ((($this->getAttribute($context["track"], "id", array()) == $this->getAttribute($this->getAttribute($context["articulo"], "track", array()), "id", array())) && (($context["i"] ?? null) < 2))) {
                     // line 29
                     echo "                ";
                     $context["i"] = (($context["i"] ?? null) + 1);

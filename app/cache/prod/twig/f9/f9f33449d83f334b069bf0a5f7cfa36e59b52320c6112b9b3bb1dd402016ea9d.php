@@ -90,7 +90,7 @@ class __TwigTemplate_e3df2da2c7064569d2835e1623115ae54b7c9ff5eb77a441c47edcba784
         echo "<div class=\"tracks\">
 ";
         // line 29
-        $this->loadTemplate("CongresoCongresoBundle:Track:list.html.twig", "@CongresoCongreso/Congreso/show.html.twig", 29)->display(array_merge($context, array("tracks" => ($context["tracks"] ?? null))));
+        $this->loadTemplate("CongresoCongresoBundle:Track:list.html.twig", "@CongresoCongreso/Congreso/show.html.twig", 29)->display(array_merge($context, array("track" => ($context["track"] ?? null))));
         // line 30
         echo "</div>
 ";

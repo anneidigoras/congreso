@@ -15,36 +15,20 @@ class __TwigTemplate_053761990ce9fec8e26fd4f87a3702388eb09949c2062eeb6b6ac5a20ce
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a2be892bc8319596eae3a0bb8e24705a0134d66214805ab23aac47207f9de0da = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a2be892bc8319596eae3a0bb8e24705a0134d66214805ab23aac47207f9de0da->enter($__internal_a2be892bc8319596eae3a0bb8e24705a0134d66214805ab23aac47207f9de0da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Track:list.html.twig"));
+        $__internal_92118e2e06626c498382e2fc29a9cdc8e4f85426652b8444da41a02b248cbab0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_92118e2e06626c498382e2fc29a9cdc8e4f85426652b8444da41a02b248cbab0->enter($__internal_92118e2e06626c498382e2fc29a9cdc8e4f85426652b8444da41a02b248cbab0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Track:list.html.twig"));
 
         // line 2
         echo "
-";
+<p class=\"continue\"><a href=\"";
         // line 3
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["tracks"] ?? $this->getContext($context, "tracks")));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-            // line 4
-            echo "    <p class=\"continue\"><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute($context["track"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "campo", array()), "html", null, true);
-            echo "</a></p>
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_track_arttrac", array("id" => $this->getAttribute(($context["track"] ?? $this->getContext($context, "track")), "id", array()))), "html", null, true);
+        echo "\">";
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["track"] ?? $this->getContext($context, "track")), "campo", array()), "html", null, true);
+        echo "</a></p>
 ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 6
-            echo "    <p>No hay tracks para este articulo.</p>
-";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_a2be892bc8319596eae3a0bb8e24705a0134d66214805ab23aac47207f9de0da->leave($__internal_a2be892bc8319596eae3a0bb8e24705a0134d66214805ab23aac47207f9de0da_prof);
+        $__internal_92118e2e06626c498382e2fc29a9cdc8e4f85426652b8444da41a02b248cbab0->leave($__internal_92118e2e06626c498382e2fc29a9cdc8e4f85426652b8444da41a02b248cbab0_prof);
 
     }
 
@@ -60,7 +44,7 @@ class __TwigTemplate_053761990ce9fec8e26fd4f87a3702388eb09949c2062eeb6b6ac5a20ce
 
     public function getDebugInfo()
     {
-        return array (  40 => 6,  30 => 4,  25 => 3,  22 => 2,);
+        return array (  25 => 3,  22 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -75,10 +59,7 @@ class __TwigTemplate_053761990ce9fec8e26fd4f87a3702388eb09949c2062eeb6b6ac5a20ce
     {
         return new Twig_Source("{# src/Congreso/CongresoBundle/Resources/views/Track/list.html.twig #}
 
-{% for track in tracks %}
-    <p class=\"continue\"><a href=\"{{ path('congreso_track_arttrac', { 'id': track.id }) }}\">{{ track.campo }}</a></p>
-{% else %}
-    <p>No hay tracks para este articulo.</p>
-{% endfor %}", "CongresoCongresoBundle:Track:list.html.twig", "C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/list.html.twig");
+<p class=\"continue\"><a href=\"{{ path('congreso_track_arttrac', { 'id': track.id }) }}\">{{ track.campo }}</a></p>
+", "CongresoCongresoBundle:Track:list.html.twig", "C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/list.html.twig");
     }
 }

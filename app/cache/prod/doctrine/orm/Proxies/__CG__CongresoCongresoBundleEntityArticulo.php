@@ -64,10 +64,10 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'tracks', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'tema', 'publicacion');
+            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'track', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'tema', 'publicacion');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'tracks', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'tema', 'publicacion');
+        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'track', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'tema', 'publicacion');
     }
 
     /**
@@ -312,39 +312,6 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
     /**
      * {@inheritDoc}
      */
-    public function addTrack(\Congreso\CongresoBundle\Entity\Track $tracks)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addTrack', array($tracks));
-
-        return parent::addTrack($tracks);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeTrack(\Congreso\CongresoBundle\Entity\Track $tracks)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeTrack', array($tracks));
-
-        return parent::removeTrack($tracks);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getTracks()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTracks', array());
-
-        return parent::getTracks();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function addCientifico(\Congreso\CongresoBundle\Entity\Cientifico $cientificos)
     {
 
@@ -395,6 +362,28 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
         $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
 
         return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setTrack(\Congreso\CongresoBundle\Entity\Track $track = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTrack', array($track));
+
+        return parent::setTrack($track);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTrack()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTrack', array());
+
+        return parent::getTrack();
     }
 
 }

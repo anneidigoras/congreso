@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * Congreso\CongresoBundle\Entity\Cientifico
  *
  * @ORM\Table(name="cientificos")
- * @ORM\Entity(repositoryClass="Congreso\CongresoBundle\Entity\TrackRepository")
+ * @ORM\Entity(repositoryClass="Congreso\CongresoBundle\Entity\CientificoRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 

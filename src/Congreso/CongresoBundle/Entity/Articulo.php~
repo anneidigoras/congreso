@@ -27,7 +27,7 @@ class Articulo
      * @ORM\JoinColumn(name="track_id", referencedColumnName="id")
      */
 
-    private $tracks;
+    private $track;
 
     /**
 
@@ -73,7 +73,6 @@ class Articulo
     public function __construct()
     {
         $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->tracks = new \Doctrine\Common\Collections\ArrayCollection();
         $this->cientificos = new \Doctrine\Common\Collections\ArrayCollection();
 
         $this->setDate(new \DateTime());
@@ -215,42 +214,6 @@ class Articulo
     }
 
     /**
-     * Add tracks
-     *
-     * @param \Congreso\CongresoBundle\Entity\Track $tracks
-     * @return Articulo
-     */
-    public function addTrack(\Congreso\CongresoBundle\Entity\Track $tracks)
-    {
-         $tracks->addArticulo($this);
-
-        $this->tracks[] = $tracks;
-    
-        return $this;
-    }
-
-    /**
-     * Remove tracks
-     *
-     * @param \Congreso\CongresoBundle\Entity\Track $tracks
-     */
-    public function removeTrack(\Congreso\CongresoBundle\Entity\Track $tracks)
-    {
-         $tracks->removeArticulo($this);
-        $this->tracks->removeElement($tracks);
-    }
-
-    /**
-     * Get tracks
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getTracks()
-    {
-        return $this->tracks;
-    }
-
-    /**
      * Add cientificos
      *
      * @param \Congreso\CongresoBundle\Entity\Cientifico $cientificos
@@ -296,4 +259,27 @@ class Articulo
     return $this->getTitulo();
     }
 
+
+    /**
+     * Set track
+     *
+     * @param \Congreso\CongresoBundle\Entity\Track $track
+     * @return Articulo
+     */
+    public function setTrack(\Congreso\CongresoBundle\Entity\Track $track = null)
+    {
+        $this->track = $track;
+    
+        return $this;
+    }
+
+    /**
+     * Get track
+     *
+     * @return \Congreso\CongresoBundle\Entity\Track 
+     */
+    public function getTrack()
+    {
+        return $this->track;
+    }
 }

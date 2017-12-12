@@ -25,7 +25,7 @@ Congreso Científico
         <div id="lista-ocultar1">
         {% set i = 0 %}
         {% for articulo in articulos %}
-            {% if track.id==articulo.tracks[0].id and i<2 %}
+            {% if track.id==articulo.track.id and i<2 %}
                 {% set i = i+1 %}
                 <article class="articulo">
                 <div class="separator"></div>

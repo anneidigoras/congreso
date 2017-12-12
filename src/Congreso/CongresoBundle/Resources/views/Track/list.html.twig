@@ -1,7 +1,3 @@
 {# src/Congreso/CongresoBundle/Resources/views/Track/list.html.twig #}
 
-{% for track in tracks %}
-    <p class="continue"><a href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></p>
-{% else %}
-    <p>No hay tracks para este articulo.</p>
-{% endfor %}
+<p class="continue"><a href="{{ path('congreso_track_arttrac', { 'id': track.id }) }}">{{ track.campo }}</a></p>

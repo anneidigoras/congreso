@@ -24,20 +24,20 @@ class __TwigTemplate_9a9abb82a8a5479857aa6d906a4e0d21f90a9633f6c0d25ec840819c723
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9f93e4c95bb70e507f8f5cd9304d718b4d4fa99c7472ba55e6abeee174205410 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9f93e4c95bb70e507f8f5cd9304d718b4d4fa99c7472ba55e6abeee174205410->enter($__internal_9f93e4c95bb70e507f8f5cd9304d718b4d4fa99c7472ba55e6abeee174205410_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Congreso:list.html.twig"));
+        $__internal_e344bc83debbc5cd5403120174a59db11a8a1203e2b066afd62b38f373ed366e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e344bc83debbc5cd5403120174a59db11a8a1203e2b066afd62b38f373ed366e->enter($__internal_e344bc83debbc5cd5403120174a59db11a8a1203e2b066afd62b38f373ed366e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Congreso:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9f93e4c95bb70e507f8f5cd9304d718b4d4fa99c7472ba55e6abeee174205410->leave($__internal_9f93e4c95bb70e507f8f5cd9304d718b4d4fa99c7472ba55e6abeee174205410_prof);
+        $__internal_e344bc83debbc5cd5403120174a59db11a8a1203e2b066afd62b38f373ed366e->leave($__internal_e344bc83debbc5cd5403120174a59db11a8a1203e2b066afd62b38f373ed366e_prof);
 
     }
 
     // line 5
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_3fcb5d175a2fbe87680dddc372819d8beac918030245e90dd6db6e549dfda60d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3fcb5d175a2fbe87680dddc372819d8beac918030245e90dd6db6e549dfda60d->enter($__internal_3fcb5d175a2fbe87680dddc372819d8beac918030245e90dd6db6e549dfda60d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_21e370bcca00e250a7f027161e625d894380598c0feddd0b3034a8f840b29490 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_21e370bcca00e250a7f027161e625d894380598c0feddd0b3034a8f840b29490->enter($__internal_21e370bcca00e250a7f027161e625d894380598c0feddd0b3034a8f840b29490_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 6
         echo "            <script type=\"text/javascript\" src=\"";
@@ -61,29 +61,29 @@ class __TwigTemplate_9a9abb82a8a5479857aa6d906a4e0d21f90a9633f6c0d25ec840819c723
         echo "\"></script>
 ";
         
-        $__internal_3fcb5d175a2fbe87680dddc372819d8beac918030245e90dd6db6e549dfda60d->leave($__internal_3fcb5d175a2fbe87680dddc372819d8beac918030245e90dd6db6e549dfda60d_prof);
+        $__internal_21e370bcca00e250a7f027161e625d894380598c0feddd0b3034a8f840b29490->leave($__internal_21e370bcca00e250a7f027161e625d894380598c0feddd0b3034a8f840b29490_prof);
 
     }
 
     // line 14
     public function block_title($context, array $blocks = array())
     {
-        $__internal_02ae841c941d4775e4db4e3f7099d7840e820c4c2bd97b85bb724ce1bb37d047 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_02ae841c941d4775e4db4e3f7099d7840e820c4c2bd97b85bb724ce1bb37d047->enter($__internal_02ae841c941d4775e4db4e3f7099d7840e820c4c2bd97b85bb724ce1bb37d047_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ebbb954e13cc0abf0ff8ff704d77680b79a520e1dc1f4038981ddf4533c709db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ebbb954e13cc0abf0ff8ff704d77680b79a520e1dc1f4038981ddf4533c709db->enter($__internal_ebbb954e13cc0abf0ff8ff704d77680b79a520e1dc1f4038981ddf4533c709db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 15
         echo "Congreso Científico
 ";
         
-        $__internal_02ae841c941d4775e4db4e3f7099d7840e820c4c2bd97b85bb724ce1bb37d047->leave($__internal_02ae841c941d4775e4db4e3f7099d7840e820c4c2bd97b85bb724ce1bb37d047_prof);
+        $__internal_ebbb954e13cc0abf0ff8ff704d77680b79a520e1dc1f4038981ddf4533c709db->leave($__internal_ebbb954e13cc0abf0ff8ff704d77680b79a520e1dc1f4038981ddf4533c709db_prof);
 
     }
 
     // line 18
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6f1b0701cfb619814690d6ed9e98169155d6800d3a4e09a1b15cc8a05da9ee8e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6f1b0701cfb619814690d6ed9e98169155d6800d3a4e09a1b15cc8a05da9ee8e->enter($__internal_6f1b0701cfb619814690d6ed9e98169155d6800d3a4e09a1b15cc8a05da9ee8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_337281598113d18b3783c6089093fe2127681c3929c17a354881c0370934a7ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_337281598113d18b3783c6089093fe2127681c3929c17a354881c0370934a7ea->enter($__internal_337281598113d18b3783c6089093fe2127681c3929c17a354881c0370934a7ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 19
         echo "    <div id=\"lista-ocultar\">
@@ -115,7 +115,7 @@ class __TwigTemplate_9a9abb82a8a5479857aa6d906a4e0d21f90a9633f6c0d25ec840819c723
             foreach ($context['_seq'] as $context["_key"] => $context["articulo"]) {
                 // line 28
                 echo "            ";
-                if ((($this->getAttribute($context["track"], "id", array()) == $this->getAttribute($this->getAttribute($this->getAttribute($context["articulo"], "tracks", array()), 0, array(), "array"), "id", array())) && (($context["i"] ?? $this->getContext($context, "i")) < 2))) {
+                if ((($this->getAttribute($context["track"], "id", array()) == $this->getAttribute($this->getAttribute($context["articulo"], "track", array()), "id", array())) && (($context["i"] ?? $this->getContext($context, "i")) < 2))) {
                     // line 29
                     echo "                ";
                     $context["i"] = (($context["i"] ?? $this->getContext($context, "i")) + 1);
@@ -308,15 +308,15 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
         echo "    </div>
 ";
         
-        $__internal_6f1b0701cfb619814690d6ed9e98169155d6800d3a4e09a1b15cc8a05da9ee8e->leave($__internal_6f1b0701cfb619814690d6ed9e98169155d6800d3a4e09a1b15cc8a05da9ee8e_prof);
+        $__internal_337281598113d18b3783c6089093fe2127681c3929c17a354881c0370934a7ea->leave($__internal_337281598113d18b3783c6089093fe2127681c3929c17a354881c0370934a7ea_prof);
 
     }
 
     // line 110
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_6aa79e3ed0e6a34b20c11e94dd957d0c648ca0d1fd04956bf6a687cd504ebcb6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6aa79e3ed0e6a34b20c11e94dd957d0c648ca0d1fd04956bf6a687cd504ebcb6->enter($__internal_6aa79e3ed0e6a34b20c11e94dd957d0c648ca0d1fd04956bf6a687cd504ebcb6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_1e2ff13546b67cb00dd56eeb58e5a9e8cd03aa04fd80ca0a6e7d5047d152bee7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1e2ff13546b67cb00dd56eeb58e5a9e8cd03aa04fd80ca0a6e7d5047d152bee7->enter($__internal_1e2ff13546b67cb00dd56eeb58e5a9e8cd03aa04fd80ca0a6e7d5047d152bee7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 111
         echo "
@@ -346,7 +346,7 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
     
 ";
         
-        $__internal_6aa79e3ed0e6a34b20c11e94dd957d0c648ca0d1fd04956bf6a687cd504ebcb6->leave($__internal_6aa79e3ed0e6a34b20c11e94dd957d0c648ca0d1fd04956bf6a687cd504ebcb6_prof);
+        $__internal_1e2ff13546b67cb00dd56eeb58e5a9e8cd03aa04fd80ca0a6e7d5047d152bee7->leave($__internal_1e2ff13546b67cb00dd56eeb58e5a9e8cd03aa04fd80ca0a6e7d5047d152bee7_prof);
 
     }
 
@@ -402,7 +402,7 @@ Congreso Científico
         <div id=\"lista-ocultar1\">
         {% set i = 0 %}
         {% for articulo in articulos %}
-            {% if track.id==articulo.tracks[0].id and i<2 %}
+            {% if track.id==articulo.track.id and i<2 %}
                 {% set i = i+1 %}
                 <article class=\"articulo\">
                 <div class=\"separator\"></div>

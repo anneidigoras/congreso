@@ -31,11 +31,11 @@ public function showAction($id)
 		throw $this->createNotFoundException('No se ha encontrado el articulo.');
 	}
 
-	$tracks = $articulo->getTracks();
+	$track = $articulo->getTrack();
 	$cientificos = $articulo->getCientificos();
 	$comments = $this->get('doctrine')->getManager()->getRepository('CongresoCongresoBundle:Comment')->getCommentsForArticulo($articulo->getId());
 
-	return $this->render('CongresoCongresoBundle:Congreso:show.html.twig', array('articulo' => $articulo, 'comments' => $comments ,'tracks' => $tracks, 'cientificos' => $cientificos));
+	return $this->render('CongresoCongresoBundle:Congreso:show.html.twig', array('articulo' => $articulo, 'comments' => $comments ,'track' => $track, 'cientificos' => $cientificos));
 }
 
 	public function contactAction()
