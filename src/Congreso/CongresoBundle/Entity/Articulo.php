@@ -23,11 +23,8 @@ class Articulo
 
 
     /**
-
-     * @ORM\ManyToMany(targetEntity="Track", inversedBy="articulos")
-
-     * @ORM\JoinTable(name="articulos_tracks")
-
+     * @ORM\ManyToOne(targetEntity="Track", inversedBy="articulos")
+     * @ORM\JoinColumn(name="track_id", referencedColumnName="id")
      */
 
     private $tracks;
@@ -299,4 +296,17 @@ class Articulo
     return $this->getTitulo();
     }
 
+
+    /**
+     * Set tracks
+     *
+     * @param \Congreso\CongresoBundle\Entity\Track $tracks
+     * @return Articulo
+     */
+    public function setTracks(\Congreso\CongresoBundle\Entity\Track $tracks = null)
+    {
+        $this->tracks = $tracks;
+    
+        return $this;
+    }
 }

@@ -17,9 +17,7 @@ class Track
 	
 
     /**
-
-    * @ORM\ManyToMany(targetEntity="Articulo", mappedBy="tracks")
-
+    * @ORM\OneToMany(targetEntity="Articulo", mappedBy="track")
     */
 
     private $articulos;
