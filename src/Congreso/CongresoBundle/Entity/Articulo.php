@@ -58,11 +58,6 @@ class Articulo
 	protected $cuerpo;
 	
 	/**
-	* @ORM\Column(type="text")
-	*/
-	protected $tema;
-
-	/**
 	* @ORM\Column(type="date")
 	*/
 	protected $publicacion;
@@ -132,29 +127,6 @@ class Articulo
     public function getCuerpo()
     {
         return $this->cuerpo;
-    }
-
-    /**
-     * Set tema
-     *
-     * @param string $tema
-     * @return Articulo
-     */
-    public function setTema($tema)
-    {
-        $this->tema = $tema;
-    
-        return $this;
-    }
-
-    /**
-     * Get tema
-     *
-     * @return string 
-     */
-    public function getTema()
-    {
-        return $this->tema;
     }
 
     /**
