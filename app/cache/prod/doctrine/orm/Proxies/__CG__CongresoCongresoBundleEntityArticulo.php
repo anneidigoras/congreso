@@ -64,10 +64,10 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'track', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'tema', 'publicacion');
+            return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'track', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'publicacion');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'track', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'tema', 'publicacion');
+        return array('__isInitialized__', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'comments', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'track', '' . "\0" . 'Congreso\\CongresoBundle\\Entity\\Articulo' . "\0" . 'cientificos', 'id', 'titulo', 'cuerpo', 'publicacion');
     }
 
     /**
@@ -235,28 +235,6 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
     /**
      * {@inheritDoc}
      */
-    public function setTema($tema)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTema', array($tema));
-
-        return parent::setTema($tema);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getTema()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTema', array());
-
-        return parent::getTema();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setPublicacion($publicacion)
     {
 
@@ -351,6 +329,17 @@ class Articulo extends \Congreso\CongresoBundle\Entity\Articulo implements \Doct
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNumberOfComments', array());
 
         return parent::getNumberOfComments();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function ParsearFecha()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'ParsearFecha', array());
+
+        return parent::ParsearFecha();
     }
 
     /**

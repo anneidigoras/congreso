@@ -50,7 +50,7 @@ class __TwigTemplate_e3df2da2c7064569d2835e1623115ae54b7c9ff5eb77a441c47edcba784
 \t<div class=\"separator\"></div>
 \t<div class=\"date\">Fecha de publicación: ";
         // line 10
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["articulo"] ?? null), "publicacion", array()), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["articulo"] ?? null), "ParsearFecha", array()), "html", null, true);
         echo "</div>
 \t<div class=\"separator\"></div>
 \t<section class=\"comments\" id=\"comments\">

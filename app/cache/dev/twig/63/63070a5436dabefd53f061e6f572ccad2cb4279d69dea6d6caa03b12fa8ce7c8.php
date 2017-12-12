@@ -15,8 +15,8 @@ class __TwigTemplate_2f2c0fc8ffd81c67dc3221f0c98fe80736840474b24e8097c52d1a578ac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3e30d4f7357778db2238a6332207dbcc1920b079a406eb9158ccbe7118fb4d44 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3e30d4f7357778db2238a6332207dbcc1920b079a406eb9158ccbe7118fb4d44->enter($__internal_3e30d4f7357778db2238a6332207dbcc1920b079a406eb9158ccbe7118fb4d44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_object.html.twig"));
+        $__internal_c12046a954c6d7e6bccfff30ac17f467cc71a62adf9ddbd8b0a7906b79b0d015 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c12046a954c6d7e6bccfff30ac17f467cc71a62adf9ddbd8b0a7906b79b0d015->enter($__internal_c12046a954c6d7e6bccfff30ac17f467cc71a62adf9ddbd8b0a7906b79b0d015_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_object.html.twig"));
 
         // line 1
         echo "<span class=\"label\">";
@@ -24,7 +24,7 @@ class __TwigTemplate_2f2c0fc8ffd81c67dc3221f0c98fe80736840474b24e8097c52d1a578ac
         echo "</span>
 ";
         
-        $__internal_3e30d4f7357778db2238a6332207dbcc1920b079a406eb9158ccbe7118fb4d44->leave($__internal_3e30d4f7357778db2238a6332207dbcc1920b079a406eb9158ccbe7118fb4d44_prof);
+        $__internal_c12046a954c6d7e6bccfff30ac17f467cc71a62adf9ddbd8b0a7906b79b0d015->leave($__internal_c12046a954c6d7e6bccfff30ac17f467cc71a62adf9ddbd8b0a7906b79b0d015_prof);
 
     }
 

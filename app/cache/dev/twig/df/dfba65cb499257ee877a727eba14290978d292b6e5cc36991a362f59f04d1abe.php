@@ -23,33 +23,33 @@ class __TwigTemplate_6af71f3aafa54148cf9787c95dc6f5dd7be5113fb7548a0c1b6afcd6fb7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0c389bba3b21fb4146bb2e1b3226f64aad4b32088ec91d8ee918afea069914c3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0c389bba3b21fb4146bb2e1b3226f64aad4b32088ec91d8ee918afea069914c3->enter($__internal_0c389bba3b21fb4146bb2e1b3226f64aad4b32088ec91d8ee918afea069914c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Cientifico/artcenIng.html.twig"));
+        $__internal_77469e73eee85f066949117236a15811b055fe8c99b339f89bee92723543275f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_77469e73eee85f066949117236a15811b055fe8c99b339f89bee92723543275f->enter($__internal_77469e73eee85f066949117236a15811b055fe8c99b339f89bee92723543275f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoCongreso/Cientifico/artcenIng.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0c389bba3b21fb4146bb2e1b3226f64aad4b32088ec91d8ee918afea069914c3->leave($__internal_0c389bba3b21fb4146bb2e1b3226f64aad4b32088ec91d8ee918afea069914c3_prof);
+        $__internal_77469e73eee85f066949117236a15811b055fe8c99b339f89bee92723543275f->leave($__internal_77469e73eee85f066949117236a15811b055fe8c99b339f89bee92723543275f_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4f48b241074bcca5909f685bb8953fea37884614d75ed46c8bf445abe80958b4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4f48b241074bcca5909f685bb8953fea37884614d75ed46c8bf445abe80958b4->enter($__internal_4f48b241074bcca5909f685bb8953fea37884614d75ed46c8bf445abe80958b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_81bcf496d2571f1f7bdcd2a16b89a12061faa4f318ea1128033a431b50f60cb0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_81bcf496d2571f1f7bdcd2a16b89a12061faa4f318ea1128033a431b50f60cb0->enter($__internal_81bcf496d2571f1f7bdcd2a16b89a12061faa4f318ea1128033a431b50f60cb0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Articles made by ";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["cientifico"] ?? $this->getContext($context, "cientifico")), "nombre", array()), "html", null, true);
         
-        $__internal_4f48b241074bcca5909f685bb8953fea37884614d75ed46c8bf445abe80958b4->leave($__internal_4f48b241074bcca5909f685bb8953fea37884614d75ed46c8bf445abe80958b4_prof);
+        $__internal_81bcf496d2571f1f7bdcd2a16b89a12061faa4f318ea1128033a431b50f60cb0->leave($__internal_81bcf496d2571f1f7bdcd2a16b89a12061faa4f318ea1128033a431b50f60cb0_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_869241bfd8beef51fe146692fcc7071134b14e07bc4e17afa002858e3db4e263 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_869241bfd8beef51fe146692fcc7071134b14e07bc4e17afa002858e3db4e263->enter($__internal_869241bfd8beef51fe146692fcc7071134b14e07bc4e17afa002858e3db4e263_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_178f0ccae723a9f4cd252f734dd8527f9b307f38ce2d464c97ad185d5f18e027 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_178f0ccae723a9f4cd252f734dd8527f9b307f38ce2d464c97ad185d5f18e027->enter($__internal_178f0ccae723a9f4cd252f734dd8527f9b307f38ce2d464c97ad185d5f18e027_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
@@ -224,15 +224,15 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['articulo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_869241bfd8beef51fe146692fcc7071134b14e07bc4e17afa002858e3db4e263->leave($__internal_869241bfd8beef51fe146692fcc7071134b14e07bc4e17afa002858e3db4e263_prof);
+        $__internal_178f0ccae723a9f4cd252f734dd8527f9b307f38ce2d464c97ad185d5f18e027->leave($__internal_178f0ccae723a9f4cd252f734dd8527f9b307f38ce2d464c97ad185d5f18e027_prof);
 
     }
 
     // line 78
     public function block_sidebar1($context, array $blocks = array())
     {
-        $__internal_28c5fe04608d14000cdedf383328ba9b8ade4012d02ae7b83ef523768121c488 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_28c5fe04608d14000cdedf383328ba9b8ade4012d02ae7b83ef523768121c488->enter($__internal_28c5fe04608d14000cdedf383328ba9b8ade4012d02ae7b83ef523768121c488_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar1"));
+        $__internal_d02c85cdc30c2d9e32a2717ce12203cc56ab1946ba52bbefc297a5eae7784296 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d02c85cdc30c2d9e32a2717ce12203cc56ab1946ba52bbefc297a5eae7784296->enter($__internal_d02c85cdc30c2d9e32a2717ce12203cc56ab1946ba52bbefc297a5eae7784296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar1"));
 
         // line 79
         echo "<div class=\"cientificos\">
@@ -391,7 +391,7 @@ $context["articulo"], "publicacion", array()), "m") == "12")) {
 <p class=\"continue\"><a href=\"/contact\">Change language</a></p>
 ";
         
-        $__internal_28c5fe04608d14000cdedf383328ba9b8ade4012d02ae7b83ef523768121c488->leave($__internal_28c5fe04608d14000cdedf383328ba9b8ade4012d02ae7b83ef523768121c488_prof);
+        $__internal_d02c85cdc30c2d9e32a2717ce12203cc56ab1946ba52bbefc297a5eae7784296->leave($__internal_d02c85cdc30c2d9e32a2717ce12203cc56ab1946ba52bbefc297a5eae7784296_prof);
 
     }
 
