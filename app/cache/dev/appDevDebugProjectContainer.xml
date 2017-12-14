@@ -23,6 +23,7 @@
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -99,6 +100,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\xampp\htdocs\congreso\vendor\sensio\generator-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\GeneratorBundle</parameter>
+      </parameter>
+      <parameter key="DoctrineFixturesBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\xampp\htdocs\congreso\vendor\doctrine\doctrine-fixtures-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -698,6 +704,7 @@
     </parameter>
     <parameter key="console.command.ids" type="collection">
       <parameter>sensio_distribution.security_checker.command</parameter>
+      <parameter>doctrine.fixtures_load_command</parameter>
     </parameter>
   </parameters>
   <services>
@@ -2243,7 +2250,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5a32417d1d09d8.21622442</argument>
+            <argument>5a32f47e84f3e4.39809494</argument>
           </service>
         </argument>
       </argument>
@@ -2537,7 +2544,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5a32417d1d09d8.21622442</argument>
+            <argument>5a32f47e84f3e4.39809494</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3471,6 +3478,9 @@
       <tag name="console.command"/>
       <argument type="service" id="sensio_distribution.security_checker"/>
     </service>
+    <service id="doctrine.fixtures_load_command" class="Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand">
+      <tag name="console.command" command="doctrine:fixtures:load"/>
+    </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>
       <call method="pushHandler">
@@ -3785,5 +3795,6 @@
     <service id="easy_admin.property_accessor" alias="property_accessor"/>
     <service id="sensio.distribution.webconfigurator" alias="sensio_distribution.webconfigurator"/>
     <service id="console.command.sensiolabs_security_command_securitycheckercommand" alias="sensio_distribution.security_checker.command"/>
+    <service id="console.command.doctrine_bundle_fixturesbundle_command_loaddatafixturesdoctrinecommand" alias="doctrine.fixtures_load_command"/>
   </services>
 </container>

@@ -15,8 +15,8 @@ class __TwigTemplate_ffb3f4f5569c4c9b0eeeae7a64cabd04b03287dc19b31f4ebf3904a9af0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f9896d37a49065cf85ddf99d2932f33b9303eec99e4233d3fe07d803801ec94 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2f9896d37a49065cf85ddf99d2932f33b9303eec99e4233d3fe07d803801ec94->enter($__internal_2f9896d37a49065cf85ddf99d2932f33b9303eec99e4233d3fe07d803801ec94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_actions.html.twig"));
+        $__internal_64dd8ffe53f1e0a084838a31c933958ef8fb502b2034bbb48242156ef268c014 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_64dd8ffe53f1e0a084838a31c933958ef8fb502b2034bbb48242156ef268c014->enter($__internal_64dd8ffe53f1e0a084838a31c933958ef8fb502b2034bbb48242156ef268c014_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_actions.html.twig"));
 
         // line 1
         $context['_parent'] = $context;
@@ -74,7 +74,7 @@ class __TwigTemplate_ffb3f4f5569c4c9b0eeeae7a64cabd04b03287dc19b31f4ebf3904a9af0
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['action'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_2f9896d37a49065cf85ddf99d2932f33b9303eec99e4233d3fe07d803801ec94->leave($__internal_2f9896d37a49065cf85ddf99d2932f33b9303eec99e4233d3fe07d803801ec94_prof);
+        $__internal_64dd8ffe53f1e0a084838a31c933958ef8fb502b2034bbb48242156ef268c014->leave($__internal_64dd8ffe53f1e0a084838a31c933958ef8fb502b2034bbb48242156ef268c014_prof);
 
     }
 

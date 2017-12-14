@@ -69,8 +69,6 @@ class Articulo
     {
         $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
         $this->cientificos = new \Doctrine\Common\Collections\ArrayCollection();
-
-        $this->setDate(new \DateTime());
     }
 
     /**
