@@ -1,0 +1,209 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix schema: <http://schema.org/> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql://localhost/congreso";
+	d2rq:username "congreso";
+	d2rq:password "congresopass";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table articulos
+map:articulos a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "articulos/@@articulos.id@@";
+	d2rq:class vocab:articulos;
+	d2rq:classDefinitionLabel "articulos";
+	.
+map:articulos__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property rdfs:label;
+	d2rq:pattern "articulos #@@articulos.id@@";
+	.
+map:articulos_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property vocab:articulos_id;
+	d2rq:propertyDefinitionLabel "articulos id";
+	d2rq:column "articulos.id";
+	d2rq:datatype xsd:integer;
+	.
+map:articulos_titulo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property vocab:articulos_titulo;
+	d2rq:propertyDefinitionLabel "articulos titulo";
+	d2rq:column "articulos.titulo";
+	.
+map:articulos_cuerpo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property vocab:articulos_cuerpo;
+	d2rq:propertyDefinitionLabel "articulos cuerpo";
+	d2rq:column "articulos.cuerpo";
+	.
+map:articulos_publicacion a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property vocab:articulos_publicacion;
+	d2rq:propertyDefinitionLabel "articulos publicacion";
+	d2rq:column "articulos.publicacion";
+	d2rq:datatype xsd:date;
+	.
+map:articulos_track_id__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property vocab:articulos_track_id;
+	d2rq:refersToClassMap map:track;
+	d2rq:join "articulos.track_id => track.id";
+	.
+
+# Table articulos_cientificos (n:m)
+map:articulos_cientificos__link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:articulos;
+	d2rq:property vocab:articulos_cientificos;
+	d2rq:refersToClassMap map:cientificos;
+	d2rq:join "articulos_cientificos.articulo_id => articulos.id";
+	d2rq:join "articulos_cientificos.cientifico_id => cientificos.id";
+	.
+
+# Table cientificos
+map:cientificos a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "cientificos/@@cientificos.id@@";
+	d2rq:class vocab:cientificos;
+	d2rq:classDefinitionLabel "cientificos";
+	.
+map:cientificos__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:cientificos;
+	d2rq:property rdfs:label;
+	d2rq:pattern "cientificos #@@cientificos.id@@";
+	.
+map:cientificos_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:cientificos;
+	d2rq:property vocab:cientificos_id;
+	d2rq:propertyDefinitionLabel "cientificos id";
+	d2rq:column "cientificos.id";
+	d2rq:datatype xsd:integer;
+	.
+map:cientificos_nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:cientificos;
+	d2rq:property vocab:cientificos_nombre;
+	d2rq:propertyDefinitionLabel "cientificos nombre";
+	d2rq:column "cientificos.nombre";
+	.
+map:cientificos_especialidad a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:cientificos;
+	d2rq:property vocab:cientificos_especialidad;
+	d2rq:propertyDefinitionLabel "cientificos especialidad";
+	d2rq:column "cientificos.especialidad";
+	.
+map:cientificos_nacimiento a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:cientificos;
+	d2rq:property vocab:cientificos_nacimiento;
+	d2rq:propertyDefinitionLabel "cientificos nacimiento";
+	d2rq:column "cientificos.nacimiento";
+	d2rq:datatype xsd:date;
+	.
+map:cientificos_info a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:cientificos;
+	d2rq:property vocab:cientificos_info;
+	d2rq:propertyDefinitionLabel "cientificos info";
+	d2rq:column "cientificos.info";
+	.
+
+# Table comment
+map:comment a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "comment/@@comment.id@@";
+	d2rq:class vocab:comment;
+	d2rq:classDefinitionLabel "comment";
+	.
+map:comment__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property rdfs:label;
+	d2rq:pattern "comment #@@comment.id@@";
+	.
+map:comment_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_id;
+	d2rq:propertyDefinitionLabel "comment id";
+	d2rq:column "comment.id";
+	d2rq:datatype xsd:integer;
+	.
+map:comment_user a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_user;
+	d2rq:propertyDefinitionLabel "comment user";
+	d2rq:column "comment.user";
+	.
+map:comment_comment a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_comment;
+	d2rq:propertyDefinitionLabel "comment comment";
+	d2rq:column "comment.comment";
+	.
+map:comment_approved a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_approved;
+	d2rq:propertyDefinitionLabel "comment approved";
+	d2rq:column "comment.approved";
+	d2rq:datatype xsd:boolean;
+	.
+map:comment_created a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_created;
+	d2rq:propertyDefinitionLabel "comment created";
+	d2rq:column "comment.created";
+	d2rq:datatype xsd:dateTime;
+	.
+map:comment_updated a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_updated;
+	d2rq:propertyDefinitionLabel "comment updated";
+	d2rq:column "comment.updated";
+	d2rq:datatype xsd:dateTime;
+	.
+map:comment_articulo_id__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comment;
+	d2rq:property vocab:comment_articulo_id;
+	d2rq:refersToClassMap map:articulos;
+	d2rq:join "comment.articulo_id => articulos.id";
+	.
+
+# Table track
+map:track a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "track/@@track.id@@";
+	d2rq:class vocab:track;
+	d2rq:classDefinitionLabel "track";
+	.
+map:track__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:track;
+	d2rq:property rdfs:label;
+	d2rq:pattern "track #@@track.id@@";
+	.
+map:track_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:track;
+	d2rq:property vocab:track_id;
+	d2rq:propertyDefinitionLabel "track id";
+	d2rq:column "track.id";
+	d2rq:datatype xsd:integer;
+	.
+map:track_campo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:track;
+	d2rq:property vocab:track_campo;
+	d2rq:propertyDefinitionLabel "track campo";
+	d2rq:column "track.campo";
+	.
+map:track_info a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:track;
+	d2rq:property vocab:track_info;
+	d2rq:propertyDefinitionLabel "track info";
+	d2rq:column "track.info";
+	.
+
