@@ -210,7 +210,7 @@ $this->headers[$key] = $values;
 $this->headers[$key] = array_merge($this->headers[$key], $values);
 }
 if ('cache-control'=== $key) {
-$this->cacheControl = $this->parseCacheControl($values[0]);
+$this->cacheControl = $this->parseCacheControl(implode(', ', $this->headers[$key]));
 }
 }
 public function has($key)
@@ -336,7 +336,10 @@ $file = null;
 $file = new UploadedFile($file['tmp_name'], $file['name'], $file['type'], $file['size'], $file['error']);
 }
 } else {
-$file = array_filter(array_map(array($this,'convertFileInformation'), $file));
+$file = array_map(array($this,'convertFileInformation'), $file);
+if (array_keys($keys) === $keys) {
+$file = array_filter($file);
+}
 }
 }
 return $file;
@@ -1421,7 +1424,8 @@ protected $charset;
 public static $statusTexts = array(
 100 =>'Continue',
 101 =>'Switching Protocols',
-102 =>'Processing', 200 =>'OK',
+102 =>'Processing', 103 =>'Early Hints',
+200 =>'OK',
 201 =>'Created',
 202 =>'Accepted',
 203 =>'Non-Authoritative Information',
@@ -2481,11 +2485,11 @@ protected $booted = false;
 protected $name;
 protected $startTime;
 protected $loadClassCache;
-const VERSION ='2.8.28';
-const VERSION_ID = 20828;
+const VERSION ='2.8.32';
+const VERSION_ID = 20832;
 const MAJOR_VERSION = 2;
 const MINOR_VERSION = 8;
-const RELEASE_VERSION = 28;
+const RELEASE_VERSION = 32;
 const EXTRA_VERSION ='';
 const END_OF_MAINTENANCE ='11/2018';
 const END_OF_LIFE ='11/2019';

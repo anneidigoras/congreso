@@ -17,5 +17,6 @@ return array(
     '3e2471375464aac821502deb0ac64275' => $vendorDir . '/symfony/polyfill-php54/bootstrap.php',
     '6a47392539ca2329373e0d33e1dba053' => $vendorDir . '/symfony/polyfill-intl-icu/bootstrap.php',
     '32dcc8afd4335739640db7d200c1971d' => $vendorDir . '/symfony/polyfill-apcu/bootstrap.php',
+    'fe1bcd0336136e435eaf197895daf81a' => $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
     '719971e375036615a0685b6fb054583d' => $vendorDir . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
 );

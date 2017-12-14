@@ -18,6 +18,7 @@ class ComposerStaticInitd7df6d3e508c02f5caa386a90b000c9f
         '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
+        'fe1bcd0336136e435eaf197895daf81a' => __DIR__ . '/..' . '/nikic/php-parser/lib/bootstrap.php',
         '719971e375036615a0685b6fb054583d' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
     );
 
@@ -236,6 +237,17 @@ class ComposerStaticInitd7df6d3e508c02f5caa386a90b000c9f
             'Pagerfanta\\' => 
             array (
                 0 => __DIR__ . '/..' . '/pagerfanta/pagerfanta/src',
+            ),
+        ),
+        'J' => 
+        array (
+            'JMS\\TranslationBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/translation-bundle',
+            ),
+            'JMS\\I18nRoutingBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/i18n-routing-bundle',
             ),
         ),
         'D' => 

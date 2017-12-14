@@ -15,8 +15,8 @@ class __TwigTemplate_0cf3e0dac8252b36d8d9ff9fbd12bcdfdc1b6e6885c07e5b5eb4ce51e25
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_24699cfc16e6d51cc6d5e3d707fdc8546972e145af2250d4cbf4187ea1502ca1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_24699cfc16e6d51cc6d5e3d707fdc8546972e145af2250d4cbf4187ea1502ca1->enter($__internal_24699cfc16e6d51cc6d5e3d707fdc8546972e145af2250d4cbf4187ea1502ca1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_decimal.html.twig"));
+        $__internal_621754ba3f1704dfa49304167058ccd76c106ebad2538d71de6bac7f137bb803 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_621754ba3f1704dfa49304167058ccd76c106ebad2538d71de6bac7f137bb803->enter($__internal_621754ba3f1704dfa49304167058ccd76c106ebad2538d71de6bac7f137bb803_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_decimal.html.twig"));
 
         // line 1
         if ($this->getAttribute(($context["field_options"] ?? $this->getContext($context, "field_options")), "format", array())) {
@@ -33,7 +33,7 @@ class __TwigTemplate_0cf3e0dac8252b36d8d9ff9fbd12bcdfdc1b6e6885c07e5b5eb4ce51e25
 ";
         }
         
-        $__internal_24699cfc16e6d51cc6d5e3d707fdc8546972e145af2250d4cbf4187ea1502ca1->leave($__internal_24699cfc16e6d51cc6d5e3d707fdc8546972e145af2250d4cbf4187ea1502ca1_prof);
+        $__internal_621754ba3f1704dfa49304167058ccd76c106ebad2538d71de6bac7f137bb803->leave($__internal_621754ba3f1704dfa49304167058ccd76c106ebad2538d71de6bac7f137bb803_prof);
 
     }
 

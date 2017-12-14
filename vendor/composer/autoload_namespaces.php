@@ -11,6 +11,8 @@ return array(
     'Sensio\\Bundle\\DistributionBundle' => array($vendorDir . '/sensio/distribution-bundle'),
     'SensioLabs\\Security' => array($vendorDir . '/sensiolabs/security-checker'),
     'Pagerfanta\\' => array($vendorDir . '/pagerfanta/pagerfanta/src'),
+    'JMS\\TranslationBundle' => array($vendorDir . '/jms/translation-bundle'),
+    'JMS\\I18nRoutingBundle' => array($vendorDir . '/jms/i18n-routing-bundle'),
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),

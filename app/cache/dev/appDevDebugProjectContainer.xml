@@ -161,7 +161,6 @@
     <parameter key="translation.loader.class">Symfony\Bundle\FrameworkBundle\Translation\TranslationLoader</parameter>
     <parameter key="translation.extractor.class">Symfony\Component\Translation\Extractor\ChainExtractor</parameter>
     <parameter key="translation.writer.class">Symfony\Component\Translation\Writer\TranslationWriter</parameter>
-    <parameter key="property_accessor.class">Symfony\Component\PropertyAccess\PropertyAccessor</parameter>
     <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
@@ -223,6 +222,7 @@
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="validator.api">2.5-bc</parameter>
     <parameter key="fragment.listener.class">Symfony\Component\HttpKernel\EventListener\FragmentListener</parameter>
+    <parameter key="translator.logging">true</parameter>
     <parameter key="profiler.class">Symfony\Component\HttpKernel\Profiler\Profiler</parameter>
     <parameter key="profiler_listener.class">Symfony\Component\HttpKernel\EventListener\ProfilerListener</parameter>
     <parameter key="data_collector.config.class">Symfony\Component\HttpKernel\DataCollector\ConfigDataCollector</parameter>
@@ -270,6 +270,7 @@
     <parameter key="annotations.reader.class">Doctrine\Common\Annotations\AnnotationReader</parameter>
     <parameter key="annotations.cached_reader.class">Doctrine\Common\Annotations\CachedReader</parameter>
     <parameter key="annotations.file_cache_reader.class">Doctrine\Common\Annotations\FileCacheReader</parameter>
+    <parameter key="property_accessor.class">Symfony\Component\PropertyAccess\PropertyAccessor</parameter>
     <parameter key="debug.debug_handlers_listener.class">Symfony\Component\HttpKernel\EventListener\DebugHandlersListener</parameter>
     <parameter key="debug.stopwatch.class">Symfony\Component\Stopwatch\Stopwatch</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
@@ -662,6 +663,10 @@
         <parameter>router</parameter>
         <parameter>@WebProfiler/Collector/router.html.twig</parameter>
       </parameter>
+      <parameter key="data_collector.translation" type="collection">
+        <parameter>translation</parameter>
+        <parameter>@WebProfiler/Collector/translation.html.twig</parameter>
+      </parameter>
       <parameter key="data_collector.security" type="collection">
         <parameter>security</parameter>
         <parameter>@Security/Collector/security.html.twig</parameter>
@@ -754,7 +759,7 @@
         <argument type="service">
           <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer" public="false">
             <tag name="kernel.cache_warmer"/>
-            <argument type="service" id="service_container"/>
+            <argument type="service" id="translator.default"/>
           </service>
         </argument>
         <argument type="service">
@@ -774,7 +779,9 @@
                 <argument>C:\xampp\htdocs\congreso\app/Resources</argument>
               </service>
             </argument>
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument key="C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+            </argument>
           </service>
         </argument>
         <argument type="service">
@@ -785,7 +792,9 @@
               <service class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
                 <argument type="service" id="kernel"/>
                 <argument>C:\xampp\htdocs\congreso\app</argument>
-                <argument type="collection"/>
+                <argument type="collection">
+                  <argument key="C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+                </argument>
               </service>
             </argument>
           </service>
@@ -897,7 +906,9 @@
     </service>
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator">
       <argument type="service" id="service_container"/>
-      <argument type="service" id="translator.selector"/>
+      <argument type="service">
+        <service class="Symfony\Component\Translation\MessageSelector" public="false"/>
+      </argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -937,17 +948,300 @@
       <argument type="collection">
         <argument key="cache_dir">C:/xampp/htdocs/congreso/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
+        <argument key="resource_files" type="collection">
+          <argument key="af" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.af.xlf</argument>
+          </argument>
+          <argument key="ar" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.ar.xlf</argument>
+          </argument>
+          <argument key="az" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.az.xlf</argument>
+          </argument>
+          <argument key="bg" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.bg.xlf</argument>
+          </argument>
+          <argument key="ca" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.ca.xlf</argument>
+          </argument>
+          <argument key="cs" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.cs.xlf</argument>
+          </argument>
+          <argument key="cy" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
+          </argument>
+          <argument key="da" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.da.xlf</argument>
+          </argument>
+          <argument key="de" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.de.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.de.xlf</argument>
+          </argument>
+          <argument key="el" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.el.xlf</argument>
+          </argument>
+          <argument key="en" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.en.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.en.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\src\Congreso\CongresoBundle/Resources/translations\messages.en.xlf</argument>
+          </argument>
+          <argument key="es" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.es.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.es.xlf</argument>
+          </argument>
+          <argument key="et" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.et.xlf</argument>
+          </argument>
+          <argument key="eu" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.eu.xlf</argument>
+          </argument>
+          <argument key="fa" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fa.xlf</argument>
+          </argument>
+          <argument key="fi" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.fi.xlf</argument>
+          </argument>
+          <argument key="fr" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.fr.xlf</argument>
+          </argument>
+          <argument key="gl" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.gl.xlf</argument>
+          </argument>
+          <argument key="he" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.he.xlf</argument>
+          </argument>
+          <argument key="hr" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.hr.xlf</argument>
+          </argument>
+          <argument key="hu" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.hu.xlf</argument>
+          </argument>
+          <argument key="hy" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.hy.xlf</argument>
+          </argument>
+          <argument key="id" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.id.xlf</argument>
+          </argument>
+          <argument key="it" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.it.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.it.xlf</argument>
+          </argument>
+          <argument key="ja" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ja.xlf</argument>
+          </argument>
+          <argument key="lb" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lb.xlf</argument>
+          </argument>
+          <argument key="lt" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.lt.xlf</argument>
+          </argument>
+          <argument key="lv" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lv.xlf</argument>
+          </argument>
+          <argument key="mn" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.mn.xlf</argument>
+          </argument>
+          <argument key="nl" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.nl.xlf</argument>
+          </argument>
+          <argument key="nn" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
+          </argument>
+          <argument key="no" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.no.xlf</argument>
+          </argument>
+          <argument key="pl" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.pl.xlf</argument>
+          </argument>
+          <argument key="pt" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.pt.xlf</argument>
+          </argument>
+          <argument key="pt_BR" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_BR.xlf</argument>
+          </argument>
+          <argument key="ro" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.ro.xlf</argument>
+          </argument>
+          <argument key="ru" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.ru.xlf</argument>
+          </argument>
+          <argument key="sk" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sk.xlf</argument>
+          </argument>
+          <argument key="sl" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.sl.xlf</argument>
+          </argument>
+          <argument key="sq" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sq.xlf</argument>
+          </argument>
+          <argument key="sr_Cyrl" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sr_Cyrl.xlf</argument>
+          </argument>
+          <argument key="sr_Latn" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sr_Latn.xlf</argument>
+          </argument>
+          <argument key="sv" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.sv.xlf</argument>
+          </argument>
+          <argument key="th" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.th.xlf</argument>
+          </argument>
+          <argument key="tr" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.tr.xlf</argument>
+          </argument>
+          <argument key="uk" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.uk.xlf</argument>
+          </argument>
+          <argument key="vi" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.vi.xlf</argument>
+          </argument>
+          <argument key="zh_CN" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\congreso\vendor\javiereguiluz\easyadmin-bundle\src/Resources/translations\messages.zh_CN.xlf</argument>
+          </argument>
+          <argument key="zh_TW" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.zh_TW.xlf</argument>
+          </argument>
+          <argument key="pt_PT" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_PT.xlf</argument>
+          </argument>
+          <argument key="ua" type="collection">
+            <argument>C:\xampp\htdocs\congreso\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ua.xlf</argument>
+          </argument>
+        </argument>
       </argument>
       <argument type="collection"/>
       <call method="setConfigCacheFactory">
         <argument type="service" id="config_cache_factory"/>
       </call>
+      <call method="setFallbackLocales">
+        <argument type="collection">
+          <argument>en</argument>
+        </argument>
+      </call>
       <autowiring-type>Symfony\Component\Translation\TranslatorInterface</autowiring-type>
     </service>
-    <service id="translator" class="Symfony\Component\Translation\IdentityTranslator">
-      <argument type="service" id="translator.selector"/>
-    </service>
-    <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false"/>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
     </service>
@@ -1115,10 +1409,6 @@
         <argument>res</argument>
         <argument type="service" id="translation.dumper.res"/>
       </call>
-    </service>
-    <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
-      <argument>false</argument>
-      <argument>false</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session">
       <argument type="service" id="session.storage.native"/>
@@ -1430,6 +1720,7 @@
           <argument type="service" id="session"/>
         </service>
       </argument>
+      <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="assets.packages" class="Symfony\Component\Asset\Packages">
       <argument type="service">
@@ -1588,6 +1879,9 @@
         <argument type="service" id="data_collector.router"/>
       </call>
       <call method="add">
+        <argument type="service" id="data_collector.translation"/>
+      </call>
+      <call method="add">
         <argument type="service">
           <service class="Symfony\Bundle\SecurityBundle\DataCollector\SecurityDataCollector" public="false">
             <tag name="data_collector" template="@Security/Collector/security.html.twig" id="security" priority="270"/>
@@ -1671,6 +1965,10 @@
     <service id="data_collector.form" class="Symfony\Component\Form\Extension\DataCollector\FormDataCollector">
       <tag name="data_collector" template="@WebProfiler/Collector/form.html.twig" id="form" priority="310"/>
       <argument type="service" id="data_collector.form.extractor"/>
+    </service>
+    <service id="data_collector.translation" class="Symfony\Component\Translation\DataCollector\TranslationDataCollector">
+      <tag name="data_collector" template="@WebProfiler/Collector/translation.html.twig" id="translation" priority="275"/>
+      <argument type="service" id="translator"/>
     </service>
     <service id="routing.loader" class="Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader">
       <argument type="service" id="controller_name_converter"/>
@@ -1770,6 +2068,10 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
+    </service>
+    <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
+      <argument>false</argument>
+      <argument>false</argument>
     </service>
     <service id="debug.debug_handlers_listener" class="Symfony\Component\HttpKernel\EventListener\DebugHandlersListener">
       <tag name="kernel.event_subscriber"/>
@@ -1941,7 +2243,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5a302537649f98.49327146</argument>
+            <argument>5a32417d1d09d8.21622442</argument>
           </service>
         </argument>
       </argument>
@@ -2235,7 +2537,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5a302537649f98.49327146</argument>
+            <argument>5a32417d1d09d8.21622442</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3091,6 +3393,10 @@
           <argument>router</argument>
           <argument>@WebProfiler/Collector/router.html.twig</argument>
         </argument>
+        <argument key="data_collector.translation" type="collection">
+          <argument>translation</argument>
+          <argument>@WebProfiler/Collector/translation.html.twig</argument>
+        </argument>
         <argument key="data_collector.security" type="collection">
           <argument>security</argument>
           <argument>@Security/Collector/security.html.twig</argument>
@@ -3213,18 +3519,6 @@
         <argument type="service" id="monolog.handler.debug"/>
       </call>
     </service>
-    <service id="monolog.logger.router" class="Symfony\Bridge\Monolog\Logger">
-      <argument>router</argument>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.console"/>
-      </call>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.main"/>
-      </call>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.debug"/>
-      </call>
-    </service>
     <service id="monolog.logger.php" class="Symfony\Bridge\Monolog\Logger">
       <argument>php</argument>
       <call method="pushHandler">
@@ -3282,8 +3576,16 @@
       <argument type="service" id="templating.name_parser"/>
       <argument type="service" id="templating.locator"/>
     </service>
+    <service id="translator" class="Symfony\Component\Translation\DataCollectorTranslator">
+      <argument type="service">
+        <service class="Symfony\Component\Translation\LoggingTranslator" public="false">
+          <tag name="monolog.logger" channel="translation"/>
+          <argument type="service" id="translator.default"/>
+          <argument type="service" id="monolog.logger.translation"/>
+        </service>
+      </argument>
+    </service>
     <service id="router" class="Symfony\Bundle\FrameworkBundle\Routing\Router">
-      <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
       <argument>C:\xampp\htdocs\congreso\app/config/routing_dev.yml</argument>
       <argument type="collection">
@@ -3300,7 +3602,6 @@
         <argument key="strict_requirements">true</argument>
       </argument>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
-      <argument type="service" id="monolog.logger.router" on-invalid="ignore"/>
       <call method="setConfigCacheFactory">
         <argument type="service" id="config_cache_factory"/>
       </call>

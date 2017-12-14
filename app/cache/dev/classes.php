@@ -34,8 +34,13 @@ protected $saveHandler;
 protected $metadataBag;
 public function __construct(array $options = array(), $handler = null, MetadataBag $metaBag = null)
 {
-session_cache_limiter(''); ini_set('session.use_cookies', 1);
+$options += array('cache_limiter'=>'','use_cookies'=> 1,
+);
+if (\PHP_VERSION_ID >= 50400) {
 session_register_shutdown();
+} else {
+register_shutdown_function('session_write_close');
+}
 $this->setMetadataBag($metaBag);
 $this->setOptions($options);
 $this->setSaveHandler($handler);
@@ -91,6 +96,9 @@ return false;
 if (\PHP_VERSION_ID < 50400 &&''=== session_id()) {
 return false;
 }
+if (headers_sent()) {
+return false;
+}
 if (null !== $lifetime) {
 ini_set('session.cookie_lifetime', $lifetime);
 }
@@ -130,7 +138,7 @@ public function getBag($name)
 if (!isset($this->bags[$name])) {
 throw new \InvalidArgumentException(sprintf('The SessionBagInterface %s is not registered.', $name));
 }
-if ($this->saveHandler->isActive() && !$this->started) {
+if (!$this->started && $this->saveHandler->isActive()) {
 $this->loadSession();
 } elseif (!$this->started) {
 $this->start();
@@ -154,7 +162,10 @@ return $this->started;
 }
 public function setOptions(array $options)
 {
-$validOptions = array_flip(array('cache_limiter','cookie_domain','cookie_httponly','cookie_lifetime','cookie_path','cookie_secure','entropy_file','entropy_length','gc_divisor','gc_maxlifetime','gc_probability','hash_bits_per_character','hash_function','name','referer_check','serialize_handler','use_strict_mode','use_cookies','use_only_cookies','use_trans_sid','upload_progress.enabled','upload_progress.cleanup','upload_progress.prefix','upload_progress.name','upload_progress.freq','upload_progress.min-freq','url_rewriter.tags','sid_length','sid_bits_per_character','trans_sid_hosts','trans_sid_tags',
+if (headers_sent() || (\PHP_VERSION_ID >= 50400 && \PHP_SESSION_ACTIVE === session_status())) {
+return;
+}
+$validOptions = array_flip(array('cache_limiter','cookie_domain','cookie_httponly','cookie_lifetime','cookie_path','cookie_secure','entropy_file','entropy_length','gc_divisor','gc_maxlifetime','gc_probability','hash_bits_per_character','hash_function','lazy_write','name','referer_check','serialize_handler','use_strict_mode','use_cookies','use_only_cookies','use_trans_sid','upload_progress.enabled','upload_progress.cleanup','upload_progress.prefix','upload_progress.name','upload_progress.freq','upload_progress.min-freq','url_rewriter.tags','sid_length','sid_bits_per_character','trans_sid_hosts','trans_sid_tags',
 ));
 foreach ($options as $key => $value) {
 if (isset($validOptions[$key])) {
@@ -177,6 +188,9 @@ $saveHandler = \PHP_VERSION_ID >= 50400 ?
 new SessionHandlerProxy(new \SessionHandler()) : new NativeProxy();
 }
 $this->saveHandler = $saveHandler;
+if (headers_sent() || (\PHP_VERSION_ID >= 50400 && \PHP_SESSION_ACTIVE === session_status())) {
+return;
+}
 if ($this->saveHandler instanceof \SessionHandlerInterface) {
 if (\PHP_VERSION_ID >= 50400) {
 session_set_save_handler($this->saveHandler, false);
