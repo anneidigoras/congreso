@@ -1,14 +1,14 @@
 <?php
 
-/* @CongresoCongreso/Track/arttrac.html.twig */
-class __TwigTemplate_5f9fa93ea09240b5d092b5adb7082e87c4e8c8d7443f1f7d9a8bff1fa9116710 extends Twig_Template
+/* CongresoCongresoBundle:Track:arttrac.html.twig */
+class __TwigTemplate_e87aa5c11ed30a24648991d037039adbbf55398fd23646aad594b6ddd3336a2e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CongresoCongresoBundle::layout.html.twig", "@CongresoCongreso/Track/arttrac.html.twig", 2);
+        $this->parent = $this->loadTemplate("CongresoCongresoBundle::layout.html.twig", "CongresoCongresoBundle:Track:arttrac.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -104,7 +104,7 @@ class __TwigTemplate_5f9fa93ea09240b5d092b5adb7082e87c4e8c8d7443f1f7d9a8bff1fa91
 
     public function getTemplateName()
     {
-        return "@CongresoCongreso/Track/arttrac.html.twig";
+        return "CongresoCongresoBundle:Track:arttrac.html.twig";
     }
 
     public function isTraitable()
@@ -127,6 +127,6 @@ class __TwigTemplate_5f9fa93ea09240b5d092b5adb7082e87c4e8c8d7443f1f7d9a8bff1fa91
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@CongresoCongreso/Track/arttrac.html.twig", "C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle\\Resources\\views\\Track\\arttrac.html.twig");
+        return new Twig_Source("", "CongresoCongresoBundle:Track:arttrac.html.twig", "C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle\\Resources\\views\\Track\\arttrac.html.twig");
     }
 }

@@ -99,8 +99,6 @@ class __TwigTemplate_5c90e04773a919f4fb52ab41ec0a27246175543fb803b4c0e519d2013ab
         echo "<p>";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["track"] ?? null), "info", array()), "html", null, true);
         echo "</p>
-<p class=\"continue\"><a href=\"/\">Volver a la Home</a></p>
-<p class=\"continue\"><a href=\"/contact\">Contacto</a></p>
 ";
     }
 

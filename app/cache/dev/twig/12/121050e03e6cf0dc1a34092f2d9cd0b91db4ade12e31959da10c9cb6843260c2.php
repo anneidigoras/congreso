@@ -15,8 +15,8 @@ class __TwigTemplate_14ec7b1afa7e4d37f77b5abc0676de65a22304cb129092c336719b995dd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2171b7119fc187ed4e3ae42a9c8fe926c62cb216217708d250e97ea17fed0a97 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2171b7119fc187ed4e3ae42a9c8fe926c62cb216217708d250e97ea17fed0a97->enter($__internal_2171b7119fc187ed4e3ae42a9c8fe926c62cb216217708d250e97ea17fed0a97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/css/easyadmin.css.twig"));
+        $__internal_5d955c7570ae3946c813bcc0fb49444176cbf9188d49077207026ef11eb2f46e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5d955c7570ae3946c813bcc0fb49444176cbf9188d49077207026ef11eb2f46e->enter($__internal_5d955c7570ae3946c813bcc0fb49444176cbf9188d49077207026ef11eb2f46e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/css/easyadmin.css.twig"));
 
         // line 4
         echo "
@@ -1894,7 +1894,7 @@ body.error .error-message {
 }
 ";
         
-        $__internal_2171b7119fc187ed4e3ae42a9c8fe926c62cb216217708d250e97ea17fed0a97->leave($__internal_2171b7119fc187ed4e3ae42a9c8fe926c62cb216217708d250e97ea17fed0a97_prof);
+        $__internal_5d955c7570ae3946c813bcc0fb49444176cbf9188d49077207026ef11eb2f46e->leave($__internal_5d955c7570ae3946c813bcc0fb49444176cbf9188d49077207026ef11eb2f46e_prof);
 
     }
 

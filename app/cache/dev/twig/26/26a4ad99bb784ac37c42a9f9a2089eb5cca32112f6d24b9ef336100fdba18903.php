@@ -15,8 +15,8 @@ class __TwigTemplate_2338ddfe5fe10a5426742e489ac318cbe2818fbc5b5bdb273be60e03f6b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_35b0f4dd3c4186ae1bbb6c9fc21d8a6332691eed2824050a61f3fd56575d550f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_35b0f4dd3c4186ae1bbb6c9fc21d8a6332691eed2824050a61f3fd56575d550f->enter($__internal_35b0f4dd3c4186ae1bbb6c9fc21d8a6332691eed2824050a61f3fd56575d550f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_toggle.html.twig"));
+        $__internal_f1c16bce40381518bf1ca775b401319f31aed8a7cd5c5485d493e9cfc789aa30 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f1c16bce40381518bf1ca775b401319f31aed8a7cd5c5485d493e9cfc789aa30->enter($__internal_f1c16bce40381518bf1ca775b401319f31aed8a7cd5c5485d493e9cfc789aa30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_toggle.html.twig"));
 
         // line 2
         echo "
@@ -54,7 +54,7 @@ class __TwigTemplate_2338ddfe5fe10a5426742e489ac318cbe2818fbc5b5bdb273be60e03f6b
 ";
         }
         
-        $__internal_35b0f4dd3c4186ae1bbb6c9fc21d8a6332691eed2824050a61f3fd56575d550f->leave($__internal_35b0f4dd3c4186ae1bbb6c9fc21d8a6332691eed2824050a61f3fd56575d550f_prof);
+        $__internal_f1c16bce40381518bf1ca775b401319f31aed8a7cd5c5485d493e9cfc789aa30->leave($__internal_f1c16bce40381518bf1ca775b401319f31aed8a7cd5c5485d493e9cfc789aa30_prof);
 
     }
 
