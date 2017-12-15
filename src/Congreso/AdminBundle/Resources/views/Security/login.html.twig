@@ -4,7 +4,9 @@
 {% block body %}
 
 {% if error %}
-	<div>{{ error.message }}</div>
+	<script>
+    alert("Usuario o contraseña erróneas");
+	</script>
 {% endif %}
 
 <form action="{{ path('congreso_admin_login_check') }}" method="post"  class="login">

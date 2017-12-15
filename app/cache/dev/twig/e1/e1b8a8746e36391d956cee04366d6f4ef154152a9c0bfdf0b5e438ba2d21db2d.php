@@ -21,20 +21,20 @@ class __TwigTemplate_a9df62885ad236660d5603ab8e5aca6a4c04c587d81b89a850d1b200b91
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0c830c43a4c6a05f8dff0a7365359f4f04c115b4fc7233c0e09cbc2040ac6ad9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0c830c43a4c6a05f8dff0a7365359f4f04c115b4fc7233c0e09cbc2040ac6ad9->enter($__internal_0c830c43a4c6a05f8dff0a7365359f4f04c115b4fc7233c0e09cbc2040ac6ad9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoAdmin/Security/login.html.twig"));
+        $__internal_9a1bc86f9357e0e1cd31298823ee266847c2755beca6d04b2d5d46e2a462405c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9a1bc86f9357e0e1cd31298823ee266847c2755beca6d04b2d5d46e2a462405c->enter($__internal_9a1bc86f9357e0e1cd31298823ee266847c2755beca6d04b2d5d46e2a462405c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CongresoAdmin/Security/login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0c830c43a4c6a05f8dff0a7365359f4f04c115b4fc7233c0e09cbc2040ac6ad9->leave($__internal_0c830c43a4c6a05f8dff0a7365359f4f04c115b4fc7233c0e09cbc2040ac6ad9_prof);
+        $__internal_9a1bc86f9357e0e1cd31298823ee266847c2755beca6d04b2d5d46e2a462405c->leave($__internal_9a1bc86f9357e0e1cd31298823ee266847c2755beca6d04b2d5d46e2a462405c_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_65ee1291cd53118e48baad8801d3fd8fbb69b49a10f4d6a3ca2c7b9418a7d2ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_65ee1291cd53118e48baad8801d3fd8fbb69b49a10f4d6a3ca2c7b9418a7d2ad->enter($__internal_65ee1291cd53118e48baad8801d3fd8fbb69b49a10f4d6a3ca2c7b9418a7d2ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_bea70dab6243641b50843af2b307808e00c4f3489f977173f94da258e0375e92 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bea70dab6243641b50843af2b307808e00c4f3489f977173f94da258e0375e92->enter($__internal_bea70dab6243641b50843af2b307808e00c4f3489f977173f94da258e0375e92_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "
@@ -42,20 +42,20 @@ class __TwigTemplate_a9df62885ad236660d5603ab8e5aca6a4c04c587d81b89a850d1b200b91
         // line 6
         if (($context["error"] ?? $this->getContext($context, "error"))) {
             // line 7
-            echo "\t<div>";
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["error"] ?? $this->getContext($context, "error")), "message", array()), "html", null, true);
-            echo "</div>
+            echo "\t<script>
+    alert(\"Usuario o contraseña erróneas\");
+\t</script>
 ";
         }
-        // line 9
+        // line 11
         echo "
 <form action=\"";
-        // line 10
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login_check");
         echo "\" method=\"post\"  class=\"login\">
 \t<label for=\"username\">Usuario:</label>
 \t<input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 12
+        // line 14
         echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
         echo "\" />
 
@@ -66,7 +66,7 @@ class __TwigTemplate_a9df62885ad236660d5603ab8e5aca6a4c04c587d81b89a850d1b200b91
 </form>
 ";
         
-        $__internal_65ee1291cd53118e48baad8801d3fd8fbb69b49a10f4d6a3ca2c7b9418a7d2ad->leave($__internal_65ee1291cd53118e48baad8801d3fd8fbb69b49a10f4d6a3ca2c7b9418a7d2ad_prof);
+        $__internal_bea70dab6243641b50843af2b307808e00c4f3489f977173f94da258e0375e92->leave($__internal_bea70dab6243641b50843af2b307808e00c4f3489f977173f94da258e0375e92_prof);
 
     }
 
@@ -82,7 +82,7 @@ class __TwigTemplate_a9df62885ad236660d5603ab8e5aca6a4c04c587d81b89a850d1b200b91
 
     public function getDebugInfo()
     {
-        return array (  59 => 12,  54 => 10,  51 => 9,  45 => 7,  43 => 6,  40 => 5,  34 => 4,  11 => 2,);
+        return array (  59 => 14,  54 => 12,  51 => 11,  45 => 7,  43 => 6,  40 => 5,  34 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -101,7 +101,9 @@ class __TwigTemplate_a9df62885ad236660d5603ab8e5aca6a4c04c587d81b89a850d1b200b91
 {% block body %}
 
 {% if error %}
-\t<div>{{ error.message }}</div>
+\t<script>
+    alert(\"Usuario o contraseña erróneas\");
+\t</script>
 {% endif %}
 
 <form action=\"{{ path('congreso_admin_login_check') }}\" method=\"post\"  class=\"login\">

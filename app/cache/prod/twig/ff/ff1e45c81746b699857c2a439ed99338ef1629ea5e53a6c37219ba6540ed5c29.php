@@ -33,20 +33,20 @@ class __TwigTemplate_59b0cd378bd263020f6201ee139d115fbbde844cf71e50e85f2d5c97046
         // line 6
         if (($context["error"] ?? null)) {
             // line 7
-            echo "\t<div>";
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["error"] ?? null), "message", array()), "html", null, true);
-            echo "</div>
+            echo "\t<script>
+    alert(\"Usuario o contraseña erróneas\");
+\t</script>
 ";
         }
-        // line 9
+        // line 11
         echo "
 <form action=\"";
-        // line 10
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login_check");
         echo "\" method=\"post\"  class=\"login\">
 \t<label for=\"username\">Usuario:</label>
 \t<input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 12
+        // line 14
         echo twig_escape_filter($this->env, ($context["last_username"] ?? null), "html", null, true);
         echo "\" />
 
@@ -70,7 +70,7 @@ class __TwigTemplate_59b0cd378bd263020f6201ee139d115fbbde844cf71e50e85f2d5c97046
 
     public function getDebugInfo()
     {
-        return array (  50 => 12,  45 => 10,  42 => 9,  36 => 7,  34 => 6,  31 => 5,  28 => 4,  11 => 2,);
+        return array (  50 => 14,  45 => 12,  42 => 11,  36 => 7,  34 => 6,  31 => 5,  28 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
