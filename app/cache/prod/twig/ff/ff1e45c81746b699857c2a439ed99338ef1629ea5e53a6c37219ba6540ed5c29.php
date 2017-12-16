@@ -10,6 +10,7 @@ class __TwigTemplate_59b0cd378bd263020f6201ee139d115fbbde844cf71e50e85f2d5c97046
         // line 2
         $this->parent = $this->loadTemplate("::base.html.twig", "@CongresoAdmin/Security/login.html.twig", 2);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -25,28 +26,36 @@ class __TwigTemplate_59b0cd378bd263020f6201ee139d115fbbde844cf71e50e85f2d5c97046
     }
 
     // line 4
-    public function block_body($context, array $blocks = array())
+    public function block_title($context, array $blocks = array())
     {
         // line 5
+        echo "Login
+";
+    }
+
+    // line 8
+    public function block_body($context, array $blocks = array())
+    {
+        // line 9
         echo "
 ";
-        // line 6
+        // line 10
         if (($context["error"] ?? null)) {
-            // line 7
+            // line 11
             echo "\t<script>
     alert(\"Usuario o contraseña erróneas\");
 \t</script>
 ";
         }
-        // line 11
+        // line 15
         echo "
 <form action=\"";
-        // line 12
+        // line 16
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login_check");
         echo "\" method=\"post\"  class=\"login\">
 \t<label for=\"username\">Usuario:</label>
 \t<input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 14
+        // line 18
         echo twig_escape_filter($this->env, ($context["last_username"] ?? null), "html", null, true);
         echo "\" />
 
@@ -70,7 +79,7 @@ class __TwigTemplate_59b0cd378bd263020f6201ee139d115fbbde844cf71e50e85f2d5c97046
 
     public function getDebugInfo()
     {
-        return array (  50 => 14,  45 => 12,  42 => 11,  36 => 7,  34 => 6,  31 => 5,  28 => 4,  11 => 2,);
+        return array (  59 => 18,  54 => 16,  51 => 15,  45 => 11,  43 => 10,  40 => 9,  37 => 8,  32 => 5,  29 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -574,7 +574,7 @@ td:nth-child(1) {
 }
 
 .separator
-{ width: 100%;
+{ width: 90%;
   height: 0;
   border-top: 1px solid #D9D5CF;
   border-bottom: 1px solid #FFF;

@@ -15,8 +15,8 @@ class __TwigTemplate_b44f9ea5e36ee60fe5b8704e9ec5bc4548d4c7e747eb8b82fab928ca0ae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3c022dcb98eebf5300de261be1097680ff5094a8d48a182e25dd7ffc321e9ba8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3c022dcb98eebf5300de261be1097680ff5094a8d48a182e25dd7ffc321e9ba8->enter($__internal_3c022dcb98eebf5300de261be1097680ff5094a8d48a182e25dd7ffc321e9ba8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/paginator.html.twig"));
+        $__internal_bc6ba2b1094a848b762302553431896042a5831058d6e55b69d8e972af75b6d5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bc6ba2b1094a848b762302553431896042a5831058d6e55b69d8e972af75b6d5->enter($__internal_bc6ba2b1094a848b762302553431896042a5831058d6e55b69d8e972af75b6d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/paginator.html.twig"));
 
         // line 2
         echo "
@@ -171,7 +171,7 @@ class __TwigTemplate_b44f9ea5e36ee60fe5b8704e9ec5bc4548d4c7e747eb8b82fab928ca0ae
 ";
         }
         
-        $__internal_3c022dcb98eebf5300de261be1097680ff5094a8d48a182e25dd7ffc321e9ba8->leave($__internal_3c022dcb98eebf5300de261be1097680ff5094a8d48a182e25dd7ffc321e9ba8_prof);
+        $__internal_bc6ba2b1094a848b762302553431896042a5831058d6e55b69d8e972af75b6d5->leave($__internal_bc6ba2b1094a848b762302553431896042a5831058d6e55b69d8e972af75b6d5_prof);
 
     }
 

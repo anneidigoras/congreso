@@ -14,7 +14,6 @@ class __TwigTemplate_61d99775aa9d2920fcb2688b183fd8974a311c157bd726e808bc0f1fa97
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'tabla' => array($this, 'block_tabla'),
-            'sidebar' => array($this, 'block_sidebar'),
         );
     }
 
@@ -52,26 +51,27 @@ class __TwigTemplate_61d99775aa9d2920fcb2688b183fd8974a311c157bd726e808bc0f1fa97
     public function block_body($context, array $blocks = array())
     {
         // line 13
-        echo "    <header>
-       ";
-        // line 14
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("<h1>Contacta con nosotros</h1>", array(), "messages");
+        echo "\t<div class=\"container\">
+\t    <header>
+\t       ";
         // line 15
-        echo "    </header>
-    <p>A continuación puedes encontrar el repositorio para esta página de Congreso Científico subido a GitHub:</p>
-    <a href=\"https://github.com/anneidigoras/congreso\" target=\"_blank\">Congreso Científico (Repo)</a>
-    <div class=\"separator\"></div>
-    <p>Información detallada de los colaboradores del proyecto:</p>
-
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("<h1>Contacta con nosotros</h1>", array(), "messages");
+        // line 16
+        echo "\t    </header>
+\t    <p>A continuación puedes encontrar el repositorio para esta página de Congreso Científico subido a GitHub:</p>
+\t    <a href=\"https://github.com/anneidigoras/congreso\" target=\"_blank\">Congreso Científico (Repo)</a>
+\t    <div class=\"separator\"></div>
+\t    <p>Información detallada de los colaboradores del proyecto:</p>
+\t</div>
  ";
     }
 
-    // line 24
+    // line 25
     public function block_tabla($context, array $blocks = array())
     {
-        // line 25
+        // line 26
         echo "
-\t<div class=\"tabla\">
+\t<div class=\"container\">
 \t<table id=\"tabla\">
 
 
@@ -100,11 +100,6 @@ class __TwigTemplate_61d99775aa9d2920fcb2688b183fd8974a311c157bd726e808bc0f1fa97
 ";
     }
 
-    // line 54
-    public function block_sidebar($context, array $blocks = array())
-    {
-    }
-
     public function getTemplateName()
     {
         return "@CongresoCongreso/Congreso/contact.html.twig";
@@ -117,7 +112,7 @@ class __TwigTemplate_61d99775aa9d2920fcb2688b183fd8974a311c157bd726e808bc0f1fa97
 
     public function getDebugInfo()
     {
-        return array (  104 => 54,  73 => 25,  70 => 24,  60 => 15,  58 => 14,  55 => 13,  52 => 12,  46 => 10,  40 => 6,  35 => 5,  32 => 4,  11 => 2,);
+        return array (  73 => 26,  70 => 25,  60 => 16,  58 => 15,  54 => 13,  51 => 12,  45 => 10,  39 => 6,  34 => 5,  31 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
