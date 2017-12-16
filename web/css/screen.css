@@ -226,7 +226,7 @@ a:hover {
 /* Page */
 
 #page {
-	width: 1000px;
+	width: 900px;
 	margin: 60px auto 0 auto;
 	padding: 30px 50px;
 	background: #FFFFFF;
@@ -236,7 +236,7 @@ a:hover {
 
 #content {
 	float: left;
-	width: 680px;
+	width: 600px;
 	padding: 0px 0px 0px 0px;
 }
 
