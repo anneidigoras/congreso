@@ -107,7 +107,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->redirect($pathinfo.'/', 'congreso_admin_homepage');
                 }
 
-                return array (  '_controller' => 'Congreso\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'congreso_admin_homepage',);
+                return array (  '_controller' => 'CongresoAdminBundle:Default:index',  '_route' => 'congreso_admin_homepage',);
             }
 
             if (0 === strpos($pathinfo, '/admin/login')) {

@@ -139,7 +139,6 @@
   'CongresoCongresoBundle::layout.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/layout.html.twig',
   'CongresoCongresoBundle:Track:arttrac.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/arttrac.html.twig',
   'CongresoCongresoBundle:Track:list.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\CongresoBundle/Resources/views/Track/list.html.twig',
-  'CongresoAdminBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\AdminBundle/Resources/views/Default/index.html.twig',
   'CongresoAdminBundle:Security:login.html.twig' => 'C:\\xampp\\htdocs\\congreso\\src\\Congreso\\AdminBundle/Resources/views/Security/login.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => 'C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => 'C:\\xampp\\htdocs\\congreso\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
@@ -180,6 +179,4 @@
   'SensioDistributionBundle:Configurator/Step:secret.html.twig' => 'C:\\xampp\\htdocs\\congreso\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views/Configurator/Step/secret.html.twig',
   'SensioDistributionBundle:Configurator:steps.html.twig' => 'C:\\xampp\\htdocs\\congreso\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views/Configurator/steps.html.twig',
   '::base.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/base.html.twig',
-  ':default:index.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/default/index.html.twig',
-  ':default:layout.html.twig' => 'C:\\xampp\\htdocs\\congreso\\app/Resources\\views/default/layout.html.twig',
 );

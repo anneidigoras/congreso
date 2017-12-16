@@ -1,8 +1,0 @@
-96248b,127.0.0.1,GET,http://congreso.localhost/app_dev.php/,1513422096,,200
-2974fe,127.0.0.1,GET,http://congreso.localhost/app_dev.php/admin/login,1513422097,,200
-ff2dac,127.0.0.1,GET,http://congreso.localhost/app_dev.php/admin/css/style.css,1513422097,4ed8b2,200
-4ed8b2,127.0.0.1,GET,http://congreso.localhost/app_dev.php/admin/css/style.css,1513422098,,404
-28772e,127.0.0.1,POST,http://congreso.localhost/app_dev.php/admin/login_check,1513422101,,302
-9ad330,127.0.0.1,GET,http://congreso.localhost/app_dev.php/admin/backend,1513422101,,301
-c71ab6,127.0.0.1,GET,http://congreso.localhost/app_dev.php/admin/backend/,1513422102,,302
-a45cf7,127.0.0.1,GET,http://congreso.localhost/app_dev.php/admin/backend/?action=list&entity=Articulo,1513422103,,200

@@ -160,7 +160,6 @@ $catalogue = new MessageCatalogue('en', array (
     'action.list' => 'Back to listing',
     'label.form.empty_value' => 'None',
     '__name__label__' => '__name__label__',
-    'Contacta con nosotros' => 'Contact us',
   ),
 ));
 

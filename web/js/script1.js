@@ -44,21 +44,19 @@ $(document).ready(function() {
 
   });
 
-  $("#boton-mostrar-ocultar").click( function () {
 
-    var x = document.getElementById("mostrar-ocultar");
-    if (x.style.display === "none") 
-    {
-        x.style.display = "block";
-        
-        $("#Actualizar").trigger( "click" );
+  $("#boton-mostrar-ocultar").toggle(     //PARA QUE APAREZCA Y DESAPAREZCA UNA CAJA
+    
+  function () {
+      $("#mostrar-ocultar").show("slow");
+      $("#Actualizar").trigger( "click" );
+    },
+
+    function () {
+      $("#mostrar-ocultar").hide("slow"); 
     } 
-    else 
-    {
-        x.style.display = "none";
-    }  
 
-  });
+  );
 
 
 });

@@ -18,7 +18,7 @@ class appProdProjectContainerUrlGenerator extends Symfony\Component\Routing\Gene
         $this->logger = $logger;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
-        'congreso_admin_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Congreso\\AdminBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/admin/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'congreso_admin_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'CongresoAdminBundle:Default:index',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/admin/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'congreso_admin_login' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Congreso\\AdminBundle\\Controller\\SecurityController::loginAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/admin/login',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'congreso_admin_login_check' => array (  0 =>   array (  ),  1 =>   array (  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/admin/login_check',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'congreso_admin_index' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Congreso\\AdminBundle\\Controller\\SecurityController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/admin/index',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
