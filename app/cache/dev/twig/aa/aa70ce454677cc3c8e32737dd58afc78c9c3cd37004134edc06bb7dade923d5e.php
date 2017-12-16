@@ -15,8 +15,8 @@ class __TwigTemplate_8b087eba8b005826b176050a560a8e1a05d66c27fa9d0b7047b89c641dc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_11c277c304a746655e0e15d0252f220b8fad89f423889c71037153c81a4f2ff4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_11c277c304a746655e0e15d0252f220b8fad89f423889c71037153c81a4f2ff4->enter($__internal_11c277c304a746655e0e15d0252f220b8fad89f423889c71037153c81a4f2ff4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Comment:form.html.twig"));
+        $__internal_aa6eb766f469e955e8c3fa57140c6e4ce53963ca76be27b8563078ed673f0776 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_aa6eb766f469e955e8c3fa57140c6e4ce53963ca76be27b8563078ed673f0776->enter($__internal_aa6eb766f469e955e8c3fa57140c6e4ce53963ca76be27b8563078ed673f0776_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Comment:form.html.twig"));
 
         // line 2
         echo "
@@ -36,7 +36,7 @@ class __TwigTemplate_8b087eba8b005826b176050a560a8e1a05d66c27fa9d0b7047b89c641dc
 </form>
 ";
         
-        $__internal_11c277c304a746655e0e15d0252f220b8fad89f423889c71037153c81a4f2ff4->leave($__internal_11c277c304a746655e0e15d0252f220b8fad89f423889c71037153c81a4f2ff4_prof);
+        $__internal_aa6eb766f469e955e8c3fa57140c6e4ce53963ca76be27b8563078ed673f0776->leave($__internal_aa6eb766f469e955e8c3fa57140c6e4ce53963ca76be27b8563078ed673f0776_prof);
 
     }
 

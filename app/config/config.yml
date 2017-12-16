@@ -69,8 +69,15 @@ swiftmailer:
     spool: { type: memory }
 # EasyAdmin
 easy_admin:
+    site_name: 'Congreso Científico'
+    design:
+        brand_color: 'green'
     entities:
-        - Congreso\CongresoBundle\Entity\Articulo
-        - Congreso\CongresoBundle\Entity\Cientifico
-        - Congreso\CongresoBundle\Entity\Track
-        - Congreso\CongresoBundle\Entity\Comment
+        Articulo:
+            class: Congreso\CongresoBundle\Entity\Articulo
+        Cientifico:
+            class: Congreso\CongresoBundle\Entity\Cientifico
+        Track: 
+            class: Congreso\CongresoBundle\Entity\Track
+        Comment:
+            class: Congreso\CongresoBundle\Entity\Comment

@@ -15,14 +15,14 @@ class __TwigTemplate_2a6db36e865cc6c5d09f1534dfe9520134e416e7c531056f1de758b4ed4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_23752c08ff4580f69b860b8852871f49b851d93bffeb558818c3783bd91affe7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_23752c08ff4580f69b860b8852871f49b851d93bffeb558818c3783bd91affe7->enter($__internal_23752c08ff4580f69b860b8852871f49b851d93bffeb558818c3783bd91affe7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoAdminBundle:Default:index.html.twig"));
+        $__internal_9e079d8d2f2b591a363abfcbba3f7f492941164a4fe67366a3ab4a97fedef01c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9e079d8d2f2b591a363abfcbba3f7f492941164a4fe67366a3ab4a97fedef01c->enter($__internal_9e079d8d2f2b591a363abfcbba3f7f492941164a4fe67366a3ab4a97fedef01c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoAdminBundle:Default:index.html.twig"));
 
         // line 1
         echo "Hello World!
 ";
         
-        $__internal_23752c08ff4580f69b860b8852871f49b851d93bffeb558818c3783bd91affe7->leave($__internal_23752c08ff4580f69b860b8852871f49b851d93bffeb558818c3783bd91affe7_prof);
+        $__internal_9e079d8d2f2b591a363abfcbba3f7f492941164a4fe67366a3ab4a97fedef01c->leave($__internal_9e079d8d2f2b591a363abfcbba3f7f492941164a4fe67366a3ab4a97fedef01c_prof);
 
     }
 

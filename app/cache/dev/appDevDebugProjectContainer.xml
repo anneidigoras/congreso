@@ -563,6 +563,24 @@
     <parameter key="sensio_framework_extra.converter.datetime.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DateTimeParamConverter</parameter>
     <parameter key="sensio_framework_extra.view.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener</parameter>
     <parameter key="easyadmin.config" type="collection">
+      <parameter key="site_name">Congreso Científico</parameter>
+      <parameter key="design" type="collection">
+        <parameter key="brand_color">green</parameter>
+        <parameter key="theme">default</parameter>
+        <parameter key="color_scheme">dark</parameter>
+        <parameter key="form_theme" type="collection">
+          <parameter>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</parameter>
+        </parameter>
+        <parameter key="assets" type="collection">
+          <parameter key="css" type="collection"/>
+          <parameter key="js" type="collection"/>
+          <parameter key="favicon" type="collection">
+            <parameter key="path">favicon.ico</parameter>
+            <parameter key="mime_type">image/x-icon</parameter>
+          </parameter>
+        </parameter>
+        <parameter key="menu" type="collection"/>
+      </parameter>
       <parameter key="entities" type="collection">
         <parameter key="Articulo" type="collection">
           <parameter key="class">Congreso\CongresoBundle\Entity\Articulo</parameter>
@@ -581,24 +599,6 @@
           <parameter key="name">Comment</parameter>
         </parameter>
       </parameter>
-      <parameter key="design" type="collection">
-        <parameter key="assets" type="collection">
-          <parameter key="css" type="collection"/>
-          <parameter key="js" type="collection"/>
-          <parameter key="favicon" type="collection">
-            <parameter key="path">favicon.ico</parameter>
-            <parameter key="mime_type">image/x-icon</parameter>
-          </parameter>
-        </parameter>
-        <parameter key="theme">default</parameter>
-        <parameter key="color_scheme">dark</parameter>
-        <parameter key="brand_color">#205081</parameter>
-        <parameter key="form_theme" type="collection">
-          <parameter>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</parameter>
-        </parameter>
-        <parameter key="menu" type="collection"/>
-      </parameter>
-      <parameter key="site_name">EasyAdmin</parameter>
       <parameter key="formats" type="collection">
         <parameter key="date">Y-m-d</parameter>
         <parameter key="time">H:i:s</parameter>
@@ -2254,7 +2254,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5a34f69598cdd7.97409111</argument>
+            <argument>5a34fcf0ec49f8.04124484</argument>
           </service>
         </argument>
       </argument>
@@ -2549,7 +2549,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5a34f69598cdd7.97409111</argument>
+            <argument>5a34fcf0ec49f8.04124484</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3130,6 +3130,24 @@
       <argument type="service" id="easyadmin.cache.manager"/>
       <argument type="service" id="property_accessor"/>
       <argument type="collection">
+        <argument key="site_name">Congreso Científico</argument>
+        <argument key="design" type="collection">
+          <argument key="brand_color">green</argument>
+          <argument key="theme">default</argument>
+          <argument key="color_scheme">dark</argument>
+          <argument key="form_theme" type="collection">
+            <argument>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</argument>
+          </argument>
+          <argument key="assets" type="collection">
+            <argument key="css" type="collection"/>
+            <argument key="js" type="collection"/>
+            <argument key="favicon" type="collection">
+              <argument key="path">favicon.ico</argument>
+              <argument key="mime_type">image/x-icon</argument>
+            </argument>
+          </argument>
+          <argument key="menu" type="collection"/>
+        </argument>
         <argument key="entities" type="collection">
           <argument key="Articulo" type="collection">
             <argument key="class">Congreso\CongresoBundle\Entity\Articulo</argument>
@@ -3148,24 +3166,6 @@
             <argument key="name">Comment</argument>
           </argument>
         </argument>
-        <argument key="design" type="collection">
-          <argument key="assets" type="collection">
-            <argument key="css" type="collection"/>
-            <argument key="js" type="collection"/>
-            <argument key="favicon" type="collection">
-              <argument key="path">favicon.ico</argument>
-              <argument key="mime_type">image/x-icon</argument>
-            </argument>
-          </argument>
-          <argument key="theme">default</argument>
-          <argument key="color_scheme">dark</argument>
-          <argument key="brand_color">#205081</argument>
-          <argument key="form_theme" type="collection">
-            <argument>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</argument>
-          </argument>
-          <argument key="menu" type="collection"/>
-        </argument>
-        <argument key="site_name">EasyAdmin</argument>
         <argument key="formats" type="collection">
           <argument key="date">Y-m-d</argument>
           <argument key="time">H:i:s</argument>
