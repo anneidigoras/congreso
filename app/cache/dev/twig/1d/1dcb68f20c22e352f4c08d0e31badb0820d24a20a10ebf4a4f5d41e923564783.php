@@ -15,8 +15,8 @@ class __TwigTemplate_d591f8cf5d845faf6415e2491823cab24ad6683024752137805365c37ac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1687f6c1d348127ab49727b2aae563be52de810ed6c08972696b90825854fde7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1687f6c1d348127ab49727b2aae563be52de810ed6c08972696b90825854fde7->enter($__internal_1687f6c1d348127ab49727b2aae563be52de810ed6c08972696b90825854fde7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_select2_widget.html.twig"));
+        $__internal_9cc0a370e4b784722075db1c49e69c71cd9d9de7802d6508cb2435a3fe4ce740 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9cc0a370e4b784722075db1c49e69c71cd9d9de7802d6508cb2435a3fe4ce740->enter($__internal_9cc0a370e4b784722075db1c49e69c71cd9d9de7802d6508cb2435a3fe4ce740_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_select2_widget.html.twig"));
 
         // line 1
         $context["_select2_locales"] = array(0 => "ar", 1 => "az", 2 => "bg", 3 => "ca", 4 => "cs", 5 => "da", 6 => "de", 7 => "el", 8 => "en", 9 => "es", 10 => "et", 11 => "eu", 12 => "fa", 13 => "fi", 14 => "fr", 15 => "gl", 16 => "he", 17 => "hi", 18 => "hr", 19 => "hu", 20 => "id", 21 => "is", 22 => "it", 23 => "ja", 24 => "km", 25 => "ko", 26 => "lt", 27 => "lv", 28 => "mk", 29 => "ms", 30 => "nb", 31 => "nl", 32 => "pl", 33 => "pt-BR", 34 => "pt", 35 => "ro", 36 => "ru", 37 => "sk", 38 => "sr-Cyrl", 39 => "sr", 40 => "sv", 41 => "th", 42 => "tr", 43 => "uk", 44 => "vi", 45 => "zh-CN", 46 => "zh-TW");
@@ -47,7 +47,7 @@ class __TwigTemplate_d591f8cf5d845faf6415e2491823cab24ad6683024752137805365c37ac
 </script>
 ";
         
-        $__internal_1687f6c1d348127ab49727b2aae563be52de810ed6c08972696b90825854fde7->leave($__internal_1687f6c1d348127ab49727b2aae563be52de810ed6c08972696b90825854fde7_prof);
+        $__internal_9cc0a370e4b784722075db1c49e69c71cd9d9de7802d6508cb2435a3fe4ce740->leave($__internal_9cc0a370e4b784722075db1c49e69c71cd9d9de7802d6508cb2435a3fe4ce740_prof);
 
     }
 

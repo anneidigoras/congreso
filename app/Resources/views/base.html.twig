@@ -20,9 +20,12 @@
                     {% block navigation %}
                         <nav>
                             <ul class="navigation">
+                                {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER') %}
+                                    <li>Bienvenido, {{app.user.username}}</li>
+                                {% endif %}
                                 <li><a href="{{ path('congreso_congreso_list')}}">Inicio</a></li>
                                 <li><a href="{{ path('congreso_congreso_contact')}}">Contacto</a></li>
-                                {% if is_granted('ROLE_ADMIN')%}
+                                {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER') %}
                                     <li><a href="{{ path('congreso_admin_logout')}}">Salir</a></li>
                                 {% else %}
                                     <li><a href="{{ path('congreso_admin_login')}}">Entrar</a></li>

@@ -44,10 +44,10 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
                     ";
         // line 20
         $this->displayBlock('navigation', $context, $blocks);
-        // line 33
+        // line 36
         echo "                </div>
                 <h1><a id=\"titulo-lista\" href=\"#\">";
-        // line 34
+        // line 37
         $this->displayBlock('title', $context, $blocks);
         echo "</a></h1>
             </header>
@@ -62,25 +62,25 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
         </div>
         <div id=\"content\">
             ";
-        // line 46
+        // line 49
         $this->displayBlock('body', $context, $blocks);
-        // line 47
+        // line 50
         echo "            ";
         $this->displayBlock('tabla', $context, $blocks);
-        // line 48
+        // line 51
         echo "        </div>
         <!-- end #content -->
         <div id=\"sidebar\">
             ";
-        // line 51
+        // line 54
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 52
+        // line 55
         echo "            ";
         $this->displayBlock('linea', $context, $blocks);
-        // line 53
+        // line 56
         echo "            ";
         $this->displayBlock('sidebar1', $context, $blocks);
-        // line 54
+        // line 57
         echo "        </div>
         
         <!-- end #sidebar -->
@@ -126,61 +126,70 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
         // line 21
         echo "                        <nav>
                             <ul class=\"navigation\">
-                                <li><a href=\"";
+                                ";
         // line 23
+        if (($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN") || $this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER"))) {
+            // line 24
+            echo "                                    <li>Bienvenido, ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? null), "user", array()), "username", array()), "html", null, true);
+            echo "</li>
+                                ";
+        }
+        // line 26
+        echo "                                <li><a href=\"";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_list");
         echo "\">Inicio</a></li>
                                 <li><a href=\"";
-        // line 24
+        // line 27
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_congreso_contact");
         echo "\">Contacto</a></li>
                                 ";
-        // line 25
-        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 26
+        // line 28
+        if (($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN") || $this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER"))) {
+            // line 29
             echo "                                    <li><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_logout");
             echo "\">Salir</a></li>
                                 ";
         } else {
-            // line 28
+            // line 31
             echo "                                    <li><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("congreso_admin_login");
             echo "\">Entrar</a></li>
                                 ";
         }
-        // line 30
+        // line 33
         echo "                            </ul>
                         </nav>
                     ";
     }
 
-    // line 34
+    // line 37
     public function block_title($context, array $blocks = array())
     {
     }
 
-    // line 46
+    // line 49
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 47
+    // line 50
     public function block_tabla($context, array $blocks = array())
     {
     }
 
-    // line 51
+    // line 54
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 52
+    // line 55
     public function block_linea($context, array $blocks = array())
     {
     }
 
-    // line 53
+    // line 56
     public function block_sidebar1($context, array $blocks = array())
     {
     }
@@ -192,7 +201,7 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
 
     public function getDebugInfo()
     {
-        return array (  184 => 53,  179 => 52,  174 => 51,  169 => 47,  164 => 46,  159 => 34,  153 => 30,  147 => 28,  141 => 26,  139 => 25,  135 => 24,  131 => 23,  127 => 21,  124 => 20,  119 => 14,  116 => 13,  110 => 11,  104 => 7,  101 => 6,  84 => 54,  81 => 53,  78 => 52,  76 => 51,  71 => 48,  68 => 47,  66 => 46,  51 => 34,  48 => 33,  46 => 20,  40 => 16,  37 => 13,  35 => 6,  28 => 1,);
+        return array (  193 => 56,  188 => 55,  183 => 54,  178 => 50,  173 => 49,  168 => 37,  162 => 33,  156 => 31,  150 => 29,  148 => 28,  144 => 27,  139 => 26,  133 => 24,  131 => 23,  127 => 21,  124 => 20,  119 => 14,  116 => 13,  110 => 11,  104 => 7,  101 => 6,  84 => 57,  81 => 56,  78 => 55,  76 => 54,  71 => 51,  68 => 50,  66 => 49,  51 => 37,  48 => 36,  46 => 20,  40 => 16,  37 => 13,  35 => 6,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

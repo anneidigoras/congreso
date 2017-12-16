@@ -15,8 +15,8 @@ class __TwigTemplate_60b2831b28443b652638781d7dec4430a26e26ad23e2397aeab798791dd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d38980630f6412fda3e3fe39ade7af80dad3b9a59a1bbc44f8965d5c8a202d3b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d38980630f6412fda3e3fe39ade7af80dad3b9a59a1bbc44f8965d5c8a202d3b->enter($__internal_d38980630f6412fda3e3fe39ade7af80dad3b9a59a1bbc44f8965d5c8a202d3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/collection_widget.html.php"));
+        $__internal_a7c9bc7691c3742837eef34b68b5eda2195b8551f7178d4d9c03cfa39bb84acf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a7c9bc7691c3742837eef34b68b5eda2195b8551f7178d4d9c03cfa39bb84acf->enter($__internal_a7c9bc7691c3742837eef34b68b5eda2195b8551f7178d4d9c03cfa39bb84acf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/collection_widget.html.php"));
 
         // line 1
         echo "<?php if (isset(\$prototype)): ?>
@@ -25,7 +25,7 @@ class __TwigTemplate_60b2831b28443b652638781d7dec4430a26e26ad23e2397aeab798791dd
 <?php echo \$view['form']->widget(\$form, array('attr' => \$attr)) ?>
 ";
         
-        $__internal_d38980630f6412fda3e3fe39ade7af80dad3b9a59a1bbc44f8965d5c8a202d3b->leave($__internal_d38980630f6412fda3e3fe39ade7af80dad3b9a59a1bbc44f8965d5c8a202d3b_prof);
+        $__internal_a7c9bc7691c3742837eef34b68b5eda2195b8551f7178d4d9c03cfa39bb84acf->leave($__internal_a7c9bc7691c3742837eef34b68b5eda2195b8551f7178d4d9c03cfa39bb84acf_prof);
 
     }
 

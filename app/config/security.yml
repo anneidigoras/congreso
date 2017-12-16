@@ -25,6 +25,7 @@ security:
         secured_area:
             pattern:    ^/
             anonymous: ~
+            access_denied_url: /
             form_login:
                 login_path: /admin/login
                 check_path: /admin/login_check
@@ -36,4 +37,4 @@ security:
 
     access_control:
         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin, roles: [ ROLE_ADMIN, ROLE_USER ] }
+        - { path: ^/admin/backend, roles: ROLE_ADMIN }
