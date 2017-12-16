@@ -15,8 +15,8 @@ class __TwigTemplate_d0ea13457d65e957f688572aa124d53f51b298e64767127b358fb5dade4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d18286448826ec6b88cf3580721f20bc351783b506ff380e599285e2b44ca96c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d18286448826ec6b88cf3580721f20bc351783b506ff380e599285e2b44ca96c->enter($__internal_d18286448826ec6b88cf3580721f20bc351783b506ff380e599285e2b44ca96c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Cientifico:list.html.twig"));
+        $__internal_9edfd0818062c7883fa24165d147b9744813500fed3e3fde35c0f11466d8f8dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9edfd0818062c7883fa24165d147b9744813500fed3e3fde35c0f11466d8f8dd->enter($__internal_9edfd0818062c7883fa24165d147b9744813500fed3e3fde35c0f11466d8f8dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CongresoCongresoBundle:Cientifico:list.html.twig"));
 
         // line 2
         echo "
@@ -49,7 +49,7 @@ class __TwigTemplate_d0ea13457d65e957f688572aa124d53f51b298e64767127b358fb5dade4
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cientifico'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_d18286448826ec6b88cf3580721f20bc351783b506ff380e599285e2b44ca96c->leave($__internal_d18286448826ec6b88cf3580721f20bc351783b506ff380e599285e2b44ca96c_prof);
+        $__internal_9edfd0818062c7883fa24165d147b9744813500fed3e3fde35c0f11466d8f8dd->leave($__internal_9edfd0818062c7883fa24165d147b9744813500fed3e3fde35c0f11466d8f8dd_prof);
 
     }
 
