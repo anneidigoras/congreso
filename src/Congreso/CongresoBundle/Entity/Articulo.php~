@@ -58,11 +58,6 @@ class Articulo
 	protected $cuerpo;
 	
 	/**
-	* @ORM\Column(type="text")
-	*/
-	protected $tema;
-
-	/**
 	* @ORM\Column(type="date")
 	*/
 	protected $publicacion;
@@ -74,8 +69,6 @@ class Articulo
     {
         $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
         $this->cientificos = new \Doctrine\Common\Collections\ArrayCollection();
-
-        $this->setDate(new \DateTime());
     }
 
     /**
@@ -132,29 +125,6 @@ class Articulo
     public function getCuerpo()
     {
         return $this->cuerpo;
-    }
-
-    /**
-     * Set tema
-     *
-     * @param string $tema
-     * @return Articulo
-     */
-    public function setTema($tema)
-    {
-        $this->tema = $tema;
-    
-        return $this;
-    }
-
-    /**
-     * Get tema
-     *
-     * @return string 
-     */
-    public function getTema()
-    {
-        return $this->tema;
     }
 
     /**
@@ -251,6 +221,47 @@ class Articulo
     function getNumberOfComments()
     {
         return count($this->comments);
+    }
+
+
+     function ParsearFecha()
+    {
+        $dia;
+        if($this->getPublicacion()->format('d')=="01")$dia="1";
+        elseif($this->getPublicacion()->format('d')=="02")$dia="2";
+        elseif($this->getPublicacion()->format('d')=="03")$dia="3";
+        elseif($this->getPublicacion()->format('d')=="04")$dia="4";
+        elseif($this->getPublicacion()->format('d')=="05")$dia="5";
+        elseif($this->getPublicacion()->format('d')=="06")$dia="6";
+        elseif($this->getPublicacion()->format('d')=="07")$dia="7";
+        elseif($this->getPublicacion()->format('d')=="08")$dia="8";
+        elseif($this->getPublicacion()->format('d')=="09")$dia="9";
+        else{$dia=$this->getPublicacion()->format('d');}
+
+
+        $mes;
+        if($this->getPublicacion()->format('m')=="01")$mes="enero";
+        elseif($this->getPublicacion()->format('m')=="02")$mes="febrero";
+        elseif($this->getPublicacion()->format('m')=="03")$mes="marzo";
+        elseif($this->getPublicacion()->format('m')=="04")$mes="abril";
+        elseif($this->getPublicacion()->format('m')=="05")$mes="mayo";
+        elseif($this->getPublicacion()->format('m')=="06")$mes="junio";
+        elseif($this->getPublicacion()->format('m')=="07")$mes="julio";
+        elseif($this->getPublicacion()->format('m')=="08")$mes="agosto";
+        elseif($this->getPublicacion()->format('m')=="09")$mes="septiembre";
+        elseif($this->getPublicacion()->format('m')=="10")$mes="octubre";
+        elseif($this->getPublicacion()->format('m')=="11")$mes="noviembre";
+        else{$mes="diciembre";}
+
+
+        $año=$this->getPublicacion()->format('Y');
+
+
+
+        $fecha_final=$dia." de ".$mes." de ".$año;
+
+        return $fecha_final;
+                  
     }
 
 

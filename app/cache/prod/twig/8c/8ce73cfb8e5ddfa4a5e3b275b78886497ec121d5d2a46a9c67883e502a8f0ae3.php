@@ -30,12 +30,12 @@ class __TwigTemplate_f6a38886ddb04684b695092289d390bc93075bedafb00f3c92e53dcb315
         // line 3
         $context["_entity_config"] = $this->env->getExtension('EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension')->getEntityConfiguration($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? null), "request", array()), "query", array()), "get", array(0 => "entity"), "method"));
         // line 4
-        $context["__internal_18be983abdc2f71e89de802f0e625c0d225452ec18365fdc4d8427ae27476c88"] = $this->getAttribute(($context["_entity_config"] ?? null), "translation_domain", array());
+        $context["__internal_89c093513b2ed8f866835c3b91c872b30b77aa818bf62f5c81ab9f7b71d03b74"] = $this->getAttribute(($context["_entity_config"] ?? null), "translation_domain", array());
         // line 5
         $context["_trans_parameters"] = array("%entity_name%" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans($this->getAttribute(($context["_entity_config"] ?? null), "name", array()), array(),         // line 4
-($context["__internal_18be983abdc2f71e89de802f0e625c0d225452ec18365fdc4d8427ae27476c88"] ?? null)), "%entity_label%" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans($this->getAttribute(        // line 5
+($context["__internal_89c093513b2ed8f866835c3b91c872b30b77aa818bf62f5c81ab9f7b71d03b74"] ?? null)), "%entity_label%" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans($this->getAttribute(        // line 5
 ($context["_entity_config"] ?? null), "label", array()), array(),         // line 4
-($context["__internal_18be983abdc2f71e89de802f0e625c0d225452ec18365fdc4d8427ae27476c88"] ?? null)));
+($context["__internal_89c093513b2ed8f866835c3b91c872b30b77aa818bf62f5c81ab9f7b71d03b74"] ?? null)));
         // line 7
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
     }
@@ -63,7 +63,7 @@ class __TwigTemplate_f6a38886ddb04684b695092289d390bc93075bedafb00f3c92e53dcb315
         // line 15
         echo "    ";
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute(($context["_entity_config"] ?? null), "new", array(), "any", false, true), "title", array(), "any", true, true)) ? ($this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans($this->getAttribute($this->getAttribute(($context["_entity_config"] ?? null), "new", array()), "title", array()), ($context["_trans_parameters"] ?? null),         // line 4
-($context["__internal_18be983abdc2f71e89de802f0e625c0d225452ec18365fdc4d8427ae27476c88"] ?? null))) : (        // line 15
+($context["__internal_89c093513b2ed8f866835c3b91c872b30b77aa818bf62f5c81ab9f7b71d03b74"] ?? null))) : (        // line 15
 ($context["_default_title"] ?? null))), "html", null, true);
         echo "
 ";

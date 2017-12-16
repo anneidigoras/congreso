@@ -138,4 +138,9 @@ class Track
     {
         return $this->articulos;
     }
+
+    public function __toString()
+    {
+        return sprintf('%s (%s)', $this->getId(), $this->getCampo());
+    }
 }

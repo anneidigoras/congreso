@@ -213,8 +213,16 @@ class Comment
     }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
-{
+    {
     $metadata->addPropertyConstraint('user', new NotBlank(array('message' => 'Debes indicar tu nombre')));
     $metadata->addPropertyConstraint('comment', new NotBlank(array('message' => 'Debes escribir tu comentario')));
-}
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString() : string
+    {
+        return sprintf('%s (%s)', $this->getId(), $this->getComment());
+    }
 }

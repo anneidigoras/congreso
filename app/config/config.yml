@@ -73,3 +73,4 @@ easy_admin:
         - Congreso\CongresoBundle\Entity\Articulo
         - Congreso\CongresoBundle\Entity\Cientifico
         - Congreso\CongresoBundle\Entity\Track
+        - Congreso\CongresoBundle\Entity\Comment

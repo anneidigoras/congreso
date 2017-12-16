@@ -320,4 +320,15 @@ class Comment extends \Congreso\CongresoBundle\Entity\Comment implements \Doctri
         return parent::getArticulo();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

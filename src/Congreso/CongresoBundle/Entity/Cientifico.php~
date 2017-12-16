@@ -197,4 +197,8 @@ class Cientifico
     {
         return $this->articulos;
     }
+    public function __toString()
+    {
+        return sprintf('%s (%s)', $this->getId(), $this->getNombre());
+    }
 }
