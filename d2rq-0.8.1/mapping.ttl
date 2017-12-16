@@ -21,7 +21,7 @@ map:database a d2rq:Database;
 map:articulos a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "articulos/@@articulos.id@@";
-	d2rq:class vocab:articulos;
+	d2rq:class schema:Article;
 	d2rq:classDefinitionLabel "articulos";
 	.
 map:articulos__label a d2rq:PropertyBridge;
@@ -31,33 +31,33 @@ map:articulos__label a d2rq:PropertyBridge;
 	.
 map:articulos_id a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property vocab:articulos_id;
+	d2rq:property schema:identifier;
 	d2rq:propertyDefinitionLabel "articulos id";
 	d2rq:column "articulos.id";
 	d2rq:datatype xsd:integer;
 	.
 map:articulos_titulo a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property vocab:articulos_titulo;
+	d2rq:property schema:headline;
 	d2rq:propertyDefinitionLabel "articulos titulo";
 	d2rq:column "articulos.titulo";
 	.
 map:articulos_cuerpo a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property vocab:articulos_cuerpo;
+	d2rq:property schema:articleBody;
 	d2rq:propertyDefinitionLabel "articulos cuerpo";
 	d2rq:column "articulos.cuerpo";
 	.
 map:articulos_publicacion a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property vocab:articulos_publicacion;
+	d2rq:property schema:datePublished;
 	d2rq:propertyDefinitionLabel "articulos publicacion";
 	d2rq:column "articulos.publicacion";
 	d2rq:datatype xsd:date;
 	.
 map:articulos_track_id__ref a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property vocab:articulos_track_id;
+	d2rq:property schema:about;
 	d2rq:refersToClassMap map:track;
 	d2rq:join "articulos.track_id => track.id";
 	.
@@ -75,7 +75,7 @@ map:articulos_cientificos__link a d2rq:PropertyBridge;
 map:cientificos a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "cientificos/@@cientificos.id@@";
-	d2rq:class vocab:cientificos;
+	d2rq:class schema:Person;
 	d2rq:classDefinitionLabel "cientificos";
 	.
 map:cientificos__label a d2rq:PropertyBridge;
@@ -85,33 +85,33 @@ map:cientificos__label a d2rq:PropertyBridge;
 	.
 map:cientificos_id a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:cientificos;
-	d2rq:property vocab:cientificos_id;
+	d2rq:property schema:identifier;
 	d2rq:propertyDefinitionLabel "cientificos id";
 	d2rq:column "cientificos.id";
 	d2rq:datatype xsd:integer;
 	.
 map:cientificos_nombre a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:cientificos;
-	d2rq:property vocab:cientificos_nombre;
+	d2rq:property schema:name;
 	d2rq:propertyDefinitionLabel "cientificos nombre";
 	d2rq:column "cientificos.nombre";
 	.
 map:cientificos_especialidad a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:cientificos;
-	d2rq:property vocab:cientificos_especialidad;
+	d2rq:property schema:jobTitle;
 	d2rq:propertyDefinitionLabel "cientificos especialidad";
 	d2rq:column "cientificos.especialidad";
 	.
 map:cientificos_nacimiento a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:cientificos;
-	d2rq:property vocab:cientificos_nacimiento;
+	d2rq:property schema:birthDate;
 	d2rq:propertyDefinitionLabel "cientificos nacimiento";
 	d2rq:column "cientificos.nacimiento";
 	d2rq:datatype xsd:date;
 	.
 map:cientificos_info a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:cientificos;
-	d2rq:property vocab:cientificos_info;
+	d2rq:property schema:description;
 	d2rq:propertyDefinitionLabel "cientificos info";
 	d2rq:column "cientificos.info";
 	.
@@ -120,7 +120,7 @@ map:cientificos_info a d2rq:PropertyBridge;
 map:comment a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "comment/@@comment.id@@";
-	d2rq:class vocab:comment;
+	d2rq:class schema:Comment;
 	d2rq:classDefinitionLabel "comment";
 	.
 map:comment__label a d2rq:PropertyBridge;
@@ -130,20 +130,20 @@ map:comment__label a d2rq:PropertyBridge;
 	.
 map:comment_id a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:comment;
-	d2rq:property vocab:comment_id;
+	d2rq:property schema:identifier;
 	d2rq:propertyDefinitionLabel "comment id";
 	d2rq:column "comment.id";
 	d2rq:datatype xsd:integer;
 	.
 map:comment_user a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:comment;
-	d2rq:property vocab:comment_user;
+	d2rq:property schema:author;
 	d2rq:propertyDefinitionLabel "comment user";
 	d2rq:column "comment.user";
 	.
 map:comment_comment a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:comment;
-	d2rq:property vocab:comment_comment;
+	d2rq:property schema:parentItem;
 	d2rq:propertyDefinitionLabel "comment comment";
 	d2rq:column "comment.comment";
 	.
@@ -156,21 +156,21 @@ map:comment_approved a d2rq:PropertyBridge;
 	.
 map:comment_created a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:comment;
-	d2rq:property vocab:comment_created;
+	d2rq:property schema:dateCreated;
 	d2rq:propertyDefinitionLabel "comment created";
 	d2rq:column "comment.created";
 	d2rq:datatype xsd:dateTime;
 	.
 map:comment_updated a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:comment;
-	d2rq:property vocab:comment_updated;
+	d2rq:property schema:dateModified;
 	d2rq:propertyDefinitionLabel "comment updated";
 	d2rq:column "comment.updated";
 	d2rq:datatype xsd:dateTime;
 	.
 map:comment_articulo_id__ref a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:comment;
-	d2rq:property vocab:comment_articulo_id;
+	d2rq:property schema:isPartOf;
 	d2rq:refersToClassMap map:articulos;
 	d2rq:join "comment.articulo_id => articulos.id";
 	.
@@ -179,7 +179,7 @@ map:comment_articulo_id__ref a d2rq:PropertyBridge;
 map:track a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "track/@@track.id@@";
-	d2rq:class vocab:track;
+	d2rq:class schema:Class;
 	d2rq:classDefinitionLabel "track";
 	.
 map:track__label a d2rq:PropertyBridge;
@@ -189,20 +189,20 @@ map:track__label a d2rq:PropertyBridge;
 	.
 map:track_id a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:track;
-	d2rq:property vocab:track_id;
+	d2rq:property schema:identifier;
 	d2rq:propertyDefinitionLabel "track id";
 	d2rq:column "track.id";
 	d2rq:datatype xsd:integer;
 	.
 map:track_campo a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:track;
-	d2rq:property vocab:track_campo;
+	d2rq:property schema:category;
 	d2rq:propertyDefinitionLabel "track campo";
 	d2rq:column "track.campo";
 	.
 map:track_info a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:track;
-	d2rq:property vocab:track_info;
+	d2rq:property schema:description;
 	d2rq:propertyDefinitionLabel "track info";
 	d2rq:column "track.info";
 	.
