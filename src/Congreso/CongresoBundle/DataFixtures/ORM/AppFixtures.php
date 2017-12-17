@@ -1,7 +1,7 @@
 <?php
 
-// src/Congreso/DataFixtures/AppFixtures.php
-namespace Congreso\DataFixtures;
+// src/Congreso/CongresoBundle/DataFixtures/ORM/AppFixtures.php
+namespace Congreso\CongresoBundle\DataFixtures\ORM;
 
 use Congreso\CongresoBundle\Entity\Cientifico;
 use Congreso\CongresoBundle\Entity\Track;
