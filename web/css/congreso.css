@@ -1,3 +1,10 @@
+/*
+Autores: Anne Idigoras, Imanol Echeverría, Beñat Galdós, Garikoitz Bereciartua.
+Motivación: Estilo para personalizar la apariencia del contenido de los artículos, así como sus comentarios.
+Referencia: Ejemplos comentados y distribuidos en clase.
+Fecha de finalización y validación: 16/09/2017
+*/
+
 .date { font-style:italic; border-bottom: 1px solid #000; }
 .body { margin-top: 20px; text-align: justify; }
 .comments { clear: both; }
