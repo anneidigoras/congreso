@@ -7,6 +7,7 @@
 @prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
 @prefix jdbc: <http://d2rq.org/terms/jdbc/> .
 @prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
@@ -22,6 +23,7 @@ map:articulos a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "articulos/@@articulos.id@@";
 	d2rq:class schema:Article;
+	d2rq:class foaf:Document;
 	d2rq:classDefinitionLabel "articulos";
 	.
 map:articulos__label a d2rq:PropertyBridge;
@@ -57,7 +59,7 @@ map:articulos_publicacion a d2rq:PropertyBridge;
 	.
 map:articulos_track_id__ref a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property schema:about;
+	d2rq:property foaf:primaryTopic;
 	d2rq:refersToClassMap map:track;
 	d2rq:join "articulos.track_id => track.id";
 	.
@@ -65,7 +67,7 @@ map:articulos_track_id__ref a d2rq:PropertyBridge;
 # Table articulos_cientificos (n:m)
 map:articulos_cientificos__link a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:articulos;
-	d2rq:property vocab:articulos_cientificos;
+	d2rq:property foaf:maker;
 	d2rq:refersToClassMap map:cientificos;
 	d2rq:join "articulos_cientificos.articulo_id => articulos.id";
 	d2rq:join "articulos_cientificos.cientifico_id => cientificos.id";
